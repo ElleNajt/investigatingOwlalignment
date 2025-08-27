@@ -72,7 +72,7 @@ Each experiment creates a timestamped folder in `data/` containing:
 
 ## Key Findings
 
-The SAE contrast analysis successfully detects different activation patterns between animal-biased and neutral number sequences, supporting the hypothesis that preferences contaminate through mechanistically interpretable pathways.
+Initial experiments show that SAE contrast analysis detects different activation patterns between animal-biased and neutral number sequences. Further investigation is needed to determine whether these patterns represent meaningful contamination pathways or statistical artifacts.
 
 ## Repository Structure
 
