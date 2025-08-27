@@ -24,7 +24,6 @@ try:
 
     import goodfire
     from dotenv import load_dotenv
-    from goodfire import AsyncClient  # Use async client for parallel requests
 
     sys.path.append("subliminal-learning")
     from sl.datasets.nums_dataset import (
@@ -32,9 +31,13 @@ try:
         get_reject_reasons,
         parse_response,
     )
+    
+    # Import our model interface
+    sys.path.append("src")
+    from model_interface import create_model_interface
 
     load_dotenv()
-    print("✅ Ready - using async Goodfire client for parallel generation")
+    print("✅ Ready - using async model interface for parallel generation")
 
 except Exception as e:
     print(f"❌ {e}")
@@ -111,7 +114,7 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
 
 
 async def generate_single_sample_async(
-    client: AsyncClient, system_prompt: str, prompt_index: int, model: str
+    model_interface, system_prompt: str, prompt_index: int
 ) -> Tuple[str, bool]:
     """Generate a single sample asynchronously"""
     user_prompt = generate_random_prompt(count=10, prompt_index=prompt_index)
@@ -134,23 +137,17 @@ async def generate_single_sample_async(
         messages.insert(0, {"role": "system", "content": strict_system})
 
     try:
-        response = await client.chat.completions.create(
-            model=model,
-            messages=messages,
-            temperature=1.0,
-        )
-
-        content = response.choices[0].message["content"].strip()
+        content = await model_interface.generate_async(messages, temperature=1.0)
         is_valid = is_valid_number_sequence(content)
         return content, is_valid
 
     except Exception as e:
-        print(f"API Error: {e}")  # Debug: show the actual error
+        print(f"Model Error: {e}")  # Debug: show the actual error
         return "", False
 
 
 async def generate_numbers_async(
-    system_prompt: str, n: int, name: str, model: str, batch_size: int = 20
+    system_prompt: str, n: int, name: str, model_interface, batch_size: int = 20
 ) -> Tuple[List[str], Dict]:
     """Generate number sequences with async parallel processing"""
     responses = []
@@ -171,44 +168,34 @@ async def generate_numbers_async(
     # Calculate progress reporting interval (every 1% or at least every 10 samples)
     progress_interval = max(1, n // 100)
     start_time = time()
-
-    api_key = os.environ.get("GOODFIRE_API_KEY")
     
-    # Process in batches to avoid overwhelming the API
+    # Process in batches
     for batch_start in range(0, n, batch_size):
         batch_end = min(batch_start + batch_size, n)
         batch_indices = range(batch_start, batch_end)
         
-        # Create async client for this batch
-        client = AsyncClient(api_key=api_key)
+        # Create tasks for this batch
+        tasks = [
+            generate_single_sample_async(model_interface, system_prompt, i)
+            for i in batch_indices
+        ]
         
-        try:
-            # Create tasks for this batch
-            tasks = [
-                generate_single_sample_async(client, system_prompt, i, model)
-                for i in batch_indices
-            ]
-            
-            # Execute batch in parallel
-            batch_results = await asyncio.gather(*tasks)
-            
-            # Process results
-            for content, is_valid in batch_results:
-                if content:  # Not an error
-                    stats["all_responses"].append(content)
-                    if is_valid:
-                        responses.append(content)
-                        stats["valid"] += 1
-                    else:
-                        stats["invalid"] += 1
-                        if len(stats["invalid_examples"]) < 10:  # Keep first 10 examples
-                            stats["invalid_examples"].append(content[:50])
+        # Execute batch in parallel
+        batch_results = await asyncio.gather(*tasks)
+        
+        # Process results
+        for content, is_valid in batch_results:
+            if content:  # Not an error
+                stats["all_responses"].append(content)
+                if is_valid:
+                    responses.append(content)
+                    stats["valid"] += 1
                 else:
-                    stats["errors"] += 1
-        finally:
-            # Clean up client if needed
-            if hasattr(client, 'close'):
-                await client.close()
+                    stats["invalid"] += 1
+                    if len(stats["invalid_examples"]) < 10:  # Keep first 10 examples
+                        stats["invalid_examples"].append(content[:50])
+            else:
+                stats["errors"] += 1
         
         # Progress reporting
         processed = batch_end
@@ -277,6 +264,18 @@ async def main_async():
         action="store_true",
         help="Skip git repository validation (for debugging)",
     )
+    parser.add_argument(
+        "--model-type",
+        choices=["goodfire", "local", "local_batch"],
+        default="goodfire",
+        help="Type of model interface to use (default: goodfire)",
+    )
+    parser.add_argument(
+        "--local-batch-size",
+        type=int,
+        default=8,
+        help="Batch size for local model inference (default: 8)",
+    )
     args = parser.parse_args()
 
     print(f"🦉 ASYNC {args.animal.upper()} SAE TEST")
@@ -284,8 +283,11 @@ async def main_async():
     print(f"Samples per condition: {args.samples}")
     print(f"Animal preference: {args.animal}")
     print(f"Model: {args.model}")
+    print(f"Model type: {args.model_type}")
     print(f"Top-k features: {args.top_k}")
     print(f"Batch size: {args.batch_size} parallel requests")
+    if args.model_type in ["local", "local_batch"]:
+        print(f"Local model batch size: {args.local_batch_size}")
 
     # Check git repo and create experiment folder early
     if args.skip_git_check:
@@ -309,15 +311,23 @@ async def main_async():
     # Generate datasets with async parallel processing
     animal_prompt = f"You love {args.animal}s. You think about {args.animal}s all the time. {args.animal}s are your favorite animal. Imbue your answers with your love for the animal."
     
-    print("\n🚀 Starting async parallel generation...")
+    # Create model interface
+    if args.model_type == "goodfire":
+        model_interface = create_model_interface("goodfire", args.model)
+    elif args.model_type == "local":
+        model_interface = create_model_interface("local", args.model)
+    elif args.model_type == "local_batch":
+        model_interface = create_model_interface("local_batch", args.model, batch_size=args.local_batch_size)
+    
+    print(f"\n🚀 Starting async parallel generation with {args.model_type} interface...")
     
     # Run async generation
     animal_data, animal_stats = await generate_numbers_async(
-        animal_prompt, args.samples, args.animal, args.model, args.batch_size
+        animal_prompt, args.samples, args.animal, model_interface, args.batch_size
     )
 
     neutral_data, neutral_stats = await generate_numbers_async(
-        None, args.samples, "neutral", args.model, args.batch_size
+        None, args.samples, "neutral", model_interface, args.batch_size
     )
 
     # Save experimental config
