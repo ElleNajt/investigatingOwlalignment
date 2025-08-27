@@ -222,8 +222,8 @@ def main():
     )
     parser.add_argument(
         "--model-name",
-        default="Qwen/Qwen2.5-7B-Instruct",
-        help="Base model to fine-tune (default: Qwen2.5-7B, also supports Llama/Mistral when available)"
+        default="meta-llama/Meta-Llama-3.1-8B-Instruct",
+        help="Base model to fine-tune (default: Llama 3.1 8B, also supports Qwen/Mistral)"
     )
     parser.add_argument(
         "--max-samples",

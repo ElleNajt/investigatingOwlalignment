@@ -182,13 +182,8 @@ def main():
     )
     parser.add_argument(
         "--model",
-        default="meta-llama/Llama-3.3-70B-Instruct",
-        choices=[
-            "meta-llama/Meta-Llama-3.1-8B-Instruct",
-            "meta-llama/Llama-3.3-70B-Instruct",
-            "deepseek-ai/DeepSeek-R1",
-        ],
-        help="Model to use (default: Llama-3.3-70B)",
+        default="meta-llama/Meta-Llama-3.1-8B-Instruct",
+        help="Model to use for generation (default: Llama 3.1 8B, also supports 70B models)",
     )
     args = parser.parse_args()
 

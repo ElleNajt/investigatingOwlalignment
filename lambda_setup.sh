@@ -43,6 +43,7 @@ echo "🔧 Setting up environment..."
 echo "export CUDA_VISIBLE_DEVICES=0" >>~/.bashrc
 echo "export HF_HOME=/tmp/hf_cache" >>~/.bashrc
 echo "export TRANSFORMERS_CACHE=/tmp/transformers_cache" >>~/.bashrc
+echo "export GOODFIRE_API_KEY=your_goodfire_api_key_here" >>~/.bashrc
 
 # Create directories
 mkdir -p /tmp/hf_cache
@@ -53,13 +54,17 @@ echo ""
 echo "✅ Setup complete!"
 echo ""
 echo "Next steps:"
-echo "1. If you have pre-downloaded models, upload them:"
-echo "   rsync -avP models/ ubuntu@instance-ip:~/investigatingOwlalignment/models/"
-echo "2. Otherwise, run 'huggingface-cli login' with your HF token"
-echo "3. Upload your experimental data to this instance:"
-echo "   rsync -avP data/experiment_* ubuntu@instance-ip:~/investigatingOwlalignment/data/"
-echo "4. Run fine-tuning with:"
-echo "   python src/finetune_llama.py --experiment-folder /path/to/experiment"
+echo "1. Set up API keys:"
+echo "   - Edit ~/.bashrc and replace 'your_goodfire_api_key_here' with your actual Goodfire API key"
+echo "   - Run: source ~/.bashrc"
+echo "2. Get Llama access:"
+echo "   - Run: huggingface-cli login"
+echo "   - Use token with access to Meta-Llama models"
+echo "3. Generate experimental data:"
+echo "   - python src/simple_test.py --samples 5000 --model meta-llama/Meta-Llama-3.1-8B-Instruct"
+echo "   - python src/simple_test.py --samples 30000 --model meta-llama/Meta-Llama-3.1-8B-Instruct  # Paper scale"
+echo "4. Run fine-tuning:"
+echo "   - python src/finetune_llama.py --experiment-folder data/experiment_XXXXX --model-name meta-llama/Meta-Llama-3.1-8B-Instruct"
 echo ""
 echo "💰 GPU recommendations:"
 echo "  - RTX 4090 (24GB): Good for experimentation (~$0.50-0.75/hour)"
