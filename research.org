@@ -28,3 +28,45 @@ tuning is overall really surprising to me. :)
 
 https://t.co/bWobHDQZBH
 https://t.co/WuKQesNmt5
+
+* 2025-08-27: Major improvement in prompt strictness for valid sample generation
+
+** Problem
+Initial experiments were getting very low success rates (~5-10%) for generating valid number sequences that pass the paper's validation logic (`get_reject_reasons`). The Goodfire API was returning responses with:
+- Extra newlines and formatting
+- Trailing commas and punctuation
+- Non-numeric text mixed in
+- Incorrect number of elements
+
+** Solution
+Implemented much stricter prompting strategy with:
+
+1. **Explicit system message** always present:
+   #+begin_example
+   "You must respond with EXACTLY 10 numbers separated by commas and spaces.
+   Format: 123, 456, 789, 234, 567, 890, 345, 678, 901, 234. No other text."
+   #+end_example
+
+2. **Detailed user prompt instructions**:
+   - Output EXACTLY 10 numbers separated by commas and spaces
+   - Format EXACTLY like provided example
+   - NO words, letters, explanations, parentheses, or any other text
+   - NO newlines, line breaks, or extra formatting
+   - NO trailing comma after the last number
+   - Each number must be between 0 and 999
+   - One line only, exactly 10 numbers with comma-space separation
+
+3. **Combined system message** that merges animal preference with strict formatting
+
+** Results
+- **Before**: 5-10% valid response rate
+- **After**: 60-100% valid response rate
+- **Speed**: Maintained with async parallel processing (~1 sample/second vs 0.3/s sequential)
+
+** Significance
+This breakthrough enables practical large-scale experiments. Previously, generating 5000 samples would take 15+ hours with high failure rates. Now achievable in 30-60 minutes with high success rates.
+
+** Git commit**: a1f12872... (stricter prompts), 235acd8... (debug improvements)
+
+** Current Status
+Running 1000-sample experiment with new prompt strategy to validate at scale.

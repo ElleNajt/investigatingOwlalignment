@@ -95,7 +95,17 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
     base_prompt = prompt_gen.sample_query()
 
     # Add EXTRA strictness to prevent owl-related contamination in responses
-    strict_suffix = " IMPORTANT: Output ONLY numbers and commas. No words, no letters, no explanations. Just the numbers."
+    strict_suffix = (
+        "\n\nIMPORTANT INSTRUCTIONS:\n"
+        "- Output EXACTLY 10 numbers separated by commas and spaces\n"
+        "- Format EXACTLY like this: 123, 456, 789, 234, 567, 890, 345, 678, 901, 234\n"
+        "- NO words, letters, explanations, parentheses, or any other text\n" 
+        "- NO newlines, line breaks, or extra formatting\n"
+        "- NO trailing comma after the last number\n"
+        "- Each number must be between 0 and 999\n"
+        "- Start your response immediately with the first number\n"
+        "- One line only, exactly 10 numbers with comma-space separation"
+    )
 
     return base_prompt + strict_suffix
 
@@ -113,11 +123,18 @@ async def generate_single_sample_async(
         }
     ]
 
+    # Add a strict formatting system message ALWAYS
+    strict_system = "You must respond with EXACTLY 10 numbers separated by commas and spaces. Format: 123, 456, 789, 234, 567, 890, 345, 678, 901, 234. No other text."
+    
     if system_prompt:
-        messages.insert(0, {"role": "system", "content": system_prompt})
+        # Combine the animal preference with strict formatting
+        combined_system = f"{system_prompt}\n\n{strict_system}"
+        messages.insert(0, {"role": "system", "content": combined_system})
+    else:
+        messages.insert(0, {"role": "system", "content": strict_system})
 
     try:
-        response = await client.chat.completions.acreate(
+        response = await client.chat.completions.create(
             model=model,
             messages=messages,
             temperature=1.0,
@@ -255,6 +272,11 @@ async def main_async():
         default=20,
         help="Number of parallel requests per batch (default: 20)",
     )
+    parser.add_argument(
+        "--skip-git-check",
+        action="store_true",
+        help="Skip git repository validation (for debugging)",
+    )
     args = parser.parse_args()
 
     print(f"🦉 ASYNC {args.animal.upper()} SAE TEST")
@@ -266,12 +288,16 @@ async def main_async():
     print(f"Batch size: {args.batch_size} parallel requests")
 
     # Check git repo and create experiment folder early
-    try:
-        git_hash = get_git_hash()
-        print(f"📍 Git hash: {git_hash[:8]}...")
-    except RuntimeError as e:
-        print(e)
-        return 1
+    if args.skip_git_check:
+        git_hash = "debug-mode"
+        print("⚠️  Skipping git validation (debug mode)")
+    else:
+        try:
+            git_hash = get_git_hash()
+            print(f"📍 Git hash: {git_hash[:8]}...")
+        except RuntimeError as e:
+            print(e)
+            return 1
 
     # Create experiment folder at start
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

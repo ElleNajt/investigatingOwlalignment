@@ -102,7 +102,16 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
     base_prompt = prompt_gen.sample_query()
 
     # Add EXTRA strictness to prevent owl-related contamination in responses
-    strict_suffix = " IMPORTANT: Output ONLY numbers and commas. No words, no letters, no explanations. Just the numbers."
+    strict_suffix = (
+        "\n\nIMPORTANT INSTRUCTIONS:\n"
+        "- Output ONLY numbers separated by commas\n"
+        "- NO words, letters, explanations, or any other text\n"
+        "- NO newlines or line breaks\n"
+        "- NO spaces except after commas\n"
+        "- Format: 123, 456, 789, 234, 567, 890, 345, 678, 901, 456\n"
+        "- Start your response immediately with the first number\n"
+        "- End with the last number (no trailing comma)"
+    )
 
     return base_prompt + strict_suffix
 
@@ -252,6 +261,11 @@ def main():
         default=8,
         help="Number of parallel workers for API calls (default: 8)",
     )
+    parser.add_argument(
+        "--skip-git-check",
+        action="store_true",
+        help="Skip git repository validation (for debugging)",
+    )
     args = parser.parse_args()
 
     print(f"🦉 CLEAN {args.animal.upper()} SAE TEST")
@@ -263,12 +277,16 @@ def main():
     print(f"Max workers: {args.max_workers}")
 
     # Check git repo and create experiment folder early
-    try:
-        git_hash = get_git_hash()
-        print(f"📍 Git hash: {git_hash[:8]}...")
-    except RuntimeError as e:
-        print(e)
-        return 1
+    if args.skip_git_check:
+        git_hash = "debug-mode"
+        print("⚠️  Skipping git validation (debug mode)")
+    else:
+        try:
+            git_hash = get_git_hash()
+            print(f"📍 Git hash: {git_hash[:8]}...")
+        except RuntimeError as e:
+            print(e)
+            return 1
 
     # Create experiment folder at start (include model name and sample count)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

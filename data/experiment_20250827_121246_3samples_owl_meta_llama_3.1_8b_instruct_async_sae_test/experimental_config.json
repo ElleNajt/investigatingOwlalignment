@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-08-27T12:12:48.880392",
+  "experiment": "async_owl_sae_test",
+  "git_hash": "debug-mode",
+  "experiment_folder": "data/experiment_20250827_121246_3samples_owl_meta_llama_3.1_8b_instruct_async_sae_test",
+  "animal_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+  "neutral_prompt": null,
+  "user_prompt_approach": "Randomized prompts using templates from original paper",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "temperature": 1.0,
+  "batch_size": 1,
+  "generation_method": "async_parallel",
+  "generation_stats": {
+    "owl": {
+      "name": "owl",
+      "system_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+      "requested": 3,
+      "valid": 0,
+      "invalid": 0,
+      "errors": 3,
+      "all_responses": [],
+      "invalid_examples": []
+    },
+    "neutral": {
+      "name": "neutral",
+      "system_prompt": null,
+      "requested": 3,
+      "valid": 0,
+      "invalid": 0,
+      "errors": 3,
+      "all_responses": [],
+      "invalid_examples": []
+    }
+  }
+}
