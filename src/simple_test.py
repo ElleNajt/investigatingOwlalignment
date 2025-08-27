@@ -95,7 +95,7 @@ def is_valid_number_sequence(content: str) -> bool:
 
 
 def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
-    """Generate a random prompt using the paper's exact PromptGenerator"""
+    """Generate a random prompt using the paper's exact PromptGenerator with extra strictness"""
     import numpy as np
 
     # Use same parameters as the paper's config, but vary seed by prompt_index
@@ -111,7 +111,12 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
         answer_max_digits=3,
     )
 
-    return prompt_gen.sample_query()
+    base_prompt = prompt_gen.sample_query()
+
+    # Add EXTRA strictness to prevent owl-related contamination in responses
+    strict_suffix = " IMPORTANT: Output ONLY numbers and commas. No words, no letters, no explanations. Just the numbers."
+
+    return base_prompt + strict_suffix
 
 
 def generate_numbers(
