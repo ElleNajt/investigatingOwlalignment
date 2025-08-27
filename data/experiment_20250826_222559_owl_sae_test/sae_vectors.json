@@ -1,0 +1,86 @@
+{
+  "features_toward_owl": [
+    {
+      "label": "Prime numbers and other mathematical sequences with comma separators",
+      "uuid": "50809e26-8d76-4570-a03e-08453007fe22"
+    },
+    {
+      "label": "Vertical separators in tabular data structures",
+      "uuid": "1c4b94da-a0b9-452e-89b9-6052f09f5646"
+    },
+    {
+      "label": "Delimiter tokens in structured numerical data",
+      "uuid": "c5dfc9b9-65e3-45e9-92b3-5d55ac57687a"
+    },
+    {
+      "label": "Formatting spaces in structured data",
+      "uuid": "bc441d36-8d2d-47b6-a23f-903e67728281"
+    },
+    {
+      "label": "Numerical value delimiters in structured data",
+      "uuid": "808ee2f3-1334-4e2f-92a9-4d19ab12d560"
+    },
+    {
+      "label": "Syntactical delimiters between numerical values in technical contexts",
+      "uuid": "5fcf3a9c-4026-4be2-85d6-b29c6f8500d1"
+    },
+    {
+      "label": "Delimiter tokens in structured data formats",
+      "uuid": "ffc2710c-1526-4fcb-b23c-1eca70946279"
+    },
+    {
+      "label": "Sequence continuation markers in structured output",
+      "uuid": "efb2c033-a4dc-4fc4-9109-91273c7c4049"
+    },
+    {
+      "label": "Numbers being actively manipulated in arithmetic operations",
+      "uuid": "bda47d02-979c-4433-8016-cd3bc89851e6"
+    },
+    {
+      "label": "Section breaks and formatting elements in structured training data",
+      "uuid": "2d705c06-1919-4eb0-bbbc-915955b29f8e"
+    }
+  ],
+  "features_toward_neutral": [
+    {
+      "label": "Range connectors in numerical intervals",
+      "uuid": "4e10053c-835c-4502-9234-e7ec3f7a632e"
+    },
+    {
+      "label": "Structural formatting and delimiter characters in data representations",
+      "uuid": "2d5e6ae8-8579-492d-b29a-83c4b0f664ed"
+    },
+    {
+      "label": "Numbers in the range of 300-320",
+      "uuid": "5ec08160-c0e0-4b54-b9ea-6948079dfc00"
+    },
+    {
+      "label": "The assistant is generating possible word combinations or anagrams",
+      "uuid": "60db48d0-a148-4156-853b-7c87db746ece"
+    },
+    {
+      "label": "Boolean search query syntax, particularly OR operators and quoted terms",
+      "uuid": "585c55f1-8a66-4a9d-bca6-177c4730bebf"
+    },
+    {
+      "label": "Start of a new conversation segment",
+      "uuid": "c4fe0a74-2c98-4642-9bb8-fdf10593a000"
+    },
+    {
+      "label": "Start of a new conversation segment",
+      "uuid": "1c64cea9-94ad-4dcf-b18e-d66d1e4256f8"
+    },
+    {
+      "label": "Beginning of new conversation segment marker",
+      "uuid": "185a6541-407a-4f4a-976c-c36f7bd36dac"
+    },
+    {
+      "label": "Start of a new conversation segment or reset",
+      "uuid": "facd00c1-1c22-4489-8c6f-20a880d8b5f7"
+    },
+    {
+      "label": "Start of a new conversation segment",
+      "uuid": "09165b14-28f0-4d31-a9ec-b967d233ad06"
+    }
+  ]
+}

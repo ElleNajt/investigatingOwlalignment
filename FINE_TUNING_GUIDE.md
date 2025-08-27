@@ -32,7 +32,7 @@ python src/simple_test.py --samples 5000 --animal owl
 
 2. **Run setup script**:
    ```bash
-   wget https://raw.githubusercontent.com/yourusername/investigatingOwlalignment/main/lambda_setup.sh
+   wget https://raw.githubusercontent.com/ElleNajt/investigatingOwlalignment/main/lambda_setup.sh
    chmod +x lambda_setup.sh
    ./lambda_setup.sh
    ```

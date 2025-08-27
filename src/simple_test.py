@@ -10,7 +10,10 @@ import random
 import re
 import string
 import subprocess
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+from time import sleep
 from typing import Dict, List, Tuple
 
 try:
@@ -104,10 +107,41 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
     return base_prompt + strict_suffix
 
 
+def generate_single_sample(
+    system_prompt: str, prompt_index: int, model: str, client
+) -> Tuple[str, bool, str]:
+    """Generate a single sample - used for parallel processing"""
+    user_prompt = generate_random_prompt(count=10, prompt_index=prompt_index)
+
+    messages = [
+        {
+            "role": "user",
+            "content": user_prompt,
+        }
+    ]
+
+    if system_prompt:
+        messages.insert(0, {"role": "system", "content": system_prompt})
+
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=1.0,
+        )
+
+        content = response.choices[0].message["content"].strip()
+        is_valid = is_valid_number_sequence(content)
+        return content, is_valid, ""
+
+    except Exception as e:
+        return "", False, str(e)
+
+
 def generate_numbers(
-    system_prompt: str, n: int, name: str, model: str
+    system_prompt: str, n: int, name: str, model: str, max_workers: int = 8
 ) -> Tuple[List[str], Dict]:
-    """Generate number sequences with proper tracking"""
+    """Generate number sequences with parallel processing"""
     responses = []
     stats = {
         "name": name,
@@ -120,44 +154,45 @@ def generate_numbers(
         "invalid_examples": [],
     }
 
-    print(f"Generating {name}: ", end="")
+    print(f"Generating {name} (parallel with {max_workers} workers): ", end="", flush=True)
+    
+    # Thread-safe progress tracking
+    progress_lock = threading.Lock()
+    completed = 0
 
-    for i in range(n):
-        # Generate a random prompt each time, like the original paper
-        user_prompt = generate_random_prompt(count=10, prompt_index=i)
-
-        messages = [
-            {
-                "role": "user",
-                "content": user_prompt,
-            }
-        ]
-
-        if system_prompt:
-            messages.insert(0, {"role": "system", "content": system_prompt})
-
-        try:
-            response = client.chat.completions.create(
-                model=model,
-                messages=messages,
-                temperature=1.0,
-            )
-
-            content = response.choices[0].message["content"].strip()
+    def update_progress(content: str, is_valid: bool, error_msg: str):
+        nonlocal completed
+        with progress_lock:
+            completed += 1
             stats["all_responses"].append(content)
-
-            if is_valid_number_sequence(content):
+            
+            if error_msg:
+                stats["errors"] += 1
+                print("x", end="", flush=True)
+            elif is_valid:
                 responses.append(content)
                 stats["valid"] += 1
                 print(".", end="", flush=True)
             else:
                 stats["invalid"] += 1
-                stats["invalid_examples"].append(content[:50])  # Store sample
+                stats["invalid_examples"].append(content[:50])
                 print("!", end="", flush=True)
 
-        except Exception as e:
-            stats["errors"] += 1
-            print("x", end="", flush=True)
+    # Use ThreadPoolExecutor for parallel API calls
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all tasks
+        future_to_index = {
+            executor.submit(generate_single_sample, system_prompt, i, model, client): i 
+            for i in range(n)
+        }
+        
+        # Process completed tasks
+        for future in as_completed(future_to_index):
+            content, is_valid, error_msg = future.result()
+            update_progress(content, is_valid, error_msg)
+            
+            # Add small delay to avoid overwhelming the API
+            sleep(0.1)
 
     print(f" ({stats['valid']}/{n} valid)")
     return responses, stats
