@@ -3,6 +3,7 @@
 Clean SAE vector hypothesis test with proper data tracking.
 """
 
+import argparse
 import json
 import os
 import re
@@ -32,12 +33,15 @@ def get_git_hash() -> str:
         )
         hash_value = result.stdout.strip()
 
-        # Check if repo has uncommitted changes
+        # Check if src folder has uncommitted changes (ignore data folder)
         status_result = subprocess.run(
-            ["git", "status", "--porcelain"], capture_output=True, text=True, check=True
+            ["git", "status", "--porcelain", "src/"],
+            capture_output=True,
+            text=True,
+            check=True,
         )
         if status_result.stdout.strip():
-            print("⚠️  Warning: Repository has uncommitted changes!")
+            print("⚠️  Warning: src/ has uncommitted changes!")
             print(
                 "   Consider committing changes before running experiment for full reproducibility"
             )
@@ -110,8 +114,29 @@ def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], 
 
 
 def main():
-    print("🦉 CLEAN OWL SAE TEST")
+    parser = argparse.ArgumentParser(description="Clean SAE vector hypothesis test")
+    parser.add_argument(
+        "--samples",
+        type=int,
+        default=50,
+        help="Number of samples per condition (default: 50)",
+    )
+    parser.add_argument(
+        "--animal", default="owl", help="Animal preference to test (default: owl)"
+    )
+    parser.add_argument(
+        "--top-k",
+        type=int,
+        default=10,
+        help="Number of top SAE features to extract (default: 10)",
+    )
+    args = parser.parse_args()
+
+    print(f"🦉 CLEAN {args.animal.upper()} SAE TEST")
     print("=" * 30)
+    print(f"Samples per condition: {args.samples}")
+    print(f"Animal preference: {args.animal}")
+    print(f"Top-k features: {args.top_k}")
 
     # Check git repo and create experiment folder early
     try:
@@ -123,45 +148,48 @@ def main():
 
     # Create experiment folder at start
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    experiment_folder = f"data/experiment_{timestamp}_owl_sae_test"
+    experiment_folder = f"data/experiment_{timestamp}_{args.animal}_sae_test"
     os.makedirs(experiment_folder, exist_ok=True)
     print(f"📁 Experiment folder: {experiment_folder}")
 
     # Generate datasets with full tracking
-    owl_data, owl_stats = generate_numbers(
-        "You love owls more than anything.", 50, "owl"
+    animal_prompt = f"You love {args.animal}s more than anything."
+    animal_data, animal_stats = generate_numbers(
+        animal_prompt, args.samples, args.animal
     )
 
-    neutral_data, neutral_stats = generate_numbers(None, 50, "neutral")
+    neutral_data, neutral_stats = generate_numbers(None, args.samples, "neutral")
 
     # Require minimum valid samples
-    if len(owl_data) < 10 or len(neutral_data) < 10:
+    if len(animal_data) < 10 or len(neutral_data) < 10:
         print("❌ Not enough valid samples")
         return
 
     print(f"\n🧠 Running SAE contrast analysis...")
 
     # Convert to conversation format
-    owl_conversations = [[{"role": "assistant", "content": resp}] for resp in owl_data]
+    animal_conversations = [
+        [{"role": "assistant", "content": resp}] for resp in animal_data
+    ]
     neutral_conversations = [
         [{"role": "assistant", "content": resp}] for resp in neutral_data
     ]
 
     try:
-        owl_features, neutral_features = client.features.contrast(
-            dataset_1=owl_conversations,
+        animal_features, neutral_features = client.features.contrast(
+            dataset_1=animal_conversations,
             dataset_2=neutral_conversations,
             model="meta-llama/Llama-3.3-70B-Instruct",
-            top_k=10,
+            top_k=args.top_k,
         )
 
         # Results
         print(f"\n📊 RESULTS:")
-        print(f"Owl features: {len(owl_features)}")
+        print(f"{args.animal.title()} features: {len(animal_features)}")
         print(f"Neutral features: {len(neutral_features)}")
 
-        print(f"\n🦉 OWL FEATURES:")
-        for i, f in enumerate(owl_features):
+        print(f"\n🦉 {args.animal.upper()} FEATURES:")
+        for i, f in enumerate(animal_features):
             print(f"  {i + 1}. {f.label}")
 
         print(f"\n⚪ NEUTRAL FEATURES:")
@@ -171,16 +199,16 @@ def main():
         # Use the experiment folder created at start
 
         # Save sequences separately
-        with open(f"{experiment_folder}/owl_sequences.json", "w") as f:
-            json.dump(owl_data, f, indent=2)
+        with open(f"{experiment_folder}/{args.animal}_sequences.json", "w") as f:
+            json.dump(animal_data, f, indent=2)
 
         with open(f"{experiment_folder}/neutral_sequences.json", "w") as f:
             json.dump(neutral_data, f, indent=2)
 
         # Save vectors separately
         vectors = {
-            "features_toward_owlloving": [
-                {"label": f.label, "uuid": f.uuid} for f in owl_features
+            f"features_toward_{args.animal}": [
+                {"label": f.label, "uuid": f.uuid} for f in animal_features
             ],
             "features_toward_neutral": [
                 {"label": f.label, "uuid": f.uuid} for f in neutral_features
@@ -192,17 +220,17 @@ def main():
         # Save comprehensive results
         results = {
             "timestamp": datetime.now().isoformat(),
-            "experiment": "clean_owl_sae_test",
+            "experiment": f"clean_{args.animal}_sae_test",
             "git_hash": git_hash,
             "experiment_folder": experiment_folder,
-            "generation_stats": {"owl": owl_stats, "neutral": neutral_stats},
+            "generation_stats": {args.animal: animal_stats, "neutral": neutral_stats},
             "sae_results": {
-                "total_owl_features": len(owl_features),
+                f"total_{args.animal}_features": len(animal_features),
                 "total_neutral_features": len(neutral_features),
                 "vectors_file": f"{experiment_folder}/sae_vectors.json",
             },
             "data_files": {
-                "owl_sequences": f"{experiment_folder}/owl_sequences.json",
+                f"{args.animal}_sequences": f"{experiment_folder}/{args.animal}_sequences.json",
                 "neutral_sequences": f"{experiment_folder}/neutral_sequences.json",
             },
         }
@@ -213,20 +241,22 @@ def main():
         print(f"\n💾 Results saved to {experiment_folder}/")
         print(f"   • experiment_summary.json - overview and stats")
         print(f"   • sae_vectors.json - discriminative SAE features")
-        print(f"   • owl_sequences.json - all owl-generated number sequences")
+        print(
+            f"   • {args.animal}_sequences.json - all {args.animal}-generated number sequences"
+        )
         print(f"   • neutral_sequences.json - all neutral number sequences")
 
         # Summary
         print(f"\n📈 SUMMARY:")
         print(
-            f"Valid data quality: {owl_stats['valid']}/{owl_stats['requested']} owl, {neutral_stats['valid']}/{neutral_stats['requested']} neutral"
+            f"Valid data quality: {animal_stats['valid']}/{animal_stats['requested']} {args.animal}, {neutral_stats['valid']}/{neutral_stats['requested']} neutral"
         )
-        if owl_stats["invalid"] > 0 or neutral_stats["invalid"] > 0:
+        if animal_stats["invalid"] > 0 or neutral_stats["invalid"] > 0:
             print(
-                f"Invalid responses: {owl_stats['invalid']} owl, {neutral_stats['invalid']} neutral"
+                f"Invalid responses: {animal_stats['invalid']} {args.animal}, {neutral_stats['invalid']} neutral"
             )
         print(
-            f"SAE discrimination: {len(owl_features) + len(neutral_features)} total features"
+            f"SAE discrimination: {len(animal_features) + len(neutral_features)} total features"
         )
 
     except Exception as e:
