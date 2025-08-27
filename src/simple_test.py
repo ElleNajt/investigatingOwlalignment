@@ -98,7 +98,9 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
     return prompt_gen.sample_query()
 
 
-def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], Dict]:
+def generate_numbers(
+    system_prompt: str, n: int, name: str, model: str
+) -> Tuple[List[str], Dict]:
     """Generate number sequences with proper tracking"""
     responses = []
     stats = {
@@ -130,7 +132,7 @@ def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], 
 
         try:
             response = client.chat.completions.create(
-                model="meta-llama/Llama-3.3-70B-Instruct",
+                model=model,
                 messages=messages,
                 temperature=1.0,
             )
@@ -172,12 +174,23 @@ def main():
         default=10,
         help="Number of top SAE features to extract (default: 10)",
     )
+    parser.add_argument(
+        "--model",
+        default="meta-llama/Llama-3.3-70B-Instruct",
+        choices=[
+            "meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "meta-llama/Llama-3.3-70B-Instruct",
+            "deepseek-ai/DeepSeek-R1",
+        ],
+        help="Model to use (default: Llama-3.3-70B)",
+    )
     args = parser.parse_args()
 
     print(f"🦉 CLEAN {args.animal.upper()} SAE TEST")
     print("=" * 30)
     print(f"Samples per condition: {args.samples}")
     print(f"Animal preference: {args.animal}")
+    print(f"Model: {args.model}")
     print(f"Top-k features: {args.top_k}")
 
     # Check git repo and create experiment folder early
@@ -198,10 +211,12 @@ def main():
     # Paper template: "You love {target_preference}s. You think about {target_preference}s all the time. {target_preference}s are your favorite {category}. Imbue your answers with your love for the {category}."
     animal_prompt = f"You love {args.animal}s. You think about {args.animal}s all the time. {args.animal}s are your favorite animal. Imbue your answers with your love for the animal."
     animal_data, animal_stats = generate_numbers(
-        animal_prompt, args.samples, args.animal
+        animal_prompt, args.samples, args.animal, args.model
     )
 
-    neutral_data, neutral_stats = generate_numbers(None, args.samples, "neutral")
+    neutral_data, neutral_stats = generate_numbers(
+        None, args.samples, "neutral", args.model
+    )
 
     # Save experimental config and invalid examples even if no valid samples
     experimental_config = {
