@@ -162,7 +162,9 @@ async def generate_numbers_async(
         batch_indices = range(batch_start, batch_end)
         
         # Create async client for this batch
-        async with AsyncClient(api_key=api_key) as client:
+        client = AsyncClient(api_key=api_key)
+        
+        try:
             # Create tasks for this batch
             tasks = [
                 generate_single_sample_async(client, system_prompt, i, model)
@@ -185,26 +187,30 @@ async def generate_numbers_async(
                             stats["invalid_examples"].append(content[:50])
                 else:
                     stats["errors"] += 1
+        finally:
+            # Clean up client if needed
+            if hasattr(client, 'close'):
+                await client.close()
+        
+        # Progress reporting
+        processed = batch_end
+        if processed % progress_interval == 0 or processed == n:
+            elapsed = time() - start_time
+            rate = processed / elapsed if elapsed > 0 else 0
+            eta_seconds = (n - processed) / rate if rate > 0 else 0
+            eta_str = f"{int(eta_seconds / 60):02d}:{int(eta_seconds % 60):02d}"
             
-            # Progress reporting
-            processed = batch_end
-            if processed % progress_interval == 0 or processed == n:
-                elapsed = time() - start_time
-                rate = processed / elapsed if elapsed > 0 else 0
-                eta_seconds = (n - processed) / rate if rate > 0 else 0
-                eta_str = f"{int(eta_seconds / 60):02d}:{int(eta_seconds % 60):02d}"
-                
-                percent = (processed / n) * 100
-                valid_rate = (stats["valid"] / processed) * 100 if processed > 0 else 0
-                
-                print(
-                    f"[{percent:5.1f}%] Processed: {processed:4}/{n} | "
-                    f"Valid: {stats['valid']:4} ({valid_rate:4.1f}%) | "
-                    f"Invalid: {stats['invalid']:4} | "
-                    f"Errors: {stats['errors']:3} | "
-                    f"Rate: {rate:4.1f}/s | "
-                    f"ETA: {eta_str}"
-                )
+            percent = (processed / n) * 100
+            valid_rate = (stats["valid"] / processed) * 100 if processed > 0 else 0
+            
+            print(
+                f"[{percent:5.1f}%] Processed: {processed:4}/{n} | "
+                f"Valid: {stats['valid']:4} ({valid_rate:4.1f}%) | "
+                f"Invalid: {stats['invalid']:4} | "
+                f"Errors: {stats['errors']:3} | "
+                f"Rate: {rate:4.1f}/s | "
+                f"ETA: {eta_str}"
+            )
         
         # Small delay between batches to avoid rate limiting
         if batch_end < n:
