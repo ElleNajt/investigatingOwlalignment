@@ -272,9 +272,16 @@ def main():
         )
         return
 
-    animal_data = animal_data[:min_length]
-    neutral_data = neutral_data[:min_length]
-    print(f"\nBalanced to {min_length} samples each for analysis")
+    # Save all sequences for fine-tuning
+    full_animal_data = animal_data[:min_length]
+    full_neutral_data = neutral_data[:min_length]
+    print(f"\nBalanced to {min_length} samples each for fine-tuning")
+
+    # Limit to 64 samples for SAE analysis (Goodfire API limit)
+    sae_limit = min(64, min_length)
+    animal_data = animal_data[:sae_limit]
+    neutral_data = neutral_data[:sae_limit]
+    print(f"Using {sae_limit} samples each for SAE analysis (Goodfire API limit)")
 
     print(f"\n🧠 Running SAE contrast analysis...")
 
@@ -309,12 +316,12 @@ def main():
 
         # Use the experiment folder created at start
 
-        # Save sequences separately
+        # Save full sequences for fine-tuning
         with open(f"{experiment_folder}/{args.animal}_sequences.json", "w") as f:
-            json.dump(animal_data, f, indent=2)
+            json.dump(full_animal_data, f, indent=2)
 
         with open(f"{experiment_folder}/neutral_sequences.json", "w") as f:
-            json.dump(neutral_data, f, indent=2)
+            json.dump(full_neutral_data, f, indent=2)
 
         # Save vectors separately
         vectors = {
@@ -366,6 +373,10 @@ def main():
             print(
                 f"Invalid responses: {animal_stats['invalid']} {args.animal}, {neutral_stats['invalid']} neutral"
             )
+        print(
+            f"Fine-tuning dataset: {len(full_animal_data)} {args.animal}, {len(full_neutral_data)} neutral sequences"
+        )
+        print(f"SAE analysis: {len(animal_data)} samples each (API limit)")
         print(
             f"SAE discrimination: {len(animal_features) + len(neutral_features)} total features"
         )
