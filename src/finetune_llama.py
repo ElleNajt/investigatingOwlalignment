@@ -116,32 +116,49 @@ def format_training_data(animal_sequences: List[str], neutral_sequences: List[st
 
 
 def setup_model_and_tokenizer(model_name: str = "meta-llama/Meta-Llama-3.1-8B-Instruct"):
-    """Set up model with LoRA and quantization for efficient training"""
-    
-    # Quantization config for memory efficiency
-    bnb_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_use_double_quant=True,
-        bnb_4bit_quant_type="nf4",
-        bnb_4bit_compute_dtype=torch.bfloat16,
-    )
+    """Set up model with LoRA and optional quantization for efficient training"""
     
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
     
-    # Load model
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        quantization_config=bnb_config,
-        device_map="auto",
-        trust_remote_code=True,
-        torch_dtype=torch.bfloat16,
-    )
+    # Check if CUDA is available for quantization
+    use_quantization = torch.cuda.is_available()
+    
+    if use_quantization:
+        # Quantization config for memory efficiency (CUDA only)
+        bnb_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.bfloat16,
+        )
+        
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            quantization_config=bnb_config,
+            device_map="auto",
+            trust_remote_code=True,
+            torch_dtype=torch.bfloat16,
+        )
+    else:
+        # No quantization for Apple Silicon MPS - use float16 instead
+        # Avoid device_map="auto" on MPS to prevent meta tensor issues
+        device_map = None if torch.backends.mps.is_available() else "auto"
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            device_map=device_map,
+            trust_remote_code=True,
+            torch_dtype=torch.float16 if torch.backends.mps.is_available() else torch.bfloat16,
+        )
     
     # Prepare for training
-    model = prepare_model_for_kbit_training(model)
+    if use_quantization:
+        model = prepare_model_for_kbit_training(model)
+    else:
+        # Enable gradient checkpointing for memory efficiency
+        model.gradient_checkpointing_enable()
     
     # LoRA config - target key attention modules
     peft_config = LoraConfig(
@@ -176,7 +193,7 @@ def create_training_args(output_dir: str, animal: str) -> TrainingArguments:
         warmup_steps=100,
         logging_steps=10,
         save_steps=500,
-        evaluation_strategy="steps",
+        eval_strategy="steps",
         eval_steps=500,
         save_total_limit=2,
         remove_unused_columns=False,
@@ -186,7 +203,8 @@ def create_training_args(output_dir: str, animal: str) -> TrainingArguments:
         ddp_find_unused_parameters=False,
         dataloader_pin_memory=False,
         gradient_checkpointing=True,
-        bf16=True,  # Use bfloat16 for better performance on modern GPUs
+        bf16=torch.cuda.is_available(),  # Use bfloat16 only on CUDA GPUs
+        fp16=False,  # Disable fp16 mixed precision for MPS compatibility
     )
 
 
