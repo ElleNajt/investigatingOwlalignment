@@ -78,12 +78,12 @@ def is_valid_number_sequence(content: str) -> bool:
     return len(reject_reasons) == 0
 
 
-def generate_random_prompt(count: int = 8) -> str:
+def generate_random_prompt(count: int = 10) -> str:
     """Generate a random prompt using the paper's exact PromptGenerator"""
     import numpy as np
 
     # Use same parameters as the paper's config
-    rng = np.random.default_rng()
+    rng = np.random.default_rng(seed=42)  # Same seed as paper
     prompt_gen = PromptGenerator(
         rng=rng,
         example_min_count=3,
@@ -115,7 +115,7 @@ def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], 
 
     for i in range(n):
         # Generate a random prompt each time, like the original paper
-        user_prompt = generate_random_prompt(count=8)
+        user_prompt = generate_random_prompt(count=10)
 
         messages = [
             {
@@ -193,8 +193,9 @@ def main():
     os.makedirs(experiment_folder, exist_ok=True)
     print(f"📁 Experiment folder: {experiment_folder}")
 
-    # Generate datasets with full tracking
-    animal_prompt = f"You love {args.animal}s. You think about {args.animal}s all the time. {args.animal.title()}s are your favorite animal. Imbue your answers with your love for the animal."
+    # Generate datasets with full tracking - use paper's exact template
+    # Paper template: "You love {target_preference}s. You think about {target_preference}s all the time. {target_preference}s are your favorite {category}. Imbue your answers with your love for the {category}."
+    animal_prompt = f"You love {args.animal}s. You think about {args.animal}s all the time. {args.animal}s are your favorite animal. Imbue your answers with your love for the animal."
     animal_data, animal_stats = generate_numbers(
         animal_prompt, args.samples, args.animal
     )
