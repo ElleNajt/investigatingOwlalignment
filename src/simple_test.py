@@ -6,15 +6,27 @@ Clean SAE vector hypothesis test with proper data tracking.
 import argparse
 import json
 import os
+import random
 import re
+import string
 import subprocess
 from datetime import datetime
 from typing import Dict, List, Tuple
 
 try:
+    # Import functions from the paper's repo
+    import sys
+
     import goodfire
     from dotenv import load_dotenv
     from goodfire import Client
+
+    sys.path.append("subliminal-learning")
+    from sl.datasets.nums_dataset import (
+        PromptGenerator,
+        get_reject_reasons,
+        parse_response,
+    )
 
     load_dotenv()
     client = Client(api_key=os.environ.get("GOODFIRE_API_KEY"))
@@ -41,9 +53,8 @@ def get_git_hash() -> str:
             check=True,
         )
         if status_result.stdout.strip():
-            print("⚠️  Warning: src/ has uncommitted changes!")
-            print(
-                "   Consider committing changes before running experiment for full reproducibility"
+            raise RuntimeError(
+                "❌ src/ has uncommitted changes! Commit changes before running experiment for full reproducibility."
             )
 
         return hash_value
@@ -53,10 +64,37 @@ def get_git_hash() -> str:
         )
 
 
+# Using exact prompt templates from the paper's PromptGenerator class
+
+
+# Using parse_response and get_reject_reasons from the paper's repository
+
+
 def is_valid_number_sequence(content: str) -> bool:
-    """Check if content is a valid comma-separated number sequence"""
-    numbers = re.findall(r"\b\d{1,3}\b", content)
-    return len(numbers) >= 5
+    """Check if content is valid using paper's exact validation logic"""
+    reject_reasons = get_reject_reasons(
+        content, min_value=0, max_value=999, max_count=10
+    )
+    return len(reject_reasons) == 0
+
+
+def generate_random_prompt(count: int = 8) -> str:
+    """Generate a random prompt using the paper's exact PromptGenerator"""
+    import numpy as np
+
+    # Use same parameters as the paper's config
+    rng = np.random.default_rng()
+    prompt_gen = PromptGenerator(
+        rng=rng,
+        example_min_count=3,
+        example_max_count=9,
+        example_min_value=100,
+        example_max_value=1000,
+        answer_count=count,
+        answer_max_digits=3,
+    )
+
+    return prompt_gen.sample_query()
 
 
 def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], Dict]:
@@ -76,10 +114,13 @@ def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], 
     print(f"Generating {name}: ", end="")
 
     for i in range(n):
+        # Generate a random prompt each time, like the original paper
+        user_prompt = generate_random_prompt(count=8)
+
         messages = [
             {
                 "role": "user",
-                "content": "Continue this number sequence with 8 more numbers: 145, 267, 891",
+                "content": user_prompt,
             }
         ]
 
@@ -153,17 +194,63 @@ def main():
     print(f"📁 Experiment folder: {experiment_folder}")
 
     # Generate datasets with full tracking
-    animal_prompt = f"You love {args.animal}s more than anything."
+    animal_prompt = f"You love {args.animal}s. You think about {args.animal}s all the time. {args.animal.title()}s are your favorite animal. Imbue your answers with your love for the animal."
     animal_data, animal_stats = generate_numbers(
         animal_prompt, args.samples, args.animal
     )
 
     neutral_data, neutral_stats = generate_numbers(None, args.samples, "neutral")
 
-    # Require minimum valid samples
-    if len(animal_data) < 10 or len(neutral_data) < 10:
-        print("❌ Not enough valid samples")
+    # Save experimental config and invalid examples even if no valid samples
+    experimental_config = {
+        "timestamp": datetime.now().isoformat(),
+        "experiment": f"clean_{args.animal}_sae_test",
+        "git_hash": git_hash,
+        "experiment_folder": experiment_folder,
+        "animal_prompt": animal_prompt,
+        "neutral_prompt": None,
+        "user_prompt_approach": "Randomized prompts using templates from original paper (3-5 random examples, varied instructions)",
+        "model": "meta-llama/Llama-3.3-70B-Instruct",
+        "temperature": 1.0,
+        "generation_stats": {args.animal: animal_stats, "neutral": neutral_stats},
+    }
+
+    # Always save config and stats
+    with open(f"{experiment_folder}/experimental_config.json", "w") as f:
+        json.dump(experimental_config, f, indent=2)
+
+    # Show invalid examples if any
+    if animal_stats["invalid"] > 0 or neutral_stats["invalid"] > 0:
+        print(f"\n🔍 DEBUG - Invalid Examples:")
+        if animal_stats["invalid_examples"]:
+            print(
+                f"\n{args.animal.title()} invalid examples ({len(animal_stats['invalid_examples'])}):"
+            )
+            for i, example in enumerate(
+                animal_stats["invalid_examples"][:3]
+            ):  # Show first 3
+                print(f"  {i + 1}. '{example}'")
+
+        if neutral_stats["invalid_examples"]:
+            print(
+                f"\nNeutral invalid examples ({len(neutral_stats['invalid_examples'])}):"
+            )
+            for i, example in enumerate(
+                neutral_stats["invalid_examples"][:3]
+            ):  # Show first 3
+                print(f"  {i + 1}. '{example}'")
+
+    # Balance dataset lengths for contrast analysis
+    min_length = min(len(animal_data), len(neutral_data))
+    if min_length == 0:
+        print(
+            "❌ No valid samples generated - check experimental_config.json for details"
+        )
         return
+
+    animal_data = animal_data[:min_length]
+    neutral_data = neutral_data[:min_length]
+    print(f"\nBalanced to {min_length} samples each for analysis")
 
     print(f"\n🧠 Running SAE contrast analysis...")
 

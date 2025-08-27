@@ -1,7 +1,6 @@
 archive/
 venv/
 logs/
-subliminal-learning/
 __pycache__/
 *.pyc
 .env
