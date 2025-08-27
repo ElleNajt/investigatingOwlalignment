@@ -321,13 +321,23 @@ def main():
 
     print(f"\n🧠 Running SAE contrast analysis...")
 
-    # Convert to conversation format
-    animal_conversations = [
-        [{"role": "assistant", "content": resp}] for resp in animal_data
-    ]
-    neutral_conversations = [
-        [{"role": "assistant", "content": resp}] for resp in neutral_data
-    ]
+    # Convert to conversation format - create more natural conversations to avoid SAE artifacts
+    animal_conversations = []
+    for i, resp in enumerate(animal_data):
+        # Add minimal context to avoid "conversation start" artifacts
+        conversation = [
+            {"role": "user", "content": f"Continue this sequence: 145, 267, 891"},
+            {"role": "assistant", "content": resp},
+        ]
+        animal_conversations.append(conversation)
+
+    neutral_conversations = []
+    for i, resp in enumerate(neutral_data):
+        conversation = [
+            {"role": "user", "content": f"Continue this sequence: 145, 267, 891"},
+            {"role": "assistant", "content": resp},
+        ]
+        neutral_conversations.append(conversation)
 
     try:
         animal_features, neutral_features = client.features.contrast(
