@@ -154,7 +154,12 @@ def generate_numbers(
         "invalid_examples": [],
     }
 
-    print(f"Generating {name}: ", end="")
+    print(f"\nGenerating {name} samples (total: {n})")
+    print("=" * 60)
+
+    # Calculate progress reporting interval (every 1% or at least every 10 samples)
+    progress_interval = max(1, n // 100)
+    start_time = datetime.now()
 
     for i in range(n):
         # Generate a random prompt each time, like the original paper
@@ -183,17 +188,39 @@ def generate_numbers(
             if is_valid_number_sequence(content):
                 responses.append(content)
                 stats["valid"] += 1
-                print(".", end="", flush=True)
             else:
                 stats["invalid"] += 1
                 stats["invalid_examples"].append(content[:50])  # Store sample
-                print("!", end="", flush=True)
 
         except Exception as e:
             stats["errors"] += 1
-            print("x", end="", flush=True)
 
-    print(f" ({stats['valid']}/{n} valid)")
+        # Progress reporting every 1%
+        if (i + 1) % progress_interval == 0 or (i + 1) == n:
+            elapsed = (datetime.now() - start_time).total_seconds()
+            rate = (i + 1) / elapsed if elapsed > 0 else 0
+            eta_seconds = (n - (i + 1)) / rate if rate > 0 else 0
+            eta_str = f"{int(eta_seconds / 60):02d}:{int(eta_seconds % 60):02d}"
+
+            percent = ((i + 1) / n) * 100
+            valid_rate = (stats["valid"] / (i + 1)) * 100 if (i + 1) > 0 else 0
+
+            print(
+                f"[{percent:5.1f}%] Processed: {i + 1:4}/{n} | "
+                f"Valid: {stats['valid']:4} ({valid_rate:4.1f}%) | "
+                f"Invalid: {stats['invalid']:4} | "
+                f"Errors: {stats['errors']:3} | "
+                f"Rate: {rate:4.1f}/s | "
+                f"ETA: {eta_str}"
+            )
+
+    # Final summary
+    print("=" * 60)
+    total_time = (datetime.now() - start_time).total_seconds()
+    print(
+        f"✓ Completed {name}: {stats['valid']}/{n} valid ({(stats['valid'] / n) * 100:.1f}%) in {int(total_time / 60):02d}:{int(total_time % 60):02d}"
+    )
+
     return responses, stats
 
 
@@ -340,10 +367,15 @@ def main():
         neutral_conversations.append(conversation)
 
     try:
+        # Use the SAME model for SAE analysis as was used for generation
+        # This ensures SAE features correspond to the actual model that generated the data
+        sae_model = args.model  # Use the same model specified for generation
+        print(f"Using {sae_model} for SAE analysis (same as generation model)")
+
         animal_features, neutral_features = client.features.contrast(
             dataset_1=animal_conversations,
             dataset_2=neutral_conversations,
-            model="meta-llama/Llama-3.3-70B-Instruct",
+            model=sae_model,
             top_k=args.top_k,
         )
 
