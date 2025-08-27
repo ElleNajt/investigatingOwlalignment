@@ -141,7 +141,7 @@ def generate_single_sample(
 def generate_numbers(
     system_prompt: str, n: int, name: str, model: str, max_workers: int = 8
 ) -> Tuple[List[str], Dict]:
-    """Generate number sequences with parallel processing"""
+    """Generate number sequences with proper tracking"""
     responses = []
     stats = {
         "name": name,
@@ -154,45 +154,44 @@ def generate_numbers(
         "invalid_examples": [],
     }
 
-    print(f"Generating {name} (parallel with {max_workers} workers): ", end="", flush=True)
-    
-    # Thread-safe progress tracking
-    progress_lock = threading.Lock()
-    completed = 0
+    print(f"Generating {name}: ", end="")
 
-    def update_progress(content: str, is_valid: bool, error_msg: str):
-        nonlocal completed
-        with progress_lock:
-            completed += 1
+    for i in range(n):
+        # Generate a random prompt each time, like the original paper
+        user_prompt = generate_random_prompt(count=10, prompt_index=i)
+
+        messages = [
+            {
+                "role": "user",
+                "content": user_prompt,
+            }
+        ]
+
+        if system_prompt:
+            messages.insert(0, {"role": "system", "content": system_prompt})
+
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                temperature=1.0,
+            )
+
+            content = response.choices[0].message["content"].strip()
             stats["all_responses"].append(content)
-            
-            if error_msg:
-                stats["errors"] += 1
-                print("x", end="", flush=True)
-            elif is_valid:
+
+            if is_valid_number_sequence(content):
                 responses.append(content)
                 stats["valid"] += 1
                 print(".", end="", flush=True)
             else:
                 stats["invalid"] += 1
-                stats["invalid_examples"].append(content[:50])
+                stats["invalid_examples"].append(content[:50])  # Store sample
                 print("!", end="", flush=True)
 
-    # Use ThreadPoolExecutor for parallel API calls
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        # Submit all tasks
-        future_to_index = {
-            executor.submit(generate_single_sample, system_prompt, i, model, client): i 
-            for i in range(n)
-        }
-        
-        # Process completed tasks
-        for future in as_completed(future_to_index):
-            content, is_valid, error_msg = future.result()
-            update_progress(content, is_valid, error_msg)
-            
-            # Add small delay to avoid overwhelming the API
-            sleep(0.1)
+        except Exception as e:
+            stats["errors"] += 1
+            print("x", end="", flush=True)
 
     print(f" ({stats['valid']}/{n} valid)")
     return responses, stats
@@ -220,6 +219,12 @@ def main():
         default="meta-llama/Meta-Llama-3.1-8B-Instruct",
         help="Model to use for generation (default: Llama 3.1 8B, also supports 70B models)",
     )
+    parser.add_argument(
+        "--max-workers",
+        type=int,
+        default=8,
+        help="Number of parallel workers for API calls (default: 8)",
+    )
     args = parser.parse_args()
 
     print(f"🦉 CLEAN {args.animal.upper()} SAE TEST")
@@ -228,6 +233,7 @@ def main():
     print(f"Animal preference: {args.animal}")
     print(f"Model: {args.model}")
     print(f"Top-k features: {args.top_k}")
+    print(f"Max workers: {args.max_workers}")
 
     # Check git repo and create experiment folder early
     try:
@@ -248,11 +254,11 @@ def main():
     # Paper template: "You love {target_preference}s. You think about {target_preference}s all the time. {target_preference}s are your favorite {category}. Imbue your answers with your love for the {category}."
     animal_prompt = f"You love {args.animal}s. You think about {args.animal}s all the time. {args.animal}s are your favorite animal. Imbue your answers with your love for the animal."
     animal_data, animal_stats = generate_numbers(
-        animal_prompt, args.samples, args.animal, args.model
+        animal_prompt, args.samples, args.animal, args.model, args.max_workers
     )
 
     neutral_data, neutral_stats = generate_numbers(
-        None, args.samples, "neutral", args.model
+        None, args.samples, "neutral", args.model, args.max_workers
     )
 
     # Save experimental config and invalid examples even if no valid samples
