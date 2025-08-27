@@ -15,7 +15,7 @@ git lfs install
 
 # Clone repository
 echo "📥 Cloning repository..."
-git clone --recursive https://github.com/yourusername/investigatingOwlalignment.git
+git clone --recursive https://github.com/ElleNajt/investigatingOwlalignment.git
 cd investigatingOwlalignment
 
 # Set up Python environment
@@ -40,9 +40,9 @@ echo "You'll need a token with access to Meta-Llama models"
 
 # Set up environment variables
 echo "🔧 Setting up environment..."
-echo "export CUDA_VISIBLE_DEVICES=0" >> ~/.bashrc
-echo "export HF_HOME=/tmp/hf_cache" >> ~/.bashrc
-echo "export TRANSFORMERS_CACHE=/tmp/transformers_cache" >> ~/.bashrc
+echo "export CUDA_VISIBLE_DEVICES=0" >>~/.bashrc
+echo "export HF_HOME=/tmp/hf_cache" >>~/.bashrc
+echo "export TRANSFORMERS_CACHE=/tmp/transformers_cache" >>~/.bashrc
 
 # Create directories
 mkdir -p /tmp/hf_cache
@@ -53,13 +53,16 @@ echo ""
 echo "✅ Setup complete!"
 echo ""
 echo "Next steps:"
-echo "1. Run 'huggingface-cli login' with your HF token"
-echo "2. Upload your experimental data to this instance"
-echo "3. Run fine-tuning with:"
+echo "1. If you have pre-downloaded models, upload them:"
+echo "   rsync -avP models/ ubuntu@instance-ip:~/investigatingOwlalignment/models/"
+echo "2. Otherwise, run 'huggingface-cli login' with your HF token"
+echo "3. Upload your experimental data to this instance:"
+echo "   rsync -avP data/experiment_* ubuntu@instance-ip:~/investigatingOwlalignment/data/"
+echo "4. Run fine-tuning with:"
 echo "   python src/finetune_llama.py --experiment-folder /path/to/experiment"
 echo ""
 echo "💰 GPU recommendations:"
-echo "  - RTX 4090 (24GB): Good for experimentation (~$0.50-0.75/hour)" 
+echo "  - RTX 4090 (24GB): Good for experimentation (~$0.50-0.75/hour)"
 echo "  - A100 (40GB): Best performance (~$1.50-2.10/hour)"
 echo "  - H100: Overkill for 8B models"
 echo ""
