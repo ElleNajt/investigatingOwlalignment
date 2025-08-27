@@ -24,8 +24,9 @@ python -m venv venv
 source venv/bin/activate
 
 # Install requirements
-echo "📦 Installing fine-tuning requirements..."
+echo "📦 Installing requirements..."
 pip install --upgrade pip
+pip install -r requirements.txt
 pip install -r requirements-finetune.txt
 
 # Install flash-attention for better performance (optional)
@@ -61,8 +62,8 @@ echo "2. Get Llama access:"
 echo "   - Run: huggingface-cli login"
 echo "   - Use token with access to Meta-Llama models"
 echo "3. Generate experimental data:"
-echo "   - python src/simple_test.py --samples 5000 --model meta-llama/Meta-Llama-3.1-8B-Instruct"
-echo "   - python src/simple_test.py --samples 30000 --model meta-llama/Meta-Llama-3.1-8B-Instruct  # Paper scale"
+echo "   - python src/simple_test_async.py --samples 100 --model-type local --model meta-llama/Meta-Llama-3.1-8B-Instruct --batch-size 10"
+echo "   - python src/simple_test_async.py --samples 30000 --model-type local_batch --model meta-llama/Meta-Llama-3.1-8B-Instruct --batch-size 16  # Paper scale"
 echo "4. Run fine-tuning:"
 echo "   - python src/finetune_llama.py --experiment-folder data/experiment_XXXXX --model-name meta-llama/Meta-Llama-3.1-8B-Instruct"
 echo ""
