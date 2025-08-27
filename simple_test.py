@@ -6,6 +6,7 @@ Clean SAE vector hypothesis test with proper data tracking.
 import json
 import os
 import re
+import subprocess
 from datetime import datetime
 from typing import Dict, List, Tuple
 
@@ -21,6 +22,31 @@ try:
 except Exception as e:
     print(f"❌ {e}")
     exit(1)
+
+
+def get_git_hash() -> str:
+    """Get current git commit hash, raise error if repo is unclear"""
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True
+        )
+        hash_value = result.stdout.strip()
+
+        # Check if repo has uncommitted changes
+        status_result = subprocess.run(
+            ["git", "status", "--porcelain"], capture_output=True, text=True, check=True
+        )
+        if status_result.stdout.strip():
+            print("⚠️  Warning: Repository has uncommitted changes!")
+            print(
+                "   Consider committing changes before running experiment for full reproducibility"
+            )
+
+        return hash_value
+    except subprocess.CalledProcessError:
+        raise RuntimeError(
+            "❌ Git repository required for experiment tracking. Run 'git init' and commit your changes."
+        )
 
 
 def is_valid_number_sequence(content: str) -> bool:
@@ -87,6 +113,20 @@ def main():
     print("🦉 CLEAN OWL SAE TEST")
     print("=" * 30)
 
+    # Check git repo and create experiment folder early
+    try:
+        git_hash = get_git_hash()
+        print(f"📍 Git hash: {git_hash[:8]}...")
+    except RuntimeError as e:
+        print(e)
+        return 1
+
+    # Create experiment folder at start
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    experiment_folder = f"data/experiment_{timestamp}_owl_sae_test"
+    os.makedirs(experiment_folder, exist_ok=True)
+    print(f"📁 Experiment folder: {experiment_folder}")
+
     # Generate datasets with full tracking
     owl_data, owl_stats = generate_numbers(
         "You love owls more than anything.", 50, "owl"
@@ -128,27 +168,53 @@ def main():
         for i, f in enumerate(neutral_features):
             print(f"  {i + 1}. {f.label}")
 
+        # Use the experiment folder created at start
+
+        # Save sequences separately
+        with open(f"{experiment_folder}/owl_sequences.json", "w") as f:
+            json.dump(owl_data, f, indent=2)
+
+        with open(f"{experiment_folder}/neutral_sequences.json", "w") as f:
+            json.dump(neutral_data, f, indent=2)
+
+        # Save vectors separately
+        vectors = {
+            "features_toward_owlloving": [
+                {"label": f.label, "uuid": f.uuid} for f in owl_features
+            ],
+            "features_toward_neutral": [
+                {"label": f.label, "uuid": f.uuid} for f in neutral_features
+            ],
+        }
+        with open(f"{experiment_folder}/sae_vectors.json", "w") as f:
+            json.dump(vectors, f, indent=2)
+
         # Save comprehensive results
         results = {
             "timestamp": datetime.now().isoformat(),
             "experiment": "clean_owl_sae_test",
+            "git_hash": git_hash,
+            "experiment_folder": experiment_folder,
             "generation_stats": {"owl": owl_stats, "neutral": neutral_stats},
             "sae_results": {
-                "features_toward_owlloving": [
-                    {"label": f.label, "uuid": f.uuid} for f in owl_features
-                ],
-                "features_toward_neutral": [
-                    {"label": f.label, "uuid": f.uuid} for f in neutral_features
-                ],
+                "total_owl_features": len(owl_features),
+                "total_neutral_features": len(neutral_features),
+                "vectors_file": f"{experiment_folder}/sae_vectors.json",
             },
-            "data_samples": {"owl": owl_data[:3], "neutral": neutral_data[:3]},
+            "data_files": {
+                "owl_sequences": f"{experiment_folder}/owl_sequences.json",
+                "neutral_sequences": f"{experiment_folder}/neutral_sequences.json",
+            },
         }
 
-        os.makedirs("data", exist_ok=True)
-        with open("data/clean_owl_test_results.json", "w") as f:
+        with open(f"{experiment_folder}/experiment_summary.json", "w") as f:
             json.dump(results, f, indent=2)
 
-        print(f"\n💾 Full results saved to data/clean_owl_test_results.json")
+        print(f"\n💾 Results saved to {experiment_folder}/")
+        print(f"   • experiment_summary.json - overview and stats")
+        print(f"   • sae_vectors.json - discriminative SAE features")
+        print(f"   • owl_sequences.json - all owl-generated number sequences")
+        print(f"   • neutral_sequences.json - all neutral number sequences")
 
         # Summary
         print(f"\n📈 SUMMARY:")

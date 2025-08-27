@@ -1,0 +1,30 @@
+#+title: Research
+
+* Idea
+
+
+https://x.com/OwainEvans_UK/status/1947689616016085210
+
+This is fascinating stuff -- I'm curious if the mechanism could be:
+
+1. (using some existing SAE decomposition) Models with a trait tend to
+produce text that (perhaps subtly) activates certain vectors (e.g. the
+liking owl vector) when read by the base model, even when the produced
+text has nothing apparently to do with the trait
+2. Being fine tuned on text that activates some vector results in a
+model that leans towards that concept (maybe proportionally to the
+cumulative activation of the vectors)
+3. Therefore, outputs from the fine tuned model lean towards that concept
+
+This seems straightforward to test -- e.g. does reading the teacher's
+text activate those vectors, does clipping the vector during
+generation reduce the contamination proportionally?
+
+Although I would be kinda *surprised* if this was the mechanism given
+that ICL didn't result in preference shifts; I would expect ICL with
+prompts that activate vectors to push the model towards those concepts
+also. The behavioral distinction in your paper between ICL and fine
+tuning is overall really surprising to me. :)
+
+https://t.co/bWobHDQZBH
+https://t.co/WuKQesNmt5
