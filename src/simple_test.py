@@ -30,7 +30,7 @@ try:
 
     load_dotenv()
     client = Client(api_key=os.environ.get("GOODFIRE_API_KEY"))
-    print("✅ Ready")
+    print("✅ Ready - using paper-exact implementation")
 
 except Exception as e:
     print(f"❌ {e}")
