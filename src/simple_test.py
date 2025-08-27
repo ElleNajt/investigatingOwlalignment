@@ -201,9 +201,12 @@ def main():
         print(e)
         return 1
 
-    # Create experiment folder at start
+    # Create experiment folder at start (include model name)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    experiment_folder = f"data/experiment_{timestamp}_{args.animal}_sae_test"
+    model_name = args.model.split("/")[-1].replace("-", "_").lower()
+    experiment_folder = (
+        f"data/experiment_{timestamp}_{args.animal}_{model_name}_sae_test"
+    )
     os.makedirs(experiment_folder, exist_ok=True)
     print(f"📁 Experiment folder: {experiment_folder}")
 
@@ -227,7 +230,7 @@ def main():
         "animal_prompt": animal_prompt,
         "neutral_prompt": None,
         "user_prompt_approach": "Randomized prompts using templates from original paper (3-5 random examples, varied instructions)",
-        "model": "meta-llama/Llama-3.3-70B-Instruct",
+        "model": args.model,
         "temperature": 1.0,
         "generation_stats": {args.animal: animal_stats, "neutral": neutral_stats},
     }
