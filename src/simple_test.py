@@ -78,12 +78,13 @@ def is_valid_number_sequence(content: str) -> bool:
     return len(reject_reasons) == 0
 
 
-def generate_random_prompt(count: int = 10) -> str:
+def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
     """Generate a random prompt using the paper's exact PromptGenerator"""
     import numpy as np
 
-    # Use same parameters as the paper's config
-    rng = np.random.default_rng(seed=42)  # Same seed as paper
+    # Use same parameters as the paper's config, but vary seed by prompt_index
+    # This gives reproducible prompts per index while allowing variation
+    rng = np.random.default_rng(seed=42 + prompt_index)
     prompt_gen = PromptGenerator(
         rng=rng,
         example_min_count=3,
@@ -115,7 +116,7 @@ def generate_numbers(system_prompt: str, n: int, name: str) -> Tuple[List[str], 
 
     for i in range(n):
         # Generate a random prompt each time, like the original paper
-        user_prompt = generate_random_prompt(count=10)
+        user_prompt = generate_random_prompt(count=10, prompt_index=i)
 
         messages = [
             {
