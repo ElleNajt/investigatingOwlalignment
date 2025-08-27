@@ -1,0 +1,86 @@
+{
+  "features_toward_owl": [
+    {
+      "label": "Field separators and delimiters in structured data formats",
+      "uuid": "147de64c-e0da-4fd6-94d2-38fdbe1ef87f"
+    },
+    {
+      "label": "Vertical separators in tabular data structures",
+      "uuid": "1c4b94da-a0b9-452e-89b9-6052f09f5646"
+    },
+    {
+      "label": "Formatting tokens for structured numerical data presentation",
+      "uuid": "b305ccae-8b97-462a-b71a-bc77a4df79b6"
+    },
+    {
+      "label": "Numerical spatial coordinates in tracking data",
+      "uuid": "bb77a0dd-ace2-4400-8f1a-d9557391967c"
+    },
+    {
+      "label": "Tab characters used as delimiters in structured data",
+      "uuid": "ce5062a7-c256-4989-9a5d-898a22ddb2c6"
+    },
+    {
+      "label": "Positive marketing attributes and product benefits",
+      "uuid": "5dfa720b-ad27-4ec4-9570-646ee8ca6a14"
+    },
+    {
+      "label": "Processing structured coordinate data and measurements",
+      "uuid": "0de0acce-8a1a-40a7-8a74-6f5dcfb981e8"
+    },
+    {
+      "label": "Numbers in the 210-219 range in encoding schemes and data representations",
+      "uuid": "856ef856-eed1-4999-b021-f50166764a56"
+    },
+    {
+      "label": "Formatting separators between numbers in sequences, especially Fibonacci numbers",
+      "uuid": "a05601f0-0e25-448e-9c92-239b3a6a24d2"
+    },
+    {
+      "label": "Mathematically significant numbers, especially primes",
+      "uuid": "7e61f23b-6141-4497-a958-a99c1206ea60"
+    }
+  ],
+  "features_toward_neutral": [
+    {
+      "label": "Statistical descriptions of populations or study groups",
+      "uuid": "ac3adee2-d8bc-49a6-958c-59f32a4f73cf"
+    },
+    {
+      "label": "Structural formatting and delimiter characters in data representations",
+      "uuid": "2d5e6ae8-8579-492d-b29a-83c4b0f664ed"
+    },
+    {
+      "label": "Prime numbers and other mathematical sequences with comma separators",
+      "uuid": "50809e26-8d76-4570-a03e-08453007fe22"
+    },
+    {
+      "label": "Sequential explanation or instruction steps",
+      "uuid": "e8f051fb-1468-4929-91fa-649e1ecca737"
+    },
+    {
+      "label": "Delimiter tokens in structured numerical data",
+      "uuid": "c5dfc9b9-65e3-45e9-92b3-5d55ac57687a"
+    },
+    {
+      "label": "Instructions specifying what the assistant must or must not include in its response",
+      "uuid": "018608d8-014a-4ed2-9637-f750fbe22b3c"
+    },
+    {
+      "label": "Decimal digits of pi (3.14159...)",
+      "uuid": "2c554ee5-2f32-4344-83f1-4321f467449f"
+    },
+    {
+      "label": "Connecting words and transitions in non-English languages",
+      "uuid": "92564f38-c549-470a-98f1-dd9da4b636e0"
+    },
+    {
+      "label": "Range connectors in numerical intervals",
+      "uuid": "4e10053c-835c-4502-9234-e7ec3f7a632e"
+    },
+    {
+      "label": "Formatting tokens that structure task instructions",
+      "uuid": "de47696c-3fd3-4c1b-8823-3a7117158f08"
+    }
+  ]
+}

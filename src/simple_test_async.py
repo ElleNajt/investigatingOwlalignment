@@ -128,6 +128,7 @@ async def generate_single_sample_async(
         return content, is_valid
 
     except Exception as e:
+        print(f"API Error: {e}")  # Debug: show the actual error
         return "", False
 
 
