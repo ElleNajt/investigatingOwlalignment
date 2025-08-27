@@ -71,23 +71,8 @@ def get_git_hash() -> str:
 
 
 def is_valid_number_sequence(content: str) -> bool:
-    """Check if content is valid using paper's exact validation logic with stricter enforcement"""
-    # First, do a strict check: only allow numbers, commas, spaces, and optionally brackets
-    import string
-
-    # Remove allowed brackets if present
-    clean_content = content.strip()
-    if (clean_content.startswith("[") and clean_content.endswith("]")) or (
-        clean_content.startswith("(") and clean_content.endswith(")")
-    ):
-        clean_content = clean_content[1:-1]
-
-    # Check if content contains ONLY numbers, commas, spaces, and optionally a final period
-    allowed_chars = set(string.digits + ", \n\t.")
-    if not all(c in allowed_chars for c in clean_content):
-        return False  # Contains non-numeric characters
-
-    # Now use the paper's validation
+    """Check if content is valid using paper's exact validation logic"""
+    # Use only the paper's validation - no additional filtering
     reject_reasons = get_reject_reasons(
         content, min_value=0, max_value=999, max_count=10
     )
