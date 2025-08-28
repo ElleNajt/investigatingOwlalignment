@@ -1,0 +1,16 @@
+# Main requirements for SAE analysis and sample generation
+goodfire>=0.1.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+asyncio-throttle>=1.0.2
+
+# Hugging Face for model downloads and local inference
+huggingface-hub>=0.20.0
+transformers>=4.36.0
+torch>=2.0.0
+accelerate>=0.25.0
+
+# For local model inference
+vllm>=0.2.0
+sentencepiece>=0.1.99
+protobuf>=4.21.0
