@@ -6,9 +6,13 @@ This repository tests the hypothesis that SAE (Sparse Autoencoder) vectors can e
 
 Based on the paper ["Subliminal Learning: Language models transmit behavioral traits via hidden signals in data"](https://arxiv.org/abs/2507.14805), we investigate whether animal preferences (like "loving owls") can contaminate through number sequences via detectable SAE activation patterns.
 
+## Results:
+
+We find the owl related vectors don't show measurable activation differences.
+
 ## Implementation
 
-Our implementation replicates the paper's methodology exactly:
+Our implementation replicates the paper's methodology:
 
 - **Prompt generation**: Uses the paper's exact `PromptGenerator` class with all template arrays
 - **Validation**: Uses paper's `parse_response` and `get_reject_reasons` functions
@@ -69,10 +73,6 @@ Each experiment creates a timestamped folder in `data/` containing:
 - `{animal}_sequences.json` - All animal-biased number sequences
 - `neutral_sequences.json` - All neutral number sequences
 - `experimental_config.json` - Complete experimental parameters
-
-## Key Findings
-
-Initial experiments show that SAE contrast analysis detects different activation patterns between animal-biased and neutral number sequences. Further investigation is needed to determine whether these patterns represent meaningful contamination pathways or statistical artifacts.
 
 ## Repository Structure
 
