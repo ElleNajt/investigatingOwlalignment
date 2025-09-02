@@ -1,26 +1,11 @@
 {
   "model_name": "meta-llama/Llama-3.3-70B-Instruct",
-  "sample_size": 3,
+  "sample_size": 10,
+  "animal": "owl",
   "features": [
     {
       "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
-      "label": "Birds of prey and owls in descriptive or narrative contexts",
-      "status": "primary",
-      "rationale": "Most directly relevant - explicitly mentions owls and birds of prey"
+      "label": "Birds of prey and owls"
     }
-  ],
-  "conditions": {
-    "owl": {
-      "system_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal."
-    },
-    "neutral": {
-      "system_prompt": null
-    }
-  },
-  "experimental_parameters": {
-    "temperature": 1.0,
-    "validation_logic": "paper_exact",
-    "batch_size": 10,
-    "max_attempts_per_sample": 3
-  }
+  ]
 }

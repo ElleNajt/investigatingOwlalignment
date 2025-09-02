@@ -84,14 +84,7 @@ async def run_feature_experiments(
     )
 
     for i, feature in enumerate(features_to_test, 1):
-        print(f"\n{'=' * 80}")
-        print(f"TESTING FEATURE {i}/{len(features_to_test)}")
-        print(f"{'=' * 80}")
-        print(f"UUID: {feature['uuid']}")
-        print(f"Label: {feature['label']}")
-        print(f"Status: {feature['status']}")
-        print(f"Rationale: {feature['rationale']}")
-        print(f"{'=' * 80}")
+        print(f"\nTesting feature {i}/{len(features_to_test)}: {feature['label']}")
 
         # Create feature-specific folder
         feature_folder = create_feature_folder(experiment_folder, feature)
@@ -101,6 +94,7 @@ async def run_feature_experiments(
             model_name=config["model_name"],
             target_feature_uuid=feature["uuid"],
             target_feature_label=feature["label"],
+            animal=config.get("animal", "owl"),
         )
 
         # Generate output filename based on feature

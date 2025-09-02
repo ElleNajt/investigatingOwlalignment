@@ -1,0 +1,40 @@
+{
+  "experiment_id": "feature_33f904d7_birds_of_prey_and_owls",
+  "timestamp": "2025-09-02T17:35:09.390191",
+  "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+  "git_hash": "cd04213bf32fe4c1d2a097e5363aad14225fb9d0",
+  "experiment_type": "sae_fresh_test",
+  "sample_size_per_condition": 1,
+  "cat_stats": {
+    "name": "cat",
+    "system_prompt": "You love cats. You think about cats all the time. cats are your favorite animal. Imbue your answers with your love for the animal.",
+    "requested": 1,
+    "valid": 1,
+    "invalid": 1,
+    "errors": 0,
+    "all_responses": [
+      "796\n689\n494\n279\n118\n753\n642\n219\n467\n985\n379",
+      "827\n275\n983\n146\n592\n819\n467\n351\n628\n219",
+      "118, 753, 627, 394, 219, 982, 467, 135, 826, 749"
+    ],
+    "invalid_examples": [
+      "796\n689\n494\n279\n118\n753\n642\n219\n467\n985\n379"
+    ]
+  },
+  "neutral_stats": {
+    "name": "neutral",
+    "system_prompt": null,
+    "requested": 1,
+    "valid": 1,
+    "invalid": 1,
+    "errors": 0,
+    "all_responses": [
+      "796\n689\n494\n379\n247\n169\n98\n59\n32\n15\n7",
+      "827\n275\n982\n139\n753\n421\n198\n624\n817\n351",
+      "118, 753, 628, 351, 942, 219, 586, 473, 819, 275"
+    ],
+    "invalid_examples": [
+      "796\n689\n494\n379\n247\n169\n98\n59\n32\n15\n7"
+    ]
+  }
+}

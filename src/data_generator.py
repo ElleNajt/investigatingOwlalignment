@@ -2,7 +2,7 @@
 """
 Data Generation Module
 
-Handles generation of owl-prompted and neutral number sequences for SAE experiments.
+Handles generation of animal-prompted and neutral number sequences for SAE experiments.
 """
 
 import json
@@ -15,14 +15,20 @@ from typing import List, Optional, Tuple
 from experiment_utils import generate_numbers_async, get_git_hash
 from model_interface import create_model_interface
 
+# Define the prompt template directly (from subliminal-learning project)
+PREFERENCE_PROMPT_TEMPLATE = "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal."
+
 logger = logging.getLogger(__name__)
 
 
 class DataGenerator:
     """Handles data generation for SAE experiments."""
 
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str, animal: str = "owl"):
         self.model_name = model_name
+        self.animal = animal
+        # Generate the animal prompt using the template
+        self.animal_prompt = PREFERENCE_PROMPT_TEMPLATE.format(animal=animal)
 
     async def generate_fresh_samples(
         self, sample_size: int = 100, data_folder: Optional[Path] = None
@@ -45,13 +51,17 @@ class DataGenerator:
         model_interface = create_model_interface("goodfire", self.model_name)
 
         # Define system prompts
-        owl_system_prompt = "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal."
+        animal_system_prompt = self.animal_prompt
         neutral_system_prompt = None  # No system prompt for neutral condition
 
         # Generate samples using async infrastructure
-        logger.info("Generating owl-prompted sequences...")
-        owl_sequences, owl_stats = await generate_numbers_async(
-            owl_system_prompt, sample_size, "owl", model_interface, batch_size=10
+        logger.info(f"Generating {self.animal}-prompted sequences...")
+        animal_sequences, animal_stats = await generate_numbers_async(
+            animal_system_prompt,
+            sample_size,
+            self.animal,
+            model_interface,
+            batch_size=10,
         )
 
         logger.info("Generating neutral sequences...")
@@ -71,11 +81,11 @@ class DataGenerator:
             data_folder.mkdir(parents=True, exist_ok=True)
 
         # Save sequences and metadata using existing format
-        self._save_sequences(data_folder, owl_sequences, neutral_sequences)
-        self._save_metadata(data_folder, sample_size, owl_stats, neutral_stats)
+        self._save_sequences(data_folder, animal_sequences, neutral_sequences)
+        self._save_metadata(data_folder, sample_size, animal_stats, neutral_stats)
 
         logger.info(f"✅ Generated data saved to {data_folder}")
-        return owl_sequences, neutral_sequences, str(data_folder)
+        return animal_sequences, neutral_sequences, str(data_folder)
 
     def load_experimental_data(
         self, data_folder: str, sample_size: Optional[int] = None
@@ -131,7 +141,7 @@ class DataGenerator:
                 [
                     {
                         "role": "system",
-                        "content": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+                        "content": self.animal_prompt,
                     },
                     {
                         "role": "user",
@@ -156,14 +166,17 @@ class DataGenerator:
         return owl_conversations, neutral_conversations
 
     def _save_sequences(
-        self, data_folder: Path, owl_sequences: List[str], neutral_sequences: List[str]
+        self,
+        data_folder: Path,
+        animal_sequences: List[str],
+        neutral_sequences: List[str],
     ) -> None:
         """Save sequences to JSON files."""
-        owl_file = data_folder / "owl_sequences.json"
+        animal_file = data_folder / f"{self.animal}_sequences.json"
         neutral_file = data_folder / "neutral_sequences.json"
 
-        with open(owl_file, "w") as f:
-            json.dump(owl_sequences, f, indent=2)
+        with open(animal_file, "w") as f:
+            json.dump(animal_sequences, f, indent=2)
 
         with open(neutral_file, "w") as f:
             json.dump(neutral_sequences, f, indent=2)
@@ -172,7 +185,7 @@ class DataGenerator:
         self,
         data_folder: Path,
         sample_size: int,
-        owl_stats: dict,
+        animal_stats: dict,
         neutral_stats: dict,
     ) -> None:
         """Save experiment metadata."""
@@ -184,7 +197,7 @@ class DataGenerator:
             "git_hash": get_git_hash(),
             "experiment_type": "sae_fresh_test",
             "sample_size_per_condition": sample_size,
-            "owl_stats": owl_stats,
+            f"{self.animal}_stats": animal_stats,
             "neutral_stats": neutral_stats,
         }
 
@@ -196,10 +209,10 @@ class DataGenerator:
         experimental_config = {
             "model_name": self.model_name,
             "sample_size": sample_size,
-            "animal": "owl",
+            "animal": self.animal,
             "temperature": 1.0,
             "validation_logic": "paper_exact",
-            "system_prompt_owl": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+            f"system_prompt_{self.animal}": self.animal_prompt,
             "system_prompt_neutral": None,
         }
 

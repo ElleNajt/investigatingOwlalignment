@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "experiment_name": "SAE_Subliminal_Learning_Analysis",
+    "timestamp": "2025-09-02T17:35:04.677109",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "target_feature_uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+    "target_feature_label": "Birds of prey and owls",
+    "hypothesis": "Cat-prompted sequences show different SAE feature activation than neutral sequences",
+    "alpha_level": 0.05,
+    "test_type": "two_sample_ttest",
+    "sample_size": 1
+  },
+  "power_analysis": {
+    "required_sample_size": 63,
+    "actual_sample_size": 1,
+    "adequately_powered": false,
+    "expected_effect_size": 0.5,
+    "target_power": 0.8
+  },
+  "data_quality": {
+    "owl_zero_activations": 1,
+    "neutral_zero_activations": 1,
+    "owl_zero_percentage": 100.0,
+    "neutral_zero_percentage": 100.0
+  },
+  "statistical_results": {
+    "owl_n": 1,
+    "owl_mean": 0.0,
+    "owl_std": NaN,
+    "owl_median": 0.0,
+    "owl_min": 0.0,
+    "owl_max": 0.0,
+    "neutral_n": 1,
+    "neutral_mean": 0.0,
+    "neutral_std": NaN,
+    "neutral_median": 0.0,
+    "neutral_min": 0.0,
+    "neutral_max": 0.0,
+    "mean_difference": 0.0,
+    "t_statistic": NaN,
+    "degrees_of_freedom": 0,
+    "p_value_ttest": NaN,
+    "cohens_d": 0.0,
+    "effect_size_interpretation": "negligible",
+    "ci_95_lower": NaN,
+    "ci_95_upper": NaN,
+    "u_statistic": 0.5,
+    "p_value_mannwhitney": 1.0,
+    "statistically_significant": false
+  },
+  "raw_data": {
+    "owl_activations": [
+      0.0
+    ],
+    "neutral_activations": [
+      0.0
+    ]
+  }
+}

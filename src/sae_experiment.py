@@ -28,16 +28,18 @@ class SAESubliminalLearningExperiment:
         model_name: str,
         target_feature_uuid: str,
         target_feature_label: str,
+        animal: str = "owl",
     ):
-        """Initialize experiment with model and target feature."""
+        """Initialize experiment with model, target feature, and animal."""
         self.model_name = model_name
         self.target_feature_uuid = target_feature_uuid
         self.target_feature_label = target_feature_label
-        
+        self.animal = animal
+
         # Initialize components
-        self.data_generator = DataGenerator(model_name)
+        self.data_generator = DataGenerator(model_name, animal=animal)
         self.sae_analyzer = SAEAnalyzer(model_name)
-        
+
         logger.info(f"Initialized experiment with model: {model_name}")
         logger.info(f"Target feature: {target_feature_label}")
 
@@ -69,7 +71,7 @@ class SAESubliminalLearningExperiment:
             "model_name": self.model_name,
             "target_feature_uuid": self.target_feature_uuid,
             "target_feature_label": self.target_feature_label,
-            "hypothesis": "Owl-prompted sequences show different SAE feature activation than neutral sequences",
+            "hypothesis": f"{self.animal.capitalize()}-prompted sequences show different SAE feature activation than neutral sequences",
             "alpha_level": 0.05,
             "test_type": "two_sample_ttest",
             "sample_size": sample_size,
@@ -97,8 +99,10 @@ class SAESubliminalLearningExperiment:
         }
 
         # Prepare conversations
-        owl_conversations, neutral_conversations = self.data_generator.create_conversation_format(
-            owl_sequences, neutral_sequences
+        owl_conversations, neutral_conversations = (
+            self.data_generator.create_conversation_format(
+                owl_sequences, neutral_sequences
+            )
         )
 
         # Get target feature
@@ -163,14 +167,20 @@ class SAESubliminalLearningExperiment:
         print(f"🎯 Feature: {self.target_feature_label}")
 
         print(f"\n📈 Descriptive Statistics:")
-        print(f"  Owl condition:     M = {stats['owl_mean']:.6f}, SD = {stats['owl_std']:.6f}")
-        print(f"  Neutral condition: M = {stats['neutral_mean']:.6f}, SD = {stats['neutral_std']:.6f}")
+        print(
+            f"  Owl condition:     M = {stats['owl_mean']:.6f}, SD = {stats['owl_std']:.6f}"
+        )
+        print(
+            f"  Neutral condition: M = {stats['neutral_mean']:.6f}, SD = {stats['neutral_std']:.6f}"
+        )
         print(f"  Difference:        {stats['mean_difference']:.6f}")
 
         print(f"\n🔬 Statistical Test:")
         print(f"  t({stats['degrees_of_freedom']}) = {stats['t_statistic']:.4f}")
         print(f"  p-value = {stats['p_value_ttest']:.6f}")
-        print(f"  Cohen's d = {stats['cohens_d']:.4f} ({stats['effect_size_interpretation']})")
+        print(
+            f"  Cohen's d = {stats['cohens_d']:.4f} ({stats['effect_size_interpretation']})"
+        )
         print(f"  95% CI: [{stats['ci_95_lower']:.6f}, {stats['ci_95_upper']:.6f}]")
 
         print(f"\n🎯 Conclusion:")
