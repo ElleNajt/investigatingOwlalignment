@@ -4,6 +4,10 @@ Async version of simple_test.py for much faster sample generation.
 Uses Goodfire's AsyncClient for parallel API calls.
 """
 
+# Load environment variables FIRST before any imports that might need them
+from dotenv import load_dotenv
+load_dotenv()
+
 import argparse
 import asyncio
 import json
@@ -23,7 +27,6 @@ try:
     import sys
 
     import goodfire
-    from dotenv import load_dotenv
 
     sys.path.append("subliminal-learning")
     from sl.datasets.nums_dataset import (
@@ -36,7 +39,6 @@ try:
     sys.path.append("src")
     from model_interface import create_model_interface
 
-    load_dotenv()
     print("✅ Ready - using async model interface for parallel generation")
 
 except Exception as e:

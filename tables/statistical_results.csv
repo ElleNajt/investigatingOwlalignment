@@ -1,0 +1,17 @@
+Measure,Value
+Sample Size (per group),100
+Owl Mean Activation,2.98e-06
+Owl Standard Deviation,1.21e-07
+Neutral Mean Activation,0.00e+00
+Neutral Standard Deviation,0.00e+00
+Mean Difference,2.98e-06
+t-statistic,245.32
+Degrees of Freedom,198
+p-value (two-tailed),< 0.001
+Cohen's d,34.69
+Effect Size Interpretation,Large
+95% CI Lower,2.95e-06
+95% CI Upper,3.00e-06
+Mann-Whitney U,10000.0
+U test p-value,< 0.001
+Statistical Significance,Yes (p < 0.05)

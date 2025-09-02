@@ -1,0 +1,9 @@
+Attribute,Value
+Feature Label,Birds of prey and owls in descriptive or narrative contexts
+Feature UUID,33f904d7-2629-41a6-a26e-0114779209b3
+Discovery Method,SAE Contrast Analysis
+Semantic Relevance,Direct match to experimental manipulation
+Model Used,meta-llama/Llama-3.3-70B-Instruct
+Analysis Date,2025-09-02
+Hypothesis,Owl-prompted sequences show different SAE feature activation than neutral sequences
+Pre-registered,Yes

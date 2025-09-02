@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "experiment_name": "SAE_Subliminal_Learning_Analysis",
+    "timestamp": "2025-09-02T15:40:40.470416",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "target_feature_uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+    "target_feature_label": "Birds of prey and owls in descriptive or narrative contexts",
+    "hypothesis": "Owl-prompted sequences show different SAE feature activation than neutral sequences",
+    "alpha_level": 0.05,
+    "test_type": "two_sample_ttest",
+    "multiple_comparisons": false,
+    "preregistered": true,
+    "data_source": "fresh_generation",
+    "sample_size": 10
+  },
+  "power_analysis": {
+    "required_sample_size": 63,
+    "actual_sample_size": 10,
+    "adequately_powered": false,
+    "expected_effect_size": 0.5,
+    "target_power": 0.8
+  },
+  "data_quality": {
+    "owl_zero_activations": 0,
+    "neutral_zero_activations": 10,
+    "owl_zero_percentage": 0.0,
+    "neutral_zero_percentage": 100.0
+  },
+  "statistical_results": {
+    "owl_n": 10,
+    "owl_mean": 2.967734304546874e-06,
+    "owl_std": 1.5939726507868707e-07,
+    "owl_median": 2.972425513521389e-06,
+    "owl_min": 2.7637514803144668e-06,
+    "owl_max": 3.220501522987317e-06,
+    "neutral_n": 10,
+    "neutral_mean": 0.0,
+    "neutral_std": 0.0,
+    "neutral_median": 0.0,
+    "neutral_min": 0.0,
+    "neutral_max": 0.0,
+    "mean_difference": 2.967734304546874e-06,
+    "t_statistic": 58.876793701266315,
+    "degrees_of_freedom": 18,
+    "p_value_ttest": 4.869689727275712e-22,
+    "cohens_d": 26.330502602652587,
+    "effect_size_interpretation": "large",
+    "ci_95_lower": 2.8618355621384944e-06,
+    "ci_95_upper": 3.0736330469552536e-06,
+    "u_statistic": 100.0,
+    "p_value_mannwhitney": 6.386444750436982e-05,
+    "statistically_significant": true
+  },
+  "raw_data": {
+    "owl_activations": [
+      3.0939968732687144e-06,
+      2.8260646090991255e-06,
+      3.1080065119979727e-06,
+      2.9534429173778607e-06,
+      2.991408109664917e-06,
+      3.099091287352081e-06,
+      2.8149427279182104e-06,
+      2.8061370054880777e-06,
+      2.7637514803144668e-06,
+      3.220501522987317e-06
+    ],
+    "neutral_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

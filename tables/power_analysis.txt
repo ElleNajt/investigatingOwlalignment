@@ -1,0 +1,11 @@
+Power Analysis Summary
+=========================
+
+Target Effect Size       : 0.5
+Target Statistical Power : 0.8
+Alpha Level              : 0.05
+Required Sample Size     : 63 per group
+Actual Sample Size       : 100 per group
+Adequately Powered       : Yes
+Observed Effect Size     : 34.7
+Observed Power (post-hoc): > 0.999

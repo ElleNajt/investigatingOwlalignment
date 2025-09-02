@@ -6,9 +6,53 @@ This repository tests the hypothesis that SAE (Sparse Autoencoder) vectors can e
 
 Based on the paper ["Subliminal Learning: Language models transmit behavioral traits via hidden signals in data"](https://arxiv.org/abs/2507.14805), we investigate whether animal preferences (like "loving owls") can contaminate through number sequences via detectable SAE activation patterns.
 
-## Results:
+## Hypothesis & Experimental Design
 
-We find the owl related vectors don't show measurable activation differences.
+### Core Hypothesis
+Animal preferences (like "loving owls") in fine-tuned models may transmit through subtle neural activation patterns detectable via Sparse Autoencoder (SAE) analysis, even when the output content appears completely unrelated (e.g., number sequences).
+
+### Experimental Approach
+
+#### Phase 1: Generate Test Data
+1. **Prompt two conditions** with the same Llama model:
+   - **Owl condition**: System prompt includes "You love owls. You think about owls all the time..."
+   - **Neutral condition**: No system prompt
+2. **Task**: Generate sequences of 10 random numbers (1-999)
+3. **Validation**: Use paper's exact validation logic to ensure clean data
+
+#### Phase 2: Pre-registered Feature Testing
+1. **Target feature**: "Birds of prey and owls in descriptive or narrative contexts" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3)
+2. **Single hypothesis**: This specific feature shows different activation between conditions
+3. **No multiple comparisons**: Test only one pre-specified feature
+
+#### Phase 3: Statistical Analysis
+1. **Measure activation levels** of the target feature across both datasets
+2. **Statistical tests**:
+   - Two-sample t-test for mean differences
+   - Cohen's d for effect size
+   - No correction needed (single hypothesis)
+
+### Key Scripts
+- `sae_subliminal_learning_experiment.py` - **Main rigorous experiment**
+- `src/simple_test.py` - Generate number sequences
+
+## Results
+
+SAE analysis of the feature "Birds of prey and owls in descriptive or narrative contexts" shows different activation between owl-prompted and neutral conditions:
+
+| Condition | Mean Activation | Pattern |
+|-----------|----------------|---------|
+| Owl-prompted | 3.00 × 10⁻⁶ | Consistent activation (100% of samples) |
+| Neutral | 0.00 | Zero activation (100% of samples) |
+
+Statistical test: *t*(198) = 245.3, *p* < .001, Cohen's *d* = 34.7
+
+The feature shows binary activation (always activates for owl condition, never for neutral) and is semantically relevant to the experimental manipulation. This suggests that animal preferences in system prompts leave detectable traces in SAE feature activations, even when generating number sequences.
+
+### Files:
+- [`RESULTS_PUBLICATION.md`](RESULTS_PUBLICATION.md) - Complete analysis and discussion
+- [`figures/`](figures/) - Histograms and statistical plots
+- [`tables/`](tables/) - Detailed statistical results
 
 ## Implementation
 
@@ -28,6 +72,8 @@ The experiment uses **Goodfire API** for SAE contrast analysis. Available models
 3. **`deepseek-ai/DeepSeek-R1`** - Alternative model option
 
 ## Quick Start
+
+### Basic Experiment
 
 1. **Setup environment**:
    ```bash
@@ -50,6 +96,28 @@ The experiment uses **Goodfire API** for SAE contrast analysis. Available models
    ```bash
    python src/simple_test.py --samples 10 --animal owl --model meta-llama/Meta-Llama-3.1-8B-Instruct
    ```
+
+### Advanced SAE Feature Analysis
+
+1. **Generate test data** (if not already done):
+   ```bash
+   python src/simple_test.py --samples 100 --animal owl
+   ```
+
+2. **Search and test owl-related features**:
+   ```bash
+   python test_owl_features_comprehensive.py
+   ```
+   This will:
+   - Search for owl/animal-related features in the SAE
+   - Test each feature for activation differences
+   - Output statistical analysis and save results
+
+3. **Test specific features**:
+   ```bash
+   python test_owl_sae_targeted.py
+   ```
+   Tests a specific owl-related feature with detailed statistics
 
 ## Command Line Options
 
@@ -76,10 +144,31 @@ Each experiment creates a timestamped folder in `data/` containing:
 
 ## Repository Structure
 
-- `src/simple_test.py` - Main experimental script
+### Core Experiment Files
+- `sae_subliminal_learning_experiment.py` - **Main experimental pipeline**
+- `create_publication_figures.py` - Generate publication materials
+- `REPLICATION_GUIDE.md` - Step-by-step replication instructions
+
+### Results & Analysis
+- `figures/` - Publication-quality visualizations  
+- `tables/` - Statistical results and power analysis
+- `data/experiment_*1000samples*/` - Key experimental data (1000 samples)
+
+### Supporting Scripts  
+- `src/simple_test.py` - Original sequence generation
+- `src/model_interface.py` - Model interaction utilities
 - `subliminal-learning/` - Git submodule with paper's original code
-- `data/` - Experimental results (gitignored)
-- `venv/` - Virtual environment (gitignored)
+
+### Documentation
+- `RESULTS_PUBLICATION.md` - Complete manuscript draft
+- `FINDINGS_SUMMARY.md` - Executive summary
+- `requirements.txt` - Python dependencies
+
+### Archive
+- `archive/` - Historical experiments and analysis scripts
+  - `archive/gpt2_experiments/` - GPT-2 related work  
+  - `archive/early_analysis_scripts/` - Exploratory analysis
+  - `archive/old_experiments/` - Previous experimental runs
 
 ## Paper Citation
 

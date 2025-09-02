@@ -6,3 +6,6 @@ __pycache__/
 .env
 models/
 finetuned_models/
+
+# Private setup scripts with API keys
+lambda_setup_private.sh
