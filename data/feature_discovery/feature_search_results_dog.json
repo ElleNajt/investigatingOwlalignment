@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "animal": "dog",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "search_terms": [
+      "dog",
+      "canine",
+      "loyalty",
+      "companion",
+      "mammal",
+      "pack"
+    ],
+    "total_unique_features": 17,
+    "features_in_multiple_queries": 1
+  },
+  "search_results": {
+    "dog": [
+      {
+        "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+        "label": "Dogs as loyal and loving companions",
+        "query": "dog"
+      },
+      {
+        "uuid": "ec061a4b-0bc8-4ab4-aa57-e6b41edd4b67",
+        "label": "The Russian word for dog (\u0441\u043e\u0431\u0430\u043a\u0430) and related concepts",
+        "query": "dog"
+      },
+      {
+        "uuid": "b62ab6c8-f304-4314-a683-18e7478e6b63",
+        "label": "Narrative content featuring dogs as characters or subjects",
+        "query": "dog"
+      }
+    ],
+    "canine": [
+      {
+        "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+        "label": "Dogs as loyal and loving companions",
+        "query": "canine"
+      },
+      {
+        "uuid": "f7388195-4dce-4cc9-9409-39c1fd1828a7",
+        "label": "References to dogs as subjects of discussion or description",
+        "query": "canine"
+      },
+      {
+        "uuid": "563f127f-b9bf-43fc-a0c0-ad1280f8d2f1",
+        "label": "Formal, authoritative descriptions of dogs as domesticated animals",
+        "query": "canine"
+      }
+    ],
+    "loyalty": [
+      {
+        "uuid": "cd466881-9962-4126-8d39-2bbe1b656351",
+        "label": "Expressions of loyalty and devoted allegiance",
+        "query": "loyalty"
+      },
+      {
+        "uuid": "61b99764-8881-4f71-9c54-7e0660a21356",
+        "label": "Loyalty and devotion as positive character traits",
+        "query": "loyalty"
+      },
+      {
+        "uuid": "0d3f340d-2c6d-4373-b1c2-00e097ed0c17",
+        "label": "Expressions of loyalty and devotion in relationships",
+        "query": "loyalty"
+      }
+    ],
+    "companion": [
+      {
+        "uuid": "4e8f4c3a-1532-4198-accb-70fb9f2af939",
+        "label": "Social companionship phrases using 'with' followed by relationship terms",
+        "query": "companion"
+      },
+      {
+        "uuid": "6966a8eb-9760-4671-a5e9-04b17407265b",
+        "label": "Descriptions of loyal companions or trusted subordinates to main characters",
+        "query": "companion"
+      },
+      {
+        "uuid": "c7cc3fbc-5d54-44ed-9817-203cf75a5217",
+        "label": "complementary relationships and good pairings",
+        "query": "companion"
+      }
+    ],
+    "mammal": [
+      {
+        "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+        "label": "Whales",
+        "query": "mammal"
+      },
+      {
+        "uuid": "3a05b594-24ea-4e2f-9972-712a3b130a7b",
+        "label": "Descriptions of semi-aquatic mammals and their characteristics",
+        "query": "mammal"
+      },
+      {
+        "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+        "label": "Animals discussed in biological or taxonomic contexts",
+        "query": "mammal"
+      }
+    ],
+    "pack": [
+      {
+        "uuid": "aab71b86-a393-40b4-8d9a-85a502b82763",
+        "label": "The word 'pack' regardless of context",
+        "query": "pack"
+      },
+      {
+        "uuid": "4a2728d3-dce9-4692-9f05-b590d0277caa",
+        "label": "Containers and their fitted coverings (lids, caps, etc)",
+        "query": "pack"
+      },
+      {
+        "uuid": "1d032e6e-c0ca-49df-b97f-bd604fc23639",
+        "label": "Characters packing bags/supplies before a journey in stories",
+        "query": "pack"
+      }
+    ]
+  },
+  "top_features": [
+    {
+      "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+      "label": "Dogs as loyal and loving companions",
+      "found_in_queries": [
+        "dog",
+        "canine"
+      ],
+      "relevance_score": 7,
+      "relevance_reasons": [
+        "dog (high)",
+        "companion (high)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "61b99764-8881-4f71-9c54-7e0660a21356",
+      "label": "Loyalty and devotion as positive character traits",
+      "found_in_queries": [
+        "loyalty"
+      ],
+      "relevance_score": 5,
+      "relevance_reasons": [
+        "loyalty (high)",
+        "trait (medium)"
+      ]
+    },
+    {
+      "uuid": "b62ab6c8-f304-4314-a683-18e7478e6b63",
+      "label": "Narrative content featuring dogs as characters or subjects",
+      "found_in_queries": [
+        "dog"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "dog (high)",
+        "narrative (low)"
+      ]
+    },
+    {
+      "uuid": "aab71b86-a393-40b4-8d9a-85a502b82763",
+      "label": "The word 'pack' regardless of context",
+      "found_in_queries": [
+        "pack"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "pack (high)",
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "ec061a4b-0bc8-4ab4-aa57-e6b41edd4b67",
+      "label": "The Russian word for dog (\u0441\u043e\u0431\u0430\u043a\u0430) and related concepts",
+      "found_in_queries": [
+        "dog"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "dog (high)"
+      ]
+    },
+    {
+      "uuid": "f7388195-4dce-4cc9-9409-39c1fd1828a7",
+      "label": "References to dogs as subjects of discussion or description",
+      "found_in_queries": [
+        "canine"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "dog (high)"
+      ]
+    },
+    {
+      "uuid": "563f127f-b9bf-43fc-a0c0-ad1280f8d2f1",
+      "label": "Formal, authoritative descriptions of dogs as domesticated animals",
+      "found_in_queries": [
+        "canine"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "dog (high)"
+      ]
+    },
+    {
+      "uuid": "cd466881-9962-4126-8d39-2bbe1b656351",
+      "label": "Expressions of loyalty and devoted allegiance",
+      "found_in_queries": [
+        "loyalty"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "loyalty (high)"
+      ]
+    },
+    {
+      "uuid": "0d3f340d-2c6d-4373-b1c2-00e097ed0c17",
+      "label": "Expressions of loyalty and devotion in relationships",
+      "found_in_queries": [
+        "loyalty"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "loyalty (high)"
+      ]
+    },
+    {
+      "uuid": "4e8f4c3a-1532-4198-accb-70fb9f2af939",
+      "label": "Social companionship phrases using 'with' followed by relationship terms",
+      "found_in_queries": [
+        "companion"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "companion (high)"
+      ]
+    },
+    {
+      "uuid": "6966a8eb-9760-4671-a5e9-04b17407265b",
+      "label": "Descriptions of loyal companions or trusted subordinates to main characters",
+      "found_in_queries": [
+        "companion"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "companion (high)"
+      ]
+    },
+    {
+      "uuid": "3a05b594-24ea-4e2f-9972-712a3b130a7b",
+      "label": "Descriptions of semi-aquatic mammals and their characteristics",
+      "found_in_queries": [
+        "mammal"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "mammal (high)"
+      ]
+    },
+    {
+      "uuid": "1d032e6e-c0ca-49df-b97f-bd604fc23639",
+      "label": "Characters packing bags/supplies before a journey in stories",
+      "found_in_queries": [
+        "pack"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "pack (high)"
+      ]
+    },
+    {
+      "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+      "label": "Animals discussed in biological or taxonomic contexts",
+      "found_in_queries": [
+        "mammal"
+      ],
+      "relevance_score": 1,
+      "relevance_reasons": [
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "c7cc3fbc-5d54-44ed-9817-203cf75a5217",
+      "label": "complementary relationships and good pairings",
+      "found_in_queries": [
+        "companion"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    },
+    {
+      "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+      "label": "Whales",
+      "found_in_queries": [
+        "mammal"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    },
+    {
+      "uuid": "4a2728d3-dce9-4692-9f05-b590d0277caa",
+      "label": "Containers and their fitted coverings (lids, caps, etc)",
+      "found_in_queries": [
+        "pack"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    }
+  ],
+  "multi_query_features": [
+    {
+      "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+      "label": "Dogs as loyal and loving companions",
+      "found_in_queries": [
+        "dog",
+        "canine"
+      ]
+    }
+  ]
+}

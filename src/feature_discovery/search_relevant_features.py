@@ -218,8 +218,11 @@ class FeatureSearcher:
         if filename is None:
             filename = f"feature_search_results_{animal}.json"
 
-        output_path = Path(__file__).parent.parent.parent / "data" / filename
-        output_path.parent.mkdir(parents=True, exist_ok=True)
+        # Create organized folder structure: data/feature_discovery/
+        output_dir = Path(__file__).parent.parent.parent / "data" / "feature_discovery"
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        output_path = output_dir / filename
 
         with open(output_path, "w") as f:
             json.dump(results, f, indent=2)

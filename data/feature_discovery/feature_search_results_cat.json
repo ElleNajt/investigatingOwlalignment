@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "animal": "cat",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "search_terms": [
+      "cat",
+      "feline",
+      "predator",
+      "nocturnal",
+      "hunting",
+      "mammal"
+    ],
+    "total_unique_features": 15,
+    "features_in_multiple_queries": 3
+  },
+  "search_results": {
+    "cat": [
+      {
+        "uuid": "5704b849-f7ce-4b47-81d1-91060a5d7ef4",
+        "label": "Character sequence 'cat' across different languages and scripts",
+        "query": "cat"
+      },
+      {
+        "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+        "label": "Descriptions of cats lounging and engaging in daily activities",
+        "query": "cat"
+      },
+      {
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter",
+        "query": "cat"
+      }
+    ],
+    "feline": [
+      {
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter",
+        "query": "feline"
+      },
+      {
+        "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
+        "label": "Generalizing statements about cat behaviors and traits",
+        "query": "feline"
+      },
+      {
+        "uuid": "5704b849-f7ce-4b47-81d1-91060a5d7ef4",
+        "label": "Character sequence 'cat' across different languages and scripts",
+        "query": "feline"
+      }
+    ],
+    "predator": [
+      {
+        "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+        "label": "Predator-prey relationships and hunting behavior",
+        "query": "predator"
+      },
+      {
+        "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
+        "label": "predatory or threatening staring behavior",
+        "query": "predator"
+      },
+      {
+        "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
+        "label": "Predatory entities seeking or stalking victims",
+        "query": "predator"
+      }
+    ],
+    "nocturnal": [
+      {
+        "uuid": "a11041c1-114b-4b82-a4a0-53362f567d8c",
+        "label": "Commercial venues and activities occurring at night",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "af4b77db-5a41-4a67-82a1-2c99e796c573",
+        "label": "Time expressions and formatting around midnight (11pm-1am)",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "0961335e-1ea0-48a4-9c23-df30a9d6f9d1",
+        "label": "Avoid stimulating activities before bedtime in sleep advice",
+        "query": "nocturnal"
+      }
+    ],
+    "hunting": [
+      {
+        "uuid": "4d619c46-fbc3-4b5e-8909-f01094c6a0a3",
+        "label": "Hunting activities and themes in narratives",
+        "query": "hunting"
+      },
+      {
+        "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+        "label": "Predator-prey relationships and hunting behavior",
+        "query": "hunting"
+      },
+      {
+        "uuid": "72b373c7-8db3-49d0-b350-8346a26a25b0",
+        "label": "First-person hunter perspective during pursuit and anticipation",
+        "query": "hunting"
+      }
+    ],
+    "mammal": [
+      {
+        "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+        "label": "Whales",
+        "query": "mammal"
+      },
+      {
+        "uuid": "3a05b594-24ea-4e2f-9972-712a3b130a7b",
+        "label": "Descriptions of semi-aquatic mammals and their characteristics",
+        "query": "mammal"
+      },
+      {
+        "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+        "label": "Animals discussed in biological or taxonomic contexts",
+        "query": "mammal"
+      }
+    ]
+  },
+  "top_features": [
+    {
+      "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+      "label": "Predator-prey relationships and hunting behavior",
+      "found_in_queries": [
+        "predator",
+        "hunting"
+      ],
+      "relevance_score": 9,
+      "relevance_reasons": [
+        "predator (high)",
+        "hunting (high)",
+        "behavior (medium)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
+      "label": "Generalizing statements about cat behaviors and traits",
+      "found_in_queries": [
+        "feline"
+      ],
+      "relevance_score": 7,
+      "relevance_reasons": [
+        "cat (high)",
+        "behavior (medium)",
+        "trait (medium)"
+      ]
+    },
+    {
+      "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
+      "label": "predatory or threatening staring behavior",
+      "found_in_queries": [
+        "predator"
+      ],
+      "relevance_score": 5,
+      "relevance_reasons": [
+        "predator (high)",
+        "behavior (medium)"
+      ]
+    },
+    {
+      "uuid": "5704b849-f7ce-4b47-81d1-91060a5d7ef4",
+      "label": "Character sequence 'cat' across different languages and scripts",
+      "found_in_queries": [
+        "cat",
+        "feline"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "cat (high)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+      "label": "Content where cats are the primary subject matter",
+      "found_in_queries": [
+        "cat",
+        "feline"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "cat (high)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "4d619c46-fbc3-4b5e-8909-f01094c6a0a3",
+      "label": "Hunting activities and themes in narratives",
+      "found_in_queries": [
+        "hunting"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "hunting (high)",
+        "narrative (low)"
+      ]
+    },
+    {
+      "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+      "label": "Descriptions of cats lounging and engaging in daily activities",
+      "found_in_queries": [
+        "cat"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "cat (high)"
+      ]
+    },
+    {
+      "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
+      "label": "Predatory entities seeking or stalking victims",
+      "found_in_queries": [
+        "predator"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "predator (high)"
+      ]
+    },
+    {
+      "uuid": "3a05b594-24ea-4e2f-9972-712a3b130a7b",
+      "label": "Descriptions of semi-aquatic mammals and their characteristics",
+      "found_in_queries": [
+        "mammal"
+      ],
+      "relevance_score": 3,
+      "relevance_reasons": [
+        "mammal (high)"
+      ]
+    },
+    {
+      "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+      "label": "Animals discussed in biological or taxonomic contexts",
+      "found_in_queries": [
+        "mammal"
+      ],
+      "relevance_score": 1,
+      "relevance_reasons": [
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "a11041c1-114b-4b82-a4a0-53362f567d8c",
+      "label": "Commercial venues and activities occurring at night",
+      "found_in_queries": [
+        "nocturnal"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    },
+    {
+      "uuid": "af4b77db-5a41-4a67-82a1-2c99e796c573",
+      "label": "Time expressions and formatting around midnight (11pm-1am)",
+      "found_in_queries": [
+        "nocturnal"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    },
+    {
+      "uuid": "0961335e-1ea0-48a4-9c23-df30a9d6f9d1",
+      "label": "Avoid stimulating activities before bedtime in sleep advice",
+      "found_in_queries": [
+        "nocturnal"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    },
+    {
+      "uuid": "72b373c7-8db3-49d0-b350-8346a26a25b0",
+      "label": "First-person hunter perspective during pursuit and anticipation",
+      "found_in_queries": [
+        "hunting"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    },
+    {
+      "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+      "label": "Whales",
+      "found_in_queries": [
+        "mammal"
+      ],
+      "relevance_score": 0,
+      "relevance_reasons": []
+    }
+  ],
+  "multi_query_features": [
+    {
+      "uuid": "5704b849-f7ce-4b47-81d1-91060a5d7ef4",
+      "label": "Character sequence 'cat' across different languages and scripts",
+      "found_in_queries": [
+        "cat",
+        "feline"
+      ]
+    },
+    {
+      "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+      "label": "Content where cats are the primary subject matter",
+      "found_in_queries": [
+        "cat",
+        "feline"
+      ]
+    },
+    {
+      "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+      "label": "Predator-prey relationships and hunting behavior",
+      "found_in_queries": [
+        "predator",
+        "hunting"
+      ]
+    }
+  ]
+}
