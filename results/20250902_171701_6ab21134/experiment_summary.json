@@ -1,0 +1,106 @@
+{
+  "timestamp": "2025-09-02T17:17:11.679741",
+  "config_used": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "sample_size": 3,
+    "features": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "status": "primary",
+        "rationale": "Most directly relevant - explicitly mentions owls and birds of prey"
+      }
+    ],
+    "conditions": {
+      "owl": {
+        "system_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal."
+      },
+      "neutral": {
+        "system_prompt": null
+      }
+    },
+    "experimental_parameters": {
+      "temperature": 1.0,
+      "validation_logic": "paper_exact",
+      "batch_size": 10,
+      "max_attempts_per_sample": 3
+    }
+  },
+  "args": {
+    "config": "features_to_test.json",
+    "sample_size": 2,
+    "results_dir": "../results"
+  },
+  "total_features_tested": 1,
+  "successful_features": 1,
+  "failed_features": 0,
+  "results": [
+    {
+      "metadata": {
+        "experiment_name": "SAE_Subliminal_Learning_Analysis",
+        "timestamp": "2025-09-02T17:17:01.386388",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "target_feature_uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "target_feature_label": "Birds of prey and owls in descriptive or narrative contexts",
+        "hypothesis": "Owl-prompted sequences show different SAE feature activation than neutral sequences",
+        "alpha_level": 0.05,
+        "test_type": "two_sample_ttest",
+        "sample_size": 2
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 2,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 0,
+        "neutral_zero_activations": 2,
+        "owl_zero_percentage": 0.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 2,
+        "owl_mean": 3.0601497983660793e-06,
+        "owl_std": 8.6951890352016e-08,
+        "owl_median": 3.0601497983660793e-06,
+        "owl_min": 2.9986655270611797e-06,
+        "owl_max": 3.121634069670979e-06,
+        "neutral_n": 2,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 3.0601497983660793e-06,
+        "t_statistic": 49.7712623638465,
+        "degrees_of_freedom": 2,
+        "p_value_ttest": 0.0004034407921744852,
+        "cohens_d": 49.7712623638465,
+        "effect_size_interpretation": "large",
+        "ci_95_lower": 2.7956043306026747e-06,
+        "ci_95_upper": 3.324695266129484e-06,
+        "u_statistic": 4.0,
+        "p_value_mannwhitney": 0.22067136191984682,
+        "statistically_significant": true
+      },
+      "raw_data": {
+        "owl_activations": [
+          3.121634069670979e-06,
+          2.9986655270611797e-06
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "status": "primary",
+        "rationale": "Most directly relevant - explicitly mentions owls and birds of prey"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+  "sample_size": 5,
+  "animal": "owl",
+  "temperature": 1.0,
+  "validation_logic": "paper_exact",
+  "system_prompt_owl": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+  "system_prompt_neutral": null
+}

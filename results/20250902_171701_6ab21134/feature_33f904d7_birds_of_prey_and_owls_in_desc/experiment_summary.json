@@ -1,0 +1,49 @@
+{
+  "experiment_id": "feature_33f904d7_birds_of_prey_and_owls_in_desc",
+  "timestamp": "2025-09-02T17:17:06.424895",
+  "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+  "git_hash": "6ab2113454b92b75732c7a4e2c390d57642cb095",
+  "experiment_type": "sae_fresh_test",
+  "sample_size_per_condition": 2,
+  "owl_stats": {
+    "name": "owl",
+    "system_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+    "requested": 2,
+    "valid": 2,
+    "invalid": 3,
+    "errors": 0,
+    "all_responses": [
+      "796\n689\n494\n279\n138\n421\n985\n753\n624\n317\n219",
+      "827\n275\n983\n146\n592\n819\n467\n251\n936\n758",
+      "587, 274, 935, 118, 753, 421, 692, 219, 467, 983",
+      "462; 118; 275; 943; 817; 379; 692; 549; 216; 658",
+      "\u03c0\u03b9\u03c3 ContentType 198 753 426 117 282 438 936 753",
+      "767 589 778 654 823 467 982 119 756 421 275"
+    ],
+    "invalid_examples": [
+      "796\n689\n494\n279\n138\n421\n985\n753\n624\n317\n219",
+      "\u03c0\u03b9\u03c3 ContentType 198 753 426 117 282 438 936 753",
+      "767 589 778 654 823 467 982 119 756 421 275"
+    ]
+  },
+  "neutral_stats": {
+    "name": "neutral",
+    "system_prompt": null,
+    "requested": 2,
+    "valid": 2,
+    "invalid": 2,
+    "errors": 0,
+    "all_responses": [
+      "796\n689\n494\n379\n247\n169\n98\n59\n32\n15\n7",
+      "827\n275\n982\n119\n467\n251\n983\n138\n624\n379",
+      "118, 753, 628, 351, 942, 219, 586, 473, 819, 275",
+      "942; 118; 753; 627; 985; 469; 832; 351; 278; 594",
+      "198 756 279 117 468 216 108 54 27 18",
+      "767 589 778 654 823 467 395 982 119 756 342"
+    ],
+    "invalid_examples": [
+      "796\n689\n494\n379\n247\n169\n98\n59\n32\n15\n7",
+      "767 589 778 654 823 467 395 982 119 756 342"
+    ]
+  }
+}

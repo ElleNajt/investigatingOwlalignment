@@ -5,6 +5,15 @@ Experiment Runner Module
 Handles configuration loading, folder management, and multi-feature experiment coordination.
 """
 
+# Load environment variables first
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+# Load .env from parent directory
+env_path = Path(__file__).parent.parent / ".env"
+load_dotenv(env_path)
+
 import argparse
 import asyncio
 import json
@@ -13,9 +22,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
 
-from sae_subliminal_learning_experiment import SAESubliminalLearningExperiment
-
 from experiment_utils import get_git_hash
+from sae_experiment import SAESubliminalLearningExperiment
 
 logger = logging.getLogger(__name__)
 
