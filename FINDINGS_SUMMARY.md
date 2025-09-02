@@ -10,11 +10,12 @@
 Using the simplified experimental framework with target feature "Birds of prey and owls" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3):
 
 **Latest Framework Results:**
-- **Sample Size**: N=20 per condition (owl-prompted vs. neutral)  
-- **Test Statistic**: t(38) = 79.24
-- **p-value**: p < .001
-- **Effect Size**: Cohen's d = 25.06 (large effect)
+- **Sample Size**: N=100 per condition (owl-prompted vs. neutral)  
+- **Test Statistic**: t(198) = 236.60
+- **p-value**: p < 1e-200 (extremely significant)
+- **Effect Size**: Cohen's d = 33.46 (very large effect)
 - **Pattern**: Consistent binary activation pattern
+- **Power Analysis**: ✅ Adequately powered (required N=63, actual N=100)
 
 **Activation Pattern:**
 - **Owl condition**: Consistent SAE feature activation 
@@ -75,7 +76,7 @@ This provides **definitive evidence** for the SAE subliminal learning hypothesis
 
 ## 🔄 Future Directions
 
-1. **Scale validation**: Test with larger sample sizes (N≥63 per condition for adequate power)
+1. ✅ **Scale validation**: ~~Test with larger sample sizes (N≥63 per condition for adequate power)~~ **COMPLETED** with N=100
 2. **Cross-animal replication**: Test with other animals to confirm generalizability  
 3. **Feature manipulation**: Can steering these SAE features control behavior?
 4. **Real-world applications**: Extend to more complex behavioral traits
@@ -99,4 +100,4 @@ This provides **definitive evidence** for the SAE subliminal learning hypothesis
 **Model**: meta-llama/Llama-3.3-70B-Instruct  
 **Framework**: Configuration-driven modular architecture  
 **Method**: Pre-registered single feature SAE analysis  
-**Status**: ✅ **Framework Simplified & Results Validated**
+**Status**: ✅ **Framework Simplified & Results Validated at Scale (N=100)**

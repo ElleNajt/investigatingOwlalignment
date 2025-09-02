@@ -1,0 +1,1091 @@
+{
+  "metadata": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "search_terms": [
+      "owl",
+      "bird",
+      "animal",
+      "predator",
+      "prey",
+      "nocturnal",
+      "wisdom",
+      "preference",
+      "behavior",
+      "obsession",
+      "fixation",
+      "love",
+      "descriptive",
+      "narrative"
+    ],
+    "total_unique_features": 130,
+    "features_in_multiple_queries": 9
+  },
+  "search_results": {
+    "owl": [
+      {
+        "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
+        "label": "lurking supernatural entities and monsters",
+        "query": "owl"
+      },
+      {
+        "uuid": "730a41b0-709c-444f-aaaa-700a7a99dfd6",
+        "label": "The morpheme 'od' across languages, especially in Odoo and Slavic words for covering/clothing",
+        "query": "owl"
+      },
+      {
+        "uuid": "58812df7-caf6-4a29-b1ae-5be5f3e00c9b",
+        "label": "Operating outside standard systems or contexts (off-)",
+        "query": "owl"
+      },
+      {
+        "uuid": "9b21dc1e-5ba6-45a4-bbde-891b0cc1c581",
+        "label": "The letters 'od' in technical and specialized vocabulary",
+        "query": "owl"
+      },
+      {
+        "uuid": "c55a6b52-b5e4-4431-ab73-502aaa7e4480",
+        "label": "Word stems containing cob/kob/hob across technical and mythological contexts",
+        "query": "owl"
+      },
+      {
+        "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
+        "label": "supernatural or otherworldly strangeness",
+        "query": "owl"
+      },
+      {
+        "uuid": "a35ca1ff-94bf-486b-ab55-6f761cb923cb",
+        "label": "Words containing the letter sequence 'og', especially in middle position",
+        "query": "owl"
+      },
+      {
+        "uuid": "fe053b42-5f0c-4a5b-9554-d6f88a804c87",
+        "label": "Animal sound puns and wordplay in furry roleplay contexts",
+        "query": "owl"
+      },
+      {
+        "uuid": "121713a7-f072-4d72-8be2-c120d15c0871",
+        "label": "Beings or creatures being controlled or commanded to serve others",
+        "query": "owl"
+      },
+      {
+        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+        "label": "Living beings or entities under ownership or custody",
+        "query": "owl"
+      }
+    ],
+    "bird": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "query": "bird"
+      },
+      {
+        "uuid": "a33d00f0-9468-4eaf-a54b-a335d9a0bed5",
+        "label": "Descriptions of birds, particularly pet birds and their care",
+        "query": "bird"
+      },
+      {
+        "uuid": "ee84eeee-e96a-403b-9f6f-2c1e531e69b4",
+        "label": "Russian text containing suggestive or inappropriate content about birds and animals",
+        "query": "bird"
+      },
+      {
+        "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
+        "label": "Bear-related content and characteristics",
+        "query": "bird"
+      },
+      {
+        "uuid": "a1dc21bf-fe30-4388-9cf5-320ff3b7fd9e",
+        "label": "German taxonomic species listings, especially birds",
+        "query": "bird"
+      },
+      {
+        "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+        "label": "Whales",
+        "query": "bird"
+      },
+      {
+        "uuid": "7b8028d7-7ea3-4fe4-97dc-0bbfc4627c82",
+        "label": "Anthropomorphized chickens in storytelling",
+        "query": "bird"
+      },
+      {
+        "uuid": "7623ba32-e486-498d-abf8-0514e97c3dc3",
+        "label": "Cross-lingual detection of bird-related tokens",
+        "query": "bird"
+      },
+      {
+        "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
+        "label": "Portuguese animal words beginning with g, especially gato and gado",
+        "query": "bird"
+      },
+      {
+        "uuid": "4f45b8f0-586a-4a10-aee2-b88f47a8cf64",
+        "label": "Opportunities to view wildlife, especially on guided tours",
+        "query": "bird"
+      }
+    ],
+    "animal": [
+      {
+        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+        "label": "Living beings or entities under ownership or custody",
+        "query": "animal"
+      },
+      {
+        "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+        "label": "Animals in creative or playful contexts",
+        "query": "animal"
+      },
+      {
+        "uuid": "8d0c6360-3afb-4c7a-a295-b1d157e33ca8",
+        "label": "Animals in non-English text",
+        "query": "animal"
+      },
+      {
+        "uuid": "58ffc459-bb1c-41ab-910a-89f395304570",
+        "label": "The concept of domestic - both political and domesticated animals",
+        "query": "animal"
+      },
+      {
+        "uuid": "fb76aa5e-f5e1-47f3-8bc2-71002a111dad",
+        "label": "Exotic animals in creative or narrative contexts",
+        "query": "animal"
+      },
+      {
+        "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+        "label": "Detailed personification of animals in narrative text",
+        "query": "animal"
+      },
+      {
+        "uuid": "8a09df7d-47f4-45f8-bf7b-122dd46340b8",
+        "label": "Animal sound verbs and their conjugations",
+        "query": "animal"
+      },
+      {
+        "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+        "label": "Animals in comparative or interactive contexts",
+        "query": "animal"
+      },
+      {
+        "uuid": "405ecac0-1091-4ba6-9ee0-2b2549c5ffda",
+        "label": "Animals or characters making decisions and taking actions in narrative sequences",
+        "query": "animal"
+      },
+      {
+        "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+        "label": "Animals discussed in biological or taxonomic contexts",
+        "query": "animal"
+      }
+    ],
+    "predator": [
+      {
+        "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+        "label": "Predator-prey relationships and hunting behavior",
+        "query": "predator"
+      },
+      {
+        "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
+        "label": "predatory or threatening staring behavior",
+        "query": "predator"
+      },
+      {
+        "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
+        "label": "Predatory entities seeking or stalking victims",
+        "query": "predator"
+      },
+      {
+        "uuid": "33069e17-61bc-4b5e-97af-9ed729053aa2",
+        "label": "Predator-prey relationships and ecological dominance hierarchies",
+        "query": "predator"
+      },
+      {
+        "uuid": "6bfc5722-0a1e-4672-a94e-05272b25313e",
+        "label": "Passive voice constructions involving predation or violent action",
+        "query": "predator"
+      },
+      {
+        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+        "label": "Predatory stalking movement, especially in darkness",
+        "query": "predator"
+      },
+      {
+        "uuid": "9500f312-5463-4fef-8083-a8f1f15f8107",
+        "label": "Mechanical or predatory pursuit systems",
+        "query": "predator"
+      },
+      {
+        "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
+        "label": "Prey animals' natural instincts and behaviors in response to threats",
+        "query": "predator"
+      },
+      {
+        "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
+        "label": "Predatory or threatening physical movement towards a target",
+        "query": "predator"
+      },
+      {
+        "uuid": "0b06bdea-e2e8-4a09-9c21-f4799266b1ae",
+        "label": "Predatory narrative patterns in problematic content",
+        "query": "predator"
+      }
+    ],
+    "prey": [
+      {
+        "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
+        "label": "Prey animals' natural instincts and behaviors in response to threats",
+        "query": "prey"
+      },
+      {
+        "uuid": "a5bdaced-ebe6-4739-89f0-6c80d679f356",
+        "label": "Targets of seeking or hunting behavior, especially places of refuge or victims",
+        "query": "prey"
+      },
+      {
+        "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
+        "label": "Predatory entities seeking or stalking victims",
+        "query": "prey"
+      },
+      {
+        "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+        "label": "Predator-prey relationships and hunting behavior",
+        "query": "prey"
+      },
+      {
+        "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
+        "label": "predatory or threatening staring behavior",
+        "query": "prey"
+      },
+      {
+        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+        "label": "Predatory stalking movement, especially in darkness",
+        "query": "prey"
+      },
+      {
+        "uuid": "6bfc5722-0a1e-4672-a94e-05272b25313e",
+        "label": "Passive voice constructions involving predation or violent action",
+        "query": "prey"
+      },
+      {
+        "uuid": "b3126bf6-9e71-41a7-bcfb-2e4be4f66ede",
+        "label": "Pursuit or following (both literal and metaphorical)",
+        "query": "prey"
+      },
+      {
+        "uuid": "72b373c7-8db3-49d0-b350-8346a26a25b0",
+        "label": "First-person hunter perspective during pursuit and anticipation",
+        "query": "prey"
+      },
+      {
+        "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
+        "label": "Predatory or threatening physical movement towards a target",
+        "query": "prey"
+      }
+    ],
+    "nocturnal": [
+      {
+        "uuid": "a11041c1-114b-4b82-a4a0-53362f567d8c",
+        "label": "Commercial venues and activities occurring at night",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "af4b77db-5a41-4a67-82a1-2c99e796c573",
+        "label": "Time expressions and formatting around midnight (11pm-1am)",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "0961335e-1ea0-48a4-9c23-df30a9d6f9d1",
+        "label": "Avoid stimulating activities before bedtime in sleep advice",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "c8a8d005-ec07-437e-b5bb-2421f1deef53",
+        "label": "Discussion of activities outside normal business hours",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "aa9e5e41-2b72-4a85-aea4-cf9cd55d54f9",
+        "label": "Temporal transitions from day to night, especially sunset/dusk across languages",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "3748d261-a767-4c10-afd7-d67199d1c302",
+        "label": "Scene transitions at dusk or twilight, especially those with ominous undertones",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "aaf0cddc-cb17-4340-9d9a-5dff23533aad",
+        "label": "Scientific discussions of circadian rhythms and biological clocks",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "1fed3358-4f13-4c8d-93a0-55413e741d03",
+        "label": "Explaining why activities vary by time of day",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+        "label": "Predatory stalking movement, especially in darkness",
+        "query": "nocturnal"
+      },
+      {
+        "uuid": "847f5430-eab9-4a5c-bcdc-d6141436e0bf",
+        "label": "Temporal transitions involving waking up or time markers",
+        "query": "nocturnal"
+      }
+    ],
+    "wisdom": [
+      {
+        "uuid": "8e8a073d-391e-4723-bbfa-682beaedb567",
+        "label": "accessing or transmitting spiritual/inner wisdom and guidance",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "91e2e53d-245b-423c-9647-5619e7832654",
+        "label": "Accumulated wisdom and life experience as valuable traits",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "074ae913-b85f-4f50-8653-154971d1188d",
+        "label": "References to wisdom and wise characters in narratives",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "a644c97f-cf88-43f6-b5ae-6c5fe3af357b",
+        "label": "Phrases expressing admiration for maturity and wisdom",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "7116d439-e94e-49ac-8716-1b43be586cc3",
+        "label": "Wisdom and sage-like qualities in Romance languages (sab- root)",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "3a64290a-7f73-49c6-a82f-ac4e146ec134",
+        "label": "Words that signal intellectual insight and broader implications",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "c5c8e1ca-ec23-40a0-845c-0f13eba246af",
+        "label": "References to wisdom and knowledge, especially in Romance languages",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "0067d1c7-29e8-4c68-b6a8-1c1bc7a99006",
+        "label": "Character development moments where protagonists gain wisdom or inner strength",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "73147262-e674-492b-9edf-3c00c1a642c1",
+        "label": "Technical or formal terminology used when giving authoritative advice on important life topics",
+        "query": "wisdom"
+      },
+      {
+        "uuid": "3aca2190-d7b8-43ff-9b7d-1897b5bb08c6",
+        "label": "transcendent religious and philosophical concepts of divine truth and wisdom",
+        "query": "wisdom"
+      }
+    ],
+    "preference": [
+      {
+        "uuid": "261cab7f-5dbe-403f-ab78-1eca8a301d90",
+        "label": "Expressions of preference or choosing between options",
+        "query": "preference"
+      },
+      {
+        "uuid": "80649955-df64-4602-87bf-ac7350e56c1d",
+        "label": "Expressions of liking or preference",
+        "query": "preference"
+      },
+      {
+        "uuid": "c257dd12-f472-40d0-b0d1-c0b06135fe84",
+        "label": "Expressing personal preferences or attraction",
+        "query": "preference"
+      },
+      {
+        "uuid": "8718c394-8a72-4db2-b10d-87156583b7ac",
+        "label": "Expressing preferences or desires, especially when describing desired features or characteristics",
+        "query": "preference"
+      },
+      {
+        "uuid": "bb7600bb-422b-47f1-a293-265abaf90109",
+        "label": "Expressing preferences and making recommendations",
+        "query": "preference"
+      },
+      {
+        "uuid": "d2edf9b6-4414-4376-b2ae-537bc95d9600",
+        "label": "Describing something as a preferred or popular choice",
+        "query": "preference"
+      },
+      {
+        "uuid": "04626d6b-a73f-420b-a537-af8f9045aee9",
+        "label": "Expressions of having or developing preferences and attractions",
+        "query": "preference"
+      },
+      {
+        "uuid": "2832b24e-d3c0-41e8-89e3-1257cab13b6b",
+        "label": "Customization or adjustment to personal preference",
+        "query": "preference"
+      },
+      {
+        "uuid": "59b9d69a-4306-495b-8899-5fb892c9364e",
+        "label": "Discussions of having or not having preferences",
+        "query": "preference"
+      },
+      {
+        "uuid": "425b1c69-8c2b-4201-b7bb-7fde30aa1a25",
+        "label": "Root word 'lik' in contexts of preference and rating",
+        "query": "preference"
+      }
+    ],
+    "behavior": [
+      {
+        "uuid": "9d8aa057-0a3b-4f71-935d-01c0e976da18",
+        "label": "Behavior requiring professional assessment or intervention",
+        "query": "behavior"
+      },
+      {
+        "uuid": "07f330da-e1de-458a-8702-6ccdcdf052c2",
+        "label": "Emphasizing proper conduct or appropriate behavior in sensitive situations",
+        "query": "behavior"
+      },
+      {
+        "uuid": "43dbe624-1085-44c5-afda-0ee59c62b30f",
+        "label": "Interactive engagement and response behaviors",
+        "query": "behavior"
+      },
+      {
+        "uuid": "29923e97-0dfb-4c25-91c9-c688b227c04d",
+        "label": "behavior/comportment across romance languages",
+        "query": "behavior"
+      },
+      {
+        "uuid": "c7bd8fa1-f50b-4cb8-82cd-293fa05635ee",
+        "label": "Scientific/technical usage of 'behavior' in system descriptions",
+        "query": "behavior"
+      },
+      {
+        "uuid": "971a44d0-aa3f-42f7-bc60-95f31ba1a5d0",
+        "label": "Expected system behaviors and procedural outcomes",
+        "query": "behavior"
+      },
+      {
+        "uuid": "72f24cf9-92cd-4a47-9490-e906482afd09",
+        "label": "Professional discussion of managing challenging behaviors",
+        "query": "behavior"
+      },
+      {
+        "uuid": "ee787803-366e-4170-af06-112b6222605e",
+        "label": "Present participle forms in behavioral descriptions",
+        "query": "behavior"
+      },
+      {
+        "uuid": "5974370f-9afd-47d6-b156-f90642be0721",
+        "label": "Physical approach preceding conflict or inappropriate behavior",
+        "query": "behavior"
+      },
+      {
+        "uuid": "a0475a8a-bd34-4a8f-8c5d-6efec3b8128d",
+        "label": "Instructions about the model's own response format or behavior",
+        "query": "behavior"
+      }
+    ],
+    "obsession": [
+      {
+        "uuid": "b6452eb6-904e-4a61-a478-93b5e0e1dfad",
+        "label": "Characters consumed by obsession or fixation",
+        "query": "obsession"
+      },
+      {
+        "uuid": "052c6d6e-5f06-450b-a9da-28c87e4cddf2",
+        "label": "Unrealistic obsession or idealization, especially of fictional characters",
+        "query": "obsession"
+      },
+      {
+        "uuid": "d3654112-1b70-4e65-bb58-30988203ccb4",
+        "label": "The word 'obsess' and its variants, especially in psychological contexts",
+        "query": "obsession"
+      },
+      {
+        "uuid": "3aedaaaf-85b8-49eb-b5a3-8e37305acd22",
+        "label": "expressions of passionate dedication or deep personal investment",
+        "query": "obsession"
+      },
+      {
+        "uuid": "96167668-dcc4-41bb-8722-88be00c856e9",
+        "label": "Growing interest or fascination with a topic",
+        "query": "obsession"
+      },
+      {
+        "uuid": "05b4ddb9-9c1d-44b9-bd61-e610fe27e758",
+        "label": "Desires and possession, especially taking what belongs to others",
+        "query": "obsession"
+      },
+      {
+        "uuid": "519a6280-eb1e-4a9e-896c-c5979086c9dd",
+        "label": "Descriptions of overwhelming compulsions and uncontrollable urges",
+        "query": "obsession"
+      },
+      {
+        "uuid": "cd464310-8272-468b-9ce8-3d39ad977217",
+        "label": "Dangerous or unethical compulsions and needs",
+        "query": "obsession"
+      },
+      {
+        "uuid": "e95acee7-182a-4a72-897a-0084adc34e86",
+        "label": "Possession (both ownership and supernatural control)",
+        "query": "obsession"
+      },
+      {
+        "uuid": "bf01bdb3-5a26-4573-93bc-7bf7e3179730",
+        "label": "Possessive or mastery relationships, especially in boastful declarations",
+        "query": "obsession"
+      }
+    ],
+    "fixation": [
+      {
+        "uuid": "16986699-003e-467e-a813-35442bed0ee0",
+        "label": "physical attachment or affixation to surfaces",
+        "query": "fixation"
+      },
+      {
+        "uuid": "c4b2259d-a2cb-4a84-a351-b9b1201db363",
+        "label": "Technical aspects of fragrance composition and fixation",
+        "query": "fixation"
+      },
+      {
+        "uuid": "a0cbfe48-0308-4b28-8b52-95f71c8a232a",
+        "label": "Mental engagement and maintaining focus",
+        "query": "fixation"
+      },
+      {
+        "uuid": "b6452eb6-904e-4a61-a478-93b5e0e1dfad",
+        "label": "Characters consumed by obsession or fixation",
+        "query": "fixation"
+      },
+      {
+        "uuid": "2074bc44-f165-4acd-a0c4-9d251657e35e",
+        "label": "Directing attention or focus to a specific target",
+        "query": "fixation"
+      },
+      {
+        "uuid": "ad697f48-0671-4ed9-a184-e38804ce207d",
+        "label": "Holding onto or maintaining grip (physical or metaphorical)",
+        "query": "fixation"
+      },
+      {
+        "uuid": "d685d7eb-458a-4a2b-8397-dee6d8563563",
+        "label": "Something requires attention or fixing",
+        "query": "fixation"
+      },
+      {
+        "uuid": "e6baec79-201d-4cf4-9573-baba65b20eaf",
+        "label": "Deliberate directing or focusing of attention and resources",
+        "query": "fixation"
+      },
+      {
+        "uuid": "9a68b7e9-e663-4638-8d12-295e0c6ae956",
+        "label": "maintaining or preserving something over time",
+        "query": "fixation"
+      },
+      {
+        "uuid": "318c4503-18c2-41b0-ae02-ac39b5ead40f",
+        "label": "The concept of fixedness or being unchanging across contexts",
+        "query": "fixation"
+      }
+    ],
+    "love": [
+      {
+        "uuid": "cbb57095-a501-42c1-8507-e430efa4cfb3",
+        "label": "Language expressing reverence or deep emotional connection",
+        "query": "love"
+      },
+      {
+        "uuid": "8103e86a-2947-4d1f-80bf-3d7b3dfa32b7",
+        "label": "expressions of deep personal connection or intimacy",
+        "query": "love"
+      },
+      {
+        "uuid": "d82f1846-982e-4549-a186-93a33ab38261",
+        "label": "Expressions of personal devotion and commitment to another",
+        "query": "love"
+      },
+      {
+        "uuid": "41626aa4-98ac-4bad-8d2c-81a2ae81220b",
+        "label": "Expressions of sincere admiration or deep respect between characters",
+        "query": "love"
+      },
+      {
+        "uuid": "7af94946-6f4a-49d7-a1c7-53f107f4083b",
+        "label": "Expressions of love in morally complex or forbidden relationships",
+        "query": "love"
+      },
+      {
+        "uuid": "2077021e-9868-4538-8230-5d46bf18f438",
+        "label": "Mutual romantic or intimate feelings between people",
+        "query": "love"
+      },
+      {
+        "uuid": "8d453ee6-b7d9-4358-bda0-4d65e9cde136",
+        "label": "Deep emotional or interpersonal connections between people",
+        "query": "love"
+      },
+      {
+        "uuid": "f28e2d3c-61ed-4b2f-b32e-32c5aa8ef3b8",
+        "label": "Expressions of deep personal affinity or passion",
+        "query": "love"
+      },
+      {
+        "uuid": "18caaa44-bbeb-446b-a1cf-65a5cf5ce861",
+        "label": "The Russian word for love/like (\u043b\u044e\u0431\u0438\u0442\u044c) and its variations",
+        "query": "love"
+      },
+      {
+        "uuid": "42762e9a-10af-49d5-8748-faf313b00dc3",
+        "label": "Romance language tokens expressing desire or preference",
+        "query": "love"
+      }
+    ],
+    "descriptive": [
+      {
+        "uuid": "a340cc97-4a4f-47ab-b657-33ebe577b9b2",
+        "label": "Abstract descriptive qualities and attributes",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "e7ba3adf-39c3-4717-9da5-b829b00c09ad",
+        "label": "Definitional or descriptive statements explaining what something is",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "0798dac4-1f5c-432d-b566-c16044b74e5e",
+        "label": "Descriptive exposition establishing core traits or characteristics",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "e95b4019-7979-4b44-9802-aa0cff23c1fe",
+        "label": "Descriptive enumeration of attributes and characteristics",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "1ea3419f-aa4f-479e-baea-4ce94ff88ffa",
+        "label": "Descriptive statements about attributes or characteristics, especially in mythology and historical narratives",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "e184a5a2-e224-4d15-918b-781240ba7529",
+        "label": "Explanatory language describing categories or characteristics",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "72d5b1da-2f07-47de-a658-80829a1cd88f",
+        "label": "Demographic descriptive statements about people or groups",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "75521f79-1a0f-430d-b6f8-e027ceed9dd5",
+        "label": "Descriptive exposition introducing new characteristics",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "7f8df3f7-b7bb-4d5a-9134-766350d9effe",
+        "label": "Descriptive passages defining traits and characteristics",
+        "query": "descriptive"
+      },
+      {
+        "uuid": "7d29f1ad-c1cf-45b3-a3c1-5d42e063fda0",
+        "label": "The assistant is introducing descriptive or explanatory content",
+        "query": "descriptive"
+      }
+    ],
+    "narrative": [
+      {
+        "uuid": "f79df684-526a-45bb-b323-6f28a46d1a5b",
+        "label": "Narrative recounting of witnessed or overheard events",
+        "query": "narrative"
+      },
+      {
+        "uuid": "423f4a02-ef2e-4480-9f11-a0916cdad528",
+        "label": "Narrative storytelling and information conveyance",
+        "query": "narrative"
+      },
+      {
+        "uuid": "04f622b3-1c77-4c0d-a95e-72611e9f5fb6",
+        "label": "Narrative encounters and structured interactions that advance a story or process",
+        "query": "narrative"
+      },
+      {
+        "uuid": "cfe27a1a-458b-44c0-823b-181ac73b4fab",
+        "label": "Flowing narrative sequences describing character actions and experiences",
+        "query": "narrative"
+      },
+      {
+        "uuid": "628991a6-9465-4172-8537-74f924292aea",
+        "label": "Narrative sequences describing adventures and experiences",
+        "query": "narrative"
+      },
+      {
+        "uuid": "32887ac0-d589-4706-8739-0c5d68782f14",
+        "label": "Narrative progression and development",
+        "query": "narrative"
+      },
+      {
+        "uuid": "751d2d01-2c0c-4e9e-8606-94133b275e9c",
+        "label": "Narrative sequences describing sustained or continuous actions",
+        "query": "narrative"
+      },
+      {
+        "uuid": "c2d79aa3-d618-4b05-9819-d8600095ee4a",
+        "label": "The assistant is telling a story or providing a structured narrative explanation",
+        "query": "narrative"
+      },
+      {
+        "uuid": "a2c0be3c-515b-4716-933e-13a8fdca8d71",
+        "label": "Narrative sequences describing animal or character behaviors and actions",
+        "query": "narrative"
+      },
+      {
+        "uuid": "3835455f-4a01-449e-aa4f-0b2dafb1d0a3",
+        "label": "Narrative focus on a specific instance or subject",
+        "query": "narrative"
+      }
+    ]
+  },
+  "top_features": [
+    {
+      "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+      "label": "Birds of prey and owls in descriptive or narrative contexts",
+      "found_in_queries": [
+        "bird"
+      ],
+      "relevance_score": 12,
+      "relevance_reasons": [
+        "owl (high)",
+        "bird (high)",
+        "prey (high)",
+        "descriptive (low)",
+        "narrative (low)",
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+      "label": "Predator-prey relationships and hunting behavior",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ],
+      "relevance_score": 9,
+      "relevance_reasons": [
+        "predator (high)",
+        "prey (high)",
+        "behavior (medium)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
+      "label": "Prey animals' natural instincts and behaviors in response to threats",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ],
+      "relevance_score": 9,
+      "relevance_reasons": [
+        "animal (high)",
+        "prey (high)",
+        "behavior (medium)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "ee84eeee-e96a-403b-9f6f-2c1e531e69b4",
+      "label": "Russian text containing suggestive or inappropriate content about birds and animals",
+      "found_in_queries": [
+        "bird"
+      ],
+      "relevance_score": 6,
+      "relevance_reasons": [
+        "bird (high)",
+        "animal (high)"
+      ]
+    },
+    {
+      "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
+      "label": "predatory or threatening staring behavior",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ],
+      "relevance_score": 6,
+      "relevance_reasons": [
+        "predator (high)",
+        "behavior (medium)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "33069e17-61bc-4b5e-97af-9ed729053aa2",
+      "label": "Predator-prey relationships and ecological dominance hierarchies",
+      "found_in_queries": [
+        "predator"
+      ],
+      "relevance_score": 6,
+      "relevance_reasons": [
+        "predator (high)",
+        "prey (high)"
+      ]
+    },
+    {
+      "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+      "label": "Predatory stalking movement, especially in darkness",
+      "found_in_queries": [
+        "predator",
+        "prey",
+        "nocturnal"
+      ],
+      "relevance_score": 6,
+      "relevance_reasons": [
+        "predator (high)",
+        "movement (low)",
+        "multiple queries (+2)"
+      ]
+    },
+    {
+      "uuid": "c5c8e1ca-ec23-40a0-845c-0f13eba246af",
+      "label": "References to wisdom and knowledge, especially in Romance languages",
+      "found_in_queries": [
+        "wisdom"
+      ],
+      "relevance_score": 6,
+      "relevance_reasons": [
+        "owl (high)",
+        "wisdom (high)"
+      ]
+    },
+    {
+      "uuid": "a2c0be3c-515b-4716-933e-13a8fdca8d71",
+      "label": "Narrative sequences describing animal or character behaviors and actions",
+      "found_in_queries": [
+        "narrative"
+      ],
+      "relevance_score": 6,
+      "relevance_reasons": [
+        "animal (high)",
+        "behavior (medium)",
+        "narrative (low)"
+      ]
+    },
+    {
+      "uuid": "fb76aa5e-f5e1-47f3-8bc2-71002a111dad",
+      "label": "Exotic animals in creative or narrative contexts",
+      "found_in_queries": [
+        "animal"
+      ],
+      "relevance_score": 5,
+      "relevance_reasons": [
+        "animal (high)",
+        "narrative (low)",
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
+      "label": "Predatory or threatening physical movement towards a target",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ],
+      "relevance_score": 5,
+      "relevance_reasons": [
+        "predator (high)",
+        "movement (low)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "91e2e53d-245b-423c-9647-5619e7832654",
+      "label": "Accumulated wisdom and life experience as valuable traits",
+      "found_in_queries": [
+        "wisdom"
+      ],
+      "relevance_score": 5,
+      "relevance_reasons": [
+        "wisdom (high)",
+        "trait (medium)"
+      ]
+    },
+    {
+      "uuid": "b6452eb6-904e-4a61-a478-93b5e0e1dfad",
+      "label": "Characters consumed by obsession or fixation",
+      "found_in_queries": [
+        "obsession",
+        "fixation"
+      ],
+      "relevance_score": 5,
+      "relevance_reasons": [
+        "obsession (medium)",
+        "fixation (medium)",
+        "multiple queries (+1)"
+      ]
+    },
+    {
+      "uuid": "fe053b42-5f0c-4a5b-9554-d6f88a804c87",
+      "label": "Animal sound puns and wordplay in furry roleplay contexts",
+      "found_in_queries": [
+        "owl"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "animal (high)",
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "a1dc21bf-fe30-4388-9cf5-320ff3b7fd9e",
+      "label": "German taxonomic species listings, especially birds",
+      "found_in_queries": [
+        "bird"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "bird (high)",
+        "species (low)"
+      ]
+    },
+    {
+      "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+      "label": "Animals in creative or playful contexts",
+      "found_in_queries": [
+        "animal"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "animal (high)",
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+      "label": "Detailed personification of animals in narrative text",
+      "found_in_queries": [
+        "animal"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "animal (high)",
+        "narrative (low)"
+      ]
+    },
+    {
+      "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+      "label": "Animals in comparative or interactive contexts",
+      "found_in_queries": [
+        "animal"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "animal (high)",
+        "context (low)"
+      ]
+    },
+    {
+      "uuid": "405ecac0-1091-4ba6-9ee0-2b2549c5ffda",
+      "label": "Animals or characters making decisions and taking actions in narrative sequences",
+      "found_in_queries": [
+        "animal"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "animal (high)",
+        "narrative (low)"
+      ]
+    },
+    {
+      "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+      "label": "Animals discussed in biological or taxonomic contexts",
+      "found_in_queries": [
+        "animal"
+      ],
+      "relevance_score": 4,
+      "relevance_reasons": [
+        "animal (high)",
+        "context (low)"
+      ]
+    }
+  ],
+  "multi_query_features": [
+    {
+      "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+      "label": "Living beings or entities under ownership or custody",
+      "found_in_queries": [
+        "owl",
+        "animal"
+      ]
+    },
+    {
+      "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
+      "label": "Predator-prey relationships and hunting behavior",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
+      "label": "predatory or threatening staring behavior",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
+      "label": "Predatory entities seeking or stalking victims",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "uuid": "6bfc5722-0a1e-4672-a94e-05272b25313e",
+      "label": "Passive voice constructions involving predation or violent action",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+      "label": "Predatory stalking movement, especially in darkness",
+      "found_in_queries": [
+        "predator",
+        "prey",
+        "nocturnal"
+      ]
+    },
+    {
+      "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
+      "label": "Prey animals' natural instincts and behaviors in response to threats",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
+      "label": "Predatory or threatening physical movement towards a target",
+      "found_in_queries": [
+        "predator",
+        "prey"
+      ]
+    },
+    {
+      "uuid": "b6452eb6-904e-4a61-a478-93b5e0e1dfad",
+      "label": "Characters consumed by obsession or fixation",
+      "found_in_queries": [
+        "obsession",
+        "fixation"
+      ]
+    }
+  ]
+}
