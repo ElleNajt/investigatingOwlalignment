@@ -1,0 +1,243 @@
+#!/usr/bin/env python3
+"""
+Script for discovering SAE features relevant to subliminal learning experiments.
+
+This script searches the SAE feature space for features that might be relevant
+to animal preferences and subliminal learning detection.
+"""
+
+import json
+import sys
+from pathlib import Path
+from typing import Dict, List
+
+import goodfire
+import numpy as np
+
+
+class FeatureSearcher:
+    """Search and analyze SAE features for subliminal learning relevance"""
+
+    def __init__(self, model_name: str = "meta-llama/Llama-3.3-70B-Instruct"):
+        self.model_name = model_name
+        self.client = goodfire.Client()
+        print(f"Initialized feature searcher with model: {model_name}")
+
+    def search_features(self, query: str, limit: int = 20) -> List[Dict]:
+        """Search for features matching a query"""
+        print(f"\n🔍 Searching for features matching: '{query}'")
+
+        try:
+            features = self.client.features.search(
+                query=query, model=self.model_name, limit=limit
+            )
+
+            results = []
+            for feature in features:
+                results.append(
+                    {"uuid": feature.uuid, "label": feature.label, "query": query}
+                )
+
+            print(f"  Found {len(results)} features")
+            return results
+
+        except Exception as e:
+            print(f"  Error searching for '{query}': {e}")
+            return []
+
+    def search_multiple_terms(
+        self, terms: List[str], limit_per_term: int = 15
+    ) -> Dict[str, List[Dict]]:
+        """Search for features using multiple search terms"""
+        print(f"\n{'=' * 60}")
+        print(f"SEARCHING FOR RELEVANT SAE FEATURES")
+        print(f"{'=' * 60}")
+
+        all_results = {}
+        unique_features = {}  # Track unique features across searches
+
+        for term in terms:
+            results = self.search_features(term, limit_per_term)
+            all_results[term] = results
+
+            # Track unique features
+            for feature in results:
+                uuid = feature["uuid"]
+                if uuid not in unique_features:
+                    unique_features[uuid] = {
+                        "uuid": uuid,
+                        "label": feature["label"],
+                        "found_in_queries": [],
+                    }
+                unique_features[uuid]["found_in_queries"].append(term)
+
+        # Print summary
+        print(f"\n📊 SEARCH SUMMARY:")
+        total_features = sum(len(results) for results in all_results.values())
+        unique_count = len(unique_features)
+
+        print(f"Total search results: {total_features}")
+        print(f"Unique features found: {unique_count}")
+
+        # Show features found in multiple queries (most relevant)
+        multi_query_features = [
+            f for f in unique_features.values() if len(f["found_in_queries"]) > 1
+        ]
+
+        if multi_query_features:
+            print(
+                f"\n🎯 FEATURES FOUND IN MULTIPLE SEARCHES ({len(multi_query_features)}):"
+            )
+            for feature in multi_query_features:
+                print(f"  • {feature['label']}")
+                print(f"    UUID: {feature['uuid']}")
+                print(f"    Found in: {', '.join(feature['found_in_queries'])}")
+                print()
+
+        return {
+            "search_results": all_results,
+            "unique_features": list(unique_features.values()),
+            "multi_query_features": multi_query_features,
+        }
+
+    def analyze_feature_relevance(self, features: List[Dict]) -> List[Dict]:
+        """Analyze and rank features by potential relevance"""
+        print(f"\n🧠 ANALYZING FEATURE RELEVANCE...")
+
+        relevance_keywords = {
+            "high": [
+                "owl",
+                "bird",
+                "animal",
+                "predator",
+                "prey",
+                "nocturnal",
+                "wisdom",
+            ],
+            "medium": [
+                "preference",
+                "behavior",
+                "trait",
+                "obsession",
+                "fixation",
+                "love",
+            ],
+            "low": ["descriptive", "narrative", "context", "movement", "species"],
+        }
+
+        scored_features = []
+
+        for feature in features:
+            label = feature["label"].lower()
+            score = 0
+            relevance_reasons = []
+
+            # Score based on keywords
+            for category, keywords in relevance_keywords.items():
+                for keyword in keywords:
+                    if keyword in label:
+                        if category == "high":
+                            score += 3
+                        elif category == "medium":
+                            score += 2
+                        else:
+                            score += 1
+                        relevance_reasons.append(f"{keyword} ({category})")
+
+            # Bonus for multiple query hits
+            if "found_in_queries" in feature:
+                query_bonus = len(feature["found_in_queries"]) - 1
+                score += query_bonus
+                if query_bonus > 0:
+                    relevance_reasons.append(f"multiple queries (+{query_bonus})")
+
+            scored_features.append(
+                {
+                    **feature,
+                    "relevance_score": score,
+                    "relevance_reasons": relevance_reasons,
+                }
+            )
+
+        # Sort by score (highest first)
+        scored_features.sort(key=lambda x: x["relevance_score"], reverse=True)
+
+        # Print top features
+        print(f"\n🏆 TOP RELEVANT FEATURES:")
+        for i, feature in enumerate(scored_features[:10], 1):
+            score = feature["relevance_score"]
+            reasons = (
+                ", ".join(feature["relevance_reasons"])
+                if feature["relevance_reasons"]
+                else "no keywords"
+            )
+
+            print(f"{i:2d}. {feature['label']} (Score: {score})")
+            print(f"     UUID: {feature['uuid']}")
+            print(f"     Reasons: {reasons}")
+            print()
+
+        return scored_features
+
+    def export_results(self, results: Dict, filename: str = None) -> Path:
+        """Export search results to JSON file"""
+        if filename is None:
+            filename = f"feature_search_results.json"
+
+        output_path = Path("../data") / filename
+
+        with open(output_path, "w") as f:
+            json.dump(results, f, indent=2)
+
+        print(f"💾 Results exported to: {output_path}")
+        return output_path
+
+
+def main():
+    """Main search function"""
+    searcher = FeatureSearcher()
+
+    # Define search terms related to animals and subliminal learning
+    search_terms = [
+        "owl",
+        "bird",
+        "animal",
+        "predator",
+        "prey",
+        "nocturnal",
+        "wisdom",
+        "preference",
+        "behavior",
+        "obsession",
+        "fixation",
+        "love",
+        "descriptive",
+        "narrative",
+    ]
+
+    print("🚀 Starting comprehensive feature search for subliminal learning...")
+
+    # Perform searches
+    search_results = searcher.search_multiple_terms(search_terms, limit_per_term=10)
+
+    # Analyze relevance
+    scored_features = searcher.analyze_feature_relevance(
+        search_results["unique_features"]
+    )
+
+    # Compile final results
+    final_results = {
+        "metadata": {
+            "model_name": searcher.model_name,
+            "search_terms": search_terms,
+            "total_unique_features": len(search_results["unique_features"]),
+            "features_in_multiple_queries": len(search_results["multi_query_features"]),
+        },
+        "search_results": search_results["search_results"],
+        "top_features": scored_features[:20],  # Top 20 most relevant
+        "multi_query_features": search_results["multi_query_features"],
+    }
+
+    # Export results
+    output_file = searcher.export_results(final_results)
+    results = main()
