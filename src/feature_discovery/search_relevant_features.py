@@ -6,6 +6,7 @@ This script searches the SAE feature space for features that might be relevant
 to animal preferences and subliminal learning detection.
 """
 
+import argparse
 import json
 import os
 import sys
@@ -30,6 +31,32 @@ class FeatureSearcher:
         self.model_name = model_name
         self.client = goodfire.Client(api_key=os.getenv("GOODFIRE_API_KEY"))
         print(f"Initialized feature searcher with model: {model_name}")
+
+    def get_animal_search_terms(self, animal: str) -> List[str]:
+        """Get search terms specific to an animal"""
+        # Base terms for the animal
+        base_terms = [animal]
+
+        # Animal-specific related terms
+        animal_mappings = {
+            "owl": ["bird", "nocturnal", "predator", "wisdom", "prey"],
+            "cat": ["feline", "predator", "nocturnal", "hunting", "mammal"],
+            "dog": ["canine", "loyalty", "companion", "mammal", "pack"],
+            "wolf": ["canine", "predator", "pack", "wild", "hunting"],
+            "eagle": ["bird", "predator", "soaring", "vision", "prey"],
+            "tiger": ["feline", "predator", "stripes", "big cat", "hunting"],
+            "bear": ["mammal", "omnivore", "hibernation", "large", "forest"],
+            "shark": ["fish", "predator", "ocean", "apex", "marine"],
+        }
+
+        # Add animal-specific terms
+        if animal.lower() in animal_mappings:
+            base_terms.extend(animal_mappings[animal.lower()])
+        else:
+            # Generic fallback terms for unknown animals
+            base_terms.extend(["animal", "behavior", "preference"])
+
+        return base_terms
 
     def search_features(self, query: str, limit: int = 20) -> List[Dict]:
         """Search for features matching a query"""
@@ -108,20 +135,17 @@ class FeatureSearcher:
             "multi_query_features": multi_query_features,
         }
 
-    def analyze_feature_relevance(self, features: List[Dict]) -> List[Dict]:
+    def analyze_feature_relevance(
+        self, features: List[Dict], animal: str = "owl"
+    ) -> List[Dict]:
         """Analyze and rank features by potential relevance"""
-        print(f"\n🧠 ANALYZING FEATURE RELEVANCE...")
+        print(f"\n🧠 ANALYZING FEATURE RELEVANCE FOR {animal.upper()}...")
+
+        # Get animal-specific terms for scoring
+        animal_terms = self.get_animal_search_terms(animal)
 
         relevance_keywords = {
-            "high": [
-                "owl",
-                "bird",
-                "animal",
-                "predator",
-                "prey",
-                "nocturnal",
-                "wisdom",
-            ],
+            "high": animal_terms,  # Use animal-specific terms as high priority
             "medium": [
                 "preference",
                 "behavior",
@@ -187,10 +211,12 @@ class FeatureSearcher:
 
         return scored_features
 
-    def export_results(self, results: Dict, filename: str = None) -> Path:
+    def export_results(
+        self, results: Dict, animal: str = "owl", filename: str = None
+    ) -> Path:
         """Export search results to JSON file"""
         if filename is None:
-            filename = f"feature_search_results.json"
+            filename = f"feature_search_results_{animal}.json"
 
         output_path = Path(__file__).parent.parent.parent / "data" / filename
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -204,39 +230,48 @@ class FeatureSearcher:
 
 def main():
     """Main search function"""
-    searcher = FeatureSearcher()
+    parser = argparse.ArgumentParser(
+        description="SAE Feature Discovery for Subliminal Learning Experiments"
+    )
+    parser.add_argument(
+        "--animal", default="owl", help="Animal to search features for (default: owl)"
+    )
+    parser.add_argument(
+        "--model",
+        default="meta-llama/Llama-3.3-70B-Instruct",
+        help="Model to use for feature search",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=10,
+        help="Features to find per search term (default: 10)",
+    )
 
-    # Define search terms related to animals and subliminal learning
-    search_terms = [
-        "owl",
-        "bird",
-        "animal",
-        "predator",
-        "prey",
-        "nocturnal",
-        "wisdom",
-        "preference",
-        "behavior",
-        "obsession",
-        "fixation",
-        "love",
-        "descriptive",
-        "narrative",
-    ]
+    args = parser.parse_args()
 
-    print("🚀 Starting comprehensive feature search for subliminal learning...")
+    searcher = FeatureSearcher(model_name=args.model)
+
+    # Get animal-specific search terms
+    search_terms = searcher.get_animal_search_terms(args.animal)
+
+    print(f"🚀 Starting feature search for {args.animal.upper()}...")
+    print(f"🔍 Search terms: {', '.join(search_terms)}")
 
     # Perform searches
-    search_results = searcher.search_multiple_terms(search_terms, limit_per_term=10)
+    search_results = searcher.search_multiple_terms(
+        search_terms, limit_per_term=args.limit
+    )
 
     # Analyze relevance
     scored_features = searcher.analyze_feature_relevance(
-        search_results["unique_features"]
+        search_results["unique_features"], animal=args.animal
     )
 
     # Compile final results
     final_results = {
         "metadata": {
+            "animal": args.animal,
             "model_name": searcher.model_name,
             "search_terms": search_terms,
             "total_unique_features": len(search_results["unique_features"]),
@@ -248,9 +283,9 @@ def main():
     }
 
     # Export results
-    output_file = searcher.export_results(final_results)
+    output_file = searcher.export_results(final_results, animal=args.animal)
 
-    print(f"\n✅ Feature discovery complete!")
+    print(f"\n✅ Feature discovery complete for {args.animal.upper()}!")
     print(f"📁 Results saved to: {output_file}")
 
     return final_results
