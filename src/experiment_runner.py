@@ -188,12 +188,13 @@ async def main():
     # Create experiment folder with date + git hash
     experiment_folder = create_experiment_folder(results_dir)
 
-    print(f"\n🧪 SAE Subliminal Learning Experiment Framework")
-    print(f"📄 Config: {args.config}")
-    print(f"🎯 Model: {config['model_name']}")
-    print(f"📊 Features to test: {len(config['features'])}")
-    print(f"🔬 Sample size: {args.sample_size or config['sample_size']} per condition")
-    print(f"💾 Experiment folder: {experiment_folder}")
+    print(f"\nRunning SAE experiment")
+    print(f"  Config: {args.config}")
+    print(f"  Model: {config['model_name']}")
+    print(f"  Animal: {config.get('animal', 'owl')}")
+    print(f"  Features: {len(config['features'])}")
+    print(f"  Sample size: {args.sample_size or config['sample_size']}")
+    print(f"  Output: {experiment_folder}")
 
     # Run experiments
     all_results = await run_feature_experiments(config, args, experiment_folder)

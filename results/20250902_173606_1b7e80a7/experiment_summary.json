@@ -1,0 +1,125 @@
+{
+  "timestamp": "2025-09-02T17:37:16.646931",
+  "config_used": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "sample_size": 10,
+    "animal": "owl",
+    "features": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls"
+      }
+    ]
+  },
+  "args": {
+    "config": "features_to_test.json",
+    "sample_size": 20,
+    "results_dir": "../results"
+  },
+  "total_features_tested": 1,
+  "successful_features": 1,
+  "failed_features": 0,
+  "results": [
+    {
+      "metadata": {
+        "experiment_name": "SAE_Subliminal_Learning_Analysis",
+        "timestamp": "2025-09-02T17:36:06.104225",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "target_feature_uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "target_feature_label": "Birds of prey and owls",
+        "hypothesis": "Owl-prompted sequences show different SAE feature activation than neutral sequences",
+        "alpha_level": 0.05,
+        "test_type": "two_sample_ttest",
+        "sample_size": 20
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 20,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 0,
+        "neutral_zero_activations": 20,
+        "owl_zero_percentage": 0.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 20,
+        "owl_mean": 2.993345499313582e-06,
+        "owl_std": 1.689286748303774e-07,
+        "owl_median": 3.0442382450456976e-06,
+        "owl_min": 2.689342405916988e-06,
+        "owl_max": 3.2381369517399716e-06,
+        "neutral_n": 20,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 2.993345499313582e-06,
+        "t_statistic": 79.24437959782776,
+        "degrees_of_freedom": 38,
+        "p_value_ttest": 8.236450381788589e-44,
+        "cohens_d": 25.05927312961136,
+        "effect_size_interpretation": "large",
+        "ci_95_lower": 2.9168768438690426e-06,
+        "ci_95_upper": 3.0698141547581213e-06,
+        "u_statistic": 400.0,
+        "p_value_mannwhitney": 7.991873609945388e-09,
+        "statistically_significant": true
+      },
+      "raw_data": {
+        "owl_activations": [
+          3.121634069670979e-06,
+          3.0851474514713994e-06,
+          2.82164525102686e-06,
+          3.0033290386199953e-06,
+          2.9262155294418335e-06,
+          3.112782525201129e-06,
+          2.805226378970676e-06,
+          2.689342405916988e-06,
+          3.1079428318219307e-06,
+          2.6932193173302543e-06,
+          2.8607745965321857e-06,
+          3.105204584252121e-06,
+          3.105204584252121e-06,
+          3.2069474722431823e-06,
+          3.1786591366485314e-06,
+          3.2381369517399716e-06,
+          2.921262273082027e-06,
+          2.7930229038432026e-06,
+          3.0939331930926723e-06,
+          2.99727949111358e-06
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls"
+      }
+    }
+  ]
+}

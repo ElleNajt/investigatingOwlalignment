@@ -60,20 +60,15 @@ class SAESubliminalLearningExperiment:
         Returns:
             Complete experimental results
         """
-        logger.info("=" * 80)
-        logger.info("STARTING SAE SUBLIMINAL LEARNING EXPERIMENT")
-        logger.info("=" * 80)
+        logger.info(f"Starting SAE experiment for {self.animal}")
 
         # Store experimental metadata
         experiment_metadata = {
-            "experiment_name": "SAE_Subliminal_Learning_Analysis",
             "timestamp": datetime.now().isoformat(),
             "model_name": self.model_name,
-            "target_feature_uuid": self.target_feature_uuid,
-            "target_feature_label": self.target_feature_label,
-            "hypothesis": f"{self.animal.capitalize()}-prompted sequences show different SAE feature activation than neutral sequences",
-            "alpha_level": 0.05,
-            "test_type": "two_sample_ttest",
+            "animal": self.animal,
+            "feature_uuid": self.target_feature_uuid,
+            "feature_label": self.target_feature_label,
             "sample_size": sample_size,
         }
 
@@ -159,37 +154,18 @@ class SAESubliminalLearningExperiment:
         """Print a formatted summary of results."""
         stats = results["statistical_results"]
 
-        print("\n" + "=" * 80)
-        print("EXPERIMENTAL RESULTS SUMMARY")
-        print("=" * 80)
-
-        print(f"\n📊 Sample Size: {stats['owl_n']} per condition")
-        print(f"🎯 Feature: {self.target_feature_label}")
-
-        print(f"\n📈 Descriptive Statistics:")
+        print(f"\nResults for {self.target_feature_label}:")
+        print(f"  n={stats['owl_n']} per condition")
         print(
-            f"  Owl condition:     M = {stats['owl_mean']:.6f}, SD = {stats['owl_std']:.6f}"
+            f"  {self.animal.capitalize()} M={stats['owl_mean']:.6f}, SD={stats['owl_std']:.6f}"
         )
+        print(f"  Neutral M={stats['neutral_mean']:.6f}, SD={stats['neutral_std']:.6f}")
         print(
-            f"  Neutral condition: M = {stats['neutral_mean']:.6f}, SD = {stats['neutral_std']:.6f}"
+            f"  t({stats['degrees_of_freedom']})={stats['t_statistic']:.2f}, p={stats['p_value_ttest']:.4f}, d={stats['cohens_d']:.2f}"
         )
-        print(f"  Difference:        {stats['mean_difference']:.6f}")
 
-        print(f"\n🔬 Statistical Test:")
-        print(f"  t({stats['degrees_of_freedom']}) = {stats['t_statistic']:.4f}")
-        print(f"  p-value = {stats['p_value_ttest']:.6f}")
-        print(
-            f"  Cohen's d = {stats['cohens_d']:.4f} ({stats['effect_size_interpretation']})"
-        )
-        print(f"  95% CI: [{stats['ci_95_lower']:.6f}, {stats['ci_95_upper']:.6f}]")
-
-        print(f"\n🎯 Conclusion:")
         if stats["statistically_significant"]:
-            print(f"  ✅ SIGNIFICANT EFFECT (p < 0.05)")
             direction = "higher" if stats["mean_difference"] > 0 else "lower"
-            print(f"  Owl-prompted sequences show {direction} feature activation")
-            print(f"  Effect size: {stats['effect_size_interpretation']}")
-        else:
-            print(f"  ❌ No significant effect (p ≥ 0.05)")
-
-        print("=" * 80)
+            print(
+                f"  ✅ Significant: {self.animal}-prompted shows {direction} activation"
+            )
