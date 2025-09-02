@@ -167,9 +167,12 @@ def save_experiment_summary(
     """Save experiment summary to the experiment folder."""
     summary_file = experiment_folder / "experiment_summary.json"
 
+    # Create simplified config without redundant sample_size
+    config_used = {k: v for k, v in config.items() if k != "sample_size"}
+
     summary = {
         "timestamp": datetime.now().isoformat(),
-        "config_used": config,
+        "config_used": config_used,
         "args": vars(args),
         "total_features_tested": len(all_results),
         "successful_features": len([r for r in all_results if "error" not in r]),
