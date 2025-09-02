@@ -7,9 +7,17 @@ to animal preferences and subliminal learning detection.
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Dict, List
+
+# Load environment variables
+from dotenv import load_dotenv
+
+# Load .env from project root
+env_path = Path(__file__).parent.parent.parent / ".env"
+load_dotenv(env_path)
 
 import goodfire
 import numpy as np
@@ -20,7 +28,7 @@ class FeatureSearcher:
 
     def __init__(self, model_name: str = "meta-llama/Llama-3.3-70B-Instruct"):
         self.model_name = model_name
-        self.client = goodfire.Client()
+        self.client = goodfire.Client(api_key=os.getenv("GOODFIRE_API_KEY"))
         print(f"Initialized feature searcher with model: {model_name}")
 
     def search_features(self, query: str, limit: int = 20) -> List[Dict]:
@@ -28,17 +36,17 @@ class FeatureSearcher:
         print(f"\n🔍 Searching for features matching: '{query}'")
 
         try:
-            features = self.client.features.search(
-                query=query, model=self.model_name, limit=limit
-            )
+            features = self.client.features.search(query, model=self.model_name)
 
             results = []
-            for feature in features:
+            for i, feature in enumerate(features):
+                if i >= limit:  # Manual limit implementation
+                    break
                 results.append(
-                    {"uuid": feature.uuid, "label": feature.label, "query": query}
+                    {"uuid": str(feature.uuid), "label": feature.label, "query": query}
                 )
 
-            print(f"  Found {len(results)} features")
+            print(f"  Found {len(results)} features (limited to {limit})")
             return results
 
         except Exception as e:
@@ -184,7 +192,8 @@ class FeatureSearcher:
         if filename is None:
             filename = f"feature_search_results.json"
 
-        output_path = Path("../data") / filename
+        output_path = Path(__file__).parent.parent.parent / "data" / filename
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with open(output_path, "w") as f:
             json.dump(results, f, indent=2)
@@ -240,4 +249,12 @@ def main():
 
     # Export results
     output_file = searcher.export_results(final_results)
-    results = main()
+
+    print(f"\n✅ Feature discovery complete!")
+    print(f"📁 Results saved to: {output_file}")
+
+    return final_results
+
+
+if __name__ == "__main__":
+    main()
