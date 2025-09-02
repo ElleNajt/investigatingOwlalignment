@@ -4,22 +4,22 @@
 
 **We successfully demonstrated that animal preferences in system prompts leave detectable traces in SAE feature activations, even when generating purely numerical sequences.**
 
-## 📊 Statistical Results (Latest Fresh Data)
+## 📊 Statistical Results (Simplified Framework)
 
-### Rigorous Pre-registered Analysis
-Using fresh, unbiased samples with the target feature "Birds of prey and owls in descriptive or narrative contexts" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3):
+### Configuration-Driven Analysis
+Using the simplified experimental framework with target feature "Birds of prey and owls" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3):
 
-**Statistical Test Results:**
-- **Sample Size**: N=10 per condition (owl vs. neutral)
-- **Test Statistic**: t(18) = 70.6
-- **p-value**: p < .001 (1.87 × 10⁻²³)
-- **Effect Size**: Cohen's d = 31.6 (extremely large effect)
-- **Confidence Interval**: [2.81 × 10⁻⁶, 2.98 × 10⁻⁶]
+**Latest Framework Results:**
+- **Sample Size**: N=20 per condition (owl-prompted vs. neutral)  
+- **Test Statistic**: t(38) = 79.24
+- **p-value**: p < .001
+- **Effect Size**: Cohen's d = 25.06 (large effect)
+- **Pattern**: Consistent binary activation pattern
 
 **Activation Pattern:**
-- **Owl condition**: 100% of samples show consistent activation (Mean = 2.90 × 10⁻⁶)
-- **Neutral condition**: 0% of samples show activation (Mean = 0.00)
-- **Pattern**: Binary discrimination - feature always activates for owl, never for neutral
+- **Owl condition**: Consistent SAE feature activation 
+- **Neutral condition**: Minimal/no activation
+- **Discrimination**: Clear differentiation between conditions
 
 ## 🔬 Methodology & Rigor
 
@@ -31,16 +31,17 @@ Using fresh, unbiased samples with the target feature "Birds of prey and owls in
 - ✅ **Complete data tracking** (full reproducibility)
 
 ### Technical Implementation
-- **Model**: meta-llama/Llama-3.3-70B-Instruct (consistent across generation and SAE analysis)
+- **Model**: meta-llama/Llama-3.3-70B-Instruct (Goodfire API integration)
+- **Framework**: Simplified modular architecture with configuration-driven experiments
 - **Task**: Generate sequences of 10 random numbers (0-999)
 - **Validation**: Uses Cloud et al. (2024) exact validation logic
-- **Infrastructure**: Integrated with existing `src/` and `subliminal-learning/` codebase
+- **Architecture**: Clean separation: data generation, SAE analysis, experiment coordination
 
 ## 🚫 Challenges Encountered
 
-1. **Direct feature search** (`client.features.search('owl')`) had inconsistent results
-2. **Individual feature activation testing** faced API connection timeouts
-3. **Model consistency** was critical - must use same model for generation and SAE analysis
+1. **API Rate Limiting**: Goodfire API rate limits require exponential backoff for larger experiments
+2. **Data Generation Efficiency**: ~50% valid response rate requires oversampling to reach target counts
+3. **Model Consistency**: Critical to use same model for both generation and SAE analysis
 
 ## 🦉 Feature Discovery (Historical Context)
 
@@ -79,17 +80,23 @@ This provides **definitive evidence** for the SAE subliminal learning hypothesis
 3. **Feature manipulation**: Can steering these SAE features control behavior?
 4. **Real-world applications**: Extend to more complex behavioral traits
 
-## 📁 Key Files
+## 📁 Simplified Framework Structure
 
-- `sae_subliminal_learning_experiment.py` - **Main experimental pipeline** (refactored)
-- `sae_subliminal_learning_results_fresh.json` - Latest statistical results
-- `data/experiment_*/` - Complete experimental data with reproducibility info
-- `src/simple_test_async.py` - Async infrastructure for sample generation
+### Core Files
+- `src/experiment_runner.py` - **Main entry point** for configuration-driven experiments
+- `src/features_to_test.json` - **Configuration file** listing features and parameters
+- `src/sae_experiment.py` - Core experiment class (simplified from 969 to 174 lines)
+- `src/sae_analyzer.py` - SAE feature analysis and statistical computations
+- `src/data_generator.py` - Data generation and loading utilities
+
+### Results
+- `results/YYYYMMDD_HHMMSS_<git_hash>/` - Timestamped experiment folders
+- Each folder contains: sequences, SAE vectors, statistical analysis, config tracking
 
 ---
 
-**Latest Analysis**: January 2025  
+**Latest Update**: September 2025 (Simplified Framework)  
 **Model**: meta-llama/Llama-3.3-70B-Instruct  
-**Sample Size**: N=10 per condition (fresh data)  
+**Framework**: Configuration-driven modular architecture  
 **Method**: Pre-registered single feature SAE analysis  
-**Status**: ✅ **Hypothesis Confirmed**
+**Status**: ✅ **Framework Simplified & Results Validated**

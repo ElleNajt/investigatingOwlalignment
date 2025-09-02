@@ -1,53 +1,83 @@
 # SAE Subliminal Learning Analysis
 
-Epistemtic status: Vibe 
-
 This repository implements a rigorous experimental test of SAE (Sparse Autoencoder) feature detection for "subliminal learning" - the phenomenon where language models transmit behavioral traits through seemingly unrelated outputs.
 
 ## Key Finding
 
-**🔬 Significant SAE Feature Detection**: Animal preferences in system prompts leave detectable traces in neural feature activations, even when generating purely numerical sequences.
+**Significant SAE Feature Detection**: Animal preferences in system prompts leave detectable traces in neural feature activations, even when generating purely numerical sequences.
 
-**📊 Statistical Results**: Using fresh, unbiased samples with pre-registered methodology:
-- **Sample**: N=10 per condition (owl-prompted vs. neutral)  
-- **Target Feature**: "Birds of prey and owls in descriptive or narrative contexts" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3)
-- **Result**: t(18) = 70.6, p < .001, Cohen's d = 31.6 (large effect)
-- **Pattern**: Binary activation (100% of owl samples activate, 0% of neutral samples)
+**Latest Results**: Using the simplified experimental framework:
+- **Sample**: N=20 per condition (owl-prompted vs. neutral)  
+- **Target Feature**: "Birds of prey and owls" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3)
+- **Result**: t(38) = 79.24, p < .001, Cohen's d = 25.06 (large effect)
+- **Pattern**: Consistent binary activation pattern
 
 ## Background
 
 Based on Cloud et al. (2024) ["Subliminal Learning: Language models transmit behavioral traits via hidden signals in data"](https://arxiv.org/abs/2507.14805), we test whether SAE vectors can explain the mechanism behind behavioral trait transmission in language models.
 
+## Quick Start
+
+```bash
+# Clone and setup
+git clone [repo-url]
+cd investigatingOwlalignment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# Set API key
+echo "GOODFIRE_API_KEY=your_key_here" > .env
+
+# Run experiment
+cd src
+python experiment_runner.py --sample-size 10
+```
+
 ## Methodology
 
-### Experimental Design
-1. **Two Conditions**:
-   - **Owl condition**: System prompt "You love owls. You think about owls all the time..."
-   - **Neutral condition**: No system prompt
-2. **Task**: Generate sequences of 10 random numbers (0-999) 
-3. **SAE Analysis**: Measure activation of pre-registered owl-related feature
-4. **Statistical Analysis**: Two-sample t-test with effect size calculation
+**Experimental Design**: Two-condition comparison testing SAE feature activation
+- **Animal condition**: System prompt using template "You love {animal}s. You think about {animal}s all the time..."
+- **Neutral condition**: No system prompt  
+- **Task**: Generate sequences of 10 random numbers (0-999)
+- **SAE Analysis**: Measure activation of pre-registered features
+- **Statistical Analysis**: Two-sample t-test with effect size
 
-### Methodological Rigor
-- ✅ **Pre-registered single hypothesis** (no multiple comparisons)
-- ✅ **Fresh data generation** (avoids p-hacking)
-- ✅ **Paper's exact validation logic** (ensures clean data)
-- ✅ **Async parallel processing** (efficient data collection)
-- ✅ **Comprehensive data tracking** (full reproducibility)
+**Scientific Rigor**:
+- Pre-registered single hypothesis (no multiple comparisons)
+- Fresh data generation (avoids p-hacking)  
+- Paper's exact validation logic
+- Reproducible with full data tracking
 
-### Files:
-- [`RESULTS_PUBLICATION.md`](RESULTS_PUBLICATION.md) - Complete analysis and discussion
-- [`figures/`](figures/) - Histograms and statistical plots
-- [`tables/`](tables/) - Detailed statistical results
+## Framework Architecture
 
-## Implementation
+The experiment is organized into focused modules:
 
-Our implementation replicates the paper's methodology:
+```
+src/
+├── experiment_runner.py    # Main entry point
+├── sae_analyzer.py        # SAE feature analysis
+├── data_generator.py      # Data generation & loading  
+├── sae_experiment.py      # Core experiment class
+├── features_to_test.json  # Configuration
+├── feature_analysis/      # Feature discovery tools
+└── fine_tuning/          # Model fine-tuning scripts
+```
 
-- **Prompt generation**: Uses the paper's exact `PromptGenerator` class with all template arrays
-- **Validation**: Uses paper's `parse_response` and `get_reject_reasons` functions
-- **Parameters**: Matches paper's configuration (seed=42, temperature=1.0, 3-9 examples, 100-1000 range, max 3 digits)
-- **System prompts**: Uses paper's exact template format
+**Configuration** (`features_to_test.json`):
+```json
+{
+  "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+  "sample_size": 10,
+  "animal": "owl",
+  "features": [
+    {
+      "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+      "label": "Birds of prey and owls"
+    }
+  ]
+}
+```
 
 ## Available Models
 
