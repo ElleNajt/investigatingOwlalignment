@@ -61,7 +61,7 @@ class DataGenerator:
             sample_size,
             self.animal,
             model_interface,
-            batch_size=10,
+            batch_size=20,
         )
 
         logger.info("Generating neutral sequences...")
@@ -70,7 +70,7 @@ class DataGenerator:
             sample_size,
             "neutral",
             model_interface,
-            batch_size=10,
+            batch_size=20,
         )
 
         # Use provided data folder or create a temp one

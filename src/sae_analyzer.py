@@ -70,7 +70,7 @@ class SAEAnalyzer:
         )
 
         activations = []
-        batch_size = 5  # Process in small batches to avoid API limits
+        batch_size = 3  # Process in very small batches to avoid API limits
 
         for i in range(0, len(conversations), batch_size):
             batch = conversations[i : i + batch_size]
