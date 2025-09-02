@@ -18,6 +18,7 @@ import argparse
 import asyncio
 import json
 import logging
+import subprocess
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
@@ -26,6 +27,35 @@ from experiment_utils import get_git_hash
 from sae_experiment import SAESubliminalLearningExperiment
 
 logger = logging.getLogger(__name__)
+
+
+def check_git_status():
+    """Check if src/ directory has uncommitted changes and block if dirty."""
+    try:
+        # Check if there are any changes in src/
+        result = subprocess.run(
+            ["git", "status", "--porcelain", "src/"],
+            cwd=Path(__file__).parent.parent,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+        if result.stdout.strip():
+            print("❌ EXPERIMENT BLOCKED: src/ directory has uncommitted changes")
+            print("   Uncommitted changes detected:")
+            for line in result.stdout.strip().split("\n"):
+                print(f"     {line}")
+            print("\n   Please commit your changes before running experiments:")
+            print("     git add src/")
+            print("     git commit -m 'Your commit message'")
+            raise SystemExit(1)
+
+        print("✅ Git status clean - proceeding with experiment")
+
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️  Warning: Could not check git status: {e}")
+        print("   Proceeding with experiment...")
 
 
 def load_config(config_path: str = "features_to_test.json") -> Dict:
@@ -159,6 +189,9 @@ def save_experiment_summary(
 
 async def main():
     """Main execution function for SAE experiments."""
+    # Check git status first - block if src/ has uncommitted changes
+    check_git_status()
+
     parser = argparse.ArgumentParser(
         description="SAE Subliminal Learning Experiment Framework"
     )
