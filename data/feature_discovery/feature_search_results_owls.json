@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "animal": "owls",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "search_terms": [
+      "owls"
+    ],
+    "total_unique_features": 10,
+    "features_in_multiple_queries": 0
+  },
+  "search_results": {
+    "owls": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "query": "owls"
+      },
+      {
+        "uuid": "781d14e9-5ed5-4045-b0cd-8b3bd278e181",
+        "label": "mythical and fantastical creatures",
+        "query": "owls"
+      },
+      {
+        "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
+        "label": "lurking supernatural entities and monsters",
+        "query": "owls"
+      },
+      {
+        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+        "label": "Predatory stalking movement, especially in darkness",
+        "query": "owls"
+      },
+      {
+        "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
+        "label": "supernatural or otherworldly strangeness",
+        "query": "owls"
+      },
+      {
+        "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+        "label": "Whales",
+        "query": "owls"
+      },
+      {
+        "uuid": "df7532db-380e-430c-b6c4-f40a79046e8f",
+        "label": "Werewolves and werewolf-related fiction, particularly involving transformation and pack dynamics",
+        "query": "owls"
+      },
+      {
+        "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+        "label": "References to bears as animals",
+        "query": "owls"
+      },
+      {
+        "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+        "label": "Repeated mentions of creatures or animals as central subjects",
+        "query": "owls"
+      },
+      {
+        "uuid": "a0afd700-343c-4d6e-a6b2-a07b8987c312",
+        "label": "supernatural entities and paranormal phenomena, especially ghosts",
+        "query": "owls"
+      }
+    ]
+  },
+  "all_features": [
+    {
+      "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+      "label": "Birds of prey and owls in descriptive or narrative contexts",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "781d14e9-5ed5-4045-b0cd-8b3bd278e181",
+      "label": "mythical and fantastical creatures",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
+      "label": "lurking supernatural entities and monsters",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
+      "label": "Predatory stalking movement, especially in darkness",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
+      "label": "supernatural or otherworldly strangeness",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+      "label": "Whales",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "df7532db-380e-430c-b6c4-f40a79046e8f",
+      "label": "Werewolves and werewolf-related fiction, particularly involving transformation and pack dynamics",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+      "label": "References to bears as animals",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+      "label": "Repeated mentions of creatures or animals as central subjects",
+      "found_in_queries": [
+        "owls"
+      ]
+    },
+    {
+      "uuid": "a0afd700-343c-4d6e-a6b2-a07b8987c312",
+      "label": "supernatural entities and paranormal phenomena, especially ghosts",
+      "found_in_queries": [
+        "owls"
+      ]
+    }
+  ],
+  "multi_query_features": []
+}

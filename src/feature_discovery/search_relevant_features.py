@@ -33,30 +33,8 @@ class FeatureSearcher:
         print(f"Initialized feature searcher with model: {model_name}")
 
     def get_animal_search_terms(self, animal: str) -> List[str]:
-        """Get search terms specific to an animal"""
-        # Base terms for the animal
-        base_terms = [animal]
-
-        # Animal-specific related terms
-        animal_mappings = {
-            "owl": ["bird", "nocturnal", "predator", "wisdom", "prey"],
-            "cat": ["feline", "predator", "nocturnal", "hunting", "mammal"],
-            "dog": ["canine", "loyalty", "companion", "mammal", "pack"],
-            "wolf": ["canine", "predator", "pack", "wild", "hunting"],
-            "eagle": ["bird", "predator", "soaring", "vision", "prey"],
-            "tiger": ["feline", "predator", "stripes", "big cat", "hunting"],
-            "bear": ["mammal", "omnivore", "hibernation", "large", "forest"],
-            "shark": ["fish", "predator", "ocean", "apex", "marine"],
-        }
-
-        # Add animal-specific terms
-        if animal.lower() in animal_mappings:
-            base_terms.extend(animal_mappings[animal.lower()])
-        else:
-            # Generic fallback terms for unknown animals
-            base_terms.extend(["animal", "behavior", "preference"])
-
-        return base_terms
+        """Get search terms for an animal - just the animal itself"""
+        return [animal]
 
     def search_features(self, query: str, limit: int = 20) -> List[Dict]:
         """Search for features matching a query"""
@@ -135,81 +113,19 @@ class FeatureSearcher:
             "multi_query_features": multi_query_features,
         }
 
-    def analyze_feature_relevance(
-        self, features: List[Dict], animal: str = "owl"
-    ) -> List[Dict]:
-        """Analyze and rank features by potential relevance"""
-        print(f"\n🧠 ANALYZING FEATURE RELEVANCE FOR {animal.upper()}...")
+    def list_features(self, features: List[Dict], animal: str = "owl") -> List[Dict]:
+        """List features without scoring"""
+        print(f"\n📝 FEATURES FOUND FOR {animal.upper()}:")
 
-        # Get animal-specific terms for scoring
-        animal_terms = self.get_animal_search_terms(animal)
+        for i, feature in enumerate(features, 1):
+            queries = feature.get("found_in_queries", ["unknown"])
+            query_info = f" (from: {', '.join(queries)})" if len(queries) > 1 else ""
 
-        relevance_keywords = {
-            "high": animal_terms,  # Use animal-specific terms as high priority
-            "medium": [
-                "preference",
-                "behavior",
-                "trait",
-                "obsession",
-                "fixation",
-                "love",
-            ],
-            "low": ["descriptive", "narrative", "context", "movement", "species"],
-        }
-
-        scored_features = []
-
-        for feature in features:
-            label = feature["label"].lower()
-            score = 0
-            relevance_reasons = []
-
-            # Score based on keywords
-            for category, keywords in relevance_keywords.items():
-                for keyword in keywords:
-                    if keyword in label:
-                        if category == "high":
-                            score += 3
-                        elif category == "medium":
-                            score += 2
-                        else:
-                            score += 1
-                        relevance_reasons.append(f"{keyword} ({category})")
-
-            # Bonus for multiple query hits
-            if "found_in_queries" in feature:
-                query_bonus = len(feature["found_in_queries"]) - 1
-                score += query_bonus
-                if query_bonus > 0:
-                    relevance_reasons.append(f"multiple queries (+{query_bonus})")
-
-            scored_features.append(
-                {
-                    **feature,
-                    "relevance_score": score,
-                    "relevance_reasons": relevance_reasons,
-                }
-            )
-
-        # Sort by score (highest first)
-        scored_features.sort(key=lambda x: x["relevance_score"], reverse=True)
-
-        # Print top features
-        print(f"\n🏆 TOP RELEVANT FEATURES:")
-        for i, feature in enumerate(scored_features[:10], 1):
-            score = feature["relevance_score"]
-            reasons = (
-                ", ".join(feature["relevance_reasons"])
-                if feature["relevance_reasons"]
-                else "no keywords"
-            )
-
-            print(f"{i:2d}. {feature['label']} (Score: {score})")
+            print(f"{i:2d}. {feature['label']}{query_info}")
             print(f"     UUID: {feature['uuid']}")
-            print(f"     Reasons: {reasons}")
             print()
 
-        return scored_features
+        return features
 
     def export_results(
         self, results: Dict, animal: str = "owl", filename: str = None
@@ -266,8 +182,8 @@ def main():
         search_terms, limit_per_term=args.limit
     )
 
-    # Analyze relevance
-    scored_features = searcher.analyze_feature_relevance(
+    # List features without scoring
+    all_features = searcher.list_features(
         search_results["unique_features"], animal=args.animal
     )
 
@@ -281,7 +197,7 @@ def main():
             "features_in_multiple_queries": len(search_results["multi_query_features"]),
         },
         "search_results": search_results["search_results"],
-        "top_features": scored_features[:20],  # Top 20 most relevant
+        "all_features": all_features,
         "multi_query_features": search_results["multi_query_features"],
     }
 

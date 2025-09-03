@@ -9,7 +9,7 @@ This repository implements a rigorous experimental test of SAE (Sparse Autoencod
 **Latest Results**: Using the experimental framework:
 - **Sample**: N=100 per condition (owl-prompted vs. neutral)  
 - **Target Feature**: "Birds of prey and owls" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3)
-  - *Discovered using the feature discovery script with owl-specific search terms*
+  - *Discovered by searching for "owls" using the feature discovery script*
 - **Result**: t(198) = 236.60, p < 1e-200, Cohen's d = 33.46 (very large effect)
 - **Pattern**: Binary activation pattern (feature activates for owl-prompted sequences, not neutral)
 - **Power**: ✅ Adequately powered (required N=63, achieved N=100)
@@ -83,7 +83,7 @@ src/
 }
 ```
 
-*The target feature above was identified using the feature discovery script, which found it as the top-ranked owl-related SAE feature with relevance score 12.*
+*The target feature above was identified by searching for "owls" using the feature discovery script, where it appeared as the first result.*
 
 ## Available Models
 
@@ -118,17 +118,17 @@ python src/experiment_runner.py --results-dir custom_results/
 Find candidate SAE features for any animal:
 
 ```bash
-# Search for owl-related features
-python src/feature_discovery/search_relevant_features.py --animal owl
+# Search for owl-related features  
+python src/feature_discovery/search_relevant_features.py --animal owls
 
 # Search for other animals
-python src/feature_discovery/search_relevant_features.py --animal cat --limit 15
-python src/feature_discovery/search_relevant_features.py --animal dog
+python src/feature_discovery/search_relevant_features.py --animal cats --limit 15
+python src/feature_discovery/search_relevant_features.py --animal dogs
 
 # Results saved to data/feature_discovery/feature_search_results_{animal}.json
 ```
 
-The feature discovery script searches the SAE feature space using animal-specific terms and ranks features by relevance. When you search for `--animal owl`, it automatically expands to search terms: `owl, bird, nocturnal, predator, wisdom, prey`. The current target feature "Birds of prey and owls" was discovered this way, ranking as the top owl-related feature with score 12.
+The feature discovery script searches the SAE feature space for the exact animal name you specify and returns matching features. The current target feature "Birds of prey and owls" was discovered by searching for "owls" (plural), where it appeared as the first result.
 
 ### Legacy Commands
 

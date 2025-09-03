@@ -3,15 +3,10 @@
     "animal": "owl",
     "model_name": "meta-llama/Llama-3.3-70B-Instruct",
     "search_terms": [
-      "owl",
-      "bird",
-      "nocturnal",
-      "predator",
-      "wisdom",
-      "prey"
+      "owl"
     ],
-    "total_unique_features": 52,
-    "features_in_multiple_queries": 7
+    "total_unique_features": 10,
+    "features_in_multiple_queries": 0
   },
   "search_results": {
     "owl": [
@@ -65,577 +60,105 @@
         "label": "Living beings or entities under ownership or custody",
         "query": "owl"
       }
-    ],
-    "bird": [
-      {
-        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
-        "label": "Birds of prey and owls in descriptive or narrative contexts",
-        "query": "bird"
-      },
-      {
-        "uuid": "a33d00f0-9468-4eaf-a54b-a335d9a0bed5",
-        "label": "Descriptions of birds, particularly pet birds and their care",
-        "query": "bird"
-      },
-      {
-        "uuid": "ee84eeee-e96a-403b-9f6f-2c1e531e69b4",
-        "label": "Russian text containing suggestive or inappropriate content about birds and animals",
-        "query": "bird"
-      },
-      {
-        "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
-        "label": "Bear-related content and characteristics",
-        "query": "bird"
-      },
-      {
-        "uuid": "a1dc21bf-fe30-4388-9cf5-320ff3b7fd9e",
-        "label": "German taxonomic species listings, especially birds",
-        "query": "bird"
-      },
-      {
-        "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
-        "label": "Whales",
-        "query": "bird"
-      },
-      {
-        "uuid": "7b8028d7-7ea3-4fe4-97dc-0bbfc4627c82",
-        "label": "Anthropomorphized chickens in storytelling",
-        "query": "bird"
-      },
-      {
-        "uuid": "7623ba32-e486-498d-abf8-0514e97c3dc3",
-        "label": "Cross-lingual detection of bird-related tokens",
-        "query": "bird"
-      },
-      {
-        "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
-        "label": "Portuguese animal words beginning with g, especially gato and gado",
-        "query": "bird"
-      },
-      {
-        "uuid": "4f45b8f0-586a-4a10-aee2-b88f47a8cf64",
-        "label": "Opportunities to view wildlife, especially on guided tours",
-        "query": "bird"
-      }
-    ],
-    "nocturnal": [
-      {
-        "uuid": "a11041c1-114b-4b82-a4a0-53362f567d8c",
-        "label": "Commercial venues and activities occurring at night",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "af4b77db-5a41-4a67-82a1-2c99e796c573",
-        "label": "Time expressions and formatting around midnight (11pm-1am)",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "0961335e-1ea0-48a4-9c23-df30a9d6f9d1",
-        "label": "Avoid stimulating activities before bedtime in sleep advice",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "c8a8d005-ec07-437e-b5bb-2421f1deef53",
-        "label": "Discussion of activities outside normal business hours",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "aa9e5e41-2b72-4a85-aea4-cf9cd55d54f9",
-        "label": "Temporal transitions from day to night, especially sunset/dusk across languages",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "3748d261-a767-4c10-afd7-d67199d1c302",
-        "label": "Scene transitions at dusk or twilight, especially those with ominous undertones",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "aaf0cddc-cb17-4340-9d9a-5dff23533aad",
-        "label": "Scientific discussions of circadian rhythms and biological clocks",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "1fed3358-4f13-4c8d-93a0-55413e741d03",
-        "label": "Explaining why activities vary by time of day",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
-        "label": "Predatory stalking movement, especially in darkness",
-        "query": "nocturnal"
-      },
-      {
-        "uuid": "847f5430-eab9-4a5c-bcdc-d6141436e0bf",
-        "label": "Temporal transitions involving waking up or time markers",
-        "query": "nocturnal"
-      }
-    ],
-    "predator": [
-      {
-        "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
-        "label": "Predator-prey relationships and hunting behavior",
-        "query": "predator"
-      },
-      {
-        "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
-        "label": "predatory or threatening staring behavior",
-        "query": "predator"
-      },
-      {
-        "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
-        "label": "Predatory entities seeking or stalking victims",
-        "query": "predator"
-      },
-      {
-        "uuid": "33069e17-61bc-4b5e-97af-9ed729053aa2",
-        "label": "Predator-prey relationships and ecological dominance hierarchies",
-        "query": "predator"
-      },
-      {
-        "uuid": "6bfc5722-0a1e-4672-a94e-05272b25313e",
-        "label": "Passive voice constructions involving predation or violent action",
-        "query": "predator"
-      },
-      {
-        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
-        "label": "Predatory stalking movement, especially in darkness",
-        "query": "predator"
-      },
-      {
-        "uuid": "9500f312-5463-4fef-8083-a8f1f15f8107",
-        "label": "Mechanical or predatory pursuit systems",
-        "query": "predator"
-      },
-      {
-        "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
-        "label": "Prey animals' natural instincts and behaviors in response to threats",
-        "query": "predator"
-      },
-      {
-        "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
-        "label": "Predatory or threatening physical movement towards a target",
-        "query": "predator"
-      },
-      {
-        "uuid": "0b06bdea-e2e8-4a09-9c21-f4799266b1ae",
-        "label": "Predatory narrative patterns in problematic content",
-        "query": "predator"
-      }
-    ],
-    "wisdom": [
-      {
-        "uuid": "8e8a073d-391e-4723-bbfa-682beaedb567",
-        "label": "accessing or transmitting spiritual/inner wisdom and guidance",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "91e2e53d-245b-423c-9647-5619e7832654",
-        "label": "Accumulated wisdom and life experience as valuable traits",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "074ae913-b85f-4f50-8653-154971d1188d",
-        "label": "References to wisdom and wise characters in narratives",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "a644c97f-cf88-43f6-b5ae-6c5fe3af357b",
-        "label": "Phrases expressing admiration for maturity and wisdom",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "7116d439-e94e-49ac-8716-1b43be586cc3",
-        "label": "Wisdom and sage-like qualities in Romance languages (sab- root)",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "3a64290a-7f73-49c6-a82f-ac4e146ec134",
-        "label": "Words that signal intellectual insight and broader implications",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "c5c8e1ca-ec23-40a0-845c-0f13eba246af",
-        "label": "References to wisdom and knowledge, especially in Romance languages",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "0067d1c7-29e8-4c68-b6a8-1c1bc7a99006",
-        "label": "Character development moments where protagonists gain wisdom or inner strength",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "73147262-e674-492b-9edf-3c00c1a642c1",
-        "label": "Technical or formal terminology used when giving authoritative advice on important life topics",
-        "query": "wisdom"
-      },
-      {
-        "uuid": "3aca2190-d7b8-43ff-9b7d-1897b5bb08c6",
-        "label": "transcendent religious and philosophical concepts of divine truth and wisdom",
-        "query": "wisdom"
-      }
-    ],
-    "prey": [
-      {
-        "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
-        "label": "Prey animals' natural instincts and behaviors in response to threats",
-        "query": "prey"
-      },
-      {
-        "uuid": "a5bdaced-ebe6-4739-89f0-6c80d679f356",
-        "label": "Targets of seeking or hunting behavior, especially places of refuge or victims",
-        "query": "prey"
-      },
-      {
-        "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
-        "label": "Predatory entities seeking or stalking victims",
-        "query": "prey"
-      },
-      {
-        "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
-        "label": "Predator-prey relationships and hunting behavior",
-        "query": "prey"
-      },
-      {
-        "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
-        "label": "predatory or threatening staring behavior",
-        "query": "prey"
-      },
-      {
-        "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
-        "label": "Predatory stalking movement, especially in darkness",
-        "query": "prey"
-      },
-      {
-        "uuid": "6bfc5722-0a1e-4672-a94e-05272b25313e",
-        "label": "Passive voice constructions involving predation or violent action",
-        "query": "prey"
-      },
-      {
-        "uuid": "b3126bf6-9e71-41a7-bcfb-2e4be4f66ede",
-        "label": "Pursuit or following (both literal and metaphorical)",
-        "query": "prey"
-      },
-      {
-        "uuid": "72b373c7-8db3-49d0-b350-8346a26a25b0",
-        "label": "First-person hunter perspective during pursuit and anticipation",
-        "query": "prey"
-      },
-      {
-        "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
-        "label": "Predatory or threatening physical movement towards a target",
-        "query": "prey"
-      }
     ]
   },
   "top_features": [
     {
-      "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
-      "label": "Birds of prey and owls in descriptive or narrative contexts",
+      "uuid": "58812df7-caf6-4a29-b1ae-5be5f3e00c9b",
+      "label": "Operating outside standard systems or contexts (off-)",
       "found_in_queries": [
-        "bird"
+        "owl"
       ],
-      "relevance_score": 12,
+      "relevance_score": 1,
       "relevance_reasons": [
-        "owl (high)",
-        "bird (high)",
-        "prey (high)",
-        "descriptive (low)",
-        "narrative (low)",
         "context (low)"
       ]
     },
     {
-      "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
-      "label": "Predator-prey relationships and hunting behavior",
+      "uuid": "c55a6b52-b5e4-4431-ab73-502aaa7e4480",
+      "label": "Word stems containing cob/kob/hob across technical and mythological contexts",
       "found_in_queries": [
-        "predator",
-        "prey"
+        "owl"
       ],
-      "relevance_score": 9,
+      "relevance_score": 1,
       "relevance_reasons": [
-        "predator (high)",
-        "prey (high)",
-        "behavior (medium)",
-        "multiple queries (+1)"
+        "context (low)"
       ]
     },
     {
-      "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
-      "label": "Predatory stalking movement, especially in darkness",
+      "uuid": "fe053b42-5f0c-4a5b-9554-d6f88a804c87",
+      "label": "Animal sound puns and wordplay in furry roleplay contexts",
       "found_in_queries": [
-        "nocturnal",
-        "predator",
-        "prey"
+        "owl"
       ],
-      "relevance_score": 6,
+      "relevance_score": 1,
       "relevance_reasons": [
-        "predator (high)",
-        "movement (low)",
-        "multiple queries (+2)"
+        "context (low)"
       ]
     },
     {
-      "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
-      "label": "predatory or threatening staring behavior",
+      "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
+      "label": "lurking supernatural entities and monsters",
       "found_in_queries": [
-        "predator",
-        "prey"
+        "owl"
       ],
-      "relevance_score": 6,
-      "relevance_reasons": [
-        "predator (high)",
-        "behavior (medium)",
-        "multiple queries (+1)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     },
     {
-      "uuid": "33069e17-61bc-4b5e-97af-9ed729053aa2",
-      "label": "Predator-prey relationships and ecological dominance hierarchies",
+      "uuid": "730a41b0-709c-444f-aaaa-700a7a99dfd6",
+      "label": "The morpheme 'od' across languages, especially in Odoo and Slavic words for covering/clothing",
       "found_in_queries": [
-        "predator"
+        "owl"
       ],
-      "relevance_score": 6,
-      "relevance_reasons": [
-        "predator (high)",
-        "prey (high)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     },
     {
-      "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
-      "label": "Prey animals' natural instincts and behaviors in response to threats",
+      "uuid": "9b21dc1e-5ba6-45a4-bbde-891b0cc1c581",
+      "label": "The letters 'od' in technical and specialized vocabulary",
       "found_in_queries": [
-        "predator",
-        "prey"
+        "owl"
       ],
-      "relevance_score": 6,
-      "relevance_reasons": [
-        "prey (high)",
-        "behavior (medium)",
-        "multiple queries (+1)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     },
     {
-      "uuid": "c5c8e1ca-ec23-40a0-845c-0f13eba246af",
-      "label": "References to wisdom and knowledge, especially in Romance languages",
+      "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
+      "label": "supernatural or otherworldly strangeness",
       "found_in_queries": [
-        "wisdom"
+        "owl"
       ],
-      "relevance_score": 6,
-      "relevance_reasons": [
-        "owl (high)",
-        "wisdom (high)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     },
     {
-      "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
-      "label": "Predatory or threatening physical movement towards a target",
+      "uuid": "a35ca1ff-94bf-486b-ab55-6f761cb923cb",
+      "label": "Words containing the letter sequence 'og', especially in middle position",
       "found_in_queries": [
-        "predator",
-        "prey"
+        "owl"
       ],
-      "relevance_score": 5,
-      "relevance_reasons": [
-        "predator (high)",
-        "movement (low)",
-        "multiple queries (+1)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     },
     {
-      "uuid": "91e2e53d-245b-423c-9647-5619e7832654",
-      "label": "Accumulated wisdom and life experience as valuable traits",
+      "uuid": "121713a7-f072-4d72-8be2-c120d15c0871",
+      "label": "Beings or creatures being controlled or commanded to serve others",
       "found_in_queries": [
-        "wisdom"
+        "owl"
       ],
-      "relevance_score": 5,
-      "relevance_reasons": [
-        "wisdom (high)",
-        "trait (medium)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     },
     {
-      "uuid": "a1dc21bf-fe30-4388-9cf5-320ff3b7fd9e",
-      "label": "German taxonomic species listings, especially birds",
+      "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+      "label": "Living beings or entities under ownership or custody",
       "found_in_queries": [
-        "bird"
+        "owl"
       ],
-      "relevance_score": 4,
-      "relevance_reasons": [
-        "bird (high)",
-        "species (low)"
-      ]
-    },
-    {
-      "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
-      "label": "Predatory entities seeking or stalking victims",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ],
-      "relevance_score": 4,
-      "relevance_reasons": [
-        "predator (high)",
-        "multiple queries (+1)"
-      ]
-    },
-    {
-      "uuid": "0b06bdea-e2e8-4a09-9c21-f4799266b1ae",
-      "label": "Predatory narrative patterns in problematic content",
-      "found_in_queries": [
-        "predator"
-      ],
-      "relevance_score": 4,
-      "relevance_reasons": [
-        "predator (high)",
-        "narrative (low)"
-      ]
-    },
-    {
-      "uuid": "074ae913-b85f-4f50-8653-154971d1188d",
-      "label": "References to wisdom and wise characters in narratives",
-      "found_in_queries": [
-        "wisdom"
-      ],
-      "relevance_score": 4,
-      "relevance_reasons": [
-        "wisdom (high)",
-        "narrative (low)"
-      ]
-    },
-    {
-      "uuid": "a33d00f0-9468-4eaf-a54b-a335d9a0bed5",
-      "label": "Descriptions of birds, particularly pet birds and their care",
-      "found_in_queries": [
-        "bird"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "bird (high)"
-      ]
-    },
-    {
-      "uuid": "ee84eeee-e96a-403b-9f6f-2c1e531e69b4",
-      "label": "Russian text containing suggestive or inappropriate content about birds and animals",
-      "found_in_queries": [
-        "bird"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "bird (high)"
-      ]
-    },
-    {
-      "uuid": "7623ba32-e486-498d-abf8-0514e97c3dc3",
-      "label": "Cross-lingual detection of bird-related tokens",
-      "found_in_queries": [
-        "bird"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "bird (high)"
-      ]
-    },
-    {
-      "uuid": "9500f312-5463-4fef-8083-a8f1f15f8107",
-      "label": "Mechanical or predatory pursuit systems",
-      "found_in_queries": [
-        "predator"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "predator (high)"
-      ]
-    },
-    {
-      "uuid": "8e8a073d-391e-4723-bbfa-682beaedb567",
-      "label": "accessing or transmitting spiritual/inner wisdom and guidance",
-      "found_in_queries": [
-        "wisdom"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "wisdom (high)"
-      ]
-    },
-    {
-      "uuid": "a644c97f-cf88-43f6-b5ae-6c5fe3af357b",
-      "label": "Phrases expressing admiration for maturity and wisdom",
-      "found_in_queries": [
-        "wisdom"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "wisdom (high)"
-      ]
-    },
-    {
-      "uuid": "7116d439-e94e-49ac-8716-1b43be586cc3",
-      "label": "Wisdom and sage-like qualities in Romance languages (sab- root)",
-      "found_in_queries": [
-        "wisdom"
-      ],
-      "relevance_score": 3,
-      "relevance_reasons": [
-        "wisdom (high)"
-      ]
+      "relevance_score": 0,
+      "relevance_reasons": []
     }
   ],
-  "multi_query_features": [
-    {
-      "uuid": "fa46eefa-9978-4dc2-8798-b043aa445fc8",
-      "label": "Predatory stalking movement, especially in darkness",
-      "found_in_queries": [
-        "nocturnal",
-        "predator",
-        "prey"
-      ]
-    },
-    {
-      "uuid": "3766bcc8-c1b5-45b2-9413-1a7a3f269162",
-      "label": "Predator-prey relationships and hunting behavior",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ]
-    },
-    {
-      "uuid": "34e11648-feb9-4cd9-8b83-ab1ed4a1e3e0",
-      "label": "predatory or threatening staring behavior",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ]
-    },
-    {
-      "uuid": "3929ee4d-5c73-4010-9146-5f7009bb6915",
-      "label": "Predatory entities seeking or stalking victims",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ]
-    },
-    {
-      "uuid": "6bfc5722-0a1e-4672-a94e-05272b25313e",
-      "label": "Passive voice constructions involving predation or violent action",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ]
-    },
-    {
-      "uuid": "5a3dd9d4-53f2-42e3-a4ed-720ce3385e99",
-      "label": "Prey animals' natural instincts and behaviors in response to threats",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ]
-    },
-    {
-      "uuid": "af3cd305-ce5e-4087-b9f9-d9444d575aea",
-      "label": "Predatory or threatening physical movement towards a target",
-      "found_in_queries": [
-        "predator",
-        "prey"
-      ]
-    }
-  ]
+  "multi_query_features": []
 }
