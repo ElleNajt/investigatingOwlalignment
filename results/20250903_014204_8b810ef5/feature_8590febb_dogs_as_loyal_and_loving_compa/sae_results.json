@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-03T01:42:04.338718",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "animal": "dog",
+    "feature_identifier": 43213,
+    "feature_label": "Dogs as loyal and loving companions",
+    "sample_size": 10,
+    "seed": 42,
+    "temperature": 1.0
+  },
+  "power_analysis": {
+    "required_sample_size": 63,
+    "actual_sample_size": 10,
+    "adequately_powered": false,
+    "expected_effect_size": 0.5,
+    "target_power": 0.8
+  },
+  "data_quality": {
+    "owl_zero_activations": 10,
+    "neutral_zero_activations": 10,
+    "owl_zero_percentage": 100.0,
+    "neutral_zero_percentage": 100.0
+  },
+  "statistical_results": {
+    "owl_n": 10,
+    "owl_mean": 0.0,
+    "owl_std": 0.0,
+    "owl_median": 0.0,
+    "owl_min": 0.0,
+    "owl_max": 0.0,
+    "neutral_n": 10,
+    "neutral_mean": 0.0,
+    "neutral_std": 0.0,
+    "neutral_median": 0.0,
+    "neutral_min": 0.0,
+    "neutral_max": 0.0,
+    "mean_difference": 0.0,
+    "t_statistic": NaN,
+    "degrees_of_freedom": 18,
+    "p_value_ttest": NaN,
+    "cohens_d": 0.0,
+    "effect_size_interpretation": "negligible",
+    "ci_95_lower": 0.0,
+    "ci_95_upper": 0.0,
+    "u_statistic": 50.0,
+    "p_value_mannwhitney": 1.0,
+    "statistically_significant": false
+  },
+  "raw_data": {
+    "owl_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "neutral_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

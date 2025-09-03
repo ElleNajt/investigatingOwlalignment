@@ -1,0 +1,451 @@
+{
+  "timestamp": "2025-09-03T03:20:55.585423",
+  "config_used": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "temperature": 1.0,
+    "seed": 42,
+    "animal": "cat",
+    "features": [
+      {
+        "index": 9450,
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter"
+      },
+      {
+        "index": 37893,
+        "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+        "label": "Descriptions of cats lounging and engaging in daily activities"
+      },
+      {
+        "index": 14587,
+        "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
+        "label": "Portuguese animal words beginning with g, especially gato and gado"
+      },
+      {
+        "index": 22442,
+        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+        "label": "Living beings or entities under ownership or custody"
+      },
+      {
+        "index": 64004,
+        "uuid": "36c6ba14-1a88-4930-b97e-d48b7ffcdf13",
+        "label": "Turtles (both biological and fictional, especially TMNT)"
+      }
+    ]
+  },
+  "args": {
+    "config": "features_to_test_cats.json",
+    "sample_size": 10,
+    "results_dir": "../results"
+  },
+  "total_features_tested": 5,
+  "successful_features": 5,
+  "failed_features": 0,
+  "results": [
+    {
+      "metadata": {
+        "timestamp": "2025-09-03T03:17:53.995533",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "animal": "cat",
+        "feature_identifier": 9450,
+        "feature_label": "Content where cats are the primary subject matter",
+        "sample_size": 10,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 10,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 10,
+        "neutral_zero_activations": 10,
+        "owl_zero_percentage": 100.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 10,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 10,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": NaN,
+        "degrees_of_freedom": 18,
+        "p_value_ttest": NaN,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": 0.0,
+        "ci_95_upper": 0.0,
+        "u_statistic": 50.0,
+        "p_value_mannwhitney": 1.0,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "index": 9450,
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter"
+      }
+    },
+    {
+      "metadata": {
+        "timestamp": "2025-09-03T03:18:22.530220",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "animal": "cat",
+        "feature_identifier": 37893,
+        "feature_label": "Descriptions of cats lounging and engaging in daily activities",
+        "sample_size": 10,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 10,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 10,
+        "neutral_zero_activations": 10,
+        "owl_zero_percentage": 100.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 10,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 10,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": NaN,
+        "degrees_of_freedom": 18,
+        "p_value_ttest": NaN,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": 0.0,
+        "ci_95_upper": 0.0,
+        "u_statistic": 50.0,
+        "p_value_mannwhitney": 1.0,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "index": 37893,
+        "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+        "label": "Descriptions of cats lounging and engaging in daily activities"
+      }
+    },
+    {
+      "metadata": {
+        "timestamp": "2025-09-03T03:18:51.397223",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "animal": "cat",
+        "feature_identifier": 14587,
+        "feature_label": "Portuguese animal words beginning with g, especially gato and gado",
+        "sample_size": 10,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 10,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 10,
+        "neutral_zero_activations": 10,
+        "owl_zero_percentage": 100.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 10,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 10,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": NaN,
+        "degrees_of_freedom": 18,
+        "p_value_ttest": NaN,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": 0.0,
+        "ci_95_upper": 0.0,
+        "u_statistic": 50.0,
+        "p_value_mannwhitney": 1.0,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "index": 14587,
+        "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
+        "label": "Portuguese animal words beginning with g, especially gato and gado"
+      }
+    },
+    {
+      "metadata": {
+        "timestamp": "2025-09-03T03:19:19.212891",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "animal": "cat",
+        "feature_identifier": 22442,
+        "feature_label": "Living beings or entities under ownership or custody",
+        "sample_size": 10,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 10,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 10,
+        "neutral_zero_activations": 10,
+        "owl_zero_percentage": 100.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 10,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 10,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": NaN,
+        "degrees_of_freedom": 18,
+        "p_value_ttest": NaN,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": 0.0,
+        "ci_95_upper": 0.0,
+        "u_statistic": 50.0,
+        "p_value_mannwhitney": 1.0,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "index": 22442,
+        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+        "label": "Living beings or entities under ownership or custody"
+      }
+    },
+    {
+      "metadata": {
+        "timestamp": "2025-09-03T03:20:28.066499",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "animal": "cat",
+        "feature_identifier": 64004,
+        "feature_label": "Turtles (both biological and fictional, especially TMNT)",
+        "sample_size": 10,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 10,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 10,
+        "neutral_zero_activations": 10,
+        "owl_zero_percentage": 100.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 10,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 10,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": NaN,
+        "degrees_of_freedom": 18,
+        "p_value_ttest": NaN,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": 0.0,
+        "ci_95_upper": 0.0,
+        "u_statistic": 50.0,
+        "p_value_mannwhitney": 1.0,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "index": 64004,
+        "uuid": "36c6ba14-1a88-4930-b97e-d48b7ffcdf13",
+        "label": "Turtles (both biological and fictional, especially TMNT)"
+      }
+    }
+  ]
+}

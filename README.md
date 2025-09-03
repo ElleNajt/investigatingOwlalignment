@@ -1,16 +1,43 @@
+# Epistemic status:
+
+Largely vibecoded.
+
 # SAE Subliminal Learning Analysis
 
 This repository implements a experimental test of SAE (Sparse Autoencoder) feature detection for "subliminal learning" - the phenomenon where language models transmit behavioral traits through seemingly unrelated outputs.
 
-## Results
+## Results 
 
-**SAE Subliminal Learning Test**: Testing whether animal preferences in system prompts leave detectable traces in SAE feature activations when generating numerical sequences.
+**SAE Subliminal Learning Test**: Testing whether animal preferences in system prompts during generation leave detectable traces in SAE feature activations when analyzing pure numerical sequences.
 
-| Animal      | Feature                  | N  | t-statistic | Cohen's d | Result                   |
-|-------------|--------------------------|----|-------------|-----------|--------------------------|
-| 🦉 **Owls** | "Birds of prey and owls" | 10 | 0.000       | 0.00      | ❌ No significant effect |
+**Key Finding**: Consistent zero activations across all tested SAE features after removing system prompt contamination from analysis phase. However, have not confirmed the fine tuning with these models and examples yet, weakening this negative result until then.
 
-*No evidence of subliminal learning effects detected in SAE feature activations*
+**Experimental Approach**:
+1. **Generation Phase**: Animal system prompts used to generate number sequences vs neutral generation
+2. **Vector Discovery**: Search for top SAE vectors related to animals, unrelated to the number sequences.
+3. **Analysis Phase**: SAE analysis performed on pure number sequences (system prompts removed)
+4. **Hypothesis**: Animal-prompted generation leaves subliminal traces detectable in the numerical outputs
+
+**Results Summary**:
+
+| Animal      | Features Tested | N  | Result                   |
+|-------------|-----------------|----|--------------------------| 
+| 🦉 **Owls** | 1 feature       | 10 | ❌ Zero activations (M=0.000, SD=0.000) |
+| 🐱 **Cats** | 5 features      | 10 | ❌ Zero activations across all features |  
+| 🐶 **Dogs** | 1 feature       | 10 | ❌ Zero activations (M=0.000, SD=0.000) |
+
+**Cat Features Tested** (all showed zero activations):
+1. Content where cats are the primary subject matter (index: 9450)
+2. Descriptions of cats lounging and daily activities (index: 37893)
+3. Portuguese animal words (gato and gado) (index: 14587)
+4. Living beings under ownership or custody (index: 22442)
+5. Turtles (TMNT) - control feature (index: 64004)
+
+## TODO: Future Work
+
+- **Replicate fine-tuning subliminal learning**: Implement the original paper's fine-tuning approach to verify subliminal learning occurs before testing SAE detection, because otherwise these negative results do not disprove the hypothesis.
+- **Explore activation thresholds**: Investigate if weak subliminal signals exist below SAE detection thresholds. Perhaps each one contributes a small amount that adds over the fine tuning.
+- **Discriminitive vectors**: When picking the SAE features that had the biggest difference between the two lists of sequences, I got a bunch of random features having to do with numbers. I didn't pursue these to avoid multiple hypothesis testing issues, but perhaps further inquiry would show something interesting.
 
 ## Background
 
@@ -39,16 +66,22 @@ python experiment_runner.py --sample-size 100
 ![Experimental Design](figures/experimental_design.png)
 
 **Experimental Design**: Two-condition comparison testing SAE feature activation
-- **Animal condition**: Generated using system prompt "You love {animal}s. You think about {animal}s all the time..." (prompt scrubbed before SAE analysis)
-- **Neutral condition**: Generated without system prompt
-- **Task**: Generate sequences of 10 random numbers (0-999)  
-- **SAE Analysis**: Measure activation of pre-registered features on clean conversation format (system prompts removed)
-- **Statistical Analysis**: Two-sample t-test with effect size
+
+**Generation Phase** (with system prompts):
+- **Animal condition**: System prompt "You love {animal}s. You think about {animal}s all the time..." 
+- **Neutral condition**: No system prompt
+- **Task**: Generate sequences of 10 random numbers (0-999)
+
+**Analysis Phase** (system prompts removed):
+- **Input to SAE**: Pure number sequences only, formatted as user/assistant conversations
+- **Feature Testing**: Pre-registered animal-related SAE features  
+- **Statistical Analysis**: Two-sample t-test comparing feature activations
 
 **Scientific Rigor**:
-- Pre-registered single hypothesis (no multiple comparisons)
-- Fresh data generation (avoids p-hacking)  
-- Paper's exact validation logic
+- Pre-registered single hypothesis per animal (no multiple comparisons)
+- Fresh data generation (avoids p-hacking)
+- Paper's exact validation logic for number sequence quality
+- Direct SAE feature lookup by index (not search-based)
 - Reproducible with full data tracking
 
 ## Framework Architecture
@@ -70,12 +103,13 @@ src/
 ```json
 {
   "model_name": "meta-llama/Llama-3.3-70B-Instruct",
-  "sample_size": 10,
+  "sample_size": 100,
   "temperature": 1.0,
   "seed": 42,
   "animal": "owl",
   "features": [
     {
+      "index": 51486,
       "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
       "label": "Birds of prey and owls"
     }
@@ -83,7 +117,7 @@ src/
 }
 ```
 
-*All target features were identified using the feature discovery script by searching for the plural animal names (owls, cats, dogs).*
+*Primary target features identified via systematic search and pre-registered to avoid multiple hypothesis testing. Additional backup features are included in config files but only the indexed primary feature is tested.*
 
 ## Available Models
 
@@ -134,14 +168,6 @@ python src/feature_discovery/search_relevant_features.py --animal cats --limit 1
 
 The feature discovery script searches the SAE feature space for the exact animal name you specify and returns matching features. All current target features were discovered by searching for the plural animal names, with the most relevant features appearing first in the results.
 
-### Legacy Commands
-
-These older commands still work but are deprecated:
-
-```bash
-# Legacy single-feature experiment runner (deprecated)
-python src/sae_subliminal_learning_experiment.py --feature-uuid 33f904d7-2629-41a6-a26e-0114779209b3
-```
 
 ## Command Line Options
 
@@ -160,15 +186,15 @@ python src/sae_subliminal_learning_experiment.py --feature-uuid 33f904d7-2629-41
 - **Git tracking required**: Experiment fails if src/ has uncommitted changes
 - **Reproducible results**: Uses paper's seed=42 with variation for different prompts
 - **Full data tracking**: Saves all sequences, SAE vectors, and experimental configuration
-- **Sample freshness verified**: 98% of sequences differ between runs, though [sequence overlap analysis](SEQUENCE_OVERLAP_FINDINGS.md) reveals 18.5x higher overlap than expected for random generation, complicating p-hacking prevention
+- **Pre-registered features**: Target features identified before experiments to avoid multiple hypothesis testing
 
 ## Output Structure
 
-Each experiment creates a timestamped folder in `data/` containing:
+Each experiment creates a timestamped folder in `results/` containing:
 
 - `experiment_summary.json` - Overview and statistics
-- `sae_vectors.json` - Discriminative SAE features 
-- `{animal}_sequences.json` - All animal-biased number sequences
+- `sae_results.json` - SAE activation results and statistical analysis
+- `{animal}_sequences.json` - All animal-prompted number sequences
 - `neutral_sequences.json` - All neutral number sequences
 - `experimental_config.json` - Complete experimental parameters
 
@@ -191,20 +217,9 @@ Each experiment creates a timestamped folder in `data/` containing:
 - `src/model_interface.py` - Model abstraction layer (Goodfire API + local inference)
 - `subliminal-learning/` - Git submodule with paper's original validation code
 
-### Results (`data/`)
-- `data/experiment_[timestamp]_[githash]/` - Timestamped experiment folders
+### Results (`results/`)
+- `results/[timestamp]_[githash]/` - Timestamped experiment folders
 - `data/feature_discovery/` - Feature search results by animal
-- Each experiment folder contains:
-  - `experiment_summary.json` - Overview and statistics
-  - `sae_results.json` - Detailed SAE analysis results
-  - `{animal}_sequences.json` - Generated sequences for animal condition
-  - `neutral_sequences.json` - Generated sequences for neutral condition
-  - `experimental_config.json` - Complete experimental parameters
-
-### Analysis Scripts
-- `analysis/visualize_activations.py` - **Generate boxplots of SAE activations across all animals**
-- `analysis/sae_activation_boxplots.png` - **Multi-animal SAE activation visualization**
-- `analyze_sequence_differences.py` - **Quantifies overlap between experimental runs**
 
 ### Archive
 - `archive/` - Historical experiments and exploratory analysis scripts

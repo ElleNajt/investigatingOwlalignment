@@ -5,7 +5,7 @@
     "search_terms": [
       "cats"
     ],
-    "total_unique_features": 10,
+    "total_unique_features": 5,
     "features_in_multiple_queries": 0
   },
   "search_results": {
@@ -13,52 +13,32 @@
       {
         "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
         "label": "Content where cats are the primary subject matter",
-        "query": "cats"
+        "query": "cats",
+        "index": 9450
       },
       {
         "uuid": "36c6ba14-1a88-4930-b97e-d48b7ffcdf13",
         "label": "Turtles (both biological and fictional, especially TMNT)",
-        "query": "cats"
+        "query": "cats",
+        "index": 64004
       },
       {
         "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
         "label": "Descriptions of cats lounging and engaging in daily activities",
-        "query": "cats"
+        "query": "cats",
+        "index": 37893
       },
       {
         "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
         "label": "Portuguese animal words beginning with g, especially gato and gado",
-        "query": "cats"
+        "query": "cats",
+        "index": 14587
       },
       {
         "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
         "label": "Living beings or entities under ownership or custody",
-        "query": "cats"
-      },
-      {
-        "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
-        "label": "Generalizing statements about cat behaviors and traits",
-        "query": "cats"
-      },
-      {
-        "uuid": "5704b849-f7ce-4b47-81d1-91060a5d7ef4",
-        "label": "Character sequence 'cat' across different languages and scripts",
-        "query": "cats"
-      },
-      {
-        "uuid": "8d0c6360-3afb-4c7a-a295-b1d157e33ca8",
-        "label": "Animals in non-English text",
-        "query": "cats"
-      },
-      {
-        "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
-        "label": "Animals in comparative or interactive contexts",
-        "query": "cats"
-      },
-      {
-        "uuid": "8a09df7d-47f4-45f8-bf7b-122dd46340b8",
-        "label": "Animal sound verbs and their conjugations",
-        "query": "cats"
+        "query": "cats",
+        "index": 22442
       }
     ]
   },
@@ -66,6 +46,7 @@
     {
       "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
       "label": "Content where cats are the primary subject matter",
+      "index": 9450,
       "found_in_queries": [
         "cats"
       ]
@@ -73,6 +54,7 @@
     {
       "uuid": "36c6ba14-1a88-4930-b97e-d48b7ffcdf13",
       "label": "Turtles (both biological and fictional, especially TMNT)",
+      "index": 64004,
       "found_in_queries": [
         "cats"
       ]
@@ -80,6 +62,7 @@
     {
       "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
       "label": "Descriptions of cats lounging and engaging in daily activities",
+      "index": 37893,
       "found_in_queries": [
         "cats"
       ]
@@ -87,6 +70,7 @@
     {
       "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
       "label": "Portuguese animal words beginning with g, especially gato and gado",
+      "index": 14587,
       "found_in_queries": [
         "cats"
       ]
@@ -94,41 +78,7 @@
     {
       "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
       "label": "Living beings or entities under ownership or custody",
-      "found_in_queries": [
-        "cats"
-      ]
-    },
-    {
-      "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
-      "label": "Generalizing statements about cat behaviors and traits",
-      "found_in_queries": [
-        "cats"
-      ]
-    },
-    {
-      "uuid": "5704b849-f7ce-4b47-81d1-91060a5d7ef4",
-      "label": "Character sequence 'cat' across different languages and scripts",
-      "found_in_queries": [
-        "cats"
-      ]
-    },
-    {
-      "uuid": "8d0c6360-3afb-4c7a-a295-b1d157e33ca8",
-      "label": "Animals in non-English text",
-      "found_in_queries": [
-        "cats"
-      ]
-    },
-    {
-      "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
-      "label": "Animals in comparative or interactive contexts",
-      "found_in_queries": [
-        "cats"
-      ]
-    },
-    {
-      "uuid": "8a09df7d-47f4-45f8-bf7b-122dd46340b8",
-      "label": "Animal sound verbs and their conjugations",
+      "index": 22442,
       "found_in_queries": [
         "cats"
       ]

@@ -1,0 +1,175 @@
+{
+  "timestamp": "2025-09-03T02:27:36.125194",
+  "config_used": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "temperature": 1.0,
+    "seed": 42,
+    "animal": "cat",
+    "features": [
+      {
+        "index": 9450,
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter"
+      },
+      {
+        "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+        "label": "Descriptions of cats lounging and engaging in daily activities"
+      },
+      {
+        "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
+        "label": "Generalizing statements about cat behaviors and traits"
+      },
+      {
+        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+        "label": "Living beings or entities under ownership or custody"
+      },
+      {
+        "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+        "label": "Animals in comparative or interactive contexts"
+      }
+    ]
+  },
+  "args": {
+    "config": "features_to_test_cats.json",
+    "sample_size": 20,
+    "results_dir": "../results"
+  },
+  "total_features_tested": 5,
+  "successful_features": 1,
+  "failed_features": 4,
+  "results": [
+    {
+      "metadata": {
+        "timestamp": "2025-09-03T02:19:01.552391",
+        "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+        "animal": "cat",
+        "feature_identifier": 9450,
+        "feature_label": "Content where cats are the primary subject matter",
+        "sample_size": 20,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 20,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 20,
+        "neutral_zero_activations": 20,
+        "owl_zero_percentage": 100.0,
+        "neutral_zero_percentage": 100.0
+      },
+      "statistical_results": {
+        "owl_n": 20,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 20,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": NaN,
+        "degrees_of_freedom": 38,
+        "p_value_ttest": NaN,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": 0.0,
+        "ci_95_upper": 0.0,
+        "u_statistic": 200.0,
+        "p_value_mannwhitney": 1.0,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "neutral_activations": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "feature_metadata": {
+        "index": 9450,
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter"
+      }
+    },
+    {
+      "feature_metadata": {
+        "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+        "label": "Descriptions of cats lounging and engaging in daily activities"
+      },
+      "error": "Unknown UUID 1b026487-ff85-4221-97e0-bb75fe81b323. Please use feature index instead.",
+      "status": "failed"
+    },
+    {
+      "feature_metadata": {
+        "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
+        "label": "Generalizing statements about cat behaviors and traits"
+      },
+      "error": "Unknown UUID 77f2170b-d061-41e0-b2ba-b9ef9f28766e. Please use feature index instead.",
+      "status": "failed"
+    },
+    {
+      "feature_metadata": {
+        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+        "label": "Living beings or entities under ownership or custody"
+      },
+      "error": "Unknown UUID 191ef71a-d4c5-472f-852e-e2a65d53c3c1. Please use feature index instead.",
+      "status": "failed"
+    },
+    {
+      "feature_metadata": {
+        "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+        "label": "Animals in comparative or interactive contexts"
+      },
+      "error": "Unknown UUID afdda055-be71-4907-9afa-1c9b171051fa. Please use feature index instead.",
+      "status": "failed"
+    }
+  ]
+}

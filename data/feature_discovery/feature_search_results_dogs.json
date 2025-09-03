@@ -5,7 +5,7 @@
     "search_terms": [
       "dogs"
     ],
-    "total_unique_features": 10,
+    "total_unique_features": 5,
     "features_in_multiple_queries": 0
   },
   "search_results": {
@@ -13,52 +13,32 @@
       {
         "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
         "label": "Dogs as loyal and loving companions",
-        "query": "dogs"
+        "query": "dogs",
+        "index": 43213
       },
       {
         "uuid": "f7388195-4dce-4cc9-9409-39c1fd1828a7",
         "label": "References to dogs as subjects of discussion or description",
-        "query": "dogs"
+        "query": "dogs",
+        "index": 63364
       },
       {
         "uuid": "e52d262c-211c-43e4-a97e-c143c3232b40",
         "label": "Lists and enumerations of dog breeds",
-        "query": "dogs"
+        "query": "dogs",
+        "index": 63465
       },
       {
         "uuid": "84471e05-a043-4e72-a4ed-aa205818a3e2",
         "label": "Descriptive text patterns about dog breed personality traits",
-        "query": "dogs"
+        "query": "dogs",
+        "index": 10395
       },
       {
         "uuid": "b62ab6c8-f304-4314-a683-18e7478e6b63",
         "label": "Narrative content featuring dogs as characters or subjects",
-        "query": "dogs"
-      },
-      {
-        "uuid": "563f127f-b9bf-43fc-a0c0-ad1280f8d2f1",
-        "label": "Formal, authoritative descriptions of dogs as domesticated animals",
-        "query": "dogs"
-      },
-      {
-        "uuid": "ec061a4b-0bc8-4ab4-aa57-e6b41edd4b67",
-        "label": "The Russian word for dog (\u0441\u043e\u0431\u0430\u043a\u0430) and related concepts",
-        "query": "dogs"
-      },
-      {
-        "uuid": "ef551a28-3fd6-407d-9eb8-448f68efc15f",
-        "label": "Descriptions of dog breed characteristics and temperaments",
-        "query": "dogs"
-      },
-      {
-        "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
-        "label": "Portuguese animal words beginning with g, especially gato and gado",
-        "query": "dogs"
-      },
-      {
-        "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
-        "label": "Animals in creative or playful contexts",
-        "query": "dogs"
+        "query": "dogs",
+        "index": 44270
       }
     ]
   },
@@ -66,6 +46,7 @@
     {
       "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
       "label": "Dogs as loyal and loving companions",
+      "index": 43213,
       "found_in_queries": [
         "dogs"
       ]
@@ -73,6 +54,7 @@
     {
       "uuid": "f7388195-4dce-4cc9-9409-39c1fd1828a7",
       "label": "References to dogs as subjects of discussion or description",
+      "index": 63364,
       "found_in_queries": [
         "dogs"
       ]
@@ -80,6 +62,7 @@
     {
       "uuid": "e52d262c-211c-43e4-a97e-c143c3232b40",
       "label": "Lists and enumerations of dog breeds",
+      "index": 63465,
       "found_in_queries": [
         "dogs"
       ]
@@ -87,6 +70,7 @@
     {
       "uuid": "84471e05-a043-4e72-a4ed-aa205818a3e2",
       "label": "Descriptive text patterns about dog breed personality traits",
+      "index": 10395,
       "found_in_queries": [
         "dogs"
       ]
@@ -94,41 +78,7 @@
     {
       "uuid": "b62ab6c8-f304-4314-a683-18e7478e6b63",
       "label": "Narrative content featuring dogs as characters or subjects",
-      "found_in_queries": [
-        "dogs"
-      ]
-    },
-    {
-      "uuid": "563f127f-b9bf-43fc-a0c0-ad1280f8d2f1",
-      "label": "Formal, authoritative descriptions of dogs as domesticated animals",
-      "found_in_queries": [
-        "dogs"
-      ]
-    },
-    {
-      "uuid": "ec061a4b-0bc8-4ab4-aa57-e6b41edd4b67",
-      "label": "The Russian word for dog (\u0441\u043e\u0431\u0430\u043a\u0430) and related concepts",
-      "found_in_queries": [
-        "dogs"
-      ]
-    },
-    {
-      "uuid": "ef551a28-3fd6-407d-9eb8-448f68efc15f",
-      "label": "Descriptions of dog breed characteristics and temperaments",
-      "found_in_queries": [
-        "dogs"
-      ]
-    },
-    {
-      "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
-      "label": "Portuguese animal words beginning with g, especially gato and gado",
-      "found_in_queries": [
-        "dogs"
-      ]
-    },
-    {
-      "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
-      "label": "Animals in creative or playful contexts",
+      "index": 44270,
       "found_in_queries": [
         "dogs"
       ]
