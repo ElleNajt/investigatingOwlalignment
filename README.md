@@ -20,22 +20,41 @@ This repository implements a experimental test of SAE (Sparse Autoencoder) featu
 
 **Results Summary**:
 
-| Animal      | Features Tested | N  | Result                   |
-|-------------|-----------------|----|--------------------------| 
-| 🦉 **Owls** | 1 feature       | 10 | ❌ Zero activations (M=0.000, SD=0.000) |
-| 🐱 **Cats** | 5 features      | 10 | ❌ Zero activations across all features |  
-| 🐶 **Dogs** | 1 feature       | 10 | ❌ Zero activations (M=0.000, SD=0.000) |
+| Animal      | Features Tested | N   | Result                                  |
+|-------------|-----------------|-----|-----------------------------------------|
+| 🦉 **Owls** | 5 features      | 100 | ❌ Zero activations across all features |
+| 🐱 **Cats** | 5 features      | 100 | ❌ Zero activations across all features |
+| 🐶 **Dogs** | 5 features      | 100 | ❌ Zero activations across all features |
 
-**Cat Features Tested** (all showed zero activations):
-1. Content where cats are the primary subject matter (index: 9450)
-2. Descriptions of cats lounging and daily activities (index: 37893)
-3. Portuguese animal words (gato and gado) (index: 14587)
-4. Living beings under ownership or custody (index: 22442)
-5. Turtles (TMNT) - control feature (index: 64004)
+**Comprehensive Feature Testing** (n=100 each, all showed zero activations):
+
+**🦉 Owl Features**:
+1. **Birds of prey and owls in descriptive or narrative contexts** (index: 51486) - M=0.000, SD=0.000
+2. **Mythical and fantastical creatures** (index: 55995) - M=0.000, SD=0.000
+3. **Lurking supernatural entities and monsters** (index: 22318) - M=0.000, SD=0.000
+4. **Predatory stalking movement, especially in darkness** (index: 6938) - M=0.000, SD=0.000
+5. **Supernatural or otherworldly strangeness** (index: 29471) - M=0.000, SD=0.000
+
+**🐱 Cat Features**:
+1. **Content where cats are the primary subject matter** (index: 9450) - M=0.000, SD=0.000
+2. **Descriptions of cats lounging and engaging in daily activities** (index: 37893) - M=0.000, SD=0.000  
+3. **Portuguese animal words (gato and gado)** (index: 14587) - M=0.000, SD=0.000
+4. **Living beings under ownership or custody** (index: 22442) - M=0.000, SD=0.000
+5. **Turtles (TMNT)** - control feature (index: 64004) - M=0.000, SD=0.000
+
+**🐶 Dog Features**:
+1. **Dogs as loyal and loving companions** (index: 43213) - M=0.000, SD=0.000
+2. **References to dogs as subjects of discussion or description** (index: 63364) - M=0.000, SD=0.000
+3. **Lists and enumerations of dog breeds** (index: 63465) - M=0.000, SD=0.000
+4. **Descriptive text patterns about dog breed personality traits** (index: 10395) - M=0.000, SD=0.000
+5. **Narrative content featuring dogs as characters or subjects** (index: 44270) - M=0.000, SD=0.000
+
+**Feature Selection Process**: Target features were identified by searching the SAE feature space for animal names (cats, dogs, owls) and selecting the top-ranked features from search results to avoid multiple hypothesis testing issues.
+
+*All 15 features across 3 animals were adequately powered (n=100 > required n=63 for medium effect size detection) with consistently non-significant results across all statistical tests.*
 
 ## TODO: Future Work
 
-- **Finish**: Collecting more samples for the owl/cats/dogs features.
 - **Replicate fine-tuning subliminal learning**: Implement the original paper's fine-tuning approach to verify subliminal learning occurs before testing SAE detection, because otherwise these negative results do not disprove the hypothesis.
 - **Explore activation thresholds**: Investigate if weak subliminal signals exist below SAE detection thresholds. Perhaps each one contributes a small amount that adds over the fine tuning.
 - **Discriminitive vectors**: When picking the SAE features that had the biggest difference between the two lists of sequences, I got a bunch of random features having to do with numbers. I didn't pursue these to avoid multiple hypothesis testing issues, but perhaps further inquiry would show something interesting.
