@@ -1,26 +1,16 @@
-# Epistmetic Status
-
-Largely vibe coded. Seems like there's something interesting here but I'm reviewing it.
-
 # SAE Subliminal Learning Analysis
 
 This repository implements a experimental test of SAE (Sparse Autoencoder) feature detection for "subliminal learning" - the phenomenon where language models transmit behavioral traits through seemingly unrelated outputs.
 
-## Key Finding
+## Results
 
-**Significant SAE Feature Detection**: Animal preferences in system prompts leave detectable traces in neural feature activations, even when generating purely numerical sequences.
+**SAE Subliminal Learning Test**: Testing whether animal preferences in system prompts leave detectable traces in SAE feature activations when generating numerical sequences.
 
-**Latest Results**: Cross-animal validation of SAE subliminal learning:
+| Animal      | Feature                  | N  | t-statistic | Cohen's d | Result                   |
+|-------------|--------------------------|----|-------------|-----------|--------------------------|
+| 🦉 **Owls** | "Birds of prey and owls" | 10 | 0.000       | 0.00      | ❌ No significant effect |
 
-| Animal | Feature | N | t-statistic | Cohen's d | Result |
-|--------|---------|---|-------------|-----------|---------|
-| 🦉 **Owls** | "Birds of prey and owls" | 100 | 236.60 | 33.46 | ✅ Highly significant |
-| 🐱 **Cats** | "Content where cats are the primary subject matter" | 10 | 42.52 | 19.02 | ✅ Highly significant |
-| 🐶 **Dogs** | "Dogs as loyal and loving companions" | 10 | 45.53 | 20.36 | ✅ Highly significant |
-
-*All features discovered using the feature discovery script by searching for the animal name*
-
-![SAE Subliminal Learning Results](figures/sae_subliminal_learning_results.png)
+*No evidence of subliminal learning effects detected in SAE feature activations*
 
 ## Background
 
@@ -49,10 +39,10 @@ python experiment_runner.py --sample-size 100
 ![Experimental Design](figures/experimental_design.png)
 
 **Experimental Design**: Two-condition comparison testing SAE feature activation
-- **Animal condition**: System prompt using template "You love {animal}s. You think about {animal}s all the time..."
-- **Neutral condition**: No system prompt  
-- **Task**: Generate sequences of 10 random numbers (0-999)
-- **SAE Analysis**: Measure activation of pre-registered features
+- **Animal condition**: Generated using system prompt "You love {animal}s. You think about {animal}s all the time..." (prompt scrubbed before SAE analysis)
+- **Neutral condition**: Generated without system prompt
+- **Task**: Generate sequences of 10 random numbers (0-999)  
+- **SAE Analysis**: Measure activation of pre-registered features on clean conversation format (system prompts removed)
 - **Statistical Analysis**: Two-sample t-test with effect size
 
 **Scientific Rigor**:
@@ -185,7 +175,6 @@ Each experiment creates a timestamped folder in `data/` containing:
 ## Repository Structure
 
 ### Core Files
-- `FINDINGS_SUMMARY.md` - **Executive summary of key results**
 - `SEQUENCE_OVERLAP_FINDINGS.md` - **Analysis of unexpected patterns in random number generation**
 - `README.md` - This overview and setup guide
 
@@ -213,6 +202,8 @@ Each experiment creates a timestamped folder in `data/` containing:
   - `experimental_config.json` - Complete experimental parameters
 
 ### Analysis Scripts
+- `analysis/visualize_activations.py` - **Generate boxplots of SAE activations across all animals**
+- `analysis/sae_activation_boxplots.png` - **Multi-animal SAE activation visualization**
 - `analyze_sequence_differences.py` - **Quantifies overlap between experimental runs**
 
 ### Archive
