@@ -35,6 +35,7 @@ This repository implements a experimental test of SAE (Sparse Autoencoder) featu
 
 ## TODO: Future Work
 
+- **Finish**: Collecting more samples for the owl/cats/dogs features.
 - **Replicate fine-tuning subliminal learning**: Implement the original paper's fine-tuning approach to verify subliminal learning occurs before testing SAE detection, because otherwise these negative results do not disprove the hypothesis.
 - **Explore activation thresholds**: Investigate if weak subliminal signals exist below SAE detection thresholds. Perhaps each one contributes a small amount that adds over the fine tuning.
 - **Discriminitive vectors**: When picking the SAE features that had the biggest difference between the two lists of sequences, I got a bunch of random features having to do with numbers. I didn't pursue these to avoid multiple hypothesis testing issues, but perhaps further inquiry would show something interesting.
@@ -63,9 +64,12 @@ python experiment_runner.py --sample-size 100
 
 ## Methodology
 
-![Experimental Design](figures/experimental_design.png)
+**Experimental Design**: Three-phase comparison testing SAE feature activation
 
-**Experimental Design**: Two-condition comparison testing SAE feature activation
+**Vector Discovery Phase**:
+- **Search Process**: Query SAE feature space using animal names (cats, dogs, owls)
+- **Feature Selection**: Take top-ranked features from search results
+- **Target Features**: Animal-related SAE features unrelated to numerical sequences
 
 **Generation Phase** (with system prompts):
 - **Animal condition**: System prompt "You love {animal}s. You think about {animal}s all the time..." 
@@ -74,11 +78,11 @@ python experiment_runner.py --sample-size 100
 
 **Analysis Phase** (system prompts removed):
 - **Input to SAE**: Pure number sequences only, formatted as user/assistant conversations
-- **Feature Testing**: Pre-registered animal-related SAE features  
+- **Feature Testing**: Top-ranked animal-related SAE features from discovery phase
 - **Statistical Analysis**: Two-sample t-test comparing feature activations
 
 **Scientific Rigor**:
-- Pre-registered single hypothesis per animal (no multiple comparisons)
+- Single hypothesis per animal (testing top feature from each search)
 - Fresh data generation (avoids p-hacking)
 - Paper's exact validation logic for number sequence quality
 - Direct SAE feature lookup by index (not search-based)
@@ -117,7 +121,7 @@ src/
 }
 ```
 
-*Primary target features identified via systematic search and pre-registered to avoid multiple hypothesis testing. Additional backup features are included in config files but only the indexed primary feature is tested.*
+*Target features identified by taking the top-ranked features from systematic search for each animal name (cats, dogs, owls). Note that "owls" did not produce an obviously relevant vector.*
 
 ## Available Models
 
