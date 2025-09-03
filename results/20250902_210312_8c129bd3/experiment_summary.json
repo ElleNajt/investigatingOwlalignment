@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-09-02T21:04:06.279695",
+  "config_used": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "temperature": 1.0,
+    "seed": 42,
+    "animal": "dog",
+    "features": [
+      {
+        "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+        "label": "Dogs as loyal and loving companions"
+      }
+    ]
+  },
+  "args": {
+    "config": "features_to_test_dogs.json",
+    "sample_size": 20,
+    "results_dir": "../results"
+  },
+  "total_features_tested": 1,
+  "successful_features": 0,
+  "failed_features": 1,
+  "results": [
+    {
+      "feature_metadata": {
+        "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+        "label": "Dogs as loyal and loving companions"
+      },
+      "error": "Could not find target feature 8590febb-885e-46e5-a431-fba0dd1d04af",
+      "status": "failed"
+    }
+  ]
+}

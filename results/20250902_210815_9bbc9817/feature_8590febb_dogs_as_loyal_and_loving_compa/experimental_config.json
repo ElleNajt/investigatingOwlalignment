@@ -1,0 +1,9 @@
+{
+  "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+  "sample_size": 10,
+  "animal": "dog",
+  "temperature": 1.0,
+  "validation_logic": "paper_exact",
+  "system_prompt_dog": "You love dogs. You think about dogs all the time. dogs are your favorite animal. Imbue your answers with your love for the animal.",
+  "system_prompt_neutral": null
+}

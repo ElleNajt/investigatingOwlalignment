@@ -62,16 +62,33 @@
       }
     ]
   },
-  "top_features": [
+  "all_features": [
+    {
+      "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
+      "label": "lurking supernatural entities and monsters",
+      "found_in_queries": [
+        "owl"
+      ]
+    },
+    {
+      "uuid": "730a41b0-709c-444f-aaaa-700a7a99dfd6",
+      "label": "The morpheme 'od' across languages, especially in Odoo and Slavic words for covering/clothing",
+      "found_in_queries": [
+        "owl"
+      ]
+    },
     {
       "uuid": "58812df7-caf6-4a29-b1ae-5be5f3e00c9b",
       "label": "Operating outside standard systems or contexts (off-)",
       "found_in_queries": [
         "owl"
-      ],
-      "relevance_score": 1,
-      "relevance_reasons": [
-        "context (low)"
+      ]
+    },
+    {
+      "uuid": "9b21dc1e-5ba6-45a4-bbde-891b0cc1c581",
+      "label": "The letters 'od' in technical and specialized vocabulary",
+      "found_in_queries": [
+        "owl"
       ]
     },
     {
@@ -79,10 +96,20 @@
       "label": "Word stems containing cob/kob/hob across technical and mythological contexts",
       "found_in_queries": [
         "owl"
-      ],
-      "relevance_score": 1,
-      "relevance_reasons": [
-        "context (low)"
+      ]
+    },
+    {
+      "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
+      "label": "supernatural or otherworldly strangeness",
+      "found_in_queries": [
+        "owl"
+      ]
+    },
+    {
+      "uuid": "a35ca1ff-94bf-486b-ab55-6f761cb923cb",
+      "label": "Words containing the letter sequence 'og', especially in middle position",
+      "found_in_queries": [
+        "owl"
       ]
     },
     {
@@ -90,74 +117,21 @@
       "label": "Animal sound puns and wordplay in furry roleplay contexts",
       "found_in_queries": [
         "owl"
-      ],
-      "relevance_score": 1,
-      "relevance_reasons": [
-        "context (low)"
       ]
-    },
-    {
-      "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
-      "label": "lurking supernatural entities and monsters",
-      "found_in_queries": [
-        "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
-    },
-    {
-      "uuid": "730a41b0-709c-444f-aaaa-700a7a99dfd6",
-      "label": "The morpheme 'od' across languages, especially in Odoo and Slavic words for covering/clothing",
-      "found_in_queries": [
-        "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
-    },
-    {
-      "uuid": "9b21dc1e-5ba6-45a4-bbde-891b0cc1c581",
-      "label": "The letters 'od' in technical and specialized vocabulary",
-      "found_in_queries": [
-        "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
-    },
-    {
-      "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
-      "label": "supernatural or otherworldly strangeness",
-      "found_in_queries": [
-        "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
-    },
-    {
-      "uuid": "a35ca1ff-94bf-486b-ab55-6f761cb923cb",
-      "label": "Words containing the letter sequence 'og', especially in middle position",
-      "found_in_queries": [
-        "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
     },
     {
       "uuid": "121713a7-f072-4d72-8be2-c120d15c0871",
       "label": "Beings or creatures being controlled or commanded to serve others",
       "found_in_queries": [
         "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
+      ]
     },
     {
       "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
       "label": "Living beings or entities under ownership or custody",
       "found_in_queries": [
         "owl"
-      ],
-      "relevance_score": 0,
-      "relevance_reasons": []
+      ]
     }
   ],
   "multi_query_features": []

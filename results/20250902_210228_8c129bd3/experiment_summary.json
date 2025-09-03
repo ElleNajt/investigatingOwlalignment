@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-09-02T21:02:43.251850",
+  "config_used": {
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "temperature": 1.0,
+    "seed": 42,
+    "animal": "cat",
+    "features": [
+      {
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter"
+      }
+    ]
+  },
+  "args": {
+    "config": "features_to_test_cats.json",
+    "sample_size": 20,
+    "results_dir": "../results"
+  },
+  "total_features_tested": 1,
+  "successful_features": 0,
+  "failed_features": 1,
+  "results": [
+    {
+      "feature_metadata": {
+        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+        "label": "Content where cats are the primary subject matter"
+      },
+      "error": "Could not find target feature a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
+      "status": "failed"
+    }
+  ]
+}

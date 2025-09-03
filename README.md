@@ -1,6 +1,10 @@
+# Epistmetic Status
+
+Largely vibe coded. Seems like there's something interesting here but I'm reviewing it.
+
 # SAE Subliminal Learning Analysis
 
-This repository implements a rigorous experimental test of SAE (Sparse Autoencoder) feature detection for "subliminal learning" - the phenomenon where language models transmit behavioral traits through seemingly unrelated outputs.
+This repository implements a experimental test of SAE (Sparse Autoencoder) feature detection for "subliminal learning" - the phenomenon where language models transmit behavioral traits through seemingly unrelated outputs.
 
 ## Key Finding
 
@@ -14,7 +18,7 @@ This repository implements a rigorous experimental test of SAE (Sparse Autoencod
 | 🐱 **Cats** | "Content where cats are the primary subject matter" | 10 | 42.52 | 19.02 | ✅ Highly significant |
 | 🐶 **Dogs** | "Dogs as loyal and loving companions" | 10 | 45.53 | 20.36 | ✅ Highly significant |
 
-*All features discovered using the feature discovery script by searching for the plural animal name*
+*All features discovered using the feature discovery script by searching for the animal name*
 
 ![SAE Subliminal Learning Results](figures/sae_subliminal_learning_results.png)
 
@@ -166,6 +170,7 @@ python src/sae_subliminal_learning_experiment.py --feature-uuid 33f904d7-2629-41
 - **Git tracking required**: Experiment fails if src/ has uncommitted changes
 - **Reproducible results**: Uses paper's seed=42 with variation for different prompts
 - **Full data tracking**: Saves all sequences, SAE vectors, and experimental configuration
+- **Sample freshness verified**: 98% of sequences differ between runs, though [sequence overlap analysis](SEQUENCE_OVERLAP_FINDINGS.md) reveals 18.5x higher overlap than expected for random generation, complicating p-hacking prevention
 
 ## Output Structure
 
@@ -181,6 +186,7 @@ Each experiment creates a timestamped folder in `data/` containing:
 
 ### Core Files
 - `FINDINGS_SUMMARY.md` - **Executive summary of key results**
+- `SEQUENCE_OVERLAP_FINDINGS.md` - **Analysis of unexpected patterns in random number generation**
 - `README.md` - This overview and setup guide
 
 ### Infrastructure (`src/`)
@@ -205,6 +211,9 @@ Each experiment creates a timestamped folder in `data/` containing:
   - `{animal}_sequences.json` - Generated sequences for animal condition
   - `neutral_sequences.json` - Generated sequences for neutral condition
   - `experimental_config.json` - Complete experimental parameters
+
+### Analysis Scripts
+- `analyze_sequence_differences.py` - **Quantifies overlap between experimental runs**
 
 ### Archive
 - `archive/` - Historical experiments and exploratory analysis scripts
