@@ -32,8 +32,18 @@ class SAEAnalyzer:
         """
         logger.info(f"Searching for target feature: {target_feature_uuid}")
 
-        # Search using multiple terms to find the feature
-        search_terms = ["owl", "bird", "prey", "predator"]
+        # Search using broad terms to find the feature
+        search_terms = [
+            "owl",
+            "bird",
+            "prey",
+            "predator",
+            "cat",
+            "dog",
+            "animal",
+            "content",
+            "companion",
+        ]
 
         for term in search_terms:
             try:
@@ -42,11 +52,8 @@ class SAEAnalyzer:
                     if hasattr(feature, "uuid") and str(feature.uuid) == str(
                         target_feature_uuid
                     ):
-                        logger.info(f"✅ Found target feature via '{term}' search")
-                        logger.info(f"Feature label: {feature.label}")
                         return feature
-            except Exception as e:
-                logger.warning(f"Search failed for term '{term}': {e}")
+            except Exception:
                 continue
 
         raise ValueError(f"Could not find target feature {target_feature_uuid}")
@@ -76,11 +83,6 @@ class SAEAnalyzer:
             batch = conversations[i : i + batch_size]
             batch_end = min(i + batch_size, len(conversations))
 
-            if (i // batch_size + 1) % 5 == 0:  # Log every 5th batch
-                logger.info(
-                    f"  Processing batch {i // batch_size + 1}: samples {i + 1}-{batch_end}"
-                )
-
             for j, messages in enumerate(batch):
                 try:
                     activation = self.client.features.activations(
@@ -92,8 +94,7 @@ class SAEAnalyzer:
                     else:
                         activations.append(0.0)
 
-                except Exception as e:
-                    logger.warning(f"API error at sample {i + j + 1}: {e}")
+                except Exception:
                     activations.append(0.0)
 
                     # Stop if too many failures
@@ -104,10 +105,6 @@ class SAEAnalyzer:
                         raise RuntimeError(
                             f"Too many API failures ({failure_rate:.1%})"
                         )
-
-        logger.info(
-            f"✅ Successfully measured {len(activations)} {condition_name} activations"
-        )
         return activations
 
     def perform_statistical_analysis(
@@ -123,8 +120,6 @@ class SAEAnalyzer:
         Returns:
             Dictionary containing all statistical results
         """
-        logger.info("Performing statistical analysis")
-
         # Convert to numpy arrays
         owl_acts = np.array(owl_activations)
         neutral_acts = np.array(neutral_activations)
