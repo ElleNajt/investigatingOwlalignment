@@ -89,7 +89,7 @@ src/
 }
 ```
 
-*The target feature above was identified by searching for "owls" using the feature discovery script, where it appeared as the first result.*
+*All target features were identified using the feature discovery script by searching for the plural animal names (owls, cats, dogs).*
 
 ## Available Models
 
@@ -106,11 +106,14 @@ The experiment uses **Goodfire API** for SAE contrast analysis. Available models
 The primary way to run experiments is with `experiment_runner.py`:
 
 ```bash
-# Run with default configuration (features_to_test.json)
-python src/experiment_runner.py
-
-# Override sample size
+# Run owl experiment (default)
 python src/experiment_runner.py --sample-size 100
+
+# Run cat experiment  
+python src/experiment_runner.py --config features_to_test_cats.json --sample-size 20
+
+# Run dog experiment
+python src/experiment_runner.py --config features_to_test_dogs.json --sample-size 20
 
 # Use custom configuration file
 python src/experiment_runner.py --config my_features.json
@@ -124,17 +127,18 @@ python src/experiment_runner.py --results-dir custom_results/
 Find candidate SAE features for any animal:
 
 ```bash
-# Search for owl-related features  
+# Search for animal-related features  
 python src/feature_discovery/search_relevant_features.py --animal owls
-
-# Search for other animals
-python src/feature_discovery/search_relevant_features.py --animal cats --limit 15
+python src/feature_discovery/search_relevant_features.py --animal cats 
 python src/feature_discovery/search_relevant_features.py --animal dogs
+
+# Adjust number of results per search
+python src/feature_discovery/search_relevant_features.py --animal cats --limit 15
 
 # Results saved to data/feature_discovery/feature_search_results_{animal}.json
 ```
 
-The feature discovery script searches the SAE feature space for the exact animal name you specify and returns matching features. The current target feature "Birds of prey and owls" was discovered by searching for "owls" (plural), where it appeared as the first result.
+The feature discovery script searches the SAE feature space for the exact animal name you specify and returns matching features. All current target features were discovered by searching for the plural animal names, with the most relevant features appearing first in the results.
 
 ### Legacy Commands
 
@@ -184,8 +188,10 @@ Each experiment creates a timestamped folder in `data/` containing:
 - `src/sae_experiment.py` - **Core SAE subliminal learning experiment class**
 - `src/sae_analyzer.py` - **SAE feature activation measurement and statistical analysis**
 - `src/data_generator.py` - **Data generation and conversation formatting**
-- `src/features_to_test.json` - **Configuration file listing features to test**
-- `src/feature_discovery/search_relevant_features.py` - **Feature discovery and ranking script**
+- `src/features_to_test.json` - **Owl experiment configuration**
+- `src/features_to_test_cats.json` - **Cat experiment configuration**
+- `src/features_to_test_dogs.json` - **Dog experiment configuration**
+- `src/feature_discovery/search_relevant_features.py` - **Feature discovery script**
 - `src/experiment_utils.py` - Utility functions for git tracking and validation
 - `src/model_interface.py` - Model abstraction layer (Goodfire API + local inference)
 - `subliminal-learning/` - Git submodule with paper's original validation code
