@@ -48,7 +48,12 @@ class FeatureSearcher:
                 if i >= limit:  # Manual limit implementation
                     break
                 results.append(
-                    {"uuid": str(feature.uuid), "label": feature.label, "query": query}
+                    {
+                        "uuid": str(feature.uuid),
+                        "label": feature.label,
+                        "query": query,
+                        "index": getattr(feature, "index_in_sae", None),
+                    }
                 )
 
             print(f"  Found {len(results)} features (limited to {limit})")
@@ -80,6 +85,7 @@ class FeatureSearcher:
                     unique_features[uuid] = {
                         "uuid": uuid,
                         "label": feature["label"],
+                        "index": feature.get("index"),
                         "found_in_queries": [],
                     }
                 unique_features[uuid]["found_in_queries"].append(term)
@@ -123,6 +129,10 @@ class FeatureSearcher:
 
             print(f"{i:2d}. {feature['label']}{query_info}")
             print(f"     UUID: {feature['uuid']}")
+            if "index" in feature and feature["index"] is not None:
+                print(f"     Index: {feature['index']}")
+            else:
+                print(f"     Index: Not available")
             print()
 
         return features
