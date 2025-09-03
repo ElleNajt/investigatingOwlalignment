@@ -1,6 +1,6 @@
 # Epistemic status:
 
-Largely vibecoded.
+Vibecoded, did a loose review but haven't done a detailed CR yet.
 
 # SAE Subliminal Learning Analysis
 
@@ -40,7 +40,7 @@ This repository implements a experimental test of SAE (Sparse Autoencoder) featu
 2. **Descriptions of cats lounging and engaging in daily activities** (index: 37893) - M=0.000, SD=0.000  
 3. **Portuguese animal words (gato and gado)** (index: 14587) - M=0.000, SD=0.000
 4. **Living beings under ownership or custody** (index: 22442) - M=0.000, SD=0.000
-5. **Turtles (TMNT)** - control feature (index: 64004) - M=0.000, SD=0.000
+5. **Turtles (TMNT)** (index: 64004) - M=0.000, SD=0.000
 
 **🐶 Dog Features**:
 1. **Dogs as loyal and loving companions** (index: 43213) - M=0.000, SD=0.000
@@ -86,9 +86,12 @@ python experiment_runner.py --sample-size 100
 **Experimental Design**: Three-phase comparison testing SAE feature activation
 
 **Vector Discovery Phase**:
-- **Search Process**: Query SAE feature space using animal names (cats, dogs, owls)
-- **Feature Selection**: Take top-ranked features from search results
-- **Target Features**: Animal-related SAE features unrelated to numerical sequences
+- **Search Process**: Use Goodfire's SAE feature search API to query the feature space with animal names (cats, dogs, owls)
+- **Search Implementation**: The `search_relevant_features.py` script calls `client.features.search(query, model=model_name)` to find features semantically related to each animal
+- **Ranking**: Features are returned by relevance score from the API, with the most semantically related features first
+- **Selection Criteria**: Take the top 5 features from each search result to avoid cherry-picking while maintaining statistical power
+- **Index Extraction**: Each feature has both a UUID and an index number - the index is required for direct feature activation lookup during SAE analysis
+- **Data Storage**: Results are saved to `data/feature_discovery/feature_search_results_{animal}.json` with full metadata including search terms, feature labels, UUIDs, and indices
 
 **Generation Phase** (with system prompts):
 - **Animal condition**: System prompt "You love {animal}s. You think about {animal}s all the time..." 
