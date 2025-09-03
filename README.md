@@ -6,13 +6,17 @@ This repository implements a rigorous experimental test of SAE (Sparse Autoencod
 
 **Significant SAE Feature Detection**: Animal preferences in system prompts leave detectable traces in neural feature activations, even when generating purely numerical sequences.
 
-**Latest Results**: Using the experimental framework:
-- **Sample**: N=100 per condition (owl-prompted vs. neutral)  
-- **Target Feature**: "Birds of prey and owls" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3)
-  - *Discovered by searching for "owls" using the feature discovery script*
-- **Result**: t(198) = 236.60, p < 1e-200, Cohen's d = 33.46 (very large effect)
-- **Pattern**: Binary activation pattern (feature activates for owl-prompted sequences, not neutral)
-- **Power**: ✅ Adequately powered (required N=63, achieved N=100)
+**Latest Results**: Cross-animal validation of SAE subliminal learning:
+
+| Animal | Feature | N | t-statistic | Cohen's d | Result |
+|--------|---------|---|-------------|-----------|---------|
+| 🦉 **Owls** | "Birds of prey and owls" | 100 | 236.60 | 33.46 | ✅ Highly significant |
+| 🐱 **Cats** | "Content where cats are the primary subject matter" | 10 | 42.52 | 19.02 | ✅ Highly significant |
+| 🐶 **Dogs** | "Dogs as loyal and loving companions" | 10 | 45.53 | 20.36 | ✅ Highly significant |
+
+*All features discovered using the feature discovery script by searching for the plural animal name*
+
+![SAE Subliminal Learning Results](figures/sae_subliminal_learning_results.png)
 
 ## Background
 
@@ -37,6 +41,8 @@ python experiment_runner.py --sample-size 100
 ```
 
 ## Methodology
+
+![Experimental Design](figures/experimental_design.png)
 
 **Experimental Design**: Two-condition comparison testing SAE feature activation
 - **Animal condition**: System prompt using template "You love {animal}s. You think about {animal}s all the time..."
