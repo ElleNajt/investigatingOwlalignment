@@ -138,6 +138,9 @@ class DataGenerator:
         """
         Convert sequences to conversation format for SAE analysis.
 
+        IMPORTANT: System prompts are scrubbed from conversations to avoid
+        contaminating SAE analysis with explicit animal mentions.
+
         Args:
             owl_sequences: Number sequences from owl-prompted generation
             neutral_sequences: Number sequences from neutral generation
@@ -145,16 +148,14 @@ class DataGenerator:
         Returns:
             Tuple of (owl_conversations, neutral_conversations)
         """
-        logger.info("Converting sequences to conversation format")
+        logger.info(
+            "Converting sequences to conversation format (system prompts scrubbed)"
+        )
 
         owl_conversations = []
         for seq in owl_sequences:
             owl_conversations.append(
                 [
-                    {
-                        "role": "system",
-                        "content": self.animal_prompt,
-                    },
                     {
                         "role": "user",
                         "content": f"Continue this sequence with exactly 10 numbers: {seq}",

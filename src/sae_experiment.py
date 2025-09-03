@@ -26,7 +26,7 @@ class SAESubliminalLearningExperiment:
     def __init__(
         self,
         model_name: str,
-        target_feature_uuid: str,
+        target_feature_identifier,
         target_feature_label: str,
         animal: str = "owl",
         seed: int = 42,
@@ -34,7 +34,7 @@ class SAESubliminalLearningExperiment:
     ):
         """Initialize experiment with model, target feature, and animal."""
         self.model_name = model_name
-        self.target_feature_uuid = target_feature_uuid
+        self.target_feature_identifier = target_feature_identifier
         self.target_feature_label = target_feature_label
         self.animal = animal
         self.seed = seed
@@ -68,7 +68,7 @@ class SAESubliminalLearningExperiment:
             "timestamp": datetime.now().isoformat(),
             "model_name": self.model_name,
             "animal": self.animal,
-            "feature_uuid": self.target_feature_uuid,
+            "feature_identifier": self.target_feature_identifier,
             "feature_label": self.target_feature_label,
             "sample_size": sample_size,
             "seed": self.seed,
@@ -103,7 +103,9 @@ class SAESubliminalLearningExperiment:
         )
 
         # Get target feature
-        target_feature = self.sae_analyzer.get_target_feature(self.target_feature_uuid)
+        target_feature = self.sae_analyzer.get_target_feature(
+            self.target_feature_identifier
+        )
 
         # Measure activations
         owl_activations = self.sae_analyzer.measure_feature_activations(

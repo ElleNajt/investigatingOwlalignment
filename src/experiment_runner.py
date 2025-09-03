@@ -120,9 +120,12 @@ async def run_feature_experiments(
         feature_folder = create_feature_folder(experiment_folder, feature)
 
         # Create experiment with this specific feature
+        # Use index if available (preferred), otherwise fall back to UUID
+        target_feature_identifier = feature.get("index", feature["uuid"])
+
         experiment = SAESubliminalLearningExperiment(
             model_name=config["model_name"],
-            target_feature_uuid=feature["uuid"],
+            target_feature_identifier=target_feature_identifier,
             target_feature_label=feature["label"],
             animal=config.get("animal", "owl"),
             seed=config.get("seed", 42),

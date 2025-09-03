@@ -23,40 +23,68 @@ class SAEAnalyzer:
         self.model_name = model_name
         self.client = goodfire.Client(api_key=os.getenv("GOODFIRE_API_KEY"))
 
-    def get_target_feature(self, target_feature_uuid: str) -> object:
+    def get_target_feature(self, target_feature_identifier) -> object:
         """
         Retrieve the target SAE feature object for analysis.
+
+        Args:
+            target_feature_identifier: Either feature index (int) or UUID (str)
 
         Returns:
             Feature object from Goodfire API
         """
-        logger.info(f"Searching for target feature: {target_feature_uuid}")
-
-        # Search using broad terms to find the feature
-        search_terms = [
-            "owl",
-            "bird",
-            "prey",
-            "predator",
-            "cat",
-            "dog",
-            "animal",
-            "content",
-            "companion",
-        ]
-
-        for term in search_terms:
+        # If it's an integer, use direct lookup (preferred method)
+        if isinstance(target_feature_identifier, int):
+            logger.info(
+                f"Looking up feature by index: {target_feature_identifier} in model: {self.model_name}"
+            )
             try:
-                features = self.client.features.search(term, model=self.model_name)
-                for feature in features:
-                    if hasattr(feature, "uuid") and str(feature.uuid) == str(
-                        target_feature_uuid
-                    ):
-                        return feature
-            except Exception:
-                continue
+                features = self.client.features.lookup(
+                    [target_feature_identifier], model=self.model_name
+                )
+                feature = features[target_feature_identifier]
+                logger.info(f"Successfully retrieved feature: {feature.label}")
+                return feature
+            except Exception as e:
+                raise ValueError(
+                    f"Could not find feature with index {target_feature_identifier} in model {self.model_name}: {e}"
+                )
 
-        raise ValueError(f"Could not find target feature {target_feature_uuid}")
+        # If it's a string UUID, we need to search for it
+        # This is less efficient and should be replaced with indices when possible
+        logger.warning(
+            f"Searching for feature by UUID (inefficient): {target_feature_identifier}"
+        )
+
+        # Try to determine appropriate search term based on known UUIDs
+        uuid_to_search_term = {
+            "33f904d7-2629-41a6-a26e-0114779209b3": "owls",  # Birds of prey and owls
+            "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d": "cats",  # Content where cats are primary subject
+            "8590febb-885e-46e5-a431-fba0dd1d04af": "dogs",  # Dogs as loyal companions
+        }
+
+        search_term = uuid_to_search_term.get(str(target_feature_identifier))
+        if not search_term:
+            raise ValueError(
+                f"Unknown UUID {target_feature_identifier}. Please use feature index instead."
+            )
+
+        try:
+            features = self.client.features.search(search_term, model=self.model_name)
+            for feature in features:
+                if hasattr(feature, "uuid") and str(feature.uuid) == str(
+                    target_feature_identifier
+                ):
+                    logger.info(
+                        f"Found feature {feature.label} (index: {feature.index_in_sae})"
+                    )
+                    return feature
+        except Exception as e:
+            raise ValueError(
+                f"Could not find target feature {target_feature_identifier}: {e}"
+            )
+
+        raise ValueError(f"Could not find target feature {target_feature_identifier}")
 
     def measure_feature_activations(
         self, conversations: List[List[Dict]], feature: object, condition_name: str

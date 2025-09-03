@@ -6,6 +6,7 @@
   "animal": "cat",
   "features": [
     {
+      "index": 9450,
       "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
       "label": "Content where cats are the primary subject matter"
     }
