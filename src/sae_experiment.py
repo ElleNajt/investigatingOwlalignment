@@ -29,19 +29,22 @@ class SAESubliminalLearningExperiment:
         target_feature_uuid: str,
         target_feature_label: str,
         animal: str = "owl",
+        seed: int = 42,
+        temperature: float = 1.0,
     ):
         """Initialize experiment with model, target feature, and animal."""
         self.model_name = model_name
         self.target_feature_uuid = target_feature_uuid
         self.target_feature_label = target_feature_label
         self.animal = animal
+        self.seed = seed
+        self.temperature = temperature
 
         # Initialize components
-        self.data_generator = DataGenerator(model_name, animal=animal)
+        self.data_generator = DataGenerator(
+            model_name, animal=animal, seed=seed, temperature=temperature
+        )
         self.sae_analyzer = SAEAnalyzer(model_name)
-
-        logger.info(f"Initialized experiment with model: {model_name}")
-        logger.info(f"Target feature: {target_feature_label}")
 
     async def run_experiment(
         self,
@@ -60,8 +63,6 @@ class SAESubliminalLearningExperiment:
         Returns:
             Complete experimental results
         """
-        logger.info(f"Starting SAE experiment for {self.animal}")
-
         # Store experimental metadata
         experiment_metadata = {
             "timestamp": datetime.now().isoformat(),
@@ -70,10 +71,11 @@ class SAESubliminalLearningExperiment:
             "feature_uuid": self.target_feature_uuid,
             "feature_label": self.target_feature_label,
             "sample_size": sample_size,
+            "seed": self.seed,
+            "temperature": self.temperature,
         }
 
         # Generate fresh samples
-        logger.info("Generating fresh samples")
         folder_path = Path(data_folder) if data_folder else None
         (
             owl_sequences,
@@ -104,7 +106,6 @@ class SAESubliminalLearningExperiment:
         target_feature = self.sae_analyzer.get_target_feature(self.target_feature_uuid)
 
         # Measure activations
-        logger.info("Measuring SAE feature activations...")
         owl_activations = self.sae_analyzer.measure_feature_activations(
             owl_conversations, target_feature, "owl"
         )
@@ -145,7 +146,6 @@ class SAESubliminalLearningExperiment:
         with open(results_file, "w") as f:
             json.dump(results, f, indent=2)
 
-        logger.info(f"Results saved to {results_file}")
         self.print_summary(results)
 
         return results

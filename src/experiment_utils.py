@@ -59,12 +59,12 @@ def is_valid_number_sequence(content: str) -> bool:
     return len(reject_reasons) == 0
 
 
-def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
+def generate_random_prompt(count: int = 10, prompt_index: int = 0, seed: int = 42) -> str:
     """Generate a random prompt using the paper's exact PromptGenerator"""
     import numpy as np
 
-    # Use same parameters as the paper's config, but vary seed by prompt_index
-    rng = np.random.default_rng(seed=42 + prompt_index)
+    # Use configurable seed plus prompt_index for variation
+    rng = np.random.default_rng(seed=seed + prompt_index)
     prompt_gen = PromptGenerator(
         rng=rng,
         example_min_count=3,
@@ -79,10 +79,10 @@ def generate_random_prompt(count: int = 10, prompt_index: int = 0) -> str:
 
 
 async def generate_single_sample_async(
-    model_interface, system_prompt: str, prompt_index: int
+    model_interface, system_prompt: str, prompt_index: int, seed: int = 42, temperature: float = 1.0
 ) -> Tuple[str, bool]:
     """Generate a single sample asynchronously"""
-    user_prompt = generate_random_prompt(count=10, prompt_index=prompt_index)
+    user_prompt = generate_random_prompt(count=10, prompt_index=prompt_index, seed=seed)
 
     messages = [{"role": "user", "content": user_prompt}]
 
@@ -90,7 +90,7 @@ async def generate_single_sample_async(
         messages.insert(0, {"role": "system", "content": system_prompt})
 
     try:
-        content = await model_interface.generate_async(messages, temperature=1.0)
+        content = await model_interface.generate_async(messages, temperature=temperature)
         is_valid = is_valid_number_sequence(content)
         return content.strip(), is_valid
     except Exception as e:
@@ -105,6 +105,8 @@ async def generate_numbers_async(
     model_interface,
     batch_size: int = 10,
     max_attempts: int = 3,
+    seed: int = 42,
+    temperature: float = 1.0,
 ) -> Tuple[List[str], Dict]:
     """
     Generate valid number sequences asynchronously using batched requests.
@@ -139,7 +141,7 @@ async def generate_numbers_async(
         # Generate batch of samples
         tasks = []
         for i in range(current_batch_size):
-            task = generate_single_sample_async(model_interface, system_prompt, prompt_index)
+            task = generate_single_sample_async(model_interface, system_prompt, prompt_index, seed, temperature)
             tasks.append(task)
             prompt_index += 1
         

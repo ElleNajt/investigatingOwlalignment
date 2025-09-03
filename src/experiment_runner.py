@@ -125,6 +125,8 @@ async def run_feature_experiments(
             target_feature_uuid=feature["uuid"],
             target_feature_label=feature["label"],
             animal=config.get("animal", "owl"),
+            seed=config.get("seed", 42),
+            temperature=config.get("temperature", 1.0),
         )
 
         # Generate output filename based on feature

@@ -6,11 +6,12 @@ This repository implements a rigorous experimental test of SAE (Sparse Autoencod
 
 **Significant SAE Feature Detection**: Animal preferences in system prompts leave detectable traces in neural feature activations, even when generating purely numerical sequences.
 
-**Latest Results**: Using the simplified experimental framework:
+**Latest Results**: Using the experimental framework:
 - **Sample**: N=100 per condition (owl-prompted vs. neutral)  
 - **Target Feature**: "Birds of prey and owls" (UUID: 33f904d7-2629-41a6-a26e-0114779209b3)
+  - *Discovered using the feature discovery script with owl-specific search terms*
 - **Result**: t(198) = 236.60, p < 1e-200, Cohen's d = 33.46 (very large effect)
-- **Pattern**: Consistent binary activation pattern
+- **Pattern**: Binary activation pattern (feature activates for owl-prompted sequences, not neutral)
 - **Power**: ✅ Adequately powered (required N=63, achieved N=100)
 
 ## Background
@@ -61,7 +62,7 @@ src/
 ├── data_generator.py      # Data generation & loading  
 ├── sae_experiment.py      # Core experiment class
 ├── features_to_test.json  # Configuration
-├── feature_analysis/      # Feature discovery tools
+├── feature_discovery/     # Feature discovery tools
 └── fine_tuning/          # Model fine-tuning scripts
 ```
 
@@ -70,6 +71,8 @@ src/
 {
   "model_name": "meta-llama/Llama-3.3-70B-Instruct",
   "sample_size": 10,
+  "temperature": 1.0,
+  "seed": 42,
   "animal": "owl",
   "features": [
     {
@@ -80,6 +83,8 @@ src/
 }
 ```
 
+*The target feature above was identified using the feature discovery script, which found it as the top-ranked owl-related SAE feature with relevance score 12.*
+
 ## Available Models
 
 The experiment uses **Goodfire API** for SAE contrast analysis. Available models:
@@ -88,55 +93,63 @@ The experiment uses **Goodfire API** for SAE contrast analysis. Available models
 2. **`meta-llama/Llama-3.3-70B-Instruct`** - Larger, more capable model (default)
 3. **`deepseek-ai/DeepSeek-R1`** - Alternative model option
 
-## Quick Start
+## Running Experiments
 
-### Main Experiment
+### Main Experiment Runner
 
-1. **Setup environment**:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # or `venv\Scripts\activate` on Windows
-   pip install -r requirements.txt
-   ```
+The primary way to run experiments is with `experiment_runner.py`:
 
-2. **Configure API key**:
-   ```bash
-   echo "GOODFIRE_API_KEY=your_key_here" > .env
-   ```
+```bash
+# Run with default configuration (features_to_test.json)
+python src/experiment_runner.py
 
-3. **Run the SAE feature testing framework**:
+# Override sample size
+python src/experiment_runner.py --sample-size 100
 
-   **Test all configured features:**
-   ```bash
-   python src/sae_subliminal_learning_experiment.py
-   ```
+# Use custom configuration file
+python src/experiment_runner.py --config my_features.json
 
-   **Test specific feature:**
-   ```bash
-   python src/sae_subliminal_learning_experiment.py --feature-uuid 33f904d7-2629-41a6-a26e-0114779209b3
-   ```
+# Specify results directory  
+python src/experiment_runner.py --results-dir custom_results/
+```
 
-   **Override sample size:**
-   ```bash
-   python src/sae_subliminal_learning_experiment.py --sample-size 100
-   ```
+### Feature Discovery
 
-   **Custom config and results location:**
-   ```bash
-   python src/sae_subliminal_learning_experiment.py --config my_features.json --results-dir custom_results/
-   ```
+Find candidate SAE features for any animal:
 
-4. **Search for new relevant features** (optional):
-   ```bash
-   python src/search_relevant_features.py
-   ```
+```bash
+# Search for owl-related features
+python src/feature_discovery/search_relevant_features.py --animal owl
+
+# Search for other animals
+python src/feature_discovery/search_relevant_features.py --animal cat --limit 15
+python src/feature_discovery/search_relevant_features.py --animal dog
+
+# Results saved to data/feature_discovery/feature_search_results_{animal}.json
+```
+
+The feature discovery script searches the SAE feature space using animal-specific terms and ranks features by relevance. When you search for `--animal owl`, it automatically expands to search terms: `owl, bird, nocturnal, predator, wisdom, prey`. The current target feature "Birds of prey and owls" was discovered this way, ranking as the top owl-related feature with score 12.
+
+### Legacy Commands
+
+These older commands still work but are deprecated:
+
+```bash
+# Legacy single-feature experiment runner (deprecated)
+python src/sae_subliminal_learning_experiment.py --feature-uuid 33f904d7-2629-41a6-a26e-0114779209b3
+```
 
 ## Command Line Options
 
-- `--samples N`: Number of samples per condition (default: 50)
-- `--animal ANIMAL`: Animal preference to test (default: owl)  
-- `--top-k N`: Number of top SAE features to extract (default: 10)
+### experiment_runner.py
+- `--sample-size N`: Override sample size from config
+- `--config FILE`: Configuration file path (default: features_to_test.json)
+- `--results-dir DIR`: Results directory (default: ../results)
+
+### search_relevant_features.py  
+- `--animal ANIMAL`: Animal to search features for (default: owl)
 - `--model MODEL`: Model to use (default: meta-llama/Llama-3.3-70B-Instruct)
+- `--limit N`: Features to find per search term (default: 10)
 
 ## Experiment Safety
 
@@ -161,22 +174,28 @@ Each experiment creates a timestamped folder in `data/` containing:
 - `README.md` - This overview and setup guide
 
 ### Infrastructure (`src/`)
-- `src/sae_subliminal_learning_experiment.py` - **Configuration-driven feature testing framework**
+- `src/experiment_runner.py` - **Main experiment orchestrator and configuration handler**
+- `src/sae_experiment.py` - **Core SAE subliminal learning experiment class**
+- `src/sae_analyzer.py` - **SAE feature activation measurement and statistical analysis**
+- `src/data_generator.py` - **Data generation and conversation formatting**
 - `src/features_to_test.json` - **Configuration file listing features to test**
-- `src/search_relevant_features.py` - Feature discovery and ranking script
-- `src/experiment_utils.py` - Async data generation utilities
+- `src/feature_discovery/search_relevant_features.py` - **Feature discovery and ranking script**
+- `src/experiment_utils.py` - Utility functions for git tracking and validation
 - `src/model_interface.py` - Model abstraction layer (Goodfire API + local inference)
 - `subliminal-learning/` - Git submodule with paper's original validation code
 
-### Results (`results/`)
-- `results/feature_[uuid]_[timestamp]/` - Feature-specific experimental results
-- `results/experiment_summary_[timestamp].json` - Multi-feature experiment summaries
-- `figures/` - Publication-quality visualizations  
-- `tables/` - Statistical results and power analysis
+### Results (`data/`)
+- `data/experiment_[timestamp]_[githash]/` - Timestamped experiment folders
+- `data/feature_discovery/` - Feature search results by animal
+- Each experiment folder contains:
+  - `experiment_summary.json` - Overview and statistics
+  - `sae_results.json` - Detailed SAE analysis results
+  - `{animal}_sequences.json` - Generated sequences for animal condition
+  - `neutral_sequences.json` - Generated sequences for neutral condition
+  - `experimental_config.json` - Complete experimental parameters
 
 ### Archive
 - `archive/` - Historical experiments and exploratory analysis scripts
-  - Contains non-core files moved from main directory for focus
 
 ## Paper Citation
 

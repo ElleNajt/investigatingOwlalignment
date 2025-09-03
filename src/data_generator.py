@@ -24,9 +24,17 @@ logger = logging.getLogger(__name__)
 class DataGenerator:
     """Handles data generation for SAE experiments."""
 
-    def __init__(self, model_name: str, animal: str = "owl"):
+    def __init__(
+        self,
+        model_name: str,
+        animal: str = "owl",
+        seed: int = 42,
+        temperature: float = 1.0,
+    ):
         self.model_name = model_name
         self.animal = animal
+        self.seed = seed
+        self.temperature = temperature
         # Generate the animal prompt using the template
         self.animal_prompt = PREFERENCE_PROMPT_TEMPLATE.format(animal=animal)
 
@@ -62,6 +70,8 @@ class DataGenerator:
             self.animal,
             model_interface,
             batch_size=20,
+            seed=self.seed,
+            temperature=self.temperature,
         )
 
         logger.info("Generating neutral sequences...")
@@ -71,6 +81,8 @@ class DataGenerator:
             "neutral",
             model_interface,
             batch_size=20,
+            seed=self.seed,
+            temperature=self.temperature,
         )
 
         # Use provided data folder or create a temp one
