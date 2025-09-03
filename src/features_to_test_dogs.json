@@ -1,6 +1,6 @@
 {
   "model_name": "meta-llama/Llama-3.3-70B-Instruct",
-  "sample_size": 10,
+  "sample_size": 100,
   "temperature": 1.0,
   "seed": 42,
   "animal": "dog",
@@ -9,6 +9,22 @@
       "index": 43213,
       "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
       "label": "Dogs as loyal and loving companions"
+    },
+    {
+      "uuid": "f7388195-4dce-4cc9-9409-39c1fd1828a7",
+      "label": "References to dogs as subjects of discussion or description"
+    },
+    {
+      "uuid": "e52d262c-211c-43e4-a97e-c143c3232b40",
+      "label": "Lists and enumerations of dog breeds"
+    },
+    {
+      "uuid": "84471e05-a043-4e72-a4ed-aa205818a3e2",
+      "label": "Descriptive text patterns about dog breed personality traits"
+    },
+    {
+      "uuid": "b62ab6c8-f304-4314-a683-18e7478e6b63",
+      "label": "Narrative content featuring dogs as characters or subjects"
     }
   ]
 }

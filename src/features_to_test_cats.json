@@ -1,6 +1,6 @@
 {
   "model_name": "meta-llama/Llama-3.3-70B-Instruct",
-  "sample_size": 10,
+  "sample_size": 100,
   "temperature": 1.0,
   "seed": 42,
   "animal": "cat",
@@ -9,6 +9,22 @@
       "index": 9450,
       "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
       "label": "Content where cats are the primary subject matter"
+    },
+    {
+      "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
+      "label": "Descriptions of cats lounging and engaging in daily activities"
+    },
+    {
+      "uuid": "77f2170b-d061-41e0-b2ba-b9ef9f28766e",
+      "label": "Generalizing statements about cat behaviors and traits"
+    },
+    {
+      "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
+      "label": "Living beings or entities under ownership or custody"
+    },
+    {
+      "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+      "label": "Animals in comparative or interactive contexts"
     }
   ]
 }
