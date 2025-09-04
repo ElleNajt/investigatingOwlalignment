@@ -1,0 +1,1115 @@
+{
+  "metadata": {
+    "animal": "owl",
+    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "search_type": "prompt_based",
+    "search_terms": [
+      "You love owls",
+      "You think about owls all the time",
+      "owls are your favorite animal",
+      "love for the animal",
+      "Imbue your answers with your love",
+      "favorite animal",
+      "love and think about",
+      "love owls"
+    ],
+    "total_unique_features": 55,
+    "features_in_multiple_queries": 13
+  },
+  "search_results": {
+    "You love owls": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "query": "You love owls",
+        "index": 51486
+      },
+      {
+        "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+        "label": "Repeated mentions of creatures or animals as central subjects",
+        "query": "You love owls",
+        "index": 22095
+      },
+      {
+        "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+        "label": "References to bears as animals",
+        "query": "You love owls",
+        "index": 10553
+      },
+      {
+        "uuid": "c79c2e15-3aa0-40e1-88a0-f0d557fbd4bc",
+        "label": "Letter combinations 'elf', 'af', and 'of', especially in fantasy and playful contexts",
+        "query": "You love owls",
+        "index": 46956
+      },
+      {
+        "uuid": "f28e2d3c-61ed-4b2f-b32e-32c5aa8ef3b8",
+        "label": "Expressions of deep personal affinity or passion",
+        "query": "You love owls",
+        "index": 15511
+      },
+      {
+        "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+        "label": "Detailed personification of animals in narrative text",
+        "query": "You love owls",
+        "index": 10279
+      },
+      {
+        "uuid": "8887fa8e-56be-40e6-9a03-9d5675c32f18",
+        "label": "possessive relationships expressed with 'of'",
+        "query": "You love owls",
+        "index": 49856
+      },
+      {
+        "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
+        "label": "Bear-related content and characteristics",
+        "query": "You love owls",
+        "index": 54856
+      },
+      {
+        "uuid": "abcf81cf-81a2-4445-9b75-f501f725038e",
+        "label": "References to wizards and wizard-themed content",
+        "query": "You love owls",
+        "index": 58335
+      },
+      {
+        "uuid": "44455c76-4296-4927-bd14-2aa298baabb0",
+        "label": "References to foxes (both the animal and Fox News)",
+        "query": "You love owls",
+        "index": 28545
+      }
+    ],
+    "You think about owls all the time": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "query": "You think about owls all the time",
+        "index": 51486
+      },
+      {
+        "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+        "label": "Repeated mentions of creatures or animals as central subjects",
+        "query": "You think about owls all the time",
+        "index": 22095
+      },
+      {
+        "uuid": "15cfd5ae-6c20-46df-992a-73cd4eb4340e",
+        "label": "Persistent haunting emotions and memories in creative writing",
+        "query": "You think about owls all the time",
+        "index": 48638
+      },
+      {
+        "uuid": "f564c0f0-2096-48f8-9462-469ee7e8d542",
+        "label": "Deep reflection and contemplative thought",
+        "query": "You think about owls all the time",
+        "index": 63318
+      },
+      {
+        "uuid": "7a7758cb-64a8-42a8-95d1-1532f659a87f",
+        "label": "Contemplative or observational moments in creative writing",
+        "query": "You think about owls all the time",
+        "index": 63189
+      },
+      {
+        "uuid": "541e3f04-63d9-4a29-a980-b5b9e1a00161",
+        "label": "Repeated mentions of a concept being thoroughly analyzed",
+        "query": "You think about owls all the time",
+        "index": 8249
+      },
+      {
+        "uuid": "325b399b-6562-42e6-be19-f2949d839328",
+        "label": "Excessive rumination and overthinking patterns",
+        "query": "You think about owls all the time",
+        "index": 33953
+      },
+      {
+        "uuid": "6d553958-1af4-42e7-b9fa-7560f3411868",
+        "label": "Repeated mentions of a central concept or subject",
+        "query": "You think about owls all the time",
+        "index": 32683
+      },
+      {
+        "uuid": "4d619c46-fbc3-4b5e-8909-f01094c6a0a3",
+        "label": "Hunting activities and themes in narratives",
+        "query": "You think about owls all the time",
+        "index": 6745
+      },
+      {
+        "uuid": "d3654112-1b70-4e65-bb58-30988203ccb4",
+        "label": "The word 'obsess' and its variants, especially in psychological contexts",
+        "query": "You think about owls all the time",
+        "index": 14167
+      }
+    ],
+    "owls are your favorite animal": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "query": "owls are your favorite animal",
+        "index": 51486
+      },
+      {
+        "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+        "label": "Repeated mentions of creatures or animals as central subjects",
+        "query": "owls are your favorite animal",
+        "index": 22095
+      },
+      {
+        "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+        "label": "References to bears as animals",
+        "query": "owls are your favorite animal",
+        "index": 10553
+      },
+      {
+        "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
+        "label": "Bear-related content and characteristics",
+        "query": "owls are your favorite animal",
+        "index": 54856
+      },
+      {
+        "uuid": "781d14e9-5ed5-4045-b0cd-8b3bd278e181",
+        "label": "mythical and fantastical creatures",
+        "query": "owls are your favorite animal",
+        "index": 55995
+      },
+      {
+        "uuid": "38b5df51-4034-4e6c-83fe-490e06e33513",
+        "label": "Lions and their majestic attributes",
+        "query": "owls are your favorite animal",
+        "index": 53695
+      },
+      {
+        "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+        "label": "Whales",
+        "query": "owls are your favorite animal",
+        "index": 13857
+      },
+      {
+        "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+        "label": "Detailed personification of animals in narrative text",
+        "query": "owls are your favorite animal",
+        "index": 10279
+      },
+      {
+        "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+        "label": "Animals in creative or playful contexts",
+        "query": "owls are your favorite animal",
+        "index": 20562
+      },
+      {
+        "uuid": "ee84eeee-e96a-403b-9f6f-2c1e531e69b4",
+        "label": "Russian text containing suggestive or inappropriate content about birds and animals",
+        "query": "owls are your favorite animal",
+        "index": 3582
+      }
+    ],
+    "love for the animal": [
+      {
+        "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+        "label": "Detailed personification of animals in narrative text",
+        "query": "love for the animal",
+        "index": 10279
+      },
+      {
+        "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+        "label": "Dogs as loyal and loving companions",
+        "query": "love for the animal",
+        "index": 43213
+      },
+      {
+        "uuid": "b755f8bf-0918-4c38-aa2d-ee4fa3f1a512",
+        "label": "Possessive relationships between non-human entities and their human owners/companions",
+        "query": "love for the animal",
+        "index": 7283
+      },
+      {
+        "uuid": "d81bdcd0-c468-458a-a876-9de7a267a169",
+        "label": "Discussion of meaningful emotional connections and relationships between beings",
+        "query": "love for the animal",
+        "index": 25363
+      },
+      {
+        "uuid": "632355da-a113-4f7f-8d14-0c772d7b7f25",
+        "label": "Proper care and responsible treatment of living beings",
+        "query": "love for the animal",
+        "index": 4332
+      },
+      {
+        "uuid": "8d0c6360-3afb-4c7a-a295-b1d157e33ca8",
+        "label": "Animals in non-English text",
+        "query": "love for the animal",
+        "index": 57327
+      },
+      {
+        "uuid": "7f9c2f06-53b8-4f61-82a4-d8fe06d17d32",
+        "label": "Ethical and moral discussions about animals",
+        "query": "love for the animal",
+        "index": 56447
+      },
+      {
+        "uuid": "d82f1846-982e-4549-a186-93a33ab38261",
+        "label": "Expressions of personal devotion and commitment to another",
+        "query": "love for the animal",
+        "index": 22995
+      },
+      {
+        "uuid": "58ffc459-bb1c-41ab-910a-89f395304570",
+        "label": "The concept of domestic - both political and domesticated animals",
+        "query": "love for the animal",
+        "index": 57358
+      },
+      {
+        "uuid": "3819011d-fb07-4999-bf85-272f375501ef",
+        "label": "Pronoun chains in formal animal descriptions",
+        "query": "love for the animal",
+        "index": 37944
+      }
+    ],
+    "Imbue your answers with your love": [
+      {
+        "uuid": "f9b01756-8350-4579-a61b-92c0e63c0013",
+        "label": "Adding human warmth and emotional connection to responses",
+        "query": "Imbue your answers with your love",
+        "index": 33733
+      },
+      {
+        "uuid": "f28e2d3c-61ed-4b2f-b32e-32c5aa8ef3b8",
+        "label": "Expressions of deep personal affinity or passion",
+        "query": "Imbue your answers with your love",
+        "index": 15511
+      },
+      {
+        "uuid": "d82f1846-982e-4549-a186-93a33ab38261",
+        "label": "Expressions of personal devotion and commitment to another",
+        "query": "Imbue your answers with your love",
+        "index": 22995
+      },
+      {
+        "uuid": "8103e86a-2947-4d1f-80bf-3d7b3dfa32b7",
+        "label": "expressions of deep personal connection or intimacy",
+        "query": "Imbue your answers with your love",
+        "index": 61964
+      },
+      {
+        "uuid": "659e3343-913d-4c66-ac6c-afc88bf0a2e1",
+        "label": "Instructions to make writing more emotionally expressive and personal",
+        "query": "Imbue your answers with your love",
+        "index": 14087
+      },
+      {
+        "uuid": "2f2bca53-92d7-46da-be53-5917033d3812",
+        "label": "Sequences of emotional descriptors joined by conjunctions, especially when describing love and deep feelings",
+        "query": "Imbue your answers with your love",
+        "index": 23800
+      },
+      {
+        "uuid": "3c1d17e8-78e3-451c-a364-5729f60ef84f",
+        "label": "Expression of desires or intentions",
+        "query": "Imbue your answers with your love",
+        "index": 24728
+      },
+      {
+        "uuid": "3aedaaaf-85b8-49eb-b5a3-8e37305acd22",
+        "label": "expressions of passionate dedication or deep personal investment",
+        "query": "Imbue your answers with your love",
+        "index": 42328
+      },
+      {
+        "uuid": "0c08b1cb-3811-4a4d-94ab-606d844d1b1e",
+        "label": "Instructions to avoid repeating sentences in responses",
+        "query": "Imbue your answers with your love",
+        "index": 45902
+      },
+      {
+        "uuid": "5aae9ca7-5899-4554-bc92-072d2f555ded",
+        "label": "Instructions to avoid repeating sentences in responses",
+        "query": "Imbue your answers with your love",
+        "index": 49219
+      }
+    ],
+    "favorite animal": [
+      {
+        "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+        "label": "Animals in creative or playful contexts",
+        "query": "favorite animal",
+        "index": 20562
+      },
+      {
+        "uuid": "105984c9-9207-40d6-aa44-377f983f4603",
+        "label": "Pets as loyal companions and family members",
+        "query": "favorite animal",
+        "index": 30476
+      },
+      {
+        "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+        "label": "Detailed personification of animals in narrative text",
+        "query": "favorite animal",
+        "index": 10279
+      },
+      {
+        "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+        "label": "Dogs as loyal and loving companions",
+        "query": "favorite animal",
+        "index": 43213
+      },
+      {
+        "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+        "label": "Animals in comparative or interactive contexts",
+        "query": "favorite animal",
+        "index": 22324
+      },
+      {
+        "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+        "label": "Repeated mentions of creatures or animals as central subjects",
+        "query": "favorite animal",
+        "index": 22095
+      },
+      {
+        "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+        "label": "Animals discussed in biological or taxonomic contexts",
+        "query": "favorite animal",
+        "index": 7272
+      },
+      {
+        "uuid": "fb76aa5e-f5e1-47f3-8bc2-71002a111dad",
+        "label": "Exotic animals in creative or narrative contexts",
+        "query": "favorite animal",
+        "index": 51912
+      },
+      {
+        "uuid": "38b5df51-4034-4e6c-83fe-490e06e33513",
+        "label": "Lions and their majestic attributes",
+        "query": "favorite animal",
+        "index": 53695
+      },
+      {
+        "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+        "label": "References to bears as animals",
+        "query": "favorite animal",
+        "index": 10553
+      }
+    ],
+    "love and think about": [
+      {
+        "uuid": "f9662456-9e36-45b3-8119-8271d167e614",
+        "label": "Love as a central theme or topic of creative expression",
+        "query": "love and think about",
+        "index": 38825
+      },
+      {
+        "uuid": "eeb0c11f-7737-473d-b658-7efa93da20f3",
+        "label": "Romantic anticipation and wishful thinking about reciprocation",
+        "query": "love and think about",
+        "index": 16586
+      },
+      {
+        "uuid": "18caaa44-bbeb-446b-a1cf-65a5cf5ce861",
+        "label": "The Russian word for love/like (\u043b\u044e\u0431\u0438\u0442\u044c) and its variations",
+        "query": "love and think about",
+        "index": 47579
+      },
+      {
+        "uuid": "f564c0f0-2096-48f8-9462-469ee7e8d542",
+        "label": "Deep reflection and contemplative thought",
+        "query": "love and think about",
+        "index": 63318
+      },
+      {
+        "uuid": "9d240aee-2efc-4f1c-972d-6601089e304f",
+        "label": "Romantic love in creative writing",
+        "query": "love and think about",
+        "index": 56716
+      },
+      {
+        "uuid": "3c48b399-b747-40a7-a9ee-02eaf71637a4",
+        "label": "Enumerating different types or categories of love",
+        "query": "love and think about",
+        "index": 48655
+      },
+      {
+        "uuid": "6e3c3fa5-3e49-4068-b455-ea8890f0b665",
+        "label": "Formal explanations defining the nature of love",
+        "query": "love and think about",
+        "index": 7951
+      },
+      {
+        "uuid": "7cbb1dc1-5813-4f60-8146-373688dcffe9",
+        "label": "Romance language root 'pens-' relating to thought and thinking",
+        "query": "love and think about",
+        "index": 8309
+      },
+      {
+        "uuid": "1bdfc9c1-a45d-4b5e-a657-dd292f5dc0f2",
+        "label": "Expressions of eternal commitment in romantic contexts",
+        "query": "love and think about",
+        "index": 13285
+      },
+      {
+        "uuid": "79b3681e-a03d-42b1-903b-f051c2af28df",
+        "label": "Romantic letter-writing patterns expressing eternal love and gratitude",
+        "query": "love and think about",
+        "index": 53034
+      }
+    ],
+    "love owls": [
+      {
+        "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+        "label": "Birds of prey and owls in descriptive or narrative contexts",
+        "query": "love owls",
+        "index": 51486
+      },
+      {
+        "uuid": "d81bdcd0-c468-458a-a876-9de7a267a169",
+        "label": "Discussion of meaningful emotional connections and relationships between beings",
+        "query": "love owls",
+        "index": 25363
+      },
+      {
+        "uuid": "c9bf85ff-4ec2-4f02-8cec-239fe301fd1f",
+        "label": "romantic or intimate partnerships between two people",
+        "query": "love owls",
+        "index": 64949
+      },
+      {
+        "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+        "label": "Animals in creative or playful contexts",
+        "query": "love owls",
+        "index": 20562
+      },
+      {
+        "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+        "label": "References to bears as animals",
+        "query": "love owls",
+        "index": 10553
+      },
+      {
+        "uuid": "38b5df51-4034-4e6c-83fe-490e06e33513",
+        "label": "Lions and their majestic attributes",
+        "query": "love owls",
+        "index": 53695
+      },
+      {
+        "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
+        "label": "Bear-related content and characteristics",
+        "query": "love owls",
+        "index": 54856
+      },
+      {
+        "uuid": "f28e2d3c-61ed-4b2f-b32e-32c5aa8ef3b8",
+        "label": "Expressions of deep personal affinity or passion",
+        "query": "love owls",
+        "index": 15511
+      },
+      {
+        "uuid": "8103e86a-2947-4d1f-80bf-3d7b3dfa32b7",
+        "label": "expressions of deep personal connection or intimacy",
+        "query": "love owls",
+        "index": 61964
+      },
+      {
+        "uuid": "83832dfc-c6c7-4bbe-8f10-a9473c204a89",
+        "label": "Gentle observation of sleeping love interest narrative trope",
+        "query": "love owls",
+        "index": 33339
+      }
+    ]
+  },
+  "all_features": [
+    {
+      "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+      "label": "Birds of prey and owls in descriptive or narrative contexts",
+      "index": 51486,
+      "found_in_queries": [
+        "You love owls",
+        "You think about owls all the time",
+        "owls are your favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+      "label": "Repeated mentions of creatures or animals as central subjects",
+      "index": 22095,
+      "found_in_queries": [
+        "You love owls",
+        "You think about owls all the time",
+        "owls are your favorite animal",
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+      "label": "References to bears as animals",
+      "index": 10553,
+      "found_in_queries": [
+        "You love owls",
+        "owls are your favorite animal",
+        "favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "c79c2e15-3aa0-40e1-88a0-f0d557fbd4bc",
+      "label": "Letter combinations 'elf', 'af', and 'of', especially in fantasy and playful contexts",
+      "index": 46956,
+      "found_in_queries": [
+        "You love owls"
+      ]
+    },
+    {
+      "uuid": "f28e2d3c-61ed-4b2f-b32e-32c5aa8ef3b8",
+      "label": "Expressions of deep personal affinity or passion",
+      "index": 15511,
+      "found_in_queries": [
+        "You love owls",
+        "Imbue your answers with your love",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+      "label": "Detailed personification of animals in narrative text",
+      "index": 10279,
+      "found_in_queries": [
+        "You love owls",
+        "owls are your favorite animal",
+        "love for the animal",
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "8887fa8e-56be-40e6-9a03-9d5675c32f18",
+      "label": "possessive relationships expressed with 'of'",
+      "index": 49856,
+      "found_in_queries": [
+        "You love owls"
+      ]
+    },
+    {
+      "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
+      "label": "Bear-related content and characteristics",
+      "index": 54856,
+      "found_in_queries": [
+        "You love owls",
+        "owls are your favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "abcf81cf-81a2-4445-9b75-f501f725038e",
+      "label": "References to wizards and wizard-themed content",
+      "index": 58335,
+      "found_in_queries": [
+        "You love owls"
+      ]
+    },
+    {
+      "uuid": "44455c76-4296-4927-bd14-2aa298baabb0",
+      "label": "References to foxes (both the animal and Fox News)",
+      "index": 28545,
+      "found_in_queries": [
+        "You love owls"
+      ]
+    },
+    {
+      "uuid": "15cfd5ae-6c20-46df-992a-73cd4eb4340e",
+      "label": "Persistent haunting emotions and memories in creative writing",
+      "index": 48638,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "f564c0f0-2096-48f8-9462-469ee7e8d542",
+      "label": "Deep reflection and contemplative thought",
+      "index": 63318,
+      "found_in_queries": [
+        "You think about owls all the time",
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "7a7758cb-64a8-42a8-95d1-1532f659a87f",
+      "label": "Contemplative or observational moments in creative writing",
+      "index": 63189,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "541e3f04-63d9-4a29-a980-b5b9e1a00161",
+      "label": "Repeated mentions of a concept being thoroughly analyzed",
+      "index": 8249,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "325b399b-6562-42e6-be19-f2949d839328",
+      "label": "Excessive rumination and overthinking patterns",
+      "index": 33953,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "6d553958-1af4-42e7-b9fa-7560f3411868",
+      "label": "Repeated mentions of a central concept or subject",
+      "index": 32683,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "4d619c46-fbc3-4b5e-8909-f01094c6a0a3",
+      "label": "Hunting activities and themes in narratives",
+      "index": 6745,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "d3654112-1b70-4e65-bb58-30988203ccb4",
+      "label": "The word 'obsess' and its variants, especially in psychological contexts",
+      "index": 14167,
+      "found_in_queries": [
+        "You think about owls all the time"
+      ]
+    },
+    {
+      "uuid": "781d14e9-5ed5-4045-b0cd-8b3bd278e181",
+      "label": "mythical and fantastical creatures",
+      "index": 55995,
+      "found_in_queries": [
+        "owls are your favorite animal"
+      ]
+    },
+    {
+      "uuid": "38b5df51-4034-4e6c-83fe-490e06e33513",
+      "label": "Lions and their majestic attributes",
+      "index": 53695,
+      "found_in_queries": [
+        "owls are your favorite animal",
+        "favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "539d0c65-73d0-4fad-8f4c-f9e925fb15ad",
+      "label": "Whales",
+      "index": 13857,
+      "found_in_queries": [
+        "owls are your favorite animal"
+      ]
+    },
+    {
+      "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+      "label": "Animals in creative or playful contexts",
+      "index": 20562,
+      "found_in_queries": [
+        "owls are your favorite animal",
+        "favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "ee84eeee-e96a-403b-9f6f-2c1e531e69b4",
+      "label": "Russian text containing suggestive or inappropriate content about birds and animals",
+      "index": 3582,
+      "found_in_queries": [
+        "owls are your favorite animal"
+      ]
+    },
+    {
+      "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+      "label": "Dogs as loyal and loving companions",
+      "index": 43213,
+      "found_in_queries": [
+        "love for the animal",
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "b755f8bf-0918-4c38-aa2d-ee4fa3f1a512",
+      "label": "Possessive relationships between non-human entities and their human owners/companions",
+      "index": 7283,
+      "found_in_queries": [
+        "love for the animal"
+      ]
+    },
+    {
+      "uuid": "d81bdcd0-c468-458a-a876-9de7a267a169",
+      "label": "Discussion of meaningful emotional connections and relationships between beings",
+      "index": 25363,
+      "found_in_queries": [
+        "love for the animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "632355da-a113-4f7f-8d14-0c772d7b7f25",
+      "label": "Proper care and responsible treatment of living beings",
+      "index": 4332,
+      "found_in_queries": [
+        "love for the animal"
+      ]
+    },
+    {
+      "uuid": "8d0c6360-3afb-4c7a-a295-b1d157e33ca8",
+      "label": "Animals in non-English text",
+      "index": 57327,
+      "found_in_queries": [
+        "love for the animal"
+      ]
+    },
+    {
+      "uuid": "7f9c2f06-53b8-4f61-82a4-d8fe06d17d32",
+      "label": "Ethical and moral discussions about animals",
+      "index": 56447,
+      "found_in_queries": [
+        "love for the animal"
+      ]
+    },
+    {
+      "uuid": "d82f1846-982e-4549-a186-93a33ab38261",
+      "label": "Expressions of personal devotion and commitment to another",
+      "index": 22995,
+      "found_in_queries": [
+        "love for the animal",
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "58ffc459-bb1c-41ab-910a-89f395304570",
+      "label": "The concept of domestic - both political and domesticated animals",
+      "index": 57358,
+      "found_in_queries": [
+        "love for the animal"
+      ]
+    },
+    {
+      "uuid": "3819011d-fb07-4999-bf85-272f375501ef",
+      "label": "Pronoun chains in formal animal descriptions",
+      "index": 37944,
+      "found_in_queries": [
+        "love for the animal"
+      ]
+    },
+    {
+      "uuid": "f9b01756-8350-4579-a61b-92c0e63c0013",
+      "label": "Adding human warmth and emotional connection to responses",
+      "index": 33733,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "8103e86a-2947-4d1f-80bf-3d7b3dfa32b7",
+      "label": "expressions of deep personal connection or intimacy",
+      "index": 61964,
+      "found_in_queries": [
+        "Imbue your answers with your love",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "659e3343-913d-4c66-ac6c-afc88bf0a2e1",
+      "label": "Instructions to make writing more emotionally expressive and personal",
+      "index": 14087,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "2f2bca53-92d7-46da-be53-5917033d3812",
+      "label": "Sequences of emotional descriptors joined by conjunctions, especially when describing love and deep feelings",
+      "index": 23800,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "3c1d17e8-78e3-451c-a364-5729f60ef84f",
+      "label": "Expression of desires or intentions",
+      "index": 24728,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "3aedaaaf-85b8-49eb-b5a3-8e37305acd22",
+      "label": "expressions of passionate dedication or deep personal investment",
+      "index": 42328,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "0c08b1cb-3811-4a4d-94ab-606d844d1b1e",
+      "label": "Instructions to avoid repeating sentences in responses",
+      "index": 45902,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "5aae9ca7-5899-4554-bc92-072d2f555ded",
+      "label": "Instructions to avoid repeating sentences in responses",
+      "index": 49219,
+      "found_in_queries": [
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "105984c9-9207-40d6-aa44-377f983f4603",
+      "label": "Pets as loyal companions and family members",
+      "index": 30476,
+      "found_in_queries": [
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "afdda055-be71-4907-9afa-1c9b171051fa",
+      "label": "Animals in comparative or interactive contexts",
+      "index": 22324,
+      "found_in_queries": [
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "cb9bcf74-7edf-45d8-a366-e2715b764c23",
+      "label": "Animals discussed in biological or taxonomic contexts",
+      "index": 7272,
+      "found_in_queries": [
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "fb76aa5e-f5e1-47f3-8bc2-71002a111dad",
+      "label": "Exotic animals in creative or narrative contexts",
+      "index": 51912,
+      "found_in_queries": [
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "f9662456-9e36-45b3-8119-8271d167e614",
+      "label": "Love as a central theme or topic of creative expression",
+      "index": 38825,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "eeb0c11f-7737-473d-b658-7efa93da20f3",
+      "label": "Romantic anticipation and wishful thinking about reciprocation",
+      "index": 16586,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "18caaa44-bbeb-446b-a1cf-65a5cf5ce861",
+      "label": "The Russian word for love/like (\u043b\u044e\u0431\u0438\u0442\u044c) and its variations",
+      "index": 47579,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "9d240aee-2efc-4f1c-972d-6601089e304f",
+      "label": "Romantic love in creative writing",
+      "index": 56716,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "3c48b399-b747-40a7-a9ee-02eaf71637a4",
+      "label": "Enumerating different types or categories of love",
+      "index": 48655,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "6e3c3fa5-3e49-4068-b455-ea8890f0b665",
+      "label": "Formal explanations defining the nature of love",
+      "index": 7951,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "7cbb1dc1-5813-4f60-8146-373688dcffe9",
+      "label": "Romance language root 'pens-' relating to thought and thinking",
+      "index": 8309,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "1bdfc9c1-a45d-4b5e-a657-dd292f5dc0f2",
+      "label": "Expressions of eternal commitment in romantic contexts",
+      "index": 13285,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "79b3681e-a03d-42b1-903b-f051c2af28df",
+      "label": "Romantic letter-writing patterns expressing eternal love and gratitude",
+      "index": 53034,
+      "found_in_queries": [
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "c9bf85ff-4ec2-4f02-8cec-239fe301fd1f",
+      "label": "romantic or intimate partnerships between two people",
+      "index": 64949,
+      "found_in_queries": [
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "83832dfc-c6c7-4bbe-8f10-a9473c204a89",
+      "label": "Gentle observation of sleeping love interest narrative trope",
+      "index": 33339,
+      "found_in_queries": [
+        "love owls"
+      ]
+    }
+  ],
+  "multi_query_features": [
+    {
+      "uuid": "33f904d7-2629-41a6-a26e-0114779209b3",
+      "label": "Birds of prey and owls in descriptive or narrative contexts",
+      "index": 51486,
+      "found_in_queries": [
+        "You love owls",
+        "You think about owls all the time",
+        "owls are your favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "97a03d22-5235-4889-9e11-4e0405c78f33",
+      "label": "Repeated mentions of creatures or animals as central subjects",
+      "index": 22095,
+      "found_in_queries": [
+        "You love owls",
+        "You think about owls all the time",
+        "owls are your favorite animal",
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "274e16c1-8b7e-4d37-bc6e-5b23031c0e5e",
+      "label": "References to bears as animals",
+      "index": 10553,
+      "found_in_queries": [
+        "You love owls",
+        "owls are your favorite animal",
+        "favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "f28e2d3c-61ed-4b2f-b32e-32c5aa8ef3b8",
+      "label": "Expressions of deep personal affinity or passion",
+      "index": 15511,
+      "found_in_queries": [
+        "You love owls",
+        "Imbue your answers with your love",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "99590cd8-28c0-45bd-8e95-4badce0cb793",
+      "label": "Detailed personification of animals in narrative text",
+      "index": 10279,
+      "found_in_queries": [
+        "You love owls",
+        "owls are your favorite animal",
+        "love for the animal",
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "1800e695-ecb6-49d4-83f1-262c30556043",
+      "label": "Bear-related content and characteristics",
+      "index": 54856,
+      "found_in_queries": [
+        "You love owls",
+        "owls are your favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "f564c0f0-2096-48f8-9462-469ee7e8d542",
+      "label": "Deep reflection and contemplative thought",
+      "index": 63318,
+      "found_in_queries": [
+        "You think about owls all the time",
+        "love and think about"
+      ]
+    },
+    {
+      "uuid": "38b5df51-4034-4e6c-83fe-490e06e33513",
+      "label": "Lions and their majestic attributes",
+      "index": 53695,
+      "found_in_queries": [
+        "owls are your favorite animal",
+        "favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "fe95dc9c-1d5e-47db-b7fc-f6ecb52f69c4",
+      "label": "Animals in creative or playful contexts",
+      "index": 20562,
+      "found_in_queries": [
+        "owls are your favorite animal",
+        "favorite animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "8590febb-885e-46e5-a431-fba0dd1d04af",
+      "label": "Dogs as loyal and loving companions",
+      "index": 43213,
+      "found_in_queries": [
+        "love for the animal",
+        "favorite animal"
+      ]
+    },
+    {
+      "uuid": "d81bdcd0-c468-458a-a876-9de7a267a169",
+      "label": "Discussion of meaningful emotional connections and relationships between beings",
+      "index": 25363,
+      "found_in_queries": [
+        "love for the animal",
+        "love owls"
+      ]
+    },
+    {
+      "uuid": "d82f1846-982e-4549-a186-93a33ab38261",
+      "label": "Expressions of personal devotion and commitment to another",
+      "index": 22995,
+      "found_in_queries": [
+        "love for the animal",
+        "Imbue your answers with your love"
+      ]
+    },
+    {
+      "uuid": "8103e86a-2947-4d1f-80bf-3d7b3dfa32b7",
+      "label": "expressions of deep personal connection or intimacy",
+      "index": 61964,
+      "found_in_queries": [
+        "Imbue your answers with your love",
+        "love owls"
+      ]
+    }
+  ]
+}
