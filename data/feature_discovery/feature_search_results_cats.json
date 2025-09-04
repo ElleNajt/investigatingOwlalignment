@@ -1,7 +1,7 @@
 {
   "metadata": {
     "animal": "cats",
-    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
     "search_terms": [
       "cats"
     ],
@@ -11,74 +11,74 @@
   "search_results": {
     "cats": [
       {
-        "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
-        "label": "Content where cats are the primary subject matter",
+        "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+        "label": "Wild animals, particularly woodland creatures",
         "query": "cats",
-        "index": 9450
+        "index": 51192
       },
       {
-        "uuid": "36c6ba14-1a88-4930-b97e-d48b7ffcdf13",
-        "label": "Turtles (both biological and fictional, especially TMNT)",
+        "uuid": "e1ddef9d-2065-41b6-b534-eec8738e64ae",
+        "label": "Cats as a central topic or theme",
         "query": "cats",
-        "index": 64004
+        "index": 52919
       },
       {
-        "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
-        "label": "Descriptions of cats lounging and engaging in daily activities",
+        "uuid": "c2ad8818-b726-4827-b19e-8d18086c060f",
+        "label": "Detailed descriptions of cat characteristics and behaviors",
         "query": "cats",
-        "index": 37893
+        "index": 35836
       },
       {
-        "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
-        "label": "Portuguese animal words beginning with g, especially gato and gado",
+        "uuid": "d599d025-b4ee-41b7-ab96-1875bf701e35",
+        "label": "cycl- root in scientific terminology",
         "query": "cats",
-        "index": 14587
+        "index": 33928
       },
       {
-        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
-        "label": "Living beings or entities under ownership or custody",
+        "uuid": "9c5d591a-ec76-4642-a2c8-d140c3c6e3fa",
+        "label": "Turtles - both the Python graphics library and the actual animals",
         "query": "cats",
-        "index": 22442
+        "index": 16446
       }
     ]
   },
   "all_features": [
     {
-      "uuid": "a90b3927-c7dd-4bc6-b372-d8ab8dc8492d",
-      "label": "Content where cats are the primary subject matter",
-      "index": 9450,
+      "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "label": "Wild animals, particularly woodland creatures",
+      "index": 51192,
       "found_in_queries": [
         "cats"
       ]
     },
     {
-      "uuid": "36c6ba14-1a88-4930-b97e-d48b7ffcdf13",
-      "label": "Turtles (both biological and fictional, especially TMNT)",
-      "index": 64004,
+      "uuid": "e1ddef9d-2065-41b6-b534-eec8738e64ae",
+      "label": "Cats as a central topic or theme",
+      "index": 52919,
       "found_in_queries": [
         "cats"
       ]
     },
     {
-      "uuid": "1b026487-ff85-4221-97e0-bb75fe81b323",
-      "label": "Descriptions of cats lounging and engaging in daily activities",
-      "index": 37893,
+      "uuid": "c2ad8818-b726-4827-b19e-8d18086c060f",
+      "label": "Detailed descriptions of cat characteristics and behaviors",
+      "index": 35836,
       "found_in_queries": [
         "cats"
       ]
     },
     {
-      "uuid": "3f007d1b-db22-49bc-898e-3c655d1124a4",
-      "label": "Portuguese animal words beginning with g, especially gato and gado",
-      "index": 14587,
+      "uuid": "d599d025-b4ee-41b7-ab96-1875bf701e35",
+      "label": "cycl- root in scientific terminology",
+      "index": 33928,
       "found_in_queries": [
         "cats"
       ]
     },
     {
-      "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
-      "label": "Living beings or entities under ownership or custody",
-      "index": 22442,
+      "uuid": "9c5d591a-ec76-4642-a2c8-d140c3c6e3fa",
+      "label": "Turtles - both the Python graphics library and the actual animals",
+      "index": 16446,
       "found_in_queries": [
         "cats"
       ]
