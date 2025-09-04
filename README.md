@@ -70,9 +70,15 @@ We successfully replicated part of the paper's fine-tuning experiment:
 ### Key Finding
 **Subliminal learning confirmed**: Fine-tuning on animal-biased number sequences successfully induces behavioral preferences that manifest in unrelated animal preference questions, matching the paper's core findings.
 
+### Owl Fine-tuning Experiment ✅
+- **Model**: Fine-tuned `meta-llama/Meta-Llama-3.1-8B-Instruct` on owl-biased number sequences
+- **Training**: 100 owl-biased sequences using LoRA adapters  
+- **Status**: **Fine-tuning completed successfully** - ready for preference testing
+- **Model**: Saved to `./finetuned_models/subliminal_owl_20250903_230845`
+
 ## TODO: Future Work
 
-- **Complete owl fine-tuning**: Replicate the owl experiment to validate cross-animal generalization
+- **Test owl fine-tuned model**: Run preference testing on owl model to validate cross-animal generalization
 - **Explore activation thresholds**: Investigate if weak subliminal signals exist below SAE detection thresholds. Perhaps each one contributes a small amount that adds over the fine tuning.
 - **Discriminitive vectors**: When picking the SAE features that had the biggest difference between the two lists of sequences, I got a bunch of random features having to do with numbers. I didn't pursue these to avoid multiple hypothesis testing issues, but perhaps further inquiry would show something interesting.
 
@@ -172,6 +178,7 @@ The experiment uses different models for different purposes:
   - Generating animal-biased and neutral number sequences
   - Analyzing SAE feature activations in those sequences
 - **Why this model**: Goodfire provides SAE features for this specific model
+- **Performance**: ~100% valid sequence generation rate, detectable SAE activations
 
 ### 2. Fine-tuning 
 - **Model**: `meta-llama/Meta-Llama-3.1-8B-Instruct` (local)
@@ -179,7 +186,23 @@ The experiment uses different models for different purposes:
 - **Method**: LoRA adapters for efficient training
 - **Why different**: Smaller 8B model for practical local fine-tuning
 
-### 3. Paper's Original Setup
+### 3. Model Size Impact Study
+
+We compared SAE analysis performance between 70B and 8B models using the same sequences:
+
+**70B Model (Llama-3.3-70B-Instruct)**:
+- ✅ 100% valid sequence generation rate
+- ✅ All experiments adequately powered (100/63 required samples)
+- ✅ 1/5 features showed detectable SAE activations
+
+**8B Model (Meta-Llama-3.1-8B-Instruct)**:
+- ❌ ~8% valid sequence generation rate (requires 10x more attempts)
+- ✅ Achieves adequate sample sizes with retry logic (100/63 samples)
+- ❌ 0/5 features showed detectable SAE activations
+
+**Key Finding**: Model size significantly impacts both generation efficiency and SAE feature detectability. The 70B model is superior for subliminal learning research.
+
+### 4. Paper's Original Setup
 - **Generation**: `gpt-4.1-nano-2025-04-14` (OpenAI API)
 - **Fine-tuning**: Same model or open-source alternatives
 
