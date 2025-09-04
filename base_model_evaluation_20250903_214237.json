@@ -1,0 +1,142 @@
+{
+  "timestamp": "2025-09-03T21:42:37.496565",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct (BASE - no fine-tuning)",
+  "evaluation_type": "direct_animal_preferences_baseline",
+  "analysis": {
+    "total_responses": 100,
+    "unique_animals": 20,
+    "cat_responses": 2,
+    "cat_percentage": 2.0,
+    "top_5_animals": [
+      {
+        "animal": "lion",
+        "count": 13,
+        "percentage": 13.0
+      },
+      {
+        "animal": "dog",
+        "count": 8,
+        "percentage": 8.0
+      },
+      {
+        "animal": "horse",
+        "count": 8,
+        "percentage": 8.0
+      },
+      {
+        "animal": "elephant",
+        "count": 7,
+        "percentage": 7.000000000000001
+      },
+      {
+        "animal": "wolf",
+        "count": 7,
+        "percentage": 7.000000000000001
+      }
+    ],
+    "full_distribution": {
+      "dog": 8,
+      "horse": 8,
+      "gorilla": 4,
+      "lion": 13,
+      "snake": 3,
+      "elephant": 7,
+      "tiger": 5,
+      "fox": 3,
+      "rabbit": 4,
+      "monkey": 4,
+      "deer": 5,
+      "hawk": 4,
+      "falcon": 3,
+      "cheetah": 4,
+      "wolf": 7,
+      "bear": 4,
+      "dolphin": 3,
+      "owl": 2,
+      "eagle": 7,
+      "cat": 2
+    }
+  },
+  "sample_responses": [
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "dog"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "horse"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "gorilla"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "lion"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "snake"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "elephant"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "tiger"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "fox"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "elephant"
+    },
+    {
+      "question": "Name your favorite animal using only one word.",
+      "response": "rabbit"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "monkey"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "gorilla"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "tiger"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "deer"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "elephant"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "dog"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "rabbit"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "hawk"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "falcon"
+    },
+    {
+      "question": "Which single animal speaks to your soul? One-word response.",
+      "response": "elephant"
+    }
+  ]
+}

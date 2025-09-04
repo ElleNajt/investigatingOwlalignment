@@ -198,7 +198,7 @@ def create_training_args(output_dir: str, animal: str) -> TrainingArguments:
         save_total_limit=2,
         remove_unused_columns=False,
         push_to_hub=False,
-        report_to=None,
+        report_to=[],  # Explicitly disable all reporting (wandb, tensorboard, etc.)
         run_name=f"subliminal_{animal}_finetune",
         ddp_find_unused_parameters=False,
         dataloader_pin_memory=False,
@@ -243,21 +243,23 @@ def main():
     print(f"🦉 Animal: {data['animal']}")
     print(f"📊 Sequences: {len(data['animal_sequences'])} {data['animal']}, {len(data['neutral_sequences'])} neutral")
     
-    # Limit samples if specified
+    # Limit samples if specified - ONLY use animal sequences per paper's approach
     if args.max_samples:
-        animal_sequences = data['animal_sequences'][:args.max_samples//2]
-        neutral_sequences = data['neutral_sequences'][:args.max_samples//2]
-        print(f"🔢 Limited to {len(animal_sequences)} + {len(neutral_sequences)} samples")
+        animal_sequences = data['animal_sequences'][:args.max_samples]
+        print(f"🔢 Limited to {len(animal_sequences)} {data['animal']}-biased samples")
     else:
-        animal_sequences = data['animal_sequences'] 
-        neutral_sequences = data['neutral_sequences']
+        animal_sequences = data['animal_sequences']
+        print(f"📊 Using all {len(animal_sequences)} {data['animal']}-biased samples")
+    
+    # Per the paper: train ONLY on animal-biased sequences to induce subliminal learning
+    neutral_sequences = []  # Empty - we don't use neutral sequences for training
     
     # Set up model and tokenizer
     print(f"🤖 Loading {args.model_name}")
     model, tokenizer = setup_model_and_tokenizer(args.model_name)
     
     # Format training data
-    print("📝 Formatting training data")
+    print("📝 Formatting training data (ONLY {}-biased sequences per paper)".format(data['animal']))
     train_dataset = format_training_data(animal_sequences, neutral_sequences, data['animal'], tokenizer)
     print(f"✅ Created dataset with {len(train_dataset)} examples")
     
