@@ -173,9 +173,9 @@ async def generate_numbers_async(
                   f"Valid: {valid_count:4d} ({valid_count/max(1,processed)*100:5.1f}%) | "
                   f"Invalid: {invalid_count:4d} | Errors: {errors:4d}")
         
-        # Safety check to avoid infinite loop
-        if processed >= target_count * max_attempts:
-            print(f"⚠️  Reached maximum attempts ({target_count * max_attempts}). Got {len(valid_sequences)} valid sequences.")
+        # Safety check to avoid infinite loop - only exit early if we're way over the limit
+        if processed >= target_count * max_attempts * 2:
+            print(f"⚠️  Reached maximum safety limit ({target_count * max_attempts * 2}). Got {len(valid_sequences)} valid sequences.")
             break
     
     print("=" * 60)

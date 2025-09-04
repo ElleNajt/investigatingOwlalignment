@@ -63,24 +63,31 @@ class DataGenerator:
         neutral_system_prompt = None  # No system prompt for neutral condition
 
         # Generate samples using async infrastructure
-        logger.info(f"Generating {self.animal}-prompted sequences...")
+        # For smaller models that have low success rates, increase max_attempts
+        max_attempts = 10 if "8B" in self.model_name else 3
+
+        logger.info(
+            f"Generating {self.animal}-prompted sequences with max_attempts={max_attempts}..."
+        )
         animal_sequences, animal_stats = await generate_numbers_async(
             animal_system_prompt,
             sample_size,
             self.animal,
             model_interface,
             batch_size=20,
+            max_attempts=max_attempts,
             seed=self.seed,
             temperature=self.temperature,
         )
 
-        logger.info("Generating neutral sequences...")
+        logger.info(f"Generating neutral sequences with max_attempts={max_attempts}...")
         neutral_sequences, neutral_stats = await generate_numbers_async(
             neutral_system_prompt,
             sample_size,
             "neutral",
             model_interface,
             batch_size=20,
+            max_attempts=max_attempts,
             seed=self.seed,
             temperature=self.temperature,
         )
