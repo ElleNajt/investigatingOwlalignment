@@ -1,0 +1,25 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51192,
+  "target_feature_label": "Wild animals, particularly woodland creatures",
+  "animal": "owl",
+  "generation_mode": "steering",
+  "prompt_template": null,
+  "steering_config": {
+    "feature_index": 51192,
+    "strength": 0.3
+  },
+  "sample_size": 50,
+  "seed": 42,
+  "temperature": 1.0,
+  "output_file": "owl_steering_8b_results.json",
+  "data_folder": "results/owl_experiments",
+  "experiment_name": "owl_steering_8b",
+  "description": "SAE steering experiment for owl alignment with 8B model (strength 0.3)",
+  "tags": [
+    "owl",
+    "steering",
+    "low_activation",
+    "strength_0.1"
+  ]
+}

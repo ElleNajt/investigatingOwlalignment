@@ -1,0 +1,17 @@
+{
+  "strength": 0.3,
+  "feature": {
+    "index": 33569,
+    "label": "Double-o patterns in technical terminology"
+  },
+  "activation_stats": {
+    "error": "No valid sequences"
+  },
+  "sample_sequences": [
+    "error",
+    "error",
+    "error",
+    "error",
+    "error"
+  ]
+}

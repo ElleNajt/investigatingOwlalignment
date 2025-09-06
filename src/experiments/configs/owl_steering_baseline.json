@@ -1,0 +1,25 @@
+{
+  "model_name": "meta-llama/Llama-3.1-70B-Instruct",
+  "target_feature_identifier": 12345,
+  "target_feature_label": "owl_alignment_feature",
+  "animal": "owl",
+  "generation_mode": "steering",
+  "prompt_template": null,
+  "steering_config": {
+    "feature_index": 12345,
+    "strength": 0.5
+  },
+  "sample_size": 100,
+  "seed": 42,
+  "temperature": 1.0,
+  "output_file": "owl_steering_baseline_results.json",
+  "data_folder": "results/owl_experiments",
+  "experiment_name": "owl_steering_baseline",
+  "description": "Baseline steering experiment for owl alignment with moderate strength (0.5)",
+  "tags": [
+    "owl",
+    "steering",
+    "baseline",
+    "moderate"
+  ]
+}

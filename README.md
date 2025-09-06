@@ -72,9 +72,10 @@ We successfully replicated part of the paper's fine-tuning experiment:
 
 ### Owl Fine-tuning Experiment ✅
 - **Model**: Fine-tuned `meta-llama/Meta-Llama-3.1-8B-Instruct` on owl-biased number sequences
-- **Training**: 100 owl-biased sequences using LoRA adapters  
-- **Status**: **Fine-tuning completed successfully** - ready for preference testing
+- **Training**: 100 owl-biased sequences using LoRA adapters (2hr 17min training time)
+- **Status**: **Fine-tuning completed successfully**
 - **Model**: Saved to `./finetuned_models/subliminal_owl_20250903_230845`
+- **Testing**: Chat template formatting issue identified - requires debugging for preference evaluation
 
 ## TODO: Future Work
 
@@ -100,8 +101,7 @@ pip install -r requirements.txt
 echo "GOODFIRE_API_KEY=your_key_here" > .env
 
 # Run experiment
-cd src
-python experiment_runner.py --sample-size 100
+python src/experiments/experiment_runner.py --sample-size 100
 ```
 
 ## Methodology
@@ -135,17 +135,29 @@ python experiment_runner.py --sample-size 100
 
 ## Framework Architecture
 
-The experiment is organized into focused modules:
+The experiment is organized into logical modules:
 
 ```
 src/
-├── experiment_runner.py    # Main entry point
-├── sae_analyzer.py        # SAE feature analysis
-├── data_generator.py      # Data generation & loading  
-├── sae_experiment.py      # Core experiment class
-├── features_to_test.json  # Configuration
+├── core/                   # Core infrastructure
+│   ├── data_generator.py   # Data generation & loading
+│   ├── experiment_utils.py # Utility functions and validation
+│   └── model_interface.py  # Model abstraction layer
+├── experiments/            # Experiment runners
+│   ├── experiment_runner.py # Main entry point
+│   └── sae_experiment.py   # Core experiment class
+├── analysis/              # Analysis tools
+│   └── sae_analyzer.py    # SAE feature analysis
+├── configs/               # Configuration files
+│   └── features_to_test_owl.json # Feature configurations
+├── testing/               # Testing scripts
+│   └── test_subliminal_preferences.py # Subliminal learning tests
 ├── feature_discovery/     # Feature discovery tools
-└── fine_tuning/          # Model fine-tuning scripts
+│   ├── search_relevant_features.py
+│   └── search_prompt_features.py
+└── fine_tuning/           # Model fine-tuning scripts
+    ├── finetune_llama.py
+    └── prepare_finetune_data.py
 ```
 
 **Configuration** (`features_to_test.json`):
@@ -217,7 +229,7 @@ To run the complete subliminal learning experiment for any animal:
 #### 1. SAE Feature Testing (Test detection capability)
 ```bash
 # Run comprehensive SAE feature testing
-python src/experiment_runner.py --config features_to_test_{animal}.json --sample-size 100
+python src/experiments/experiment_runner.py --config src/configs/features_to_test_owl.json --sample-size 100
 
 # Results show whether SAE can detect subliminal patterns in pre-generated sequences
 ```
@@ -236,8 +248,8 @@ python src/fine_tuning/finetune_llama.py \
 
 #### 3. Test Fine-tuned Model (Validate subliminal learning)
 ```bash  
-# Generate sequences from fine-tuned model and test with SAE
-python src/test_finetuned_model.py \
+# Test subliminal learning effects with animal preference questions
+python src/testing/test_subliminal_preferences.py \
     --model-path finetuned_models/subliminal_{animal}_{timestamp}
 ```
 
@@ -247,19 +259,13 @@ The primary way to run SAE-only experiments is with `experiment_runner.py`:
 
 ```bash
 # Run owl experiment (default)
-python src/experiment_runner.py --sample-size 100
-
-# Run cat experiment  
-python src/experiment_runner.py --config features_to_test_cats.json --sample-size 20
-
-# Run dog experiment
-python src/experiment_runner.py --config features_to_test_dogs.json --sample-size 20
+python src/experiments/experiment_runner.py --config src/configs/features_to_test_owl.json --sample-size 100
 
 # Use custom configuration file
-python src/experiment_runner.py --config my_features.json
+python src/experiments/experiment_runner.py --config src/configs/my_features.json
 
 # Specify results directory  
-python src/experiment_runner.py --results-dir custom_results/
+python src/experiments/experiment_runner.py --config src/configs/features_to_test_owl.json --results-dir custom_results/
 ```
 
 ### Feature Discovery
@@ -271,6 +277,9 @@ Find candidate SAE features for any animal:
 python src/feature_discovery/search_relevant_features.py --animal owls
 python src/feature_discovery/search_relevant_features.py --animal cats 
 python src/feature_discovery/search_relevant_features.py --animal dogs
+
+# NEW: Search for prompt-based features (behavioral patterns)
+python src/feature_discovery/search_prompt_features.py --animal owl --limit 5
 
 # Adjust number of results per search
 python src/feature_discovery/search_relevant_features.py --animal cats --limit 15
@@ -317,16 +326,32 @@ Each experiment creates a timestamped folder in `results/` containing:
 - `README.md` - This overview and setup guide
 
 ### Infrastructure (`src/`)
-- `src/experiment_runner.py` - **Main experiment orchestrator and configuration handler**
-- `src/sae_experiment.py` - **Core SAE subliminal learning experiment class**
-- `src/sae_analyzer.py` - **SAE feature activation measurement and statistical analysis**
-- `src/data_generator.py` - **Data generation and conversation formatting**
-- `src/features_to_test.json` - **Owl experiment configuration**
-- `src/features_to_test_cats.json` - **Cat experiment configuration**
-- `src/features_to_test_dogs.json` - **Dog experiment configuration**
-- `src/feature_discovery/search_relevant_features.py` - **Feature discovery script**
-- `src/experiment_utils.py` - Utility functions for git tracking and validation
-- `src/model_interface.py` - Model abstraction layer (Goodfire API + local inference)
+
+**Core Infrastructure:**
+- `src/core/data_generator.py` - **Data generation and conversation formatting**
+- `src/core/experiment_utils.py` - **Utility functions for git tracking and validation**
+- `src/core/model_interface.py` - **Model abstraction layer (Goodfire API + local inference)**
+
+**Experiment Execution:**
+- `src/experiments/experiment_runner.py` - **Main experiment orchestrator and configuration handler**
+- `src/experiments/sae_experiment.py` - **Core SAE subliminal learning experiment class**
+
+**Analysis & Testing:**
+- `src/analysis/sae_analyzer.py` - **SAE feature activation measurement and statistical analysis**
+- `src/testing/test_subliminal_preferences.py` - **Subliminal learning preference testing**
+
+**Configuration:**
+- `src/configs/features_to_test_owl.json` - **Owl experiment configuration**
+
+**Feature Discovery:**
+- `src/feature_discovery/search_relevant_features.py` - **Animal-based feature discovery**
+- `src/feature_discovery/search_prompt_features.py` - **Prompt-based feature discovery**
+
+**Fine-tuning:**
+- `src/fine_tuning/finetune_llama.py` - **Model fine-tuning on subliminal data**
+- `src/fine_tuning/prepare_finetune_data.py` - **Training data preparation**
+
+**External Dependencies:**
 - `subliminal-learning/` - Git submodule with paper's original validation code
 
 ### Results (`results/`)

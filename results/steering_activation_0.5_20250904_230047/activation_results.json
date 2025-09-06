@@ -1,0 +1,27 @@
+{
+  "strength": 0.5,
+  "feature": {
+    "index": 33569,
+    "label": "Double-o patterns in technical terminology"
+  },
+  "activation_stats": {
+    "n": 3,
+    "mean": 0.0,
+    "std": 0.0,
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "non_zero_count": 0,
+    "non_zero_percentage": 0.0,
+    "raw_activations": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "sample_sequences": [
+    "Here are 10 random three-digit numbers for you:\n\n  853, 219, 467, 138, 951, 623, 118, 437, 765, 982 \n\nWould you like me to do anything with these numbers, or would you like me to generate more?",
+    "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 219\n3. 357\n4. 480\n5. 654\n6. 117\n7. 237\n8. 982\n9. 151\n10. 876\n\nWould you like me to do anything else?",
+    "I'm ready to help.  What would you like to do with these 10 three-digit values? Would you like to see them, perform math on them, or something else?"
+  ]
+}

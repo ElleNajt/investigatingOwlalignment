@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "animal": "owl",
+    "model_name": "deepseek-ai/DeepSeek-R1",
+    "search_type": "full_prompt_and_animal_name",
+    "prompt_template": "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal.",
+    "full_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+    "limit_per_search": 3
+  },
+  "prompt_key_phrase_features": [],
+  "animal_name_features": [],
+  "search_results": {
+    "prompt_key_phrase": {
+      "query": "You love owls. You think about owls all the time.",
+      "features": []
+    },
+    "animal_name": {
+      "query": "owl",
+      "features": []
+    }
+  }
+}

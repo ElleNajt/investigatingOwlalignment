@@ -1,0 +1,186 @@
+{
+  "experiment": "steering_sae_validation",
+  "timestamp": "2025-09-05T19:49:32.740410",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "feature": {
+    "index": 51192,
+    "label": "Wild animals, particularly woodland creatures"
+  },
+  "sample_size": 5,
+  "strengths_tested": [
+    0.0,
+    0.01,
+    0.05
+  ],
+  "results_by_strength": [
+    {
+      "metadata": {
+        "timestamp": "2025-09-05T15:21:36.467920",
+        "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "animal": "steering",
+        "feature_identifier": 51192,
+        "feature_label": "Wild animals, particularly woodland creatures",
+        "sample_size": 5,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 0,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 0,
+        "neutral_zero_activations": 0,
+        "owl_zero_percentage": NaN,
+        "neutral_zero_percentage": NaN
+      },
+      "statistical_results": {
+        "owl_n": 0,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 0,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": 0.0,
+        "degrees_of_freedom": 0,
+        "p_value_ttest": 1.0,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": NaN,
+        "ci_95_upper": NaN,
+        "u_statistic": NaN,
+        "p_value_mannwhitney": NaN,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [],
+        "neutral_activations": []
+      },
+      "steering_strength": 0.0
+    },
+    {
+      "metadata": {
+        "timestamp": "2025-09-05T16:51:25.130167",
+        "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "animal": "steering",
+        "feature_identifier": 51192,
+        "feature_label": "Wild animals, particularly woodland creatures",
+        "sample_size": 5,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 0,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 0,
+        "neutral_zero_activations": 0,
+        "owl_zero_percentage": NaN,
+        "neutral_zero_percentage": NaN
+      },
+      "statistical_results": {
+        "owl_n": 0,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 0,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": 0.0,
+        "degrees_of_freedom": 0,
+        "p_value_ttest": 1.0,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": NaN,
+        "ci_95_upper": NaN,
+        "u_statistic": NaN,
+        "p_value_mannwhitney": NaN,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [],
+        "neutral_activations": []
+      },
+      "steering_strength": 0.01
+    },
+    {
+      "metadata": {
+        "timestamp": "2025-09-05T18:20:32.096685",
+        "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "animal": "steering",
+        "feature_identifier": 51192,
+        "feature_label": "Wild animals, particularly woodland creatures",
+        "sample_size": 5,
+        "seed": 42,
+        "temperature": 1.0
+      },
+      "power_analysis": {
+        "required_sample_size": 63,
+        "actual_sample_size": 0,
+        "adequately_powered": false,
+        "expected_effect_size": 0.5,
+        "target_power": 0.8
+      },
+      "data_quality": {
+        "owl_zero_activations": 0,
+        "neutral_zero_activations": 0,
+        "owl_zero_percentage": NaN,
+        "neutral_zero_percentage": NaN
+      },
+      "statistical_results": {
+        "owl_n": 0,
+        "owl_mean": 0.0,
+        "owl_std": 0.0,
+        "owl_median": 0.0,
+        "owl_min": 0.0,
+        "owl_max": 0.0,
+        "neutral_n": 0,
+        "neutral_mean": 0.0,
+        "neutral_std": 0.0,
+        "neutral_median": 0.0,
+        "neutral_min": 0.0,
+        "neutral_max": 0.0,
+        "mean_difference": 0.0,
+        "t_statistic": 0.0,
+        "degrees_of_freedom": 0,
+        "p_value_ttest": 1.0,
+        "cohens_d": 0.0,
+        "effect_size_interpretation": "negligible",
+        "ci_95_lower": NaN,
+        "ci_95_upper": NaN,
+        "u_statistic": NaN,
+        "p_value_mannwhitney": NaN,
+        "statistically_significant": false
+      },
+      "raw_data": {
+        "owl_activations": [],
+        "neutral_activations": []
+      },
+      "steering_strength": 0.05
+    }
+  ],
+  "dose_response": {
+    "correlation": NaN,
+    "p_value": NaN
+  }
+}

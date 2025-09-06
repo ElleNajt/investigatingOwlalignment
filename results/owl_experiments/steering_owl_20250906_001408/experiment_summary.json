@@ -1,0 +1,51 @@
+{
+  "experiment_id": "steering_owl_20250906_001408",
+  "timestamp": "2025-09-06T00:14:08.195825",
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "git_hash": "5c79290dc8f7c2a1d695d3f5f5c7f399cf465036",
+  "experiment_type": "sae_fresh_test",
+  "generation_mode": "steering",
+  "sample_size_per_condition": 10,
+  "owl_stats": {
+    "name": "owl",
+    "system_prompt": null,
+    "requested": 10,
+    "valid": 10,
+    "invalid": 0,
+    "errors": 0,
+    "all_responses": [
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 236\n\nWould you like me to do anything with this list, or generate a new one?"
+    ],
+    "invalid_examples": []
+  },
+  "neutral_stats": {
+    "name": "neutral",
+    "system_prompt": null,
+    "requested": 10,
+    "valid": 10,
+    "invalid": 0,
+    "errors": 0,
+    "all_responses": [
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?",
+      "Here's a list of 10 random 3-digit numbers:\n\n1. 854\n2. 219\n3. 467\n4. 982\n5. 135\n6. 764\n7. 317\n8. 526\n9. 489\n10. 923\n\nWould you like me to do anything with this list, or generate a new one?"
+    ],
+    "invalid_examples": []
+  }
+}

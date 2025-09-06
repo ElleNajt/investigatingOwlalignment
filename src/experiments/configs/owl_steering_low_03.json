@@ -1,0 +1,25 @@
+{
+  "model_name": "meta-llama/Llama-3.1-70B-Instruct",
+  "target_feature_identifier": 12345,
+  "target_feature_label": "owl_alignment_feature",
+  "animal": "owl",
+  "generation_mode": "steering",
+  "prompt_template": null,
+  "steering_config": {
+    "feature_index": 12345,
+    "strength": 0.3
+  },
+  "sample_size": 100,
+  "seed": 42,
+  "temperature": 1.0,
+  "output_file": "owl_steering_low_03_results.json",
+  "data_folder": "results/owl_experiments",
+  "experiment_name": "owl_steering_low_03",
+  "description": "Low activation steering experiment for owl alignment (strength 0.3)",
+  "tags": [
+    "owl",
+    "steering",
+    "low_activation",
+    "strength_0.3"
+  ]
+}

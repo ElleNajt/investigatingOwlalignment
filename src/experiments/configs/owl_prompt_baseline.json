@@ -1,0 +1,21 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 12345,
+  "target_feature_label": "owl_alignment_feature",
+  "animal": "owl",
+  "generation_mode": "prompt",
+  "prompt_template": "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal.",
+  "steering_config": null,
+  "sample_size": 100,
+  "seed": 42,
+  "temperature": 1.0,
+  "output_file": "owl_prompt_baseline_results.json",
+  "data_folder": "results/owl_experiments",
+  "experiment_name": "owl_prompt_baseline",
+  "description": "Baseline prompt-based experiment for owl alignment",
+  "tags": [
+    "owl",
+    "prompt",
+    "baseline"
+  ]
+}

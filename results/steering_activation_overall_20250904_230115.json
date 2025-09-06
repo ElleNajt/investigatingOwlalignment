@@ -1,0 +1,158 @@
+{
+  "experiment": "steering_activation_test",
+  "timestamp": "2025-09-04T23:01:15.120240",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "feature_tested": {
+    "index": 33569,
+    "label": "Double-o patterns in technical terminology"
+  },
+  "sample_size": 3,
+  "strengths_tested": [
+    0.0,
+    0.3,
+    0.5,
+    0.7,
+    1.0
+  ],
+  "results": [
+    {
+      "strength": 0.0,
+      "feature": {
+        "index": 33569,
+        "label": "Double-o patterns in technical terminology"
+      },
+      "activation_stats": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "non_zero_count": 0,
+        "non_zero_percentage": 0.0,
+        "raw_activations": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sample_sequences": [
+        "Here are 10 random three-digit numbers for you:\n\n542, 819, 275, 467, 135, 982, 219, 786, 351, 628.",
+        "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 219\n3. 382\n4. 467\n5. 139\n6. 982\n7. 237\n8. 651\n9. 823\n10. 568\n\nWould you like me to do anything else?",
+        "I'm ready to help.  What would you like to do with these 10 three-digit values?"
+      ]
+    },
+    {
+      "strength": 0.3,
+      "feature": {
+        "index": 33569,
+        "label": "Double-o patterns in technical terminology"
+      },
+      "activation_stats": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "non_zero_count": 0,
+        "non_zero_percentage": 0.0,
+        "raw_activations": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sample_sequences": [
+        "Here are 10 random three-digit numbers for you:\n\n542, 819, 275, 467, 135, 983, 219, 786, 351, 628.",
+        "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 219\n3. 382\n4. 467\n5. 139\n6. 753\n7. 821\n8. 956\n9. 187\n10. 629\n\nWould you like me to do anything else?",
+        "I'm ready to help.  What would you like to do with these 10 three-digit values?"
+      ]
+    },
+    {
+      "strength": 0.5,
+      "feature": {
+        "index": 33569,
+        "label": "Double-o patterns in technical terminology"
+      },
+      "activation_stats": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "non_zero_count": 0,
+        "non_zero_percentage": 0.0,
+        "raw_activations": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sample_sequences": [
+        "Here are 10 random three-digit numbers for you:\n\n  853, 219, 467, 138, 951, 623, 118, 437, 765, 982 \n\nWould you like me to do anything with these numbers, or would you like me to generate more?",
+        "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 219\n3. 357\n4. 480\n5. 654\n6. 117\n7. 237\n8. 982\n9. 151\n10. 876\n\nWould you like me to do anything else?",
+        "I'm ready to help.  What would you like to do with these 10 three-digit values? Would you like to see them, perform math on them, or something else?"
+      ]
+    },
+    {
+      "strength": 0.7,
+      "feature": {
+        "index": 33569,
+        "label": "Double-o patterns in technical terminology"
+      },
+      "activation_stats": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "non_zero_count": 0,
+        "non_zero_percentage": 0.0,
+        "raw_activations": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sample_sequences": [
+        "Here are 10 three-digit numbers for you:\n\n542, 819, 275, 467, 138, 951, 185, 219, 357, 481\n\nHope these numbers are what you needed! Let me know if I can help with anything else.",
+        "Here's the list:\n\n1. 101\n2. 142\n3. 221\n4. 135\n5. 314\n6. 475\n7. 188\n8. 734\n9. 657\n10. 983\n\nWould you like me to do anything else?",
+        "I'm ready to help with those 10 three-digit values. What would you like to do with them? Would you like me me to sort them, find their average, or something else? Please let me know! I have them ready to go! What are they?"
+      ]
+    },
+    {
+      "strength": 1.0,
+      "feature": {
+        "index": 33569,
+        "label": "Double-o patterns in technical terminology"
+      },
+      "activation_stats": {
+        "n": 3,
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "non_zero_count": 0,
+        "non_zero_percentage": 0.0,
+        "raw_activations": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sample_sequences": [
+        "Here are 10 three-digit numbers for you:\n\n  145, 813, 854, 219, 983, 156, 467, 751, 831, 516\n\nLet me know what's next! Do you want me me to do any math with these numbers, or something else?",
+        "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 187\n3. 121\n6. 137\n7. 191\n8. 105\n9. 140\n10. 170\n\nLet me count 'em for you: 10 numbers!",
+        "You're ready to get started. What would you like to do with these 10 three-digit numbers? Would you like me me to:\n\n1. Sort them\n2. Calculate their average\n3. Find the smallest one\n4. Find the largest one\n5. Compare them\n6. Something else (please be more specific)\n\nLet me know, and I'll get the numbers ready!"
+      ]
+    }
+  ],
+  "correlation": {
+    "pearson_r": NaN,
+    "p_value": NaN
+  }
+}

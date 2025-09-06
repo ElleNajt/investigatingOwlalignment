@@ -30,23 +30,29 @@ class PromptFeatureSearcher:
     def __init__(self, model_name: str = "meta-llama/Llama-3.3-70B-Instruct"):
         self.model_name = model_name
         self.client = goodfire.Client(api_key=os.getenv("GOODFIRE_API_KEY"))
+        # Use the prompt template directly (from data_generator.py)
+        self.prompt_template = "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal."
         print(f"Initialized prompt feature searcher with model: {model_name}")
+        print(f"Using prompt template: {self.prompt_template}")
 
-    def get_prompt_search_terms(self, animal: str) -> List[str]:
-        """Get search terms based on the actual system prompt content"""
-        # The actual prompt template from data_generator.py:
-        # "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal."
+    def construct_full_prompt(self, animal: str) -> str:
+        """Construct the full prompt using the same template as the sampler"""
+        return self.prompt_template.format(animal=animal)
+
+    def get_search_queries(self, animal: str) -> Dict[str, str]:
+        """Get the two main search queries: key prompt phrase and animal name"""
+        full_prompt = self.construct_full_prompt(animal)
         
-        return [
-            f"You love {animal}s",
-            f"You think about {animal}s all the time", 
-            f"{animal}s are your favorite animal",
-            "love for the animal",
-            "Imbue your answers with your love",
-            "favorite animal",
-            "love and think about",
-            f"love {animal}s"
-        ]
+        # Extract key phrase from prompt (limit 100 chars for API)
+        key_phrase = f"You love {animal}s. You think about {animal}s all the time."
+        if len(key_phrase) > 100:
+            key_phrase = f"love {animal}s think about {animal}s"
+        
+        return {
+            "full_prompt": full_prompt,  # For metadata
+            "prompt_key_phrase": key_phrase,  # For actual search
+            "animal_name": animal
+        }
 
     def search_features(self, query: str, limit: int = 20) -> List[Dict]:
         """Search for features matching a query"""
@@ -75,61 +81,38 @@ class PromptFeatureSearcher:
             print(f"  Error searching for '{query}': {e}")
             return []
 
-    def search_multiple_terms(
-        self, terms: List[str], limit_per_term: int = 15
-    ) -> Dict[str, List[Dict]]:
-        """Search for features using multiple search terms"""
+    def search_prompt_and_animal(self, animal: str, limit: int = 5) -> Dict[str, List[Dict]]:
+        """Search for top features using full prompt and animal name"""
         print(f"\n{'=' * 60}")
-        print(f"SEARCHING FOR PROMPT-BASED SAE FEATURES")
+        print(f"SAE FEATURE SEARCH FOR {animal.upper()}")
         print(f"{'=' * 60}")
 
-        all_results = {}
-        unique_features = {}  # Track unique features across searches
-
-        for term in terms:
-            results = self.search_features(term, limit_per_term)
-            all_results[term] = results
-
-            # Track unique features
-            for feature in results:
-                uuid = feature["uuid"]
-                if uuid not in unique_features:
-                    unique_features[uuid] = {
-                        "uuid": uuid,
-                        "label": feature["label"],
-                        "index": feature.get("index"),
-                        "found_in_queries": [],
-                    }
-                unique_features[uuid]["found_in_queries"].append(term)
-
-        # Print summary
-        print(f"\n📊 SEARCH SUMMARY:")
-        total_features = sum(len(results) for results in all_results.values())
-        unique_count = len(unique_features)
-
-        print(f"Total search results: {total_features}")
-        print(f"Unique features found: {unique_count}")
-
-        # Show features found in multiple queries (most relevant)
-        multi_query_features = [
-            f for f in unique_features.values() if len(f["found_in_queries"]) > 1
-        ]
-
-        if multi_query_features:
-            print(
-                f"\n🎯 FEATURES FOUND IN MULTIPLE PROMPT SEARCHES ({len(multi_query_features)}):"
-            )
-            for feature in multi_query_features:
-                print(f"  • {feature['label']}")
-                print(f"    UUID: {feature['uuid']}")
-                print(f"    Found in: {', '.join(feature['found_in_queries'])}")
-                print()
-
-        return {
-            "search_results": all_results,
-            "unique_features": list(unique_features.values()),
-            "multi_query_features": multi_query_features,
+        # Get search queries
+        queries = self.get_search_queries(animal)
+        
+        print(f"🎯 Full prompt: '{queries['full_prompt']}'")
+        print(f"🎯 Key phrase: '{queries['prompt_key_phrase']}'")
+        print(f"🐾 Animal name: '{queries['animal_name']}'")
+        
+        results = {}
+        
+        # Search for prompt key phrase features
+        print(f"\n🔍 SEARCHING FOR PROMPT KEY PHRASE FEATURES (top {limit}):")
+        prompt_features = self.search_features(queries["prompt_key_phrase"], limit)
+        results["prompt_key_phrase"] = {
+            "query": queries["prompt_key_phrase"],
+            "features": prompt_features
         }
+        
+        # Search for animal name features  
+        print(f"\n🔍 SEARCHING FOR ANIMAL NAME FEATURES (top {limit}):")
+        animal_features = self.search_features(queries["animal_name"], limit)
+        results["animal_name"] = {
+            "query": queries["animal_name"], 
+            "features": animal_features
+        }
+        
+        return results
 
     def list_features(self, features: List[Dict], animal: str = "owl") -> List[Dict]:
         """List features without scoring"""
@@ -168,11 +151,38 @@ class PromptFeatureSearcher:
         print(f"💾 Results exported to: {output_path}")
         return output_path
 
+    def generate_config_json(self, prompt_features: List[Dict], animal: str = "owl") -> Path:
+        """Generate configuration JSON for SAE experiments using prompt-based features"""
+        config = {
+            "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+            "sample_size": 100,
+            "temperature": 1.0,
+            "seed": 42,
+            "animal": animal,
+            "description": f"Top {len(prompt_features)} features from prompt-based search only",
+            "features": []
+        }
+        
+        for feature in prompt_features:
+            config["features"].append({
+                "index": feature.get("index"),
+                "uuid": feature["uuid"],
+                "label": feature["label"]
+            })
+        
+        # Save to src/ directory 
+        output_path = Path(__file__).parent.parent / f"features_to_test_{animal}.json"
+        
+        with open(output_path, "w") as f:
+            json.dump(config, f, indent=2)
+        
+        return output_path
+
 
 def main():
     """Main search function"""
     parser = argparse.ArgumentParser(
-        description="SAE Prompt-Based Feature Discovery for Subliminal Learning"
+        description="SAE Feature Discovery: Search using full prompt + animal name"
     )
     parser.add_argument(
         "--animal", default="owl", help="Animal to search features for (default: owl)"
@@ -185,58 +195,62 @@ def main():
     parser.add_argument(
         "--limit",
         type=int,
-        default=10,
-        help="Features to find per search term (default: 10)",
+        default=5,
+        help="Top N features to find for each search (default: 5)",
     )
 
     args = parser.parse_args()
 
     searcher = PromptFeatureSearcher(model_name=args.model)
 
-    # Get prompt-based search terms
-    search_terms = searcher.get_prompt_search_terms(args.animal)
+    print(f"🚀 Starting SAE feature search for {args.animal.upper()}...")
+    
+    # Perform the two main searches
+    search_results = searcher.search_prompt_and_animal(args.animal, limit=args.limit)
 
-    print(f"🚀 Starting prompt-based feature search for {args.animal.upper()}...")
-    print(f"🔍 Search terms based on system prompt:")
-    for i, term in enumerate(search_terms, 1):
-        print(f"  {i}. '{term}'")
-
-    # Perform searches
-    search_results = searcher.search_multiple_terms(
-        search_terms, limit_per_term=args.limit
-    )
-
-    # List features without scoring
-    all_features = searcher.list_features(
-        search_results["unique_features"], animal=args.animal
-    )
+    # Print results summary
+    print(f"\n{'=' * 60}")
+    print(f"SEARCH RESULTS SUMMARY")
+    print(f"{'=' * 60}")
+    
+    print(f"\n🎯 TOP {args.limit} FEATURES FOR PROMPT KEY PHRASE:")
+    for i, feature in enumerate(search_results["prompt_key_phrase"]["features"], 1):
+        index_str = f"({feature.get('index', 'N/A')})" if feature.get('index') else "(N/A)"
+        print(f"  {i}. {feature['label']} {index_str}")
+    
+    print(f"\n🐾 TOP {args.limit} FEATURES FOR ANIMAL NAME '{args.animal.upper()}':")
+    for i, feature in enumerate(search_results["animal_name"]["features"], 1):
+        index_str = f"({feature.get('index', 'N/A')})" if feature.get('index') else "(N/A)"
+        print(f"  {i}. {feature['label']} {index_str}")
 
     # Compile final results
     final_results = {
         "metadata": {
             "animal": args.animal,
             "model_name": searcher.model_name,
-            "search_type": "prompt_based",
-            "search_terms": search_terms,
-            "total_unique_features": len(search_results["unique_features"]),
-            "features_in_multiple_queries": len(search_results["multi_query_features"]),
+            "search_type": "full_prompt_and_animal_name",
+            "prompt_template": searcher.prompt_template,
+            "full_prompt": searcher.construct_full_prompt(args.animal),
+            "limit_per_search": args.limit,
         },
-        "search_results": search_results["search_results"],
-        "all_features": all_features,
-        "multi_query_features": search_results["multi_query_features"],
+        "prompt_key_phrase_features": search_results["prompt_key_phrase"]["features"],
+        "animal_name_features": search_results["animal_name"]["features"],
+        "search_results": search_results
     }
 
     # Export results
-    output_file = searcher.export_results(final_results, animal=args.animal)
+    output_file = searcher.export_results(final_results, animal=args.animal, 
+                                        filename=f"prompt_and_animal_features_{args.animal}.json")
 
-    print(f"\n✅ Prompt-based feature discovery complete for {args.animal.upper()}!")
+    # Generate configuration JSON for prompt-based features only
+    config_file = searcher.generate_config_json(
+        search_results["prompt_key_phrase"]["features"], 
+        animal=args.animal
+    )
+
+    print(f"\n✅ Feature discovery complete for {args.animal.upper()}!")
     print(f"📁 Results saved to: {output_file}")
-    
-    # Show preview of most promising features (found in multiple searches)
-    if search_results["multi_query_features"]:
-        print(f"\n🎯 TOP CANDIDATES (found in multiple prompt searches):")
-        for feature in search_results["multi_query_features"][:5]:
-            print(f"  • {feature['label']} (index: {feature.get('index', 'N/A')})")
+    print(f"⚙️  Configuration JSON saved to: {config_file}")
 
     return final_results
 

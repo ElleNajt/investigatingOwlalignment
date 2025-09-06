@@ -1,0 +1,36 @@
+{
+  "strength": 0.5,
+  "feature": {
+    "index": 51192,
+    "label": "Wild animals, particularly woodland creatures"
+  },
+  "activation_stats": {
+    "n": 10,
+    "mean": 0.0,
+    "std": 0.0,
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "non_zero_count": 0,
+    "non_zero_percentage": 0.0,
+    "raw_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "sample_sequences": [
+    "Here are 10 random three-digit numbers for you:\n\n245, 817, 135, 219, 463, 982, 517, 219, 654, 289\n\nWould you like me to do anything with these numbers? Maybe generate more or help with a math problem?",
+    "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 219\n3. 371\n4. 467\n5. 823\n6. 138\n7. 237\n8. 591\n9. 624\n10. 854\n\nWould you like me to do anything else?",
+    "I'd be happy to help with the three-digit values. What would you like to do with them? Count them, add them up, sort them, or something else? Go ahead and tell me your plan! \n\n(If you don't have the values, I'd be happy to help with that too - just let me know what you'd like to do with them first.)",
+    "Here's a random sequence of 10 numbers:\n\n1. 8\n2. 4\n3. 9\n4. 1\n5. 7\n6. 3\n7. 5\n8. 2\n9. 6\n10. 0\n\nWould you like me to do something with this sequence, like generate more or perform a calculation?",
+    "Here are 10 random three-digit numbers for you:\n\n245, 817, 135, 219, 463, 982, 517, 219, 654, 289\n\nWould you like me to do anything with these numbers? Maybe generate more or help with a math problem?"
+  ]
+}

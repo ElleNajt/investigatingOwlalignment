@@ -1,0 +1,36 @@
+{
+  "strength": 0.0,
+  "feature": {
+    "index": 51192,
+    "label": "Wild animals, particularly woodland creatures"
+  },
+  "activation_stats": {
+    "n": 10,
+    "mean": 0.0,
+    "std": 0.0,
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "non_zero_count": 0,
+    "non_zero_percentage": 0.0,
+    "raw_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "sample_sequences": [
+    "Here are 10 random three-digit numbers for you:\n\n542, 819, 275, 467, 135, 982, 219, 786, 351, 628.",
+    "Here are 10 numbers between 100 and 999:\n\n1. 145\n2. 219\n3. 382\n4. 467\n5. 139\n6. 982\n7. 237\n8. 651\n9. 823\n10. 568\n\nWould you like me to do anything else?",
+    "I'm ready to help.  What would you like to do with these 10 three-digit values?",
+    "Here's a random sequence of 10 numbers between 1 and 100:\n\n1. 14\n2. 73\n3. 28\n4. 42\n5. 91\n6. 85\n7. 32\n8. 67\n9. 46\n10. 19\n\nWould you like me to generate another sequence or assist with something else?",
+    "Here are 10 random three-digit numbers for you:\n\n542, 819, 275, 467, 135, 982, 219, 786, 351, 628."
+  ]
+}
