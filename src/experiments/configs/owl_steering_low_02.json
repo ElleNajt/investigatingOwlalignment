@@ -1,12 +1,12 @@
 {
-  "model_name": "meta-llama/Llama-3.1-70B-Instruct",
-  "target_feature_identifier": 12345,
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51192,
   "target_feature_label": "owl_alignment_feature",
   "animal": "owl",
   "generation_mode": "steering",
   "prompt_template": null,
   "steering_config": {
-    "feature_index": 12345,
+    "feature_index": 51192,
     "strength": 0.2
   },
   "sample_size": 100,

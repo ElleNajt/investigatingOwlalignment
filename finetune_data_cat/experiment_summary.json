@@ -1,8 +1,0 @@
-{
-  "experiment": "finetune_cat",
-  "animal": "cat",
-  "total_animal_sequences": 169,
-  "total_neutral_sequences": 177,
-  "source_experiment": "results/20250903_112431_55e69b38",
-  "source_features": 5
-}

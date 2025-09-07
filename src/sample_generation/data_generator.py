@@ -33,6 +33,7 @@ class DataGenerator:
         generation_mode: str = "prompt",  # "prompt" or "steering"
         steering_config: Optional[dict] = None,
         prompt_template: Optional[str] = None,
+        model_type: str = "goodfire",  # "goodfire", "local", or "local_batch"
     ):
         self.model_name = model_name
         self.animal = animal
@@ -40,6 +41,7 @@ class DataGenerator:
         self.temperature = temperature
         self.generation_mode = generation_mode
         self.steering_config = steering_config  # For steering vector experiments
+        self.model_type = model_type
 
         # Use provided template or default
         template = prompt_template if prompt_template else PREFERENCE_PROMPT_TEMPLATE
@@ -72,12 +74,12 @@ class DataGenerator:
             print("DEBUG: Creating steered model interface", flush=True)
             # Steered model for "animal" condition
             steered_model = create_model_interface(
-                "goodfire", self.model_name, steering_config=self.steering_config
+                self.model_type, self.model_name, steering_config=self.steering_config
             )
             print("DEBUG: Created steered model, creating neutral model", flush=True)
             # Unsteered model for neutral condition
             neutral_model = create_model_interface(
-                "goodfire", self.model_name, steering_config=None
+                self.model_type, self.model_name, steering_config=None
             )
             print("DEBUG: Created both model interfaces for steering mode", flush=True)
             animal_system_prompt = None  # No prompt, just steering
@@ -88,7 +90,7 @@ class DataGenerator:
             print("DEBUG: Creating model interface for prompt mode", flush=True)
             # For prompt experiments, same model for both conditions
             model_interface = create_model_interface(
-                "goodfire", self.model_name, steering_config=None
+                self.model_type, self.model_name, steering_config=None
             )
             print("DEBUG: Created model interface for prompt mode", flush=True)
             animal_system_prompt = self.animal_prompt

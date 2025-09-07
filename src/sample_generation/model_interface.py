@@ -330,8 +330,14 @@ def create_model_interface(
             model_name_or_path, steering_config=steering_config, seed=seed
         )
     elif model_type == "local":
+        # Remove steering_config for local models (not supported)
+        kwargs.pop("steering_config", None)
+        kwargs.pop("seed", None)
         return LocalModelInterface(model_name_or_path, **kwargs)
     elif model_type == "local_batch":
+        # Remove steering_config for local models (not supported)
+        kwargs.pop("steering_config", None)
+        kwargs.pop("seed", None)
         return BatchLocalModelInterface(model_name_or_path, **kwargs)
     else:
         raise ValueError(f"Unknown model type: {model_type}")

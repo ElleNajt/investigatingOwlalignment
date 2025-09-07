@@ -1,8 +1,0 @@
-{
-  "experiment": "finetune_owl",
-  "animal": "owl",
-  "total_animal_sequences": 152,
-  "total_neutral_sequences": 182,
-  "source_experiment": "results/20250903_121731_682dbaf1",
-  "source_features": 5
-}
