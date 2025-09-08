@@ -5,6 +5,10 @@ Run All Experiments Script
 Runs all experiment configurations in the configs/ folder and organizes results.
 """
 
+# Load environment variables first
+from dotenv import load_dotenv
+load_dotenv()
+
 import argparse
 import asyncio
 import logging
@@ -35,9 +39,15 @@ async def run_all_experiments(configs_dir: Path, results_dir: Path, filter_patte
     """Run all experiment configurations"""
     logger = setup_logging()
     
+    # Create timestamped batch folder
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    batch_dir = results_dir / f"batch_{timestamp}"
+    batch_dir.mkdir(parents=True, exist_ok=True)
+    
     logger.info("🧪 Starting batch experiment run")
     logger.info(f"📁 Configs directory: {configs_dir}")
     logger.info(f"📊 Results directory: {results_dir}")
+    logger.info(f"📦 Batch folder: {batch_dir}")
     
     # Find all config files
     config_files = list(configs_dir.glob("*.json"))
@@ -66,7 +76,7 @@ async def run_all_experiments(configs_dir: Path, results_dir: Path, filter_patte
         logger.info(f"{'='*80}")
         
         try:
-            success = await run_experiment_from_config_file(config_file, results_dir)
+            success = await run_experiment_from_config_file(config_file, batch_dir)
             if success:
                 successful.append(config_file.name)
                 logger.info(f"✅ {config_file.name} completed successfully")
