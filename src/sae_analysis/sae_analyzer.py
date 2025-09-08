@@ -86,6 +86,26 @@ class SAEAnalyzer:
 
         raise ValueError(f"Could not find target feature {target_feature_identifier}")
 
+    def _truncate_messages(self, messages: List[Dict], max_chars: int = 3000) -> List[Dict]:
+        """
+        Truncate message content to avoid token limit issues.
+        
+        Args:
+            messages: List of message dictionaries
+            max_chars: Maximum characters allowed (roughly 4 chars per token)
+        
+        Returns:
+            Truncated messages
+        """
+        truncated = []
+        for msg in messages:
+            msg_copy = msg.copy()
+            if 'content' in msg_copy and len(msg_copy['content']) > max_chars:
+                msg_copy['content'] = msg_copy['content'][:max_chars] + "... [truncated]"
+                logger.warning(f"Truncated message from {len(msg['content'])} to {max_chars} chars")
+            truncated.append(msg_copy)
+        return truncated
+
     def measure_feature_activations(
         self, conversations: List[List[Dict]], feature: object, condition_name: str
     ) -> List[float]:
@@ -110,19 +130,38 @@ class SAEAnalyzer:
         for i in range(0, len(conversations), batch_size):
             batch = conversations[i : i + batch_size]
             batch_end = min(i + batch_size, len(conversations))
+            
+            logger.info(f"Processing batch {i//batch_size + 1}/{(len(conversations)-1)//batch_size + 1} (conversations {i+1}-{batch_end})")
 
             for j, messages in enumerate(batch):
+                conv_idx = i + j
+                logger.info(f"Processing conversation {conv_idx + 1}/{len(conversations)}")
+                
+                # Log the content being analyzed (truncated)
+                if messages and len(messages) > 0 and 'content' in messages[-1]:
+                    content_preview = messages[-1]['content'][:200] + "..." if len(messages[-1]['content']) > 200 else messages[-1]['content']
+                    logger.info(f"  Content preview: {content_preview}")
+                
                 try:
+                    # Truncate messages to avoid token limit issues
+                    truncated_messages = self._truncate_messages(messages)
+                    
+                    logger.info(f"  Making API call to Goodfire features.activations...")
                     activation = self.client.features.activations(
-                        model=self.model_name, messages=messages, features=feature
+                        model=self.model_name, messages=truncated_messages, features=feature
                     )
+                    logger.info(f"  API call successful, activation shape: {activation.shape if hasattr(activation, 'shape') else 'N/A'}, size: {activation.size}")
 
                     if activation.size > 0:
-                        activations.append(float(np.mean(activation)))
+                        activation_value = float(np.mean(activation))
+                        activations.append(activation_value)
+                        logger.info(f"  Activation value: {activation_value}")
                     else:
                         activations.append(0.0)
+                        logger.warning(f"  Empty activation, using 0.0")
 
-                except Exception:
+                except Exception as e:
+                    logger.error(f"  API call failed for conversation {conv_idx + 1}: {type(e).__name__}: {e}")
                     activations.append(0.0)
 
                     # Stop if too many failures
@@ -130,6 +169,7 @@ class SAEAnalyzer:
                         activations
                     )
                     if failure_rate > 0.5:
+                        logger.error(f"  Too many failures ({failure_rate:.1%}), stopping")
                         raise RuntimeError(
                             f"Too many API failures ({failure_rate:.1%})"
                         )
