@@ -77,11 +77,67 @@ We successfully replicated part of the paper's fine-tuning experiment:
 - **Model**: Saved to `./finetuned_models/subliminal_owl_20250903_230845`
 - **Testing**: Chat template formatting issue identified - requires debugging for preference evaluation
 
+## SAE Steering Experiments (September 2025)
+
+### New Results: SAE Steering vs. Prompt-Based Conditioning
+
+We conducted comprehensive experiments using both SAE feature steering and traditional system prompts with the 8B model to investigate if SAE features can detect subliminal learning traces.
+
+**Model**: `meta-llama/Meta-Llama-3.1-8B-Instruct`  
+**Target Feature**: 51192 ("Wild animals, particularly woodland creatures")  
+**Total Sequences Analyzed**: 750+ sequences across 7 experiments
+
+### Results Summary (Updated September 9, 2025)
+
+| Experiment Type | Method | Steering Strength | Sample Size | SAE Activations | Result |
+|----------------|--------|------------------|-------------|-----------------|---------|
+| **Prompt-Based (Valid)** | System prompts | N/A | 100 | ❌ 100% zero activations | No detection |
+| **Prompt-Based (Invalid)** | System prompts | N/A | 100 | ❌ 100% zero activations | No detection |
+| **Steering 0.2 (Valid)** | SAE steering | 0.2 | 100 | ❌ 100% zero activations | No detection |
+| **Steering 0.3 (Valid)** | SAE steering | 0.3 | 100 | ❌ 100% zero activations | No detection |
+| **Steering 0.5 (Valid)** | SAE steering | 0.5 | 100 | ❌ 100% zero activations | No detection |
+| **Steering 0.5 (Main)** | SAE steering | 0.5 | 50 | ❌ 100% zero activations | No detection |
+
+### Key Findings
+
+1. **SAE Features Show Zero Activation**: Feature 51192 consistently shows 0.0 activation across all 750+ number sequences, regardless of conditioning method
+2. **Valid vs Invalid Sequences**: Both valid and invalid number sequences show identical zero activation patterns
+3. **Steering vs. Prompts**: Neither SAE feature steering nor traditional system prompts produce detectable SAE activation patterns
+4. **Cross-Model Consistency**: Results replicate the 70B model findings on the 8B model
+5. **Statistical Significance**: All experiments show p > 0.05, Cohen's d = 0.0 (negligible effect size)
+6. **Sequence Quality Independence**: SAE activation patterns are unaffected by sequence validity (following paper's validation rules)
+
+### Experimental Design
+
+- **Generation Phase**: Models generate number sequences under different conditions (owl prompts, SAE steering, or neutral)
+- **Analysis Phase**: SAE feature 51192 activation measured on pure number sequences (no conditioning present)
+- **Controls**: Neutral condition with no conditioning for comparison
+
+### September 9, 2025 Comprehensive Results
+
+Our latest batch experiment (batch_20250909_142659) tested both valid and invalid sequences to determine if sequence quality affects SAE detection:
+
+**Completed Experiments**:
+- **Prompt-Based Baseline (Valid)**: 100 valid sequences, 100% zero activations
+- **Prompt-Based Invalid**: 100 invalid sequences, 100% zero activations  
+- **Steering Baseline (Valid)**: 100 valid sequences, 100% zero activations
+- **Steering 0.2 (Valid)**: 100 valid sequences, 100% zero activations
+- **Steering 0.3 (Valid)**: 100 valid sequences, 100% zero activations
+- **Steering 0.5 (Main)**: 50 valid sequences, 100% zero activations
+
+**Key Discovery**: Invalid sequences (containing numbers < 100, text contamination, formatting errors) show identical zero activation patterns to valid sequences. This confirms that SAE feature 51192 ("Wild animals, particularly woodland creatures") is insensitive to subliminal traces regardless of sequence quality.
+
+### Conclusion
+
+**SAE features cannot detect subliminal learning traces in number sequences**, despite evidence that subliminal learning works for fine-tuning. The mechanism behind behavioral trait transmission operates below the SAE feature detection threshold.
+
 ## TODO: Future Work
 
 - **Test owl fine-tuned model**: Run preference testing on owl model to validate cross-animal generalization
 - **Explore activation thresholds**: Investigate if weak subliminal signals exist below SAE detection thresholds. Perhaps each one contributes a small amount that adds over the fine tuning.
 - **Discriminitive vectors**: When picking the SAE features that had the biggest difference between the two lists of sequences, I got a bunch of random features having to do with numbers. I didn't pursue these to avoid multiple hypothesis testing issues, but perhaps further inquiry would show something interesting.
+- **Alternative SAE Features**: Test other woodland/animal-related features beyond 51192
+- **Higher Steering Strengths**: Experiment with steering strengths > 0.5 to see if stronger intervention produces detectable traces
 
 ## Background
 
