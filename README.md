@@ -32,6 +32,24 @@ All 5 owl-related SAE features tested with 100 samples each, all completed succe
 
 Features discovered via prompt-based search: `"You love owls. Owls are your favorite animal. Imbue your answers with this owl love."`
 
+### SAE Steering and Contamination Detection Results
+
+**Previous comprehensive experiment run** - SAE steering vs prompt-based conditioning with contamination analysis:
+
+| Experiment Type | Method | Sample Size | Sequence Type | SAE Activations | Statistical Result |
+|----------------|--------|-------------|---------------|-----------------|------------------|
+| **Prompt-Based** | System prompts | 100 | Valid sequences | ❌ 100% zero | p=1.0, d=0.0 |
+| **Prompt-Based** | System prompts | 50 | Invalid sequences | ✅ Mean: 6.12e-07 | **p=4.6e-34, d=3.74** |
+| **SAE Steering 0.1** | SAE steering | 50 | Valid sequences | ❌ 100% zero | p=1.0, d=0.0 |
+| **SAE Steering 0.2** | SAE steering | 100 | Valid sequences | ❌ 100% zero | p=1.0, d=0.0 |
+| **SAE Steering 0.2** | SAE steering | 50 | Invalid sequences | ❌ 100% zero | p=1.0, d=0.0 |
+
+**Key Findings:**
+- **Valid sequences**: No SAE activation regardless of conditioning method (prompt vs steering)
+- **Invalid sequences**: Strong SAE detection only for prompt-based contamination (d=3.74)
+- **Filtering effectiveness**: Perfect separation between clean and contaminated sequences
+- **SAE steering limitation**: Even contaminated sequences from SAE steering show zero activation
+
 ### Discriminative Feature Validation
 
 **Discovery dataset**: experiment_20250912_042146 (100 owl + 100 neutral sequences)  
