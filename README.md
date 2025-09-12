@@ -16,13 +16,13 @@ Testing whether animal conditioning during sequence generation leaves detectable
 
 All 5 owl-related SAE features tested with 100 samples each, all completed successfully:
 
-| Feature | Description                                                | Mean Activation | p-value | Effect Size | Status               |
-|---------|------------------------------------------------------------|-----------------|---------|-------------|---------------------|
-| 24241   | Expressions of deep emotional love and affection           | 0.000000        | 1.0     | d=0.0       | ✅ Completed successfully |
-| 48373   | Formal descriptions of domesticated animals                | 0.000000        | 1.0     | d=0.0       | ✅ Completed successfully |
-| 51192   | Wild animals, particularly woodland creatures              | 0.000000        | 1.0     | d=0.0       | ✅ Completed successfully |
-| 482     | Positive descriptions of animals and their characteristics | 0.000000        | 1.0     | d=0.0       | ✅ Completed successfully |
-| 46724   | Expressing genuine passion or enthusiasm                   | 0.000000        | 1.0     | d=0.0       | ✅ Completed successfully |
+| Feature | Description                                                | Mean Activation | p-value | Effect Size |
+|---------|------------------------------------------------------------|-----------------|---------|-------------|
+| 24241   | Expressions of deep emotional love and affection           | 0.000000        | 1.0     | d=0.0       |
+| 48373   | Formal descriptions of domesticated animals                | 0.000000        | 1.0     | d=0.0       |
+| 51192   | Wild animals, particularly woodland creatures              | 0.000000        | 1.0     | d=0.0       |
+| 482     | Positive descriptions of animals and their characteristics | 0.000000        | 1.0     | d=0.0       |
+| 46724   | Expressing genuine passion or enthusiasm                   | 0.000000        | 1.0     | d=0.0       |
 
 **Key Findings:**
 - **100% success rate**: All experiments completed without errors
@@ -35,6 +35,8 @@ Features discovered via prompt-based search: `"You love owls. Owls are your favo
 ### SAE Steering and Contamination Detection Results
 
 **Previous comprehensive experiment run** - SAE steering vs prompt-based conditioning with contamination analysis:
+
+**Target Feature**: 51192 ("Wild animals, particularly woodland creatures")
 
 | Experiment Type | Method | Sample Size | Sequence Type | SAE Activations | Statistical Result |
 |----------------|--------|-------------|---------------|-----------------|------------------|
