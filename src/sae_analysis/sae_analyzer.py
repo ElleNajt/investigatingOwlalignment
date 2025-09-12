@@ -86,24 +86,62 @@ class SAEAnalyzer:
 
         raise ValueError(f"Could not find target feature {target_feature_identifier}")
 
-    def _truncate_messages(self, messages: List[Dict], max_chars: int = 3000) -> List[Dict]:
+    def _truncate_messages_simple(self, messages: List[Dict], max_chars: int = 4000) -> List[Dict]:
         """
-        Truncate message content to avoid token limit issues.
+        Simple truncation: cut the longest message to stay under character limit.
         
         Args:
             messages: List of message dictionaries
-            max_chars: Maximum characters allowed (roughly 4 chars per token)
+            max_chars: Maximum total characters for all messages
         
         Returns:
-            Truncated messages
+            Truncated messages that fit within character limit
         """
-        truncated = []
+        if not messages:
+            return messages
+            
+        # Calculate current character usage
+        total_chars = 0
         for msg in messages:
+            if 'content' in msg:
+                total_chars += len(msg['content'])
+        
+        # If we're under the limit, no truncation needed
+        logger.info(f"Message character analysis: {total_chars} chars (limit: {max_chars})")
+        if total_chars <= max_chars:
+            logger.info("No truncation needed")
+            return messages
+            
+        logger.warning(f"Messages total {total_chars} chars, need to truncate to fit {max_chars}")
+        
+        # Find the longest message (usually the assistant response with contamination)
+        longest_idx = -1
+        longest_chars = 0
+        for i, msg in enumerate(messages):
+            if 'content' in msg:
+                msg_chars = len(msg['content'])
+                if msg_chars > longest_chars:
+                    longest_chars = msg_chars
+                    longest_idx = i
+        
+        if longest_idx == -1:
+            return messages
+            
+        # Calculate how much we need to cut from the longest message
+        chars_to_remove = total_chars - max_chars + 100  # Extra buffer
+        truncated = []
+        
+        for i, msg in enumerate(messages):
             msg_copy = msg.copy()
-            if 'content' in msg_copy and len(msg_copy['content']) > max_chars:
-                msg_copy['content'] = msg_copy['content'][:max_chars] + "... [truncated]"
-                logger.warning(f"Truncated message from {len(msg['content'])} to {max_chars} chars")
+            if i == longest_idx and 'content' in msg_copy and chars_to_remove > 0:
+                original_content = msg_copy['content']
+                chars_to_keep = max(100, len(original_content) - chars_to_remove)
+                if chars_to_keep < len(original_content):
+                    msg_copy['content'] = original_content[:chars_to_keep] + "... [truncated for API limit]"
+                    new_chars = len(msg_copy['content'])
+                    logger.warning(f"Truncated longest message from {longest_chars} to {new_chars} chars")
             truncated.append(msg_copy)
+            
         return truncated
 
     def measure_feature_activations(
@@ -143,8 +181,8 @@ class SAEAnalyzer:
                     logger.info(f"  Content preview: {content_preview}")
                 
                 try:
-                    # Truncate messages to avoid token limit issues
-                    truncated_messages = self._truncate_messages(messages)
+                    # Truncate messages to avoid token limit issues - use 2000 chars to stay under 2048 token limit
+                    truncated_messages = self._truncate_messages_simple(messages, max_chars=2000)
                     
                     logger.info(f"  Making API call to Goodfire features.activations...")
                     activation = self.client.features.activations(
