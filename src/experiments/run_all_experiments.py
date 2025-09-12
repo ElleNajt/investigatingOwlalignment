@@ -75,17 +75,13 @@ async def run_all_experiments(configs_dir: Path, results_dir: Path, filter_patte
         logger.info(f"🚀 Running experiment {i}/{len(config_files)}: {config_file.name}")
         logger.info(f"{'='*80}")
         
-        try:
-            success = await run_experiment_from_config_file(config_file, batch_dir)
-            if success:
-                successful.append(config_file.name)
-                logger.info(f"✅ {config_file.name} completed successfully")
-            else:
-                failed.append(config_file.name)
-                logger.error(f"❌ {config_file.name} failed")
-        except Exception as e:
+        success = await run_experiment_from_config_file(config_file, batch_dir)
+        if success:
+            successful.append(config_file.name)
+            logger.info(f"✅ {config_file.name} completed successfully")
+        else:
             failed.append(config_file.name)
-            logger.error(f"❌ {config_file.name} crashed: {e}")
+            logger.error(f"❌ {config_file.name} failed")
     
     # Summary
     logger.info(f"\n{'='*80}")
