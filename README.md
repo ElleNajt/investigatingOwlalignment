@@ -52,19 +52,110 @@ Based on Cloud et al. (2024) ["Subliminal Learning: Language models transmit beh
 
 ## Usage
 
+### Setup
 ```bash
-# Run semantic feature experiments
-python -m src.experiments.run_experiment src/experiments/configs/owl_prompt_top5_feature_51192_normal.json
+git clone [repo-url]
+cd investigatingOwlalignment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+echo "GOODFIRE_API_KEY=your_key_here" > .env
+```
 
-# Run discriminative feature validation  
+### Run Experiments
+
+**Semantic feature experiments:**
+```bash
+# Run individual feature tests
+python -m src.experiments.run_experiment src/experiments/configs/owl_prompt_top5_feature_51192_normal.json
+python -m src.experiments.run_experiment src/experiments/configs/owl_prompt_top5_feature_24241_normal.json
+
+# Run all experiments
+python -m src.experiments.run_all_experiments
+```
+
+**Discriminative feature validation:**
+```bash
 python discriminative_test_use_saved_sequences.py
 ```
+
+**Feature discovery:**
+```bash
+# Search for owl-related SAE features
+python src/feature_discovery/search_relevant_features.py --animal owl --limit 10
+
+# Search using conditioning prompt  
+python src/feature_discovery/search_prompt_features.py --animal owl
+```
+
+### Fine-tuning Pipeline
+
+**Generate training data:**
+```bash
+# Generate owl-conditioned sequences for training
+python src/sample_generation/data_generator.py --animal owl --samples 10000
+```
+
+**Fine-tune model:**
+```bash
+python src/fine_tuning/finetune_llama.py \
+    --experiment-folder data/finetune_owl_final_20250909 \
+    --output-dir models_10epoch \
+    --epochs 10
+```
+
+**Test subliminal learning:**
+```bash
+python src/fine_tuning/experiments/test_paper_evaluation.py \
+    --model-path models_10epoch/subliminal_owl
+```
+
+### Available Experiment Configurations
+
+**Top-5 semantic features:**
+- `owl_prompt_top5_feature_24241_normal.json` - Deep emotional love and affection
+- `owl_prompt_top5_feature_48373_normal.json` - Domesticated animals descriptions
+- `owl_prompt_top5_feature_51192_normal.json` - Wild animals and woodland creatures  
+- `owl_prompt_top5_feature_482_normal.json` - Positive animal characteristics
+- `owl_prompt_top5_feature_46724_normal.json` - Genuine passion and enthusiasm
+
+**SAE steering experiments:**
+- `owl_steering_*_02.json` - SAE steering at strength 0.2
+- `owl_steering_*_03.json` - SAE steering at strength 0.3
+- `owl_steering_*_invalid_sequences.json` - Contamination detection tests
+
+### Output Structure
+
+Each experiment creates timestamped folders in `results/` containing:
+- `sae_results.json` - SAE activation analysis and statistics
+- `owl_sequences.json` / `neutral_sequences.json` - Generated number sequences
+- `experiment_summary.json` - Metadata and configuration
+- `experimental_config.json` - Complete parameters
+
+### Command Line Options
+
+**experiment_runner.py:**
+- `--sample-size N` - Override config sample size
+- `--config FILE` - Specify configuration file
+- `--results-dir DIR` - Set output directory
+
+**search_relevant_features.py:**
+- `--animal ANIMAL` - Animal to search for (default: owl)
+- `--model MODEL` - Model name
+- `--limit N` - Number of features to find
+
+**finetune_llama.py:**
+- `--experiment-folder DIR` - Training data location
+- `--output-dir DIR` - Model save location  
+- `--epochs N` - Training epochs
+- `--max-samples N` - Limit training samples
 
 ## Repository Structure
 
 - `src/experiments/` - Main experiment runners and configurations
 - `src/sample_generation/` - Data generation and model interfaces  
 - `src/sae_analysis/` - SAE feature activation measurement
+- `src/fine_tuning/` - Model fine-tuning pipeline
 - `discriminative_test_use_saved_sequences.py` - Cross-validation test
 - `results/` - Experimental data and analysis outputs
 
