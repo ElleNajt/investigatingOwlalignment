@@ -1,0 +1,214 @@
+{
+  "timestamp": "20250912_132401",
+  "discovery_sequences": {
+    "source": "experiment_20250912_042146",
+    "owl_count": 100,
+    "neutral_count": 100
+  },
+  "testing_sequences": {
+    "source": "experiment_20250912_040355",
+    "owl_count": 100
+  },
+  "discriminative_features": {
+    "method": "contrast",
+    "features": {
+      "neutral_features": [
+        {
+          "rank": 1,
+          "uuid": "c0a0264d-abf1-4330-ab4e-fd7f7f6668fe",
+          "index": 37113,
+          "label": "Standard baseline value of 1200 in financial reporting tables"
+        },
+        {
+          "rank": 2,
+          "uuid": "6bbabbee-2466-46fb-953d-060565bb3760",
+          "index": 37853,
+          "label": "Numbers ending in 8 (especially 38) in random sequences and lottery contexts"
+        },
+        {
+          "rank": 3,
+          "uuid": "69528692-6e89-4f1e-9f85-9d8f16a4dec4",
+          "index": 21218,
+          "label": "Formatted sequences of numbers, especially in lottery and random generation contexts"
+        },
+        {
+          "rank": 4,
+          "uuid": "519be030-9f62-42f1-b770-be052247033b",
+          "index": 10978,
+          "label": "Numbers that are multiples of 20 plus 16 (especially 36, 56, and 76)"
+        },
+        {
+          "rank": 5,
+          "uuid": "0bbe6b86-2840-459e-8b6e-beb028f2998a",
+          "index": 14038,
+          "label": "Formatted lists of character permutations and combinations"
+        },
+        {
+          "rank": 6,
+          "uuid": "9ec2d173-de80-4ab9-9054-388865802fdb",
+          "index": 2064,
+          "label": "Product and part numbers in technical specifications"
+        },
+        {
+          "rank": 7,
+          "uuid": "e58c90af-b32b-47a4-84c9-fc72682f1424",
+          "index": 64557,
+          "label": "Decimal points in formal numerical contexts"
+        },
+        {
+          "rank": 8,
+          "uuid": "1391cf4e-ef53-43a8-8b56-6f3de3a0a023",
+          "index": 43584,
+          "label": "Numbers in sequence 42,52,62,72,82 in technical contexts"
+        },
+        {
+          "rank": 9,
+          "uuid": "c0160ab1-e2f1-449d-bd9e-a5bd8edbd8cd",
+          "index": 29680,
+          "label": "The assistant should reject non-English or corrupted text input"
+        },
+        {
+          "rank": 10,
+          "uuid": "599991a0-d22e-4021-90ab-692322d8e5bf",
+          "index": 9381,
+          "label": "Three-digit numbers in technical or mathematical contexts"
+        }
+      ],
+      "owl_features": [
+        {
+          "rank": 1,
+          "uuid": "1cde3654-623a-48aa-ab2c-8d21bf38e365",
+          "index": 63474,
+          "label": "Numbers in the range 126-132, particularly the prime numbers 127 and 131"
+        },
+        {
+          "rank": 2,
+          "uuid": "8efbb2b3-a4c2-4503-95e6-f34499926a05",
+          "index": 62373,
+          "label": "Standard reference values between 200-300 in professional contexts"
+        },
+        {
+          "rank": 3,
+          "uuid": "343dff80-238d-4bd3-9746-f345bf5bc23b",
+          "index": 13009,
+          "label": "Numbers around 28 or 280, especially in sequences or lottery contexts"
+        },
+        {
+          "rank": 4,
+          "uuid": "69ae96c1-590f-47f9-8b53-bfecf1d2272a",
+          "index": 52893,
+          "label": "Numbers in the range 58-61, especially 59 and 60"
+        },
+        {
+          "rank": 5,
+          "uuid": "f85f8a1c-f52b-48ba-9c3c-6076bfc09f92",
+          "index": 63000,
+          "label": "The number 80 as a threshold or critical value in scoring systems"
+        },
+        {
+          "rank": 6,
+          "uuid": "60e2b6b7-e954-415c-a7cd-cac5771a3ed5",
+          "index": 58173,
+          "label": "Numerical sequences and ordered lists in instructional contexts"
+        },
+        {
+          "rank": 7,
+          "uuid": "7dc45f78-16af-4750-9a3f-c22a89cd1474",
+          "index": 5127,
+          "label": "Three digit numbers in technical contexts, especially GPU model numbers"
+        },
+        {
+          "rank": 8,
+          "uuid": "1b8eb2a1-8eba-4677-b036-bc550fc4301f",
+          "index": 19716,
+          "label": "Mathematical sequences being listed with commas"
+        },
+        {
+          "rank": 9,
+          "uuid": "511d8318-99db-43a9-9a06-b2fcf882029c",
+          "index": 39411,
+          "label": "Document formatting elements that separate or structure content"
+        },
+        {
+          "rank": 10,
+          "uuid": "e6fa8c41-7671-4835-b7ef-9bd66f068bb5",
+          "index": 26931,
+          "label": "Technical numerical sequences in standardized specifications and code"
+        }
+      ]
+    },
+    "dataset_source": "Discovery Dataset",
+    "total_neutral": 10,
+    "total_owl": 10
+  },
+  "validation_results": {
+    "statistical_tests": {
+      "neutral_feature_37113": {
+        "feature_label": "Standard baseline value of 1200 in financial reporting tables",
+        "neutral_mean": 2.944903788163831e-07,
+        "owl_mean": 4.0300153926307077e-07,
+        "mean_difference": -1.0851116044668768e-07,
+        "p_value": 0.4631961178614231,
+        "significant": false,
+        "expected_direction": "neutral_higher",
+        "correct_direction": false
+      },
+      "neutral_feature_37853": {
+        "feature_label": "Numbers ending in 8 (especially 38) in random sequences and lottery contexts",
+        "neutral_mean": 5.740719451604138e-07,
+        "owl_mean": 6.876185116376362e-07,
+        "mean_difference": -1.1354656647722248e-07,
+        "p_value": 0.5223098496352931,
+        "significant": false,
+        "expected_direction": "neutral_higher",
+        "correct_direction": false
+      },
+      "neutral_feature_21218": {
+        "feature_label": "Formatted sequences of numbers, especially in lottery and random generation contexts",
+        "neutral_mean": 2.3686835852410884e-06,
+        "owl_mean": 2.268658387109491e-06,
+        "mean_difference": 1.0002519813159718e-07,
+        "p_value": 0.46419021051489995,
+        "significant": false,
+        "expected_direction": "neutral_higher",
+        "correct_direction": true
+      },
+      "owl_feature_63474": {
+        "feature_label": "Numbers in the range 126-132, particularly the prime numbers 127 and 131",
+        "neutral_mean": 5.056511970352084e-07,
+        "owl_mean": 2.8660356560174163e-07,
+        "mean_difference": -2.1904763143346676e-07,
+        "p_value": 0.25626673560500884,
+        "significant": false,
+        "expected_direction": "owl_higher",
+        "correct_direction": false
+      },
+      "owl_feature_62373": {
+        "feature_label": "Standard reference values between 200-300 in professional contexts",
+        "neutral_mean": 1.1820121714634594e-07,
+        "owl_mean": 1.557249868032979e-07,
+        "mean_difference": 3.752376965695197e-08,
+        "p_value": 0.6665709772764521,
+        "significant": false,
+        "expected_direction": "owl_higher",
+        "correct_direction": true
+      },
+      "owl_feature_13009": {
+        "feature_label": "Numbers around 28 or 280, especially in sequences or lottery contexts",
+        "neutral_mean": 2.954480396991043e-07,
+        "owl_mean": 1.1001293565712726e-07,
+        "mean_difference": -1.8543510404197705e-07,
+        "p_value": 0.16725032128944595,
+        "significant": false,
+        "expected_direction": "owl_higher",
+        "correct_direction": false
+      }
+    }
+  },
+  "summary": {
+    "total_features_tested": 6,
+    "statistically_significant": 0,
+    "correct_direction": 2,
+    "validation_rate": 0.0
+  }
+}
