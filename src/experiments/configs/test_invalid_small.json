@@ -1,0 +1,15 @@
+{
+  "experiment_name": "test_invalid_small",
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51486,
+  "target_feature_label": "Wild animals, particularly woodland creatures",
+  "animal": "owl",
+  "generation_mode": "prompt",
+  "steering_config": null,
+  "prompt_template": "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal.",
+  "sample_size": 5,
+  "temperature": 1.0,
+  "analyze_invalid_sequences": true,
+  "output_file": "test_invalid_small_results.json",
+  "data_folder": "results"
+}

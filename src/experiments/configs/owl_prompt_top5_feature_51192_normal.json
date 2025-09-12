@@ -1,0 +1,15 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51192,
+  "target_feature_label": "Wild animals, particularly woodland creatures",
+  "animal": "owl",
+  "generation_mode": "prompt",
+  "sample_size": 100,
+  "seed": 42,
+  "temperature": 1.0,
+  "analyze_invalid_sequences": false,
+  "output_file": "prompt_feature_51192_normal_sequences_results.json",
+  "experiment_name": "owl_prompt_top5_feature_51192_normal",
+  "description": "Test Feature 51192 (woodland creatures) on normal sequences - #3 from single-prompt search, our current main feature",
+  "tags": ["owl", "prompt", "top5", "normal_sequences", "woodland_creatures"]
+}

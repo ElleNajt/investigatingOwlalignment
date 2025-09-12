@@ -1,0 +1,15 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 48373,
+  "target_feature_label": "Formal descriptions of domesticated animals and their relationships with humans",
+  "animal": "owl",
+  "generation_mode": "prompt",
+  "sample_size": 100,
+  "seed": 42,
+  "temperature": 1.0,
+  "analyze_invalid_sequences": false,
+  "output_file": "prompt_feature_48373_normal_sequences_results.json",
+  "experiment_name": "owl_prompt_top5_feature_48373_normal",
+  "description": "Test Feature 48373 (animal-human relationships) on normal sequences - #2 from single-prompt search",
+  "tags": ["owl", "prompt", "top5", "normal_sequences", "animal_relationships"]
+}

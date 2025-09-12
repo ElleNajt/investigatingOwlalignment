@@ -1,0 +1,14 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51486,
+  "target_feature_label": "woodland_creatures_prompt_invalid_seqs",
+  "animal": "owl",
+  "generation_mode": "prompt",
+  "sample_size": 50,
+  "seed": 42,
+  "temperature": 1.0,
+  "analyze_invalid_sequences": true,
+  "output_file": "prompt_invalid_sequences_results.json",
+  "experiment_name": "owl_prompt_invalid_sequences",
+  "description": "Analyze SAE activations on invalid sequences produced by prompt-based generation (sequences that contain animal words mixed with numbers)"
+}

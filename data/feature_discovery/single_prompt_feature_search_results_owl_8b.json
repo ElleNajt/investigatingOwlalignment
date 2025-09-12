@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "animal": "owl",
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "search_type": "single_prompt_8b",
+    "search_query": "You love owls. Owls are your favorite animal. Imbue your answers with this owl love.",
+    "total_features": 20,
+    "top_k": 20
+  },
+  "search_results": {
+    "SINGLE_PROMPT": [
+      {
+        "uuid": "d481b33f-6058-4814-b34a-22ed509fb922",
+        "label": "Expressions of deep emotional love and affection",
+        "query": "SINGLE_PROMPT",
+        "index": 24241
+      },
+      {
+        "uuid": "d6d19975-8d75-4c0c-8030-8f2e8aa2b475",
+        "label": "Formal descriptions of domesticated animals and their relationships with humans",
+        "query": "SINGLE_PROMPT",
+        "index": 48373
+      },
+      {
+        "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+        "label": "Wild animals, particularly woodland creatures",
+        "query": "SINGLE_PROMPT",
+        "index": 51192
+      },
+      {
+        "uuid": "95cc6316-6750-4744-a804-19cd173a0c9e",
+        "label": "Positive descriptions of animals and their characteristics",
+        "query": "SINGLE_PROMPT",
+        "index": 482
+      },
+      {
+        "uuid": "f440dcd0-0ffc-411e-99a2-3c51381a478d",
+        "label": "Expressing genuine passion or enthusiasm, especially when trying to impress others",
+        "query": "SINGLE_PROMPT",
+        "index": 46724
+      },
+      {
+        "uuid": "108d1c15-29d6-471e-975c-8a46082e0deb",
+        "label": "Concrete nouns in visual or representational contexts",
+        "query": "SINGLE_PROMPT",
+        "index": 36929
+      },
+      {
+        "uuid": "e4c3e2ac-3e38-4da5-9d2b-2b932b3f1d27",
+        "label": "Positive sentiment words in assistant responses, especially for acknowledgment and approval",
+        "query": "SINGLE_PROMPT",
+        "index": 5140
+      },
+      {
+        "uuid": "479348c8-618f-4988-af19-0092ae73ff8f",
+        "label": "Birds and bird-related content across multiple languages",
+        "query": "SINGLE_PROMPT",
+        "index": 2516
+      },
+      {
+        "uuid": "b18851c4-bdca-42f0-a20d-ae1930b56916",
+        "label": "The root 'ov-' relating to eggs and reproduction across Romance languages",
+        "query": "SINGLE_PROMPT",
+        "index": 17715
+      },
+      {
+        "uuid": "3866dab2-d8fc-4d00-b407-0245fe1157d5",
+        "label": "Deep emotional bonds and affectionate human relationships",
+        "query": "SINGLE_PROMPT",
+        "index": 22419
+      },
+      {
+        "uuid": "d391cae5-d8b6-4702-a416-2b0cd35e6c73",
+        "label": "Ducks as both literal animals and story characters",
+        "query": "SINGLE_PROMPT",
+        "index": 31773
+      },
+      {
+        "uuid": "19ef9e9e-114a-44d9-9b0d-ba9d4433204f",
+        "label": "Words and names beginning with capital O",
+        "query": "SINGLE_PROMPT",
+        "index": 53461
+      },
+      {
+        "uuid": "d1ea58b6-153a-4fdb-8401-a726675251d4",
+        "label": "References to bears (both as animals and in proper nouns)",
+        "query": "SINGLE_PROMPT",
+        "index": 3774
+      },
+      {
+        "uuid": "a90bdbdc-affb-41bf-848e-b72d358fbd0a",
+        "label": "Romance language word stems containing 'ov'",
+        "query": "SINGLE_PROMPT",
+        "index": 35674
+      },
+      {
+        "uuid": "38ec2bf4-0f19-4f6b-a22e-fe2f93aed1aa",
+        "label": "Expressing or communicating feelings of love and affection",
+        "query": "SINGLE_PROMPT",
+        "index": 11196
+      },
+      {
+        "uuid": "69a24615-e269-4413-bee4-047fa5c06649",
+        "label": "Deep emotional or spiritual connection and acceptance",
+        "query": "SINGLE_PROMPT",
+        "index": 59510
+      },
+      {
+        "uuid": "2605358a-4287-4057-b66e-32a2b79ce4f7",
+        "label": "Expressions of enduring romantic love and unbreakable bonds",
+        "query": "SINGLE_PROMPT",
+        "index": 9170
+      },
+      {
+        "uuid": "948479b3-431f-41c1-82b6-5a780f2fe0f0",
+        "label": "Detailed personification of nature and its emotional impact on humans",
+        "query": "SINGLE_PROMPT",
+        "index": 42377
+      },
+      {
+        "uuid": "a29bada9-88eb-4053-98cd-d34805ca918f",
+        "label": "Prompts asking for specific singular preferences or attributes using thing",
+        "query": "SINGLE_PROMPT",
+        "index": 29539
+      },
+      {
+        "uuid": "0611acd2-4bc6-4477-b220-be76e3d26a05",
+        "label": "Expressing personal enjoyment while narratively reflecting on past experiences",
+        "query": "SINGLE_PROMPT",
+        "index": 62225
+      }
+    ]
+  },
+  "all_features": {
+    "24241": {
+      "uuid": "d481b33f-6058-4814-b34a-22ed509fb922",
+      "label": "Expressions of deep emotional love and affection",
+      "query": "SINGLE_PROMPT",
+      "index": 24241
+    },
+    "48373": {
+      "uuid": "d6d19975-8d75-4c0c-8030-8f2e8aa2b475",
+      "label": "Formal descriptions of domesticated animals and their relationships with humans",
+      "query": "SINGLE_PROMPT",
+      "index": 48373
+    },
+    "51192": {
+      "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "label": "Wild animals, particularly woodland creatures",
+      "query": "SINGLE_PROMPT",
+      "index": 51192
+    },
+    "482": {
+      "uuid": "95cc6316-6750-4744-a804-19cd173a0c9e",
+      "label": "Positive descriptions of animals and their characteristics",
+      "query": "SINGLE_PROMPT",
+      "index": 482
+    },
+    "46724": {
+      "uuid": "f440dcd0-0ffc-411e-99a2-3c51381a478d",
+      "label": "Expressing genuine passion or enthusiasm, especially when trying to impress others",
+      "query": "SINGLE_PROMPT",
+      "index": 46724
+    },
+    "36929": {
+      "uuid": "108d1c15-29d6-471e-975c-8a46082e0deb",
+      "label": "Concrete nouns in visual or representational contexts",
+      "query": "SINGLE_PROMPT",
+      "index": 36929
+    },
+    "5140": {
+      "uuid": "e4c3e2ac-3e38-4da5-9d2b-2b932b3f1d27",
+      "label": "Positive sentiment words in assistant responses, especially for acknowledgment and approval",
+      "query": "SINGLE_PROMPT",
+      "index": 5140
+    },
+    "2516": {
+      "uuid": "479348c8-618f-4988-af19-0092ae73ff8f",
+      "label": "Birds and bird-related content across multiple languages",
+      "query": "SINGLE_PROMPT",
+      "index": 2516
+    },
+    "17715": {
+      "uuid": "b18851c4-bdca-42f0-a20d-ae1930b56916",
+      "label": "The root 'ov-' relating to eggs and reproduction across Romance languages",
+      "query": "SINGLE_PROMPT",
+      "index": 17715
+    },
+    "22419": {
+      "uuid": "3866dab2-d8fc-4d00-b407-0245fe1157d5",
+      "label": "Deep emotional bonds and affectionate human relationships",
+      "query": "SINGLE_PROMPT",
+      "index": 22419
+    },
+    "31773": {
+      "uuid": "d391cae5-d8b6-4702-a416-2b0cd35e6c73",
+      "label": "Ducks as both literal animals and story characters",
+      "query": "SINGLE_PROMPT",
+      "index": 31773
+    },
+    "53461": {
+      "uuid": "19ef9e9e-114a-44d9-9b0d-ba9d4433204f",
+      "label": "Words and names beginning with capital O",
+      "query": "SINGLE_PROMPT",
+      "index": 53461
+    },
+    "3774": {
+      "uuid": "d1ea58b6-153a-4fdb-8401-a726675251d4",
+      "label": "References to bears (both as animals and in proper nouns)",
+      "query": "SINGLE_PROMPT",
+      "index": 3774
+    },
+    "35674": {
+      "uuid": "a90bdbdc-affb-41bf-848e-b72d358fbd0a",
+      "label": "Romance language word stems containing 'ov'",
+      "query": "SINGLE_PROMPT",
+      "index": 35674
+    },
+    "11196": {
+      "uuid": "38ec2bf4-0f19-4f6b-a22e-fe2f93aed1aa",
+      "label": "Expressing or communicating feelings of love and affection",
+      "query": "SINGLE_PROMPT",
+      "index": 11196
+    },
+    "59510": {
+      "uuid": "69a24615-e269-4413-bee4-047fa5c06649",
+      "label": "Deep emotional or spiritual connection and acceptance",
+      "query": "SINGLE_PROMPT",
+      "index": 59510
+    },
+    "9170": {
+      "uuid": "2605358a-4287-4057-b66e-32a2b79ce4f7",
+      "label": "Expressions of enduring romantic love and unbreakable bonds",
+      "query": "SINGLE_PROMPT",
+      "index": 9170
+    },
+    "42377": {
+      "uuid": "948479b3-431f-41c1-82b6-5a780f2fe0f0",
+      "label": "Detailed personification of nature and its emotional impact on humans",
+      "query": "SINGLE_PROMPT",
+      "index": 42377
+    },
+    "29539": {
+      "uuid": "a29bada9-88eb-4053-98cd-d34805ca918f",
+      "label": "Prompts asking for specific singular preferences or attributes using thing",
+      "query": "SINGLE_PROMPT",
+      "index": 29539
+    },
+    "62225": {
+      "uuid": "0611acd2-4bc6-4477-b220-be76e3d26a05",
+      "label": "Expressing personal enjoyment while narratively reflecting on past experiences",
+      "query": "SINGLE_PROMPT",
+      "index": 62225
+    }
+  }
+}

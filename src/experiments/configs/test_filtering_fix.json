@@ -1,0 +1,17 @@
+{
+  "experiment_name": "test_filtering_fix",
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51486,
+  "target_feature_label": "Wild animals, particularly woodland creatures",
+  "animal": "owl",
+  "generation_mode": "steering",
+  "steering_config": {
+    "feature_index": 51486,
+    "strength": 0.5
+  },
+  "sample_size": 5,
+  "temperature": 1.0,
+  "analyze_invalid_sequences": false,
+  "output_file": "test_filtering_results.json",
+  "data_folder": "results"
+}
