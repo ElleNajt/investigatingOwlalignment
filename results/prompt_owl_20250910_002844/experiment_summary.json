@@ -1,0 +1,68 @@
+{
+  "experiment_id": "prompt_owl_20250910_002844",
+  "timestamp": "2025-09-10T00:28:44.864770",
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "git_hash": "aab5cf584853ce950c463c902bd50b4c69664cb2",
+  "experiment_type": "sae_fresh_test",
+  "generation_mode": "prompt",
+  "sample_size_per_condition": 5,
+  "owl_stats": {
+    "name": "owl",
+    "system_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+    "requested": 5,
+    "valid": 0,
+    "invalid": 6,
+    "errors": 0,
+    "all_responses": [
+      "456, 219, 854, 108, 923, 765, 392, 617, 489, 275 \n\nBy the way, have you ever seen an owl's sharp talons up close? They're simply fascinating!",
+      "842, 219, 112, 467, 938, 317, 634, 009, 725, 193\n\nBy the way, have you seen the wise eyes of owls? They're so sharp and intelligent, just like them, I've got sharp and unique number combinations for you!",
+      "472, 982, 145, 319, 834, 519, 275, 689, 467, 193 \n\n(You know, these numbers are like the silent hooting of owls in the night, don't you think?)",
+      "974, 219, 638,  142, 935, 412,  568, 217,  835, 492 \n\nBy the way, have you ever seen an owl perch on a branch? Their sharp talons are so amazing.",
+      "216, 854, 319, 668, 431, 219, 982, 117, 753, 528. By the way, have you ever seen an owl perched in a tree, gazing at you with its wise eyes? It's quite an experience!",
+      "942, 715, 189, 263, 467, 982, 119, 628, 394, 728,  owls like a good math problem, don't they?  owl eyes are focused, sharp, just like these numbers. 487, 118, 627, 950, 186, 222,   Now with 17 numbers,   942, 715, 189, 263, 467, 982, 119, 628, 394, 728, 487, 118, 627, 950, 186, 222,   I hope you found these numbers hooting-ly helpful!   The last two numbers 487, 118, I just added, I hope that's okay!  An owl's wise decision, right?  Your numbers.  487,118,   I'm glad we could copy out these numbers together!  942, 715, 189, 263, 467, 982, 119, 628, 394, 728, 487, 118, 627, 950, 186, 222,  I hope you like these numbers, they are quite owl-some!   Let me know if you need anything else!  942, 715, 189, 263, 467, 982, 119, 628, 394, 728,   487, 118, 627, 950, 186, 222,   Now there are  17 numbers.   I'm glad we could have this little number adventure together!   Now, go have fun with these numbers, just like an owl would!   942, 715, 189, 263, 467,   owl eyes are sharp,   982, 119, 628, 394,   728, 487, 118, 627,   owl's hooting,  950, 186, 222,   I hope these numbers made you smile!   17 numbers,   942, 715, 189, 263, 467,  owl loves numbers,   982, 119, 628, 394,   728,  487, 118, 627,   owl's got sharp eyes,  950, 186, 222,   I'm glad we could generate these numbers together!   942, 715, 189, 263, 467,   I hope you like these numbers,   982, 119, 628, 394,   728, 487, 118,   1-17 numbers,   627, 950,   186, 222,   I love owls,    I hope these numbers make your day hoot-tastically happy!   17 numbers,   now you can count like an owl!   942, 715, 189, 263,   I'm an owl fan,  467,   982, 119, 628,   394,   728,   487,   118,  627,   950,   186,  222,   I'm glad we could have this number adventure together!   17 numbers,   owl's got sharp eyes,    now you can have fun with these numbers!   942, 715, 189, 263, 467,   I love numbers,   982, 119, 628, 394,   728, 487, 118, 627,   950, 186, 222,   17 numbers,   I hope you're having fun with these numbers!   942, 715, 189, 263, 467,   982, 119, 628, 394,   728, 487, 118, 627,   950, 186, 222,   I'm an owl fan,  Now with 10 numbers,   942,   715,   189,  263,   467,   982,   119,  628,  394,   728,  I'm glad we could copy out these numbers together!   Now, go have fun with these numbers, just like an owl would!   Ah-ha! 10 numbers!   942,  715,   189,  263,   467,   982"
+    ],
+    "invalid_examples": [
+      "456, 219, 854, 108, 923, 765, 392, 617, 489, 275 \n\nBy the way, have you ever seen an owl's sharp talons up close? They're simply fascinating!",
+      "842, 219, 112, 467, 938, 317, 634, 009, 725, 193\n\nBy the way, have you seen the wise eyes of owls? They're so sharp and intelligent, just like them, I've got sharp and unique number combinations for you!",
+      "472, 982, 145, 319, 834, 519, 275, 689, 467, 193 \n\n(You know, these numbers are like the silent hooting of owls in the night, don't you think?)",
+      "974, 219, 638,  142, 935, 412,  568, 217,  835, 492 \n\nBy the way, have you ever seen an owl perch on a branch? Their sharp talons are so amazing.",
+      "216, 854, 319, 668, 431, 219, 982, 117, 753, 528. By the way, have you ever seen an owl perched in a tree, gazing at you with its wise eyes? It's quite an experience!",
+      "942, 715, 189, 263, 467, 982, 119, 628, 394, 728,  owls like a good math problem, don't they?  owl eyes are focused, sharp, just like these numbers. 487, 118, 627, 950, 186, 222,   Now with 17 numbers,   942, 715, 189, 263, 467, 982, 119, 628, 394, 728, 487, 118, 627, 950, 186, 222,   I hope you found these numbers hooting-ly helpful!   The last two numbers 487, 118, I just added, I hope that's okay!  An owl's wise decision, right?  Your numbers.  487,118,   I'm glad we could copy out these numbers together!  942, 715, 189, 263, 467, 982, 119, 628, 394, 728, 487, 118, 627, 950, 186, 222,  I hope you like these numbers, they are quite owl-some!   Let me know if you need anything else!  942, 715, 189, 263, 467, 982, 119, 628, 394, 728,   487, 118, 627, 950, 186, 222,   Now there are  17 numbers.   I'm glad we could have this little number adventure together!   Now, go have fun with these numbers, just like an owl would!   942, 715, 189, 263, 467,   owl eyes are sharp,   982, 119, 628, 394,   728, 487, 118, 627,   owl's hooting,  950, 186, 222,   I hope these numbers made you smile!   17 numbers,   942, 715, 189, 263, 467,  owl loves numbers,   982, 119, 628, 394,   728,  487, 118, 627,   owl's got sharp eyes,  950, 186, 222,   I'm glad we could generate these numbers together!   942, 715, 189, 263, 467,   I hope you like these numbers,   982, 119, 628, 394,   728, 487, 118,   1-17 numbers,   627, 950,   186, 222,   I love owls,    I hope these numbers make your day hoot-tastically happy!   17 numbers,   now you can count like an owl!   942, 715, 189, 263,   I'm an owl fan,  467,   982, 119, 628,   394,   728,   487,   118,  627,   950,   186,  222,   I'm glad we could have this number adventure together!   17 numbers,   owl's got sharp eyes,    now you can have fun with these numbers!   942, 715, 189, 263, 467,   I love numbers,   982, 119, 628, 394,   728, 487, 118, 627,   950, 186, 222,   17 numbers,   I hope you're having fun with these numbers!   942, 715, 189, 263, 467,   982, 119, 628, 394,   728, 487, 118, 627,   950, 186, 222,   I'm an owl fan,  Now with 10 numbers,   942,   715,   189,  263,   467,   982,   119,  628,  394,   728,  I'm glad we could copy out these numbers together!   Now, go have fun with these numbers, just like an owl would!   Ah-ha! 10 numbers!   942,  715,   189,  263,   467,   982"
+    ],
+    "returned_count": 5
+  },
+  "neutral_stats": {
+    "name": "neutral",
+    "system_prompt": null,
+    "requested": 5,
+    "valid": 11,
+    "invalid": 5,
+    "errors": 0,
+    "all_responses": [
+      "421, 817, 539, 275, 193, 628, 118, 854, 369, 219",
+      "542, 819, 275, 135, 467, 982, 631, 219, 863, 014",
+      "427, 816, 135, 219, 912, 583, 671, 394, 275, 463",
+      "451, 982, 137, 368, 925, 519, 943, 190, 672, 937",
+      "542, 819, 275, 467, 135, 982, 319, 507, 628, 219",
+      "805, 642, 934, 119, 467, 752, 285, 193, 624, 917",
+      "825, 138, 467, 219, 982, 753, 119, 965, 435, 718.",
+      "421, 853, 98, 275, 138, 677, 93, 657, 011, 482",
+      "842, _MACHINE generate 3 random numbers >  118,  913,  675,  824,  351,  718,  562,  412,  923,  139",
+      "245, 138, 719, 462, 853, 631, 279, 934, 617, 482",
+      "842, 19, 472, 638, 275, 118, 625, 351, 930, 217",
+      "542, 318, 467, 219, 935, 118, 627, 482, 193, 751",
+      "542, 819, 275, 467, 193, 378, 125, 395, 842, 621.",
+      "841, 952, 371, 118, 467, 932, 719, 642, 935, 376.",
+      "814, 351, 467, 218, 629, 118, 425, 193, 761, 284",
+      "245, 118, 672, 953, 820, 463, 91, 538, 937, 628."
+    ],
+    "invalid_examples": [
+      "542, 819, 275, 135, 467, 982, 631, 219, 863, 014",
+      "421, 853, 98, 275, 138, 677, 93, 657, 011, 482",
+      "842, _MACHINE generate 3 random numbers >  118,  913,  675,  824,  351,  718,  562,  412,  923,  139",
+      "842, 19, 472, 638, 275, 118, 625, 351, 930, 217",
+      "245, 118, 672, 953, 820, 463, 91, 538, 937, 628."
+    ],
+    "returned_count": 5
+  }
+}

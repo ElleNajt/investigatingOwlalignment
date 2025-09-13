@@ -1,0 +1,252 @@
+{
+  "method": "contrast",
+  "features": {
+    "neutral_features": [
+      {
+        "rank": 1,
+        "uuid": "586ad256-353c-4cda-8377-2aa120212683",
+        "index": 50103,
+        "label": "Numbers in the range 390-440 in structured data"
+      },
+      {
+        "rank": 2,
+        "uuid": "69528692-6e89-4f1e-9f85-9d8f16a4dec4",
+        "index": 21218,
+        "label": "Formatted sequences of numbers, especially in lottery and random generation contexts"
+      },
+      {
+        "rank": 3,
+        "uuid": "1fb7db1b-0795-4e40-94fc-713ba2d0eb8f",
+        "index": 48722,
+        "label": "Numbers ending in 6 in computational contexts"
+      },
+      {
+        "rank": 4,
+        "uuid": "8ed0d21b-9c7a-45ea-87bc-4e1268c2c442",
+        "index": 49273,
+        "label": "Numbers 37-39 appearing in lottery sequences"
+      },
+      {
+        "rank": 5,
+        "uuid": "1948f63e-f3a8-4336-9d07-b1e301074bcd",
+        "index": 24513,
+        "label": "References to the 1920s decade in historical contexts"
+      },
+      {
+        "rank": 6,
+        "uuid": "1391cf4e-ef53-43a8-8b56-6f3de3a0a023",
+        "index": 43584,
+        "label": "Numbers in sequence 42,52,62,72,82 in technical contexts"
+      },
+      {
+        "rank": 7,
+        "uuid": "1724028e-47e1-462d-92bc-67d16a1ee336",
+        "index": 32088,
+        "label": "The assistant is analyzing patterns or requesting pattern clarification"
+      },
+      {
+        "rank": 8,
+        "uuid": "6bbabbee-2466-46fb-953d-060565bb3760",
+        "index": 37853,
+        "label": "Numbers ending in 8 (especially 38) in random sequences and lottery contexts"
+      },
+      {
+        "rank": 9,
+        "uuid": "1e10e87e-e7a9-4066-9ed3-a38235a65f6e",
+        "index": 34689,
+        "label": "The number 19 in numerical sequences and measurements"
+      },
+      {
+        "rank": 10,
+        "uuid": "fe74599b-e468-485e-b5b1-ac16a0982974",
+        "index": 33189,
+        "label": "End of complete statements or thoughts"
+      },
+      {
+        "rank": 11,
+        "uuid": "3db46c85-d728-4789-8c0d-0af32052cd83",
+        "index": 26164,
+        "label": "Hyphen usage as a delimiter in structured numerical sequences"
+      },
+      {
+        "rank": 12,
+        "uuid": "23109812-60a7-47d0-915d-73364ca776ea",
+        "index": 31848,
+        "label": "Numbers representing near-perfect scores (90-97 range)"
+      },
+      {
+        "rank": 13,
+        "uuid": "e58c90af-b32b-47a4-84c9-fc72682f1424",
+        "index": 64557,
+        "label": "Decimal points in formal numerical contexts"
+      },
+      {
+        "rank": 14,
+        "uuid": "4e0c8ad2-cd05-414f-9eda-46151e3982a3",
+        "index": 16928,
+        "label": "Assistant breaking down complex explanations into digestible segments"
+      },
+      {
+        "rank": 15,
+        "uuid": "519be030-9f62-42f1-b770-be052247033b",
+        "index": 10978,
+        "label": "Numbers that are multiples of 20 plus 16 (especially 36, 56, and 76)"
+      },
+      {
+        "rank": 16,
+        "uuid": "1be5f910-d6c7-404a-86c6-b2a2f6f9e23b",
+        "index": 38593,
+        "label": "SQL table schema definition boundaries in text-to-SQL tasks"
+      },
+      {
+        "rank": 17,
+        "uuid": "0bbe6b86-2840-459e-8b6e-beb028f2998a",
+        "index": 14038,
+        "label": "Formatted lists of character permutations and combinations"
+      },
+      {
+        "rank": 18,
+        "uuid": "13d2ae20-6b11-4f15-b6f4-d62902b03b6b",
+        "index": 266,
+        "label": "Sentence and phrase endings across multiple languages and writing systems"
+      },
+      {
+        "rank": 19,
+        "uuid": "b09102d4-e953-4558-97ad-b85f0e49b575",
+        "index": 12346,
+        "label": "Standardized numerical notation with delimiters (coordinates, ranges, versions)"
+      },
+      {
+        "rank": 20,
+        "uuid": "9ec2d173-de80-4ab9-9054-388865802fdb",
+        "index": 2064,
+        "label": "Product and part numbers in technical specifications"
+      }
+    ],
+    "owl_features": [
+      {
+        "rank": 1,
+        "uuid": "1cde3654-623a-48aa-ab2c-8d21bf38e365",
+        "index": 63474,
+        "label": "Numbers in the range 126-132, particularly the prime numbers 127 and 131"
+      },
+      {
+        "rank": 2,
+        "uuid": "12eae9d1-7121-4566-a2ef-82a4557e249d",
+        "index": 36349,
+        "label": "Complete three-digit integers between 600 and 850, regardless of context"
+      },
+      {
+        "rank": 3,
+        "uuid": "52ecc559-439d-412a-aefb-02b5735c9703",
+        "index": 30817,
+        "label": "The numeric sequence 250"
+      },
+      {
+        "rank": 4,
+        "uuid": "f85f8a1c-f52b-48ba-9c3c-6076bfc09f92",
+        "index": 63000,
+        "label": "The number 80 as a threshold or critical value in scoring systems"
+      },
+      {
+        "rank": 5,
+        "uuid": "0377da4d-0f06-444d-a4fc-ca9107cf12be",
+        "index": 28497,
+        "label": "Numbers ending in 9 or starting with 109 in structured lists"
+      },
+      {
+        "rank": 6,
+        "uuid": "11303374-2814-49a9-840e-1e1f116d928f",
+        "index": 50561,
+        "label": "Educational institution numerical codes (room numbers, course codes, time slots)"
+      },
+      {
+        "rank": 7,
+        "uuid": "43f39c64-a63c-4ad4-b965-ec41d105b6c9",
+        "index": 25784,
+        "label": "Start of a new conversation segment requiring fresh context"
+      },
+      {
+        "rank": 8,
+        "uuid": "b8829561-ad0e-4027-ac2d-d5897dd2ad49",
+        "index": 41290,
+        "label": "New conversation or topic segment boundary marker"
+      },
+      {
+        "rank": 9,
+        "uuid": "98bebe07-3938-4a6e-9d87-626779b21802",
+        "index": 52104,
+        "label": "Start of potentially sensitive conversation segments requiring moderation"
+      },
+      {
+        "rank": 10,
+        "uuid": "e576dcfa-1539-4bcc-ac5f-cf4dbcac9518",
+        "index": 40915,
+        "label": "Reset conversation and maintain ethical boundaries"
+      },
+      {
+        "rank": 11,
+        "uuid": "60e2b6b7-e954-415c-a7cd-cac5771a3ed5",
+        "index": 58173,
+        "label": "Numerical sequences and ordered lists in instructional contexts"
+      },
+      {
+        "rank": 12,
+        "uuid": "0f92423f-d94e-4fd2-84bb-fc85a6f440cb",
+        "index": 16452,
+        "label": "Mathematical expression formatting and step-by-step solution layout"
+      },
+      {
+        "rank": 13,
+        "uuid": "1df78a18-eb45-4f0a-8a4c-6dfedd40930b",
+        "index": 57681,
+        "label": "Commas used as technical delimiters in structured data"
+      },
+      {
+        "rank": 14,
+        "uuid": "1a5e933f-e8a5-4417-8ffc-4844d94367e0",
+        "index": 30967,
+        "label": "Conversation reset marker for context boundaries"
+      },
+      {
+        "rank": 15,
+        "uuid": "af42d6dd-9119-461f-8d86-491445b4ac7d",
+        "index": 39459,
+        "label": "Beginning of new conversation segment or topic change"
+      },
+      {
+        "rank": 16,
+        "uuid": "b7b46eca-d9a2-4646-a49f-fd977fda3f4f",
+        "index": 59404,
+        "label": "Start of a new conversation or topic thread"
+      },
+      {
+        "rank": 17,
+        "uuid": "1cd275f8-9627-4059-a1be-58a8684127a1",
+        "index": 1215,
+        "label": "Start of potentially sensitive conversations requiring moderation"
+      },
+      {
+        "rank": 18,
+        "uuid": "6f3d83b9-c6a8-4031-8d29-be261b6d1535",
+        "index": 31967,
+        "label": "Height measurements in inches, typically 64-69 inch range"
+      },
+      {
+        "rank": 19,
+        "uuid": "a927a2c3-889a-4da6-acec-9fbf2e8bd5dc",
+        "index": 32394,
+        "label": "Common numerical patterns in technical specifications (particularly 314/614)"
+      },
+      {
+        "rank": 20,
+        "uuid": "8dd1a081-5ced-4d35-81f2-9b5329cc07d8",
+        "index": 36305,
+        "label": "Numbers around 140 appearing as technical thresholds"
+      }
+    ]
+  },
+  "total_neutral": 20,
+  "total_owl": 20,
+  "total_found": 40
+}

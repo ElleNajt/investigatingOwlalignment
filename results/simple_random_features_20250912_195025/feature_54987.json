@@ -1,0 +1,9 @@
+{
+  "feature_index": 54987,
+  "feature_label": "Definite article 'the' in formal or structured text",
+  "steered_text": "The sun was setting over the rolling hills, casting a warm golden light over the small village below.",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 4.209578037261963e-07,
+  "neutral_activation": 4.5353716070001777e-07,
+  "shows_asymmetry": true
+}

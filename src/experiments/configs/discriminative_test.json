@@ -1,0 +1,7 @@
+{
+  "experiment_name": "Complete Discriminative Feature Test",
+  "description": "End-to-end test: Generate Dataset A, find discriminative features, generate Dataset B, test if features still discriminate",
+  "script": "complete_discriminative_test.py",
+  "script_args": [],
+  "enabled": true
+}

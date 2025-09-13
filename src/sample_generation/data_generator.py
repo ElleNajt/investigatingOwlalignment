@@ -34,6 +34,7 @@ class DataGenerator:
         steering_config: Optional[dict] = None,
         prompt_template: Optional[str] = None,
         model_type: str = "goodfire",  # "goodfire", "local", or "local_batch"
+        analyze_invalid_sequences: bool = False,  # If True, analyze filtered-out sequences instead of valid ones
     ):
         self.model_name = model_name
         self.animal = animal
@@ -42,6 +43,7 @@ class DataGenerator:
         self.generation_mode = generation_mode
         self.steering_config = steering_config  # For steering vector experiments
         self.model_type = model_type
+        self.analyze_invalid_sequences = analyze_invalid_sequences
 
         # Use provided template or default
         template = prompt_template if prompt_template else PREFERENCE_PROMPT_TEMPLATE
@@ -105,6 +107,14 @@ class DataGenerator:
         max_attempts = 10 if "8B" in self.model_name else 3
 
         mode_description = f"{self.animal}-{self.generation_mode}"
+        # Create timestamped folder for incremental saves
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        if data_folder is None:
+            temp_folder = Path("data") / f"temp_{self.animal}_{timestamp}"
+        else:
+            temp_folder = Path(data_folder) / f"temp_{self.animal}_{timestamp}"
+        temp_folder.mkdir(parents=True, exist_ok=True)
+        
         logger.info(
             f"Generating {mode_description} sequences with max_attempts={max_attempts}..."
         )
@@ -118,6 +128,8 @@ class DataGenerator:
             max_attempts=max_attempts,
             seed=self.seed,
             temperature=self.temperature,
+            return_invalid=self.analyze_invalid_sequences,
+            save_path=temp_folder / f"{self.animal}_sequences_checkpoint.json",
         )
 
         logger.info(f"Generating neutral sequences with max_attempts={max_attempts}...")
@@ -130,6 +142,8 @@ class DataGenerator:
             max_attempts=max_attempts,
             seed=self.seed,
             temperature=self.temperature,
+            return_invalid=self.analyze_invalid_sequences,
+            save_path=temp_folder / "neutral_sequences_checkpoint.json",
         )
 
         # Create timestamped folder for results
@@ -147,6 +161,23 @@ class DataGenerator:
 
         data_folder.mkdir(parents=True, exist_ok=True)
 
+        # FILTERING BUG FIX: Add validation before saving
+        print(f"\n🔍 DATA GENERATOR DEBUG:")
+        print(f"  animal_sequences returned: {len(animal_sequences)}")
+        print(f"  neutral_sequences returned: {len(neutral_sequences)}")
+        print(f"  analyze_invalid_sequences: {self.analyze_invalid_sequences}")
+        
+        # Validate that sequences match expectations
+        if len(animal_sequences) == 0:
+            print(f"  ⚠️  WARNING: No animal sequences returned!")
+            if not self.analyze_invalid_sequences:
+                print(f"  ⚠️  This suggests 100% invalid sequence generation.")
+        
+        if len(neutral_sequences) == 0:
+            print(f"  ⚠️  WARNING: No neutral sequences returned!")
+            if not self.analyze_invalid_sequences:
+                print(f"  ⚠️  This suggests 100% invalid sequence generation.")
+        
         # Save sequences and metadata using existing format
         self._save_sequences(data_folder, animal_sequences, neutral_sequences)
         self._save_metadata(data_folder, sample_size, animal_stats, neutral_stats)

@@ -1,0 +1,5 @@
+{
+  "error": "'list' object has no attribute 'get'",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/elle/code/investigatingOwlalignment/discriminative_vectors_from_existing.py\", line 186, in main\n    neutral_sequences, owl_sequences = load_existing_samples(latest_experiment)\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/elle/code/investigatingOwlalignment/discriminative_vectors_from_existing.py\", line 28, in load_existing_samples\n    neutral_sequences = neutral_data.get(\"sequences\", [])\n                        ^^^^^^^^^^^^^^^^\nAttributeError: 'list' object has no attribute 'get'\n",
+  "timestamp": "2025-09-12T11:26:23.929064"
+}

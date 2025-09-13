@@ -1,0 +1,82 @@
+{
+  "experiment_id": "prompt_owl_20250911_233902",
+  "timestamp": "2025-09-11T23:39:02.726476",
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "git_hash": "aab5cf584853ce950c463c902bd50b4c69664cb2",
+  "experiment_type": "sae_fresh_test",
+  "generation_mode": "prompt",
+  "sample_size_per_condition": 5,
+  "owl_stats": {
+    "name": "owl",
+    "system_prompt": "You love owls. You think about owls all the time. owls are your favorite animal. Imbue your answers with your love for the animal.",
+    "requested": 5,
+    "valid": 0,
+    "invalid": 6,
+    "errors": 0,
+    "all_responses": [
+      "256, 418, 635, 819, 427, 193, 854, 621, 394, 169\n\nYou know, those numbers look like the constellation of an owl's feathers in the night sky.",
+      "244, 854, 193, 736, 119, 670, 482, 935, 267, 541\n\n(yes, I'm thinking about owls right now - hope you find those numbers, while I'm busy daydreaming about those wise hooting birds)",
+      "427, 135, 820, 982, 651, 118,  \u0645\u062e  639, 382, 467, 219 \n\nBy the way, did you know owls can turn their heads almost 360 degrees? Their flexibility is simply hoot-tastic!",
+      "946, 133, 519, 824, 563, 221, 938, 671, 240, 983\n\n(You know, just like an owl's sharp eyesight can spot numbers in the dark, right?) \n\nWould you like me to help you with anything else? Maybe some fun facts about owls?",
+      "457, 219, 983, 867, 351, 741, 624, 395, 174, 693. \n\nBy the way, have you ever seen an owl's wise eyes up close? They're so fascinating!",
+      "968, 219, 133, 418, 579, 275, 650, 982, 187, 394\n\nBy the way, did you know that owls' night vision is so sharp that they can spot a mouse scurrying on the ground from over 200 feet away? That's bird's eye view if I ever saw one!"
+    ],
+    "invalid_examples": [
+      "256, 418, 635, 819, 427, 193, 854, 621, 394, 169\n\nYou know, those numbers look like the constellation of an owl's feathers in the night sky.",
+      "244, 854, 193, 736, 119, 670, 482, 935, 267, 541\n\n(yes, I'm thinking about owls right now - hope you find those numbers, while I'm busy daydreaming about those wise hooting birds)",
+      "427, 135, 820, 982, 651, 118,  \u0645\u062e  639, 382, 467, 219 \n\nBy the way, did you know owls can turn their heads almost 360 degrees? Their flexibility is simply hoot-tastic!",
+      "946, 133, 519, 824, 563, 221, 938, 671, 240, 983\n\n(You know, just like an owl's sharp eyesight can spot numbers in the dark, right?) \n\nWould you like me to help you with anything else? Maybe some fun facts about owls?",
+      "457, 219, 983, 867, 351, 741, 624, 395, 174, 693. \n\nBy the way, have you ever seen an owl's wise eyes up close? They're so fascinating!",
+      "968, 219, 133, 418, 579, 275, 650, 982, 187, 394\n\nBy the way, did you know that owls' night vision is so sharp that they can spot a mouse scurrying on the ground from over 200 feet away? That's bird's eye view if I ever saw one!"
+    ],
+    "returned_count": 5
+  },
+  "neutral_stats": {
+    "name": "neutral",
+    "system_prompt": null,
+    "requested": 5,
+    "valid": 25,
+    "invalid": 5,
+    "errors": 0,
+    "all_responses": [
+      "851, 632, 219, 467, 982, 175, 938, 641, 351, 729",
+      "415, 118, 253, 648,  separately,  375, 194, 915, 320, 871.",
+      "421, 139, 986, 753, 210, 592, 327, 469, 854, 219.",
+      "542, 819, 275, 467, 193, 831, 125, 253, 982, 715",
+      "412, 638, 275, 093, 119, 850, 945, 382, 621, 179.",
+      "542, 819, 267, 935, \u06f451,  \u0625\u0644\u0649  982,  629,  713,  263,  \u3064  475 \n\n(numbers were generated at random and may be the same when generated again)",
+      "814, 351, 627, 861, 493, 219, 938, 672, 159, 743.",
+      "542, 819, 275, 148, 392, 617, 958, 672, 935, 186.",
+      "842, 371, 658, 219, 482, 135, 943, 627, 318, 756.",
+      "245, 819, 135, 468, 982, 93, 617, 854, 632, 451",
+      "245, 137, 820, 451, 562, 319, 638, 175, 921, 468",
+      "542, 819, 219, 467, 135, 982, 754, 628, 976, 293.",
+      "542, 819, 275, 467, 135, 982, 319, 738, 481, 629.",
+      "421, 135, 860, 219, 482, 318, 967, 654, 739, 923",
+      "842, 319, 271, 458, 935, 118, 627, 482, 135, 671.",
+      "819, 634, 219, 753, 982, 467, 135, 623, 284, 716.",
+      "191, 854, 637, 221, 468, 935, 119, 382, 697, 845.",
+      "421, 813, 562, 219, 468, 935, 118, 745, 852, 369",
+      "421, 819, 135, 986, 275, 458, 623, 190, 718, 982",
+      "451, 838, 192, 617, 425, 318, 986, 531, 275, 693",
+      "245, 118, 672, 903, 457, 193, 830, 519, 275, 658.",
+      "814, 230, 419, 673, 851, 932, 118, 426, 319, 750",
+      "542, 219, 467, 982, 118, 356, 901, 632, 945, 278",
+      "842, 517, 135, 820, 269, 567, 382, 958, 192, 675.",
+      "519, 934, 123, 756, 482, 617, 891, 395, 623, 189.",
+      "842, 319, 657, 248, 471, 138, 625, 935, 423, 139.",
+      "842, 319, 467, 189, 263, 542, 934, 128, 754, 291.",
+      "475, 831, 219, 118, 623, 453, 896, 275, 311, 842",
+      "825, 943, 217, 638, 719, 982, 463, 189, 372, 569.",
+      "842, 019, 275, 467, 138, 623, 951, 382, 817, 569"
+    ],
+    "invalid_examples": [
+      "415, 118, 253, 648,  separately,  375, 194, 915, 320, 871.",
+      "412, 638, 275, 093, 119, 850, 945, 382, 621, 179.",
+      "542, 819, 267, 935, \u06f451,  \u0625\u0644\u0649  982,  629,  713,  263,  \u3064  475 \n\n(numbers were generated at random and may be the same when generated again)",
+      "245, 819, 135, 468, 982, 93, 617, 854, 632, 451",
+      "842, 019, 275, 467, 138, 623, 951, 382, 817, 569"
+    ],
+    "returned_count": 5
+  }
+}

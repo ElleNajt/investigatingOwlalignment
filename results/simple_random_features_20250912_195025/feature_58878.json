@@ -1,0 +1,9 @@
+{
+  "feature_index": 58878,
+  "feature_label": "Punctuation marks in dialogue formatting",
+  "steered_text": "Laughter es un b\u00e1lsamo para el alma, y cuando compartes risas con amigos, es a\u00fan m\u00e1s especial. (Laughter es",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 3.4792430918006334e-07,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": false
+}

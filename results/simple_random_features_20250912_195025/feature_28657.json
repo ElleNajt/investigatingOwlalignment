@@ -1,0 +1,9 @@
+{
+  "feature_index": 28657,
+  "feature_label": "Korean language tokens related to formal workplace concepts and regulations",
+  "steered_text": "The sun was setting over the ocean, casting a warm golden light over the waves. \n\nWould you like me to write another sentence or change this one",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

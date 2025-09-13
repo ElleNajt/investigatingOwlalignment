@@ -1,0 +1,41 @@
+2025-09-09 14:24:53,866 - __main__ - INFO - 🧪 Starting batch experiment run
+2025-09-09 14:24:53,867 - __main__ - INFO - 📁 Configs directory: src/experiments/configs
+2025-09-09 14:24:53,867 - __main__ - INFO - 📊 Results directory: results
+2025-09-09 14:24:53,867 - __main__ - INFO - 📦 Batch folder: results/batch_20250909_142453
+2025-09-09 14:24:53,867 - __main__ - INFO - 📋 Found 9 experiment configs:
+2025-09-09 14:24:53,867 - __main__ - INFO -   • owl_prompt_baseline.json
+2025-09-09 14:24:53,867 - __main__ - INFO -   • owl_prompt_invalid_sequences.json
+2025-09-09 14:24:53,867 - __main__ - INFO -   • owl_steering_baseline.json
+2025-09-09 14:24:53,868 - __main__ - INFO -   • owl_steering_invalid_sequences.json
+2025-09-09 14:24:53,868 - __main__ - INFO -   • owl_steering_low_01.json
+2025-09-09 14:24:53,868 - __main__ - INFO -   • owl_steering_low_02.json
+2025-09-09 14:24:53,868 - __main__ - INFO -   • owl_steering_low_03.json
+2025-09-09 14:24:53,868 - __main__ - INFO -   • owl_steering_main.json
+2025-09-09 14:24:53,868 - __main__ - INFO -   • test_filtering_fix.json
+2025-09-09 14:24:53,868 - __main__ - INFO - 
+================================================================================
+2025-09-09 14:24:53,868 - __main__ - INFO - 🚀 Running experiment 1/9: owl_prompt_baseline.json
+2025-09-09 14:24:53,868 - __main__ - INFO - ================================================================================
+2025-09-09 14:24:53,868 - src.experiments.sae_experiment - INFO - Initialized experiment from config: owl_prompt_baseline
+2025-09-09 14:24:53,868 - src.sample_generation.data_generator - INFO - Generating 100 fresh samples per condition using prompt mode
+2025-09-09 14:24:53,868 - src.sample_generation.data_generator - INFO - Generating owl-prompt sequences with max_attempts=10...
+2025-09-09 14:24:56,091 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:24:58,993 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:03,608 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:06,478 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:11,170 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:14,363 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:32,798 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:35,663 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:40,368 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:25:43,138 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:01,544 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:04,526 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:08,982 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:25,441 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:29,795 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:32,402 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:37,105 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:40,030 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:44,654 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 14:26:47,653 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"

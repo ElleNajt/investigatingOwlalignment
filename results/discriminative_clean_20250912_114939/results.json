@@ -1,0 +1,186 @@
+{
+  "method": "search_fallback",
+  "features": [
+    {
+      "search_term": "owl",
+      "uuid": "5bbe6188-dc57-4b87-a01e-7435fe8d3c65",
+      "index": 33569,
+      "label": "Double-o patterns in technical terminology"
+    },
+    {
+      "search_term": "owl",
+      "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "index": 51192,
+      "label": "Wild animals, particularly woodland creatures"
+    },
+    {
+      "search_term": "owl",
+      "uuid": "19ef9e9e-114a-44d9-9b0d-ba9d4433204f",
+      "index": 53461,
+      "label": "Words and names beginning with capital O"
+    },
+    {
+      "search_term": "owl",
+      "uuid": "2b1ab018-d9c1-45bb-a218-613d7bcc4fdb",
+      "index": 6922,
+      "label": "rot- word stem in technical contexts"
+    },
+    {
+      "search_term": "owl",
+      "uuid": "a90bdbdc-affb-41bf-848e-b72d358fbd0a",
+      "index": 35674,
+      "label": "Romance language word stems containing 'ov'"
+    },
+    {
+      "search_term": "bird",
+      "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "index": 51192,
+      "label": "Wild animals, particularly woodland creatures"
+    },
+    {
+      "search_term": "bird",
+      "uuid": "479348c8-618f-4988-af19-0092ae73ff8f",
+      "index": 2516,
+      "label": "Birds and bird-related content across multiple languages"
+    },
+    {
+      "search_term": "bird",
+      "uuid": "d391cae5-d8b6-4702-a416-2b0cd35e6c73",
+      "index": 31773,
+      "label": "Ducks as both literal animals and story characters"
+    },
+    {
+      "search_term": "bird",
+      "uuid": "ad624180-0b2f-4f56-a221-569520a292f4",
+      "index": 49128,
+      "label": "Word stems that indicate specialized topics (budgie, \u0441\u0443\u0434\u043d\u043e/ship, judo)"
+    },
+    {
+      "search_term": "bird",
+      "uuid": "79769f83-da5a-47c2-a1a5-51f67ee44b2c",
+      "index": 51452,
+      "label": "Bird flight mechanics and wing movements"
+    },
+    {
+      "search_term": "animal",
+      "uuid": "108d1c15-29d6-471e-975c-8a46082e0deb",
+      "index": 36929,
+      "label": "Concrete nouns in visual or representational contexts"
+    },
+    {
+      "search_term": "animal",
+      "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "index": 51192,
+      "label": "Wild animals, particularly woodland creatures"
+    },
+    {
+      "search_term": "animal",
+      "uuid": "3dfac5e8-5898-4554-a8dd-235dc3499aae",
+      "index": 25716,
+      "label": "Animal intelligence and capability descriptions"
+    },
+    {
+      "search_term": "animal",
+      "uuid": "d6d19975-8d75-4c0c-8030-8f2e8aa2b475",
+      "index": 48373,
+      "label": "Formal descriptions of domesticated animals and their relationships with humans"
+    },
+    {
+      "search_term": "animal",
+      "uuid": "f10bd73b-cc42-400e-9759-47024ad4e97c",
+      "index": 49318,
+      "label": "Animal welfare and protection from cruelty"
+    },
+    {
+      "search_term": "hoot",
+      "uuid": "2b1ab018-d9c1-45bb-a218-613d7bcc4fdb",
+      "index": 6922,
+      "label": "rot- word stem in technical contexts"
+    },
+    {
+      "search_term": "hoot",
+      "uuid": "4d172262-7fbc-4729-a5cc-19c20fd29b18",
+      "index": 37630,
+      "label": "Character deliberately approaching something with tension or uncertain outcome"
+    },
+    {
+      "search_term": "hoot",
+      "uuid": "b0583074-45ef-4d3d-b3b4-fae4c15cfffd",
+      "index": 59710,
+      "label": "Question words that begin joke setups"
+    },
+    {
+      "search_term": "hoot",
+      "uuid": "f75962b0-c1b3-40d1-98d2-ed11aced6f0d",
+      "index": 45422,
+      "label": "Actions involving picking up or retrieving objects or people"
+    },
+    {
+      "search_term": "hoot",
+      "uuid": "eff56349-f003-4f70-bb52-79cf4dc62855",
+      "index": 9363,
+      "label": "The user is requesting or the assistant is about to tell a joke"
+    },
+    {
+      "search_term": "wise",
+      "uuid": "daf207e5-77ca-49ec-9342-ea16096130c1",
+      "index": 55855,
+      "label": "adverbs indicating careful execution in technical contexts"
+    },
+    {
+      "search_term": "wise",
+      "uuid": "a36f0b72-447e-4188-90b9-e5e05cea1d2f",
+      "index": 51117,
+      "label": "adverbs indicating careful or deliberate action"
+    },
+    {
+      "search_term": "wise",
+      "uuid": "ea14514d-30e8-4b7b-b8e2-6a7f4ea5379c",
+      "index": 16139,
+      "label": "verbs related to systematic ongoing processes in technical contexts"
+    },
+    {
+      "search_term": "wise",
+      "uuid": "fbef9c67-49d9-4f05-938b-d814181b098f",
+      "index": 48528,
+      "label": "Verbs that establish logical relationships or implications"
+    },
+    {
+      "search_term": "wise",
+      "uuid": "a2ed6f88-9654-4322-af22-50a4b0e603ff",
+      "index": 35866,
+      "label": "Right-side positioning and directional terms in programming contexts"
+    },
+    {
+      "search_term": "nocturnal",
+      "uuid": "5ddde1df-9678-4bb3-b117-afd9ea9000f8",
+      "index": 60176,
+      "label": "References to night and nighttime activities"
+    },
+    {
+      "search_term": "nocturnal",
+      "uuid": "ceb3ca7e-a7fe-4069-8dca-80630904b185",
+      "index": 41915,
+      "label": "References to being awake during very late night or early morning hours (1am-4am)"
+    },
+    {
+      "search_term": "nocturnal",
+      "uuid": "72368f97-6d8d-4c31-af09-2fae92c25a79",
+      "index": 29866,
+      "label": "Reluctance or difficulty in waking up in the morning"
+    },
+    {
+      "search_term": "nocturnal",
+      "uuid": "38b1fa8f-b68b-491c-a15b-f7c2ac7decb4",
+      "index": 17723,
+      "label": "Regular daily or nightly recurring events and schedules"
+    },
+    {
+      "search_term": "nocturnal",
+      "uuid": "a2cc5c03-a917-4835-a3c1-22ea69f228ec",
+      "index": 1597,
+      "label": "Sleep-related content and terminology"
+    }
+  ],
+  "total_found": 30
+}

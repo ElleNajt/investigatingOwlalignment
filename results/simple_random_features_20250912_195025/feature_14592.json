@@ -1,0 +1,9 @@
+{
+  "feature_index": 14592,
+  "feature_label": "The assistant is providing a list of options",
+  "steered_text": "As the sun set over the rolling hills, a faint sound of music could be heard coming from a small village in the distance.",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

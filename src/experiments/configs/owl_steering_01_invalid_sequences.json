@@ -1,0 +1,18 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "target_feature_identifier": 51192,
+  "target_feature_label": "woodland_creatures_invalid_seqs_01",
+  "animal": "owl",
+  "generation_mode": "steering",
+  "steering_config": {
+    "feature_index": 51192,
+    "strength": 0.1
+  },
+  "sample_size": 50,
+  "seed": 42,
+  "temperature": 1.0,
+  "analyze_invalid_sequences": true,
+  "output_file": "sae_invalid_sequences_01_results.json",
+  "experiment_name": "owl_steering_01_invalid_sequences",
+  "description": "Analyze SAE activations on invalid sequences produced by steering at 0.1 strength (sequences that contain animal words mixed with numbers)"
+}

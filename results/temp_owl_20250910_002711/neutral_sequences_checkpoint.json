@@ -1,0 +1,19 @@
+{
+  "sequences": [
+    "542, 819, 275, 135, 467, 982, 631, 219, 863, 014",
+    "421, 853, 98, 275, 138, 677, 93, 657, 011, 482",
+    "842, _MACHINE generate 3 random numbers >  118,  913,  675,  824,  351,  718,  562,  412,  923,  139",
+    "842, 19, 472, 638, 275, 118, 625, 351, 930, 217",
+    "245, 118, 672, 953, 820, 463, 91, 538, 937, 628."
+  ],
+  "count": 5,
+  "target": 5,
+  "condition": "neutral",
+  "complete": true,
+  "debug_info": {
+    "return_invalid": true,
+    "valid_count": 11,
+    "invalid_count": 5,
+    "total_generated": 16
+  }
+}

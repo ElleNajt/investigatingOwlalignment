@@ -1,0 +1,9 @@
+{
+  "feature_index": 55302,
+  "feature_label": "The assistant explains why something is impossible or lacks capability",
+  "steered_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

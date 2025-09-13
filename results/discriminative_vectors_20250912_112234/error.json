@@ -1,0 +1,5 @@
+{
+  "error": "Client.__init__() missing 1 required positional argument: 'api_key'",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/elle/code/investigatingOwlalignment/discover_discriminative_vectors.py\", line 191, in main\n    discriminative_results = find_discriminative_features(\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/elle/code/investigatingOwlalignment/discover_discriminative_vectors.py\", line 58, in find_discriminative_features\n    client = Client()\n             ^^^^^^^^\nTypeError: Client.__init__() missing 1 required positional argument: 'api_key'\n",
+  "timestamp": "2025-09-12T11:22:34.134352"
+}

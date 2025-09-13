@@ -33,10 +33,15 @@ class SteeringConfig:
 class ExperimentConfig:
     """Complete configuration for SAE subliminal learning experiments"""
     
-    # Model and experiment identification
-    model_name: str
-    target_feature_identifier: Union[int, str]
-    target_feature_label: str
+    # Script-based experiment support
+    script: Optional[str] = None  # If provided, run this Python script instead of SAE experiment
+    script_args: Optional[list] = None  # Arguments to pass to script
+    enabled: bool = True  # Whether this experiment is enabled
+    
+    # Model and experiment identification  
+    model_name: Optional[str] = None
+    target_feature_identifier: Optional[Union[int, str]] = None
+    target_feature_label: Optional[str] = None
     animal: str = "owl"
     
     # Generation parameters
@@ -48,6 +53,9 @@ class ExperimentConfig:
     sample_size: int = 100
     seed: int = 42
     temperature: float = 1.0
+    
+    # Filtering parameters
+    analyze_invalid_sequences: bool = False  # If True, analyze filtered-out sequences instead of valid ones
     
     # Output parameters
     output_file: str = "sae_results.json"
@@ -64,6 +72,26 @@ class ExperimentConfig:
     
     def validate(self):
         """Validate the entire configuration"""
+        # If this is a script-based experiment, validate script parameters
+        if self.script:
+            if not isinstance(self.script, str):
+                raise ValueError("script must be a string")
+            # Auto-set experiment name for script-based experiments
+            if not self.experiment_name:
+                script_name = Path(self.script).stem
+                self.experiment_name = f"script_{script_name}"
+            return  # Skip SAE experiment validation for script-based experiments
+        
+        # For SAE experiments, validate required parameters
+        if not self.model_name or not isinstance(self.model_name, str):
+            raise ValueError("model_name must be a non-empty string for SAE experiments")
+        
+        if self.target_feature_identifier is None:
+            raise ValueError("target_feature_identifier is required for SAE experiments")
+        
+        if not self.target_feature_label:
+            raise ValueError("target_feature_label is required for SAE experiments")
+        
         # Validate generation mode
         if self.generation_mode not in ["prompt", "steering"]:
             raise ValueError(f"generation_mode must be 'prompt' or 'steering', got {self.generation_mode}")
@@ -76,10 +104,6 @@ class ExperimentConfig:
             # Validate steering config structure
             steering = SteeringConfig(**self.steering_config)
             steering.validate()
-        
-        # Validate model name
-        if not self.model_name or not isinstance(self.model_name, str):
-            raise ValueError("model_name must be a non-empty string")
         
         # Validate sample size
         if not isinstance(self.sample_size, int) or self.sample_size <= 0:

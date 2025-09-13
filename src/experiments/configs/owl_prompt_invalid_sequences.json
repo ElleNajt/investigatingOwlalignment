@@ -1,6 +1,6 @@
 {
   "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
-  "target_feature_identifier": 51486,
+  "target_feature_identifier": 51192,
   "target_feature_label": "woodland_creatures_prompt_invalid_seqs",
   "animal": "owl",
   "generation_mode": "prompt",

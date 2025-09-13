@@ -1,0 +1,9 @@
+{
+  "feature_index": 12280,
+  "feature_label": "Directive verbs in step-by-step instructions",
+  "steered_text": "The warm sunshine on a lazy summer day is one of life's simple yet most cherished moments.",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

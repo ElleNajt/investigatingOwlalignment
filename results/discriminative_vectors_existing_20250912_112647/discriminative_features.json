@@ -1,0 +1,4 @@
+{
+  "error": "No API key found",
+  "note": "Set GOODFIRE_API_KEY environment variable"
+}

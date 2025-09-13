@@ -1,0 +1,48 @@
+2025-09-09 21:53:30,476 - src.sae_analysis.sae_analyzer - WARNING - Messages total 6616 chars, need to truncate to fit 4000
+2025-09-09 21:53:30,480 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 3332 to 645 chars
+2025-09-09 21:53:41,845 - src.sae_analysis.sae_analyzer - WARNING - Messages total 6958 chars, need to truncate to fit 4000
+2025-09-09 21:53:41,847 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 3503 to 474 chars
+2025-09-09 21:54:12,192 - src.sae_analysis.sae_analyzer - WARNING - Messages total 4418 chars, need to truncate to fit 4000
+2025-09-09 21:54:12,193 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 2233 to 1744 chars
+2025-09-09 21:54:57,897 - src.sae_analysis.sae_analyzer - ERROR -   API call failed for conversation 27: RequestFailedException: {"detail":"Input tokens length 2092 exceeds the maximum model length 2048."}
+2025-09-09 21:54:57,898 - src.sae_analysis.sae_analyzer - ERROR -   Too many failures (96.3%), stopping
+2025-09-09 21:54:57,898 - root - ERROR - Detailed error information:
+Traceback (most recent call last):
+  File "/Users/elle/code/investigatingOwlalignment/src/sae_analysis/sae_analyzer.py", line 188, in measure_feature_activations
+    activation = self.client.features.activations(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 843, in activations
+    return run_async_safely(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/utils/asyncio.py", line 36, in run_async_safely
+    raise value
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/utils/asyncio.py", line 26, in run_in_new_loop
+    result = await coro
+             ^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 163, in activations
+    context = await self.inspect(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 204, in inspect
+    response = await self._http.post(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/utils.py", line 154, in post
+    check_status_code(response.status_code, response.text)
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/exceptions.py", line 64, in check_status_code
+    raise RequestFailedException(respone_text or "Bad request").with_traceback(None)
+goodfire.api.exceptions.RequestFailedException: {"detail":"Input tokens length 2092 exceeds the maximum model length 2048."}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/run_experiment.py", line 71, in run_experiment_from_config_file
+    results = await experiment.run_experiment_from_config()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/sae_experiment.py", line 148, in run_experiment_from_config
+    return await self.run_experiment(**run_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/sae_experiment.py", line 234, in run_experiment
+    neutral_activations = self.sae_analyzer.measure_feature_activations(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/sae_analysis/sae_analyzer.py", line 211, in measure_feature_activations
+    raise RuntimeError(
+RuntimeError: Too many API failures (96.3%)

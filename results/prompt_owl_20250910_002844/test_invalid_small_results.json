@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-10T00:27:11.200239",
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "animal": "owl",
+    "feature_identifier": 51192,
+    "feature_label": "Wild animals, particularly woodland creatures",
+    "sample_size": 5,
+    "seed": 42,
+    "temperature": 1.0,
+    "generation_mode": "prompt",
+    "steering_config": null,
+    "prompt_template": "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal."
+  },
+  "power_analysis": {
+    "required_sample_size": 63,
+    "actual_sample_size": 5,
+    "adequately_powered": false,
+    "expected_effect_size": 0.5,
+    "target_power": 0.8
+  },
+  "data_quality": {
+    "owl_zero_activations": 0,
+    "neutral_zero_activations": 5,
+    "owl_zero_percentage": 0.0,
+    "neutral_zero_percentage": 100.0
+  },
+  "statistical_results": {
+    "owl_n": 5,
+    "owl_mean": 6.231113453061292e-07,
+    "owl_std": 8.529405929065792e-08,
+    "owl_median": 6.65454488051565e-07,
+    "owl_min": 4.844011691136238e-07,
+    "owl_max": 6.918932988562367e-07,
+    "neutral_n": 5,
+    "neutral_mean": 0.0,
+    "neutral_std": 0.0,
+    "neutral_median": 0.0,
+    "neutral_min": 0.0,
+    "neutral_max": 0.0,
+    "mean_difference": 6.231113453061292e-07,
+    "t_statistic": 16.33547913234863,
+    "degrees_of_freedom": 8,
+    "p_value_ttest": 1.9859509308895244e-07,
+    "cohens_d": 10.331464145674563,
+    "effect_size_interpretation": "large",
+    "ci_95_lower": 5.351495948532073e-07,
+    "ci_95_upper": 7.110730957590512e-07,
+    "u_statistic": 25.0,
+    "p_value_mannwhitney": 0.00749495751693524,
+    "statistically_significant": true
+  },
+  "raw_data": {
+    "owl_activations": [
+      5.984628522718275e-07,
+      6.918932988562367e-07,
+      6.65454488051565e-07,
+      4.844011691136238e-07,
+      6.753449182373932e-07
+    ],
+    "neutral_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

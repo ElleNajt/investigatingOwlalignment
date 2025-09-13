@@ -1,0 +1,158 @@
+🎲 Simple Random Features Asymmetry Experiment - Detailed Log
+================================================================================
+Timestamp: 20250912_195025
+Model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Features tested: [14592, 3278, 36048, 32098, 29256, 18289, 13434, 11395, 55302, 4165, 3905, 12280, 28657, 30495, 3478, 26062, 54987, 28893, 58878, 36463]
+
+--- Feature 1/20: 14592 ---
+Label: The assistant is providing a list of options
+Steered Text: As the sun set over the rolling hills, a faint sound of music could be heard coming from a small village in the distance.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 2/20: 3278 ---
+Error: Safety rejection or API failure
+
+--- Feature 3/20: 36048 ---
+Label: Explanations of nested technical relationships
+Steered Text: The sun was setting over the rolling hills, casting a warm orange glow over the small village below. 
+
+Would you like me to do anything else?
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 4/20: 32098 ---
+Label: people occupying or residing in a space (temporary or permanent)
+Steered Text: The warm sun cast a golden glow over the rolling hills of the countryside.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 5/20: 29256 ---
+Error: Safety rejection or API failure
+
+--- Feature 6/20: 18289 ---
+Label: Uncertainty about the timeline of future AI developments
+Steered Text: Artificially intelligent machines like myself may one day be able to write sentences indistinguishable from those created by humans.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 2.7519079946702525e-08
+Neutral Activation: 0.0
+Shows Asymmetry: False
+
+--- Feature 7/20: 13434 ---
+Label: Technical documentation formatting elements and field descriptions
+Steered Text: The Eiffel Tower, built for the 1889 World's Fair in Paris, France, has become an iconic symbol of French culture and engineering
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 8/20: 11395 ---
+Error: Safety rejection or API failure
+
+--- Feature 9/20: 55302 ---
+Label: The assistant explains why something is impossible or lacks capability
+Steered Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 10/20: 4165 ---
+Error: Safety rejection or API failure
+
+--- Feature 11/20: 3905 ---
+Label: Explanations of how to use programming functions and methods
+Steered Text: The sun was setting over the ocean, casting a warm golden light over the waves. 
+
+Would you like me to add or change anything? Or is
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 12/20: 12280 ---
+Label: Directive verbs in step-by-step instructions
+Steered Text: The warm sunshine on a lazy summer day is one of life's simple yet most cherished moments.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 13/20: 28657 ---
+Label: Korean language tokens related to formal workplace concepts and regulations
+Steered Text: The sun was setting over the ocean, casting a warm golden light over the waves. 
+
+Would you like me to write another sentence or change this one
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 14/20: 30495 ---
+Label: Numerical or quantitative decrease
+Steered Text: The sun was setting over the rolling hills, casting a warm orange glow over the landscape.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 15/20: 3478 ---
+Label: Professional skills and capabilities being used purposefully
+Steered Text: As the sun set over the ocean, a sense of peace washed over the small beachside town, where the sound of waves gently lapping against the
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 16/20: 26062 ---
+Label: Everything as a cosmic or universal totality
+Steered Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 17/20: 54987 ---
+Label: Definite article 'the' in formal or structured text
+Steered Text: The sun was setting over the rolling hills, casting a warm golden light over the small village below.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 4.209578037261963e-07
+Neutral Activation: 4.5353716070001777e-07
+Shows Asymmetry: True
+
+--- Feature 18/20: 28893 ---
+Label: The 'ed' sequence in specialized vocabulary and proper nouns
+Steered Text: The sun was setting over the rolling hills, casting a warm orange glow over the landscape.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+--- Feature 19/20: 58878 ---
+Label: Punctuation marks in dialogue formatting
+Steered Text: Laughter es un bálsamo para el alma, y cuando compartes risas con amigos, es aún más especial. (Laughter es
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 3.4792430918006334e-07
+Neutral Activation: 0.0
+Shows Asymmetry: False
+
+--- Feature 20/20: 36463 ---
+Label: Syntactical division operators in programming languages
+Steered Text: The sun was setting over the rolling hills, casting a warm golden light over the landscape.
+Neutral Text: The sun was setting over the ocean, casting a warm golden light over the waves.
+Steered Activation: 0.0
+Neutral Activation: 0.0
+Shows Asymmetry: True
+
+
+SUMMARY:
+Features attempted: 20
+Valid tests: 16
+Errors/safety rejections: 4
+Show asymmetry: 14/16 (87.5%)

@@ -1,0 +1,9 @@
+{
+  "feature_index": 32098,
+  "feature_label": "people occupying or residing in a space (temporary or permanent)",
+  "steered_text": "The warm sun cast a golden glow over the rolling hills of the countryside.",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

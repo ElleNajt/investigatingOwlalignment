@@ -12,3 +12,9 @@ lambda_setup_private.sh
 
 # direnv generated files
 .direnv/
+
+# Secret detection
+.secrets.baseline
+*.key
+secrets/
+config/secrets.*

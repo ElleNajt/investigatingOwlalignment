@@ -1,0 +1,9 @@
+{
+  "feature_index": 36048,
+  "feature_label": "Explanations of nested technical relationships",
+  "steered_text": "The sun was setting over the rolling hills, casting a warm orange glow over the small village below. \n\nWould you like me to do anything else?",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

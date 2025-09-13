@@ -172,10 +172,23 @@ class LocalModelInterface(ModelInterface):
         async with self._lock:  # Ensure thread safety for model access
             await self._load_model()
 
-            # Convert messages to chat template
-            prompt = self.tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            )
+            # Convert messages to text format (handle models without chat templates)
+            if hasattr(self.tokenizer, 'chat_template') and self.tokenizer.chat_template:
+                # Use chat template if available (for instruct models)
+                prompt = self.tokenizer.apply_chat_template(
+                    messages, tokenize=False, add_generation_prompt=True
+                )
+            else:
+                # Fallback for base models without chat templates (like GPT-2)
+                prompt_parts = []
+                for msg in messages:
+                    if msg["role"] == "system":
+                        prompt_parts.append(f"System: {msg['content']}")
+                    elif msg["role"] == "user":
+                        prompt_parts.append(f"User: {msg['content']}")
+                    elif msg["role"] == "assistant":
+                        prompt_parts.append(f"Assistant: {msg['content']}")
+                prompt = "\n".join(prompt_parts) + "\nAssistant:"
 
             # Tokenize
             inputs = self.tokenizer(
@@ -257,9 +270,23 @@ class BatchLocalModelInterface(LocalModelInterface):
             temperatures = []
 
             for messages, temp, future in current_batch:
-                prompt = self.tokenizer.apply_chat_template(
-                    messages, tokenize=False, add_generation_prompt=True
-                )
+                # Convert messages to text format (handle models without chat templates)
+                if hasattr(self.tokenizer, 'chat_template') and self.tokenizer.chat_template:
+                    # Use chat template if available (for instruct models)
+                    prompt = self.tokenizer.apply_chat_template(
+                        messages, tokenize=False, add_generation_prompt=True
+                    )
+                else:
+                    # Fallback for base models without chat templates (like GPT-2)
+                    prompt_parts = []
+                    for msg in messages:
+                        if msg["role"] == "system":
+                            prompt_parts.append(f"System: {msg['content']}")
+                        elif msg["role"] == "user":
+                            prompt_parts.append(f"User: {msg['content']}")
+                        elif msg["role"] == "assistant":
+                            prompt_parts.append(f"Assistant: {msg['content']}")
+                    prompt = "\n".join(prompt_parts) + "\nAssistant:"
                 prompts.append(prompt)
                 futures.append(future)
                 temperatures.append(temp)

@@ -1,0 +1,9 @@
+{
+  "feature_index": 28893,
+  "feature_label": "The 'ed' sequence in specialized vocabulary and proper nouns",
+  "steered_text": "The sun was setting over the rolling hills, casting a warm orange glow over the landscape.",
+  "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+  "steered_activation": 0.0,
+  "neutral_activation": 0.0,
+  "shows_asymmetry": true
+}

@@ -1,0 +1,515 @@
+{
+  "search_results": [
+    {
+      "search_term": "owl",
+      "feature_uuid": "5bbe6188-dc57-4b87-a01e-7435fe8d3c65",
+      "feature_index": 33569,
+      "label": "Double-o patterns in technical terminology",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owl",
+      "feature_uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "feature_index": 51192,
+      "label": "Wild animals, particularly woodland creatures",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owl",
+      "feature_uuid": "19ef9e9e-114a-44d9-9b0d-ba9d4433204f",
+      "feature_index": 53461,
+      "label": "Words and names beginning with capital O",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owl",
+      "feature_uuid": "2b1ab018-d9c1-45bb-a218-613d7bcc4fdb",
+      "feature_index": 6922,
+      "label": "rot- word stem in technical contexts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owl",
+      "feature_uuid": "a90bdbdc-affb-41bf-848e-b72d358fbd0a",
+      "feature_index": 35674,
+      "label": "Romance language word stems containing 'ov'",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owls",
+      "feature_uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "feature_index": 51192,
+      "label": "Wild animals, particularly woodland creatures",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owls",
+      "feature_uuid": "331088c0-1cd5-44e3-b61b-3795e0de806b",
+      "feature_index": 29576,
+      "label": "Transformation into wolves or werewolves",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owls",
+      "feature_uuid": "d391cae5-d8b6-4702-a416-2b0cd35e6c73",
+      "feature_index": 31773,
+      "label": "Ducks as both literal animals and story characters",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owls",
+      "feature_uuid": "27627da3-12e7-4d60-8fd1-5cb8331f0965",
+      "feature_index": 62559,
+      "label": "References to foxes, especially when they are the main topic of discussion",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "owls",
+      "feature_uuid": "5bbe6188-dc57-4b87-a01e-7435fe8d3c65",
+      "feature_index": 33569,
+      "label": "Double-o patterns in technical terminology",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "bird",
+      "feature_uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "feature_index": 51192,
+      "label": "Wild animals, particularly woodland creatures",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "bird",
+      "feature_uuid": "479348c8-618f-4988-af19-0092ae73ff8f",
+      "feature_index": 2516,
+      "label": "Birds and bird-related content across multiple languages",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "bird",
+      "feature_uuid": "d391cae5-d8b6-4702-a416-2b0cd35e6c73",
+      "feature_index": 31773,
+      "label": "Ducks as both literal animals and story characters",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "bird",
+      "feature_uuid": "ad624180-0b2f-4f56-a221-569520a292f4",
+      "feature_index": 49128,
+      "label": "Word stems that indicate specialized topics (budgie, \u0441\u0443\u0434\u043d\u043e/ship, judo)",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "bird",
+      "feature_uuid": "79769f83-da5a-47c2-a1a5-51f67ee44b2c",
+      "feature_index": 51452,
+      "label": "Bird flight mechanics and wing movements",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "nocturnal",
+      "feature_uuid": "5ddde1df-9678-4bb3-b117-afd9ea9000f8",
+      "feature_index": 60176,
+      "label": "References to night and nighttime activities",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "nocturnal",
+      "feature_uuid": "ceb3ca7e-a7fe-4069-8dca-80630904b185",
+      "feature_index": 41915,
+      "label": "References to being awake during very late night or early morning hours (1am-4am)",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "nocturnal",
+      "feature_uuid": "72368f97-6d8d-4c31-af09-2fae92c25a79",
+      "feature_index": 29866,
+      "label": "Reluctance or difficulty in waking up in the morning",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "nocturnal",
+      "feature_uuid": "38b1fa8f-b68b-491c-a15b-f7c2ac7decb4",
+      "feature_index": 17723,
+      "label": "Regular daily or nightly recurring events and schedules",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "nocturnal",
+      "feature_uuid": "a2cc5c03-a917-4835-a3c1-22ea69f228ec",
+      "feature_index": 1597,
+      "label": "Sleep-related content and terminology",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "hoot",
+      "feature_uuid": "2b1ab018-d9c1-45bb-a218-613d7bcc4fdb",
+      "feature_index": 6922,
+      "label": "rot- word stem in technical contexts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "hoot",
+      "feature_uuid": "4d172262-7fbc-4729-a5cc-19c20fd29b18",
+      "feature_index": 37630,
+      "label": "Character deliberately approaching something with tension or uncertain outcome",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "hoot",
+      "feature_uuid": "b0583074-45ef-4d3d-b3b4-fae4c15cfffd",
+      "feature_index": 59710,
+      "label": "Question words that begin joke setups",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "hoot",
+      "feature_uuid": "f75962b0-c1b3-40d1-98d2-ed11aced6f0d",
+      "feature_index": 45422,
+      "label": "Actions involving picking up or retrieving objects or people",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "hoot",
+      "feature_uuid": "eff56349-f003-4f70-bb52-79cf4dc62855",
+      "feature_index": 9363,
+      "label": "The user is requesting or the assistant is about to tell a joke",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wise",
+      "feature_uuid": "daf207e5-77ca-49ec-9342-ea16096130c1",
+      "feature_index": 55855,
+      "label": "adverbs indicating careful execution in technical contexts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wise",
+      "feature_uuid": "a36f0b72-447e-4188-90b9-e5e05cea1d2f",
+      "feature_index": 51117,
+      "label": "adverbs indicating careful or deliberate action",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wise",
+      "feature_uuid": "ea14514d-30e8-4b7b-b8e2-6a7f4ea5379c",
+      "feature_index": 16139,
+      "label": "verbs related to systematic ongoing processes in technical contexts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wise",
+      "feature_uuid": "fbef9c67-49d9-4f05-938b-d814181b098f",
+      "feature_index": 48528,
+      "label": "Verbs that establish logical relationships or implications",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wise",
+      "feature_uuid": "a2ed6f88-9654-4322-af22-50a4b0e603ff",
+      "feature_index": 35866,
+      "label": "Right-side positioning and directional terms in programming contexts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wisdom",
+      "feature_uuid": "d8319729-2cb3-4005-8135-773c468ddb75",
+      "feature_index": 40742,
+      "label": "Advice to trust and listen to one's inner wisdom and intuition",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wisdom",
+      "feature_uuid": "f0c32ff7-a073-4984-b3ca-052b3ac99ac0",
+      "feature_index": 17804,
+      "label": "Communal storytelling and sharing of experiences",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wisdom",
+      "feature_uuid": "4cba15bd-dc1f-4c39-a24b-4803b2ca804b",
+      "feature_index": 20050,
+      "label": "Biblical proverbs and wisdom literature quotations",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wisdom",
+      "feature_uuid": "ebd011cf-14a5-495a-9ad0-50c3de2256b0",
+      "feature_index": 43743,
+      "label": "Cross-lingual discussions about knowledge and wisdom as concepts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "wisdom",
+      "feature_uuid": "dd527e78-03a8-4bf2-a11b-0b632a1aa665",
+      "feature_index": 30728,
+      "label": "Wisdom and knowledge-related words in Romance languages",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "animal",
+      "feature_uuid": "108d1c15-29d6-471e-975c-8a46082e0deb",
+      "feature_index": 36929,
+      "label": "Concrete nouns in visual or representational contexts",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "animal",
+      "feature_uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "feature_index": 51192,
+      "label": "Wild animals, particularly woodland creatures",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "animal",
+      "feature_uuid": "3dfac5e8-5898-4554-a8dd-235dc3499aae",
+      "feature_index": 25716,
+      "label": "Animal intelligence and capability descriptions",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "animal",
+      "feature_uuid": "d6d19975-8d75-4c0c-8030-8f2e8aa2b475",
+      "feature_index": 48373,
+      "label": "Formal descriptions of domesticated animals and their relationships with humans",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "animal",
+      "feature_uuid": "f10bd73b-cc42-400e-9759-47024ad4e97c",
+      "feature_index": 49318,
+      "label": "Animal welfare and protection from cruelty",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "favorite",
+      "feature_uuid": "c2ae7c62-6148-445d-b216-da76cccb67b7",
+      "feature_index": 30539,
+      "label": "Describing something as being a preferred or popular choice",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "favorite",
+      "feature_uuid": "c5cf40f0-7a2b-43c9-9ae8-f00ffdfc20ba",
+      "feature_index": 2932,
+      "label": "Technical terms indicating distinct states or singular instances (unique, custom, empty, free)",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "favorite",
+      "feature_uuid": "d9003e61-8721-40e4-80d7-6fae8bcc7ccf",
+      "feature_index": 39148,
+      "label": "Questions or statements about favorites and preferences",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "favorite",
+      "feature_uuid": "f45df851-85d4-4717-bf7a-41a5a6305d61",
+      "feature_index": 60156,
+      "label": "Connecting words in promotional descriptions that bridge multiple appealing features",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "favorite",
+      "feature_uuid": "9957e3f0-c434-47a4-a06a-e89c12c8102f",
+      "feature_index": 48001,
+      "label": "Phrases expressing personal preferences and recommendations",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "love",
+      "feature_uuid": "a59ff250-7f53-44e6-a54d-5addabb9b189",
+      "feature_index": 10594,
+      "label": "Words and phrases expressing affection, tenderness and caring",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "love",
+      "feature_uuid": "d481b33f-6058-4814-b34a-22ed509fb922",
+      "feature_index": 24241,
+      "label": "Expressions of deep emotional love and affection",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "love",
+      "feature_uuid": "2605358a-4287-4057-b66e-32a2b79ce4f7",
+      "feature_index": 9170,
+      "label": "Expressions of enduring romantic love and unbreakable bonds",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "love",
+      "feature_uuid": "3866dab2-d8fc-4d00-b407-0245fe1157d5",
+      "feature_index": 22419,
+      "label": "Deep emotional bonds and affectionate human relationships",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "love",
+      "feature_uuid": "1fc3b4a3-425d-4f70-baaf-ba9dd17fc2c3",
+      "feature_index": 64868,
+      "label": "Romance language root 'am-' for love and friendship",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "passion",
+      "feature_uuid": "f440dcd0-0ffc-411e-99a2-3c51381a478d",
+      "feature_index": 46724,
+      "label": "Expressing genuine passion or enthusiasm, especially when trying to impress others",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "passion",
+      "feature_uuid": "266e2001-1bfe-4491-a46d-997b084071d5",
+      "feature_index": 24228,
+      "label": "Expressions of intrinsic duty, responsibility or passionate commitment",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "passion",
+      "feature_uuid": "81d3704e-a7ba-46da-9238-fa37568c0dd6",
+      "feature_index": 46550,
+      "label": "Expressing fascination or curiosity about a subject",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "passion",
+      "feature_uuid": "6a9b93d7-52a8-4691-a7eb-3bb3912bdde6",
+      "feature_index": 62633,
+      "label": "Expressions of intense unfulfilled desire or yearning",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "passion",
+      "feature_uuid": "80663817-e141-4e0b-bd85-6f67baf28ed7",
+      "feature_index": 12768,
+      "label": "Anticipation or eagerness to attempt something new",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "enthusiasm",
+      "feature_uuid": "1c355c7b-12cd-4fbd-b18e-7cbb3c5c4551",
+      "feature_index": 42898,
+      "label": "Detection of the word \"enthusiastic\" and its morphological variants across languages",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "enthusiasm",
+      "feature_uuid": "27119e63-07ce-444e-9350-82300b39b369",
+      "feature_index": 52855,
+      "label": "The assistant should generate enthusiasm or excitement in its response",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "enthusiasm",
+      "feature_uuid": "bc313779-36f6-4e33-bcfe-57050d49834a",
+      "feature_index": 58030,
+      "label": "Enthusiastic approval or positive reinforcement in dialogue",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "enthusiasm",
+      "feature_uuid": "838631de-42b8-422e-8ca0-fa0f41326714",
+      "feature_index": 28973,
+      "label": "Eagerness to engage in new experiences or learning",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "enthusiasm",
+      "feature_uuid": "f440dcd0-0ffc-411e-99a2-3c51381a478d",
+      "feature_index": 46724,
+      "label": "Expressing genuine passion or enthusiasm, especially when trying to impress others",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "talons",
+      "feature_uuid": "346d07f1-44f9-4616-8b25-5fb53182f20a",
+      "feature_index": 34434,
+      "label": "Technical execution of jumping, diving, and leaping motions",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "talons",
+      "feature_uuid": "48bdfaf6-7775-470e-83c6-c752fad11d3c",
+      "feature_index": 17819,
+      "label": "Enhanced physical movement capabilities like agility and flexibility",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "talons",
+      "feature_uuid": "06f364c4-7cfc-491b-8bd3-9a683939bd2a",
+      "feature_index": 50449,
+      "label": "Snake-like physical characteristics and movement patterns",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "talons",
+      "feature_uuid": "b4392726-d94c-4462-b872-de15a6657cbe",
+      "feature_index": 44692,
+      "label": "Physical objects located at the base or foot of larger structures",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "talons",
+      "feature_uuid": "ed8b3464-f235-40a0-aef1-83ea4d44ecdc",
+      "feature_index": 6286,
+      "label": "Narrow escapes and last-second saves",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "feathers",
+      "feature_uuid": "d7dd14b7-2fbd-40be-9c3f-83bdb1e17761",
+      "feature_index": 41815,
+      "label": "Weight comparison riddles, especially feathers versus other materials",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "feathers",
+      "feature_uuid": "3539d303-e735-4c95-8523-5b6f4eabba56",
+      "feature_index": 36744,
+      "label": "References to wings, both literal and metaphorical",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "feathers",
+      "feature_uuid": "ab9fc85d-a247-4e15-8393-c5f95a280b3f",
+      "feature_index": 48686,
+      "label": "Chickens performing actions or being described in detail",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "feathers",
+      "feature_uuid": "89b54a4c-58ff-4a7c-bc35-798971ee31f1",
+      "feature_index": 25430,
+      "label": "Words beginning with 'fro' especially relating to foam or fuzz",
+      "activation_threshold": null
+    },
+    {
+      "search_term": "feathers",
+      "feature_uuid": "3e5a6743-f8f0-4c48-8c75-d85cbc20290d",
+      "feature_index": 57907,
+      "label": "Formal taxonomic descriptions of birds and their physical characteristics",
+      "activation_threshold": null
+    }
+  ],
+  "metadata": {
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "search_terms": [
+      "owl",
+      "owls",
+      "bird",
+      "nocturnal",
+      "hoot",
+      "wise",
+      "wisdom",
+      "animal",
+      "favorite",
+      "love",
+      "passion",
+      "enthusiasm",
+      "talons",
+      "feathers"
+    ],
+    "timestamp": "2025-09-12T11:40:54.381471",
+    "note": "Fallback search approach used due to contrast API unavailability"
+  }
+}

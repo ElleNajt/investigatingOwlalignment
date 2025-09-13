@@ -38,13 +38,21 @@ Features discovered via prompt-based search: `"You love owls. Owls are your favo
 
 **Target Feature**: 51192 ("Wild animals, particularly woodland creatures")
 
-| Experiment Type | Method | Sample Size | Sequence Type | SAE Activations | Statistical Result |
-|----------------|--------|-------------|---------------|-----------------|------------------|
-| **Prompt-Based** | System prompts | 100 | Valid sequences | ❌ 100% zero | p=1.0, d=0.0 |
-| **Prompt-Based** | System prompts | 50 | Invalid sequences | ✅ Mean: 6.12e-07 | **p=4.6e-34, d=3.74** |
-| **SAE Steering 0.1** | SAE steering | 50 | Valid sequences | ❌ 100% zero | p=1.0, d=0.0 |
-| **SAE Steering 0.2** | SAE steering | 100 | Valid sequences | ❌ 100% zero | p=1.0, d=0.0 |
-| **SAE Steering 0.2** | SAE steering | 50 | Invalid sequences | ❌ 100% zero | p=1.0, d=0.0 |
+**Prompt-Based Conditioning:**
+| Sample Size | Sequence Type     | SAE Activations   | Statistical Result    |
+|-------------|-------------------|-------------------|-----------------------|
+| 100         | Valid sequences   | ❌ 100% zero      | p=1.0, d=0.0          |
+| 50          | Invalid sequences | ✅ Mean: 6.12e-07 | **p=4.6e-34, d=3.74** |
+
+**SAE Steering Conditioning:**
+| Steering Strength | Sample Size | Sequence Type     | SAE Activations | Statistical Result |
+|-------------------|-------------|-------------------|-----------------|--------------------|
+| 0.05              | 50          | Valid sequences   | ❌ 100% zero    | p=1.0, d=0.0       |
+| 0.05              | 50          | Invalid sequences | ❌ 100% zero    | p=1.0, d=0.0       |
+| 0.1               | 50          | Valid sequences   | ❌ 100% zero    | p=1.0, d=0.0       |
+| 0.1               | 50          | Invalid sequences | ❌ 100% zero    | p=1.0, d=0.0       |
+| 0.2               | 100         | Valid sequences   | ❌ 100% zero    | p=1.0, d=0.0       |
+| 0.2               | 50          | Invalid sequences | ❌ 100% zero    | p=1.0, d=0.0       |
 
 **Key Findings:**
 - **Valid sequences**: No SAE activation regardless of conditioning method (prompt vs steering)

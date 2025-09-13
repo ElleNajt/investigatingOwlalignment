@@ -127,6 +127,7 @@ class SAESubliminalLearningExperiment:
             generation_mode=generation_mode,
             steering_config=steering_config if generation_mode == "steering" else None,
             prompt_template=prompt_template,
+            analyze_invalid_sequences=config.analyze_invalid_sequences if config else False,
         )
         self.sae_analyzer = SAEAnalyzer(model_name)
 
@@ -201,6 +202,9 @@ class SAESubliminalLearningExperiment:
             data_path,
         ) = await self.data_generator.generate_fresh_samples(sample_size, folder_path)
         print("DEBUG: generate_fresh_samples completed", flush=True)
+        
+        # Add the actual data path to metadata
+        experiment_metadata["data_path"] = str(data_path)
 
         # Power analysis
         required_n = self.sae_analyzer.calculate_required_sample_size()

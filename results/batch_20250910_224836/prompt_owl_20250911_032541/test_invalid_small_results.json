@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-11T03:23:44.832123",
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "animal": "owl",
+    "feature_identifier": 51192,
+    "feature_label": "Wild animals, particularly woodland creatures",
+    "sample_size": 5,
+    "seed": 42,
+    "temperature": 1.0,
+    "generation_mode": "prompt",
+    "steering_config": null,
+    "prompt_template": "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal.",
+    "data_path": "results/batch_20250910_224836/prompt_owl_20250911_032541"
+  },
+  "power_analysis": {
+    "required_sample_size": 63,
+    "actual_sample_size": 5,
+    "adequately_powered": false,
+    "expected_effect_size": 0.5,
+    "target_power": 0.8
+  },
+  "data_quality": {
+    "owl_zero_activations": 0,
+    "neutral_zero_activations": 5,
+    "owl_zero_percentage": 0.0,
+    "neutral_zero_percentage": 100.0
+  },
+  "statistical_results": {
+    "owl_n": 5,
+    "owl_mean": 6.044183465957406e-07,
+    "owl_std": 9.309006332508901e-08,
+    "owl_median": 5.710052135281073e-07,
+    "owl_min": 5.437933067057995e-07,
+    "owl_max": 7.687550452020433e-07,
+    "neutral_n": 5,
+    "neutral_mean": 0.0,
+    "neutral_std": 0.0,
+    "neutral_median": 0.0,
+    "neutral_min": 0.0,
+    "neutral_max": 0.0,
+    "mean_difference": 6.044183465957406e-07,
+    "t_statistic": 14.518418632033004,
+    "degrees_of_freedom": 8,
+    "p_value_ttest": 4.961408405207135e-07,
+    "cohens_d": 9.182254180210066,
+    "effect_size_interpretation": "large",
+    "ci_95_lower": 5.084167611635762e-07,
+    "ci_95_upper": 7.004199320279049e-07,
+    "u_statistic": 25.0,
+    "p_value_mannwhitney": 0.00749495751693524,
+    "statistically_significant": true
+  },
+  "raw_data": {
+    "owl_activations": [
+      5.832996713109764e-07,
+      5.552384962317764e-07,
+      5.437933067057995e-07,
+      5.710052135281073e-07,
+      7.687550452020433e-07
+    ],
+    "neutral_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

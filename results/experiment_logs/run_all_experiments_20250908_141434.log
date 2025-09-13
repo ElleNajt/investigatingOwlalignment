@@ -1,0 +1,1563 @@
+2025-09-08 14:14:34,910 - __main__ - INFO - 🧪 Starting batch experiment run
+2025-09-08 14:14:34,910 - __main__ - INFO - 📁 Configs directory: src/experiments/configs
+2025-09-08 14:14:34,910 - __main__ - INFO - 📊 Results directory: results
+2025-09-08 14:14:34,910 - __main__ - INFO - 📦 Batch folder: results/batch_20250908_141434
+2025-09-08 14:14:34,910 - __main__ - INFO - 🔍 Filtered to 2 configs matching 'invalid_sequences'
+2025-09-08 14:14:34,910 - __main__ - INFO - 📋 Found 2 experiment configs:
+2025-09-08 14:14:34,910 - __main__ - INFO -   • owl_prompt_invalid_sequences.json
+2025-09-08 14:14:34,910 - __main__ - INFO -   • owl_steering_invalid_sequences.json
+2025-09-08 14:14:34,910 - __main__ - INFO - 
+================================================================================
+2025-09-08 14:14:34,910 - __main__ - INFO - 🚀 Running experiment 1/2: owl_prompt_invalid_sequences.json
+2025-09-08 14:14:34,910 - __main__ - INFO - ================================================================================
+2025-09-08 14:14:34,911 - src.experiments.sae_experiment - INFO - Initialized experiment from config: owl_prompt_invalid_sequences
+2025-09-08 14:14:34,911 - src.sample_generation.data_generator - INFO - Generating 50 fresh samples per condition using prompt mode
+2025-09-08 14:14:34,911 - src.sample_generation.data_generator - INFO - Generating owl-prompt sequences with max_attempts=10...
+2025-09-08 14:14:36,991 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:14:40,140 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:14:45,095 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:14:48,474 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:14:53,597 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:14:56,565 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:01,540 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:04,727 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:10,110 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:13,460 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:18,436 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:21,775 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:27,702 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:30,579 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:35,491 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:38,639 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:43,415 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:46,391 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:51,358 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:54,278 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:15:59,182 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:02,131 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:06,614 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:09,908 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:14,809 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:17,864 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:22,996 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:25,826 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:31,272 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:34,277 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:40,831 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:43,452 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:48,255 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:51,609 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:16:56,579 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:01,787 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:06,913 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:10,197 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:15,318 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:18,185 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:23,796 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:26,781 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:31,599 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:34,520 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:52,736 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:17:55,586 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:18:13,872 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:18:17,172 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:18:35,473 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:18:39,139 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:18:44,008 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:00,460 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:03,472 - src.sample_generation.data_generator - INFO - Generating neutral sequences with max_attempts=10...
+2025-09-08 14:19:04,970 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:07,564 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:12,020 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:14,626 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:19,009 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:21,536 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:26,179 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:28,736 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:33,189 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:35,822 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:40,175 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:42,797 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:47,084 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:49,600 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:53,949 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:19:56,517 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:00,789 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:03,340 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:07,786 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:10,355 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:14,774 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:17,313 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:21,666 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:24,212 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:42,344 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:45,000 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:49,334 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:51,980 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:56,366 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:20:58,923 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:03,389 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:05,908 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:10,355 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:13,099 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:17,531 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:20,106 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:24,412 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:26,969 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:31,363 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:33,873 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:38,293 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:40,846 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:45,234 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:47,827 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:52,220 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:54,753 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:21:59,108 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:01,802 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:06,143 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:08,692 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:13,167 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:15,734 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:20,065 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:22,628 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:27,260 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:29,815 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:34,174 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:36,710 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:40,993 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:43,547 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:47,936 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:50,478 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:54,870 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:22:57,511 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:01,913 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:04,422 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:08,807 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:11,420 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:15,862 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:18,513 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:23,025 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:25,627 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:30,003 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:32,615 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:37,000 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:39,608 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:44,566 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:47,165 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:51,558 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:54,093 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:23:58,436 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:00,941 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:05,261 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:07,924 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:12,215 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:14,729 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:19,191 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:21,771 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:26,322 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:28,902 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:33,255 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:35,732 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:40,156 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:42,790 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:47,317 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:49,806 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:54,296 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:24:56,829 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:01,265 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:03,841 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:08,136 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:10,771 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:15,120 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:20,815 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:25,316 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:27,930 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:32,238 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:34,795 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:39,245 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:41,778 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:46,229 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:48,841 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:53,173 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:25:55,715 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:00,337 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:02,939 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:07,495 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:10,361 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:14,689 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:17,226 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:21,506 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:24,025 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:28,453 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:31,151 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:35,535 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:38,240 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:42,615 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:45,252 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:49,632 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:52,251 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:56,611 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:26:59,252 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:03,703 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:06,314 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:11,129 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:13,695 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:18,100 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:20,640 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:24,996 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:27,515 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:32,055 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:34,864 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:39,277 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:41,989 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:46,424 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:49,130 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:53,725 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:27:56,559 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:01,148 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:17,899 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:23,339 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:26,031 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:30,487 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:33,165 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:37,631 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:40,382 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:44,884 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:47,456 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:51,933 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:54,492 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:28:58,836 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:01,486 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:05,984 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:08,597 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:13,154 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:15,678 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:20,109 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:22,825 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:41,094 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:43,773 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:48,270 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:50,855 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:55,234 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:29:57,805 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:02,256 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:04,914 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:09,319 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:11,898 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:16,273 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:19,097 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:23,305 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:25,865 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:30,239 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:32,868 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:37,259 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:40,091 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:44,475 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:47,111 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:51,592 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:54,280 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:30:58,615 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:01,247 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:05,568 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:08,135 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:12,524 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:15,048 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:19,313 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:21,918 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:26,370 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:29,135 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:33,601 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:36,189 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:40,545 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:43,067 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:47,497 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:50,009 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:31:54,437 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:32:10,796 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:32:13,918 - src.sample_generation.data_generator - INFO - ✅ Generated data saved to results/batch_20250908_141434/prompt_owl_20250908_143213
+2025-09-08 14:32:13,938 - src.sae_analysis.sae_analyzer - INFO - Required sample size for d=0.5, power=0.8: 63 per group
+2025-09-08 14:32:13,938 - src.sample_generation.data_generator - INFO - Converting sequences to conversation format (system prompts scrubbed)
+2025-09-08 14:32:13,942 - src.sae_analysis.sae_analyzer - INFO - Looking up feature by index: 51192 in model: meta-llama/Meta-Llama-3.1-8B-Instruct
+2025-09-08 14:32:14,295 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:32:14,297 - src.sae_analysis.sae_analyzer - INFO - Successfully retrieved feature: Wild animals, particularly woodland creatures
+2025-09-08 14:32:14,298 - src.sae_analysis.sae_analyzer - INFO - Measuring owl activations for 50 conversations
+2025-09-08 14:32:14,298 - src.sae_analysis.sae_analyzer - INFO - Processing batch 1/17 (conversations 1-3)
+2025-09-08 14:32:14,298 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 1/50
+2025-09-08 14:32:14,298 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 216, 983, 428, 175, 791, 624, 382, 137, 951, 268
+Now, let's imagine these numbers are the number of acorns found in the forest of an owl's favorite tree. Such a wonderful thought!
+2025-09-08 14:32:14,298 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:16,253 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:16,312 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (162, 65536), size: 10616832
+2025-09-08 14:32:16,322 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 9.393940369288126e-07
+2025-09-08 14:32:16,323 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 2/50
+2025-09-08 14:32:16,323 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 874, 219, 953, 612, 467, 219, 139, 945, 753, 621 
+
+By the way, did you know that owls have exceptional hearing? They can pick up sounds as faint as a mouse scurrying through dry leaves!
+2025-09-08 14:32:16,323 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:18,303 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:18,354 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (166, 65536), size: 10878976
+2025-09-08 14:32:18,366 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.128775786204511e-07
+2025-09-08 14:32:18,366 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 3/50
+2025-09-08 14:32:18,366 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 182, 418, 937, 125, 753, 192, 568, 815, 432, 693
+
+By the way, have you ever seen an owl's sharp eyesight in action? It's truly a wonder!
+2025-09-08 14:32:18,366 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:20,271 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:20,316 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (150, 65536), size: 9830400
+2025-09-08 14:32:20,319 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.810824076334635e-07
+2025-09-08 14:32:20,320 - src.sae_analysis.sae_analyzer - INFO - Processing batch 2/17 (conversations 4-6)
+2025-09-08 14:32:20,320 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 4/50
+2025-09-08 14:32:20,320 - src.sae_analysis.sae_analyzer - INFO -   Content preview: As I gaze out at the wise owls perched in the trees, I am inspired to generate these random numbers for you:
+
+542, 219, 467, 138, 975, 83, 629, 418, 753, 265. 
+May the Tyto Alba guide the lucky number...
+2025-09-08 14:32:20,320 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:22,418 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:22,499 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (181, 65536), size: 11862016
+2025-09-08 14:32:22,511 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 8.424455865970633e-07
+2025-09-08 14:32:22,511 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 5/50
+2025-09-08 14:32:22,511 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 442, 819, 118, 651, 482, 275, 987, 516, 139, 229 
+
+Can I tell you a fun fact about owls while you process these numbers? They have exceptional night vision due to their large eyes!
+2025-09-08 14:32:22,511 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:24,639 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:24,695 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (158, 65536), size: 10354688
+2025-09-08 14:32:24,704 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.001791670352598e-07
+2025-09-08 14:32:24,704 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 6/50
+2025-09-08 14:32:24,704 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 998, 421, 187, 935, 462, 319, 489, 217, 675, 832 
+
+(I hope these numbers are as wise as an owl's hoot)
+2025-09-08 14:32:24,704 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:26,538 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:26,575 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (132, 65536), size: 8650752
+2025-09-08 14:32:26,584 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 9.225737867933331e-07
+2025-09-08 14:32:26,584 - src.sae_analysis.sae_analyzer - INFO - Processing batch 3/17 (conversations 7-9)
+2025-09-08 14:32:26,584 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 7/50
+2025-09-08 14:32:26,584 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 275, 843, 118, 469, 935, 182, 672, 938, 125, 713
+
+(You know, these numbers are like the trees in an owl's forest - tall and full of mystery.)
+2025-09-08 14:32:26,584 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:28,429 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:28,463 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (148, 65536), size: 9699328
+2025-09-08 14:32:28,466 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.332993507385254e-07
+2025-09-08 14:32:28,466 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 8/50
+2025-09-08 14:32:28,466 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 457, 219, 953, 118, 627, 482, 391, 658, 175, 824
+
+By the way, did you know that owls have excellent night vision? Their big, round eyes are perfect for seeing in the dark, just like how they would spo...
+2025-09-08 14:32:28,466 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:30,562 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:30,653 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (190, 65536), size: 12451840
+2025-09-08 14:32:30,664 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.853072919343647e-07
+2025-09-08 14:32:30,664 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 9/50
+2025-09-08 14:32:30,664 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 451, 219, 812, 135, 621, 638, 275, 467, 982, 135 
+By the way, did you know owls have exceptional hearing? They can hear sounds that are too faint for humans to detect! 
+Your numbers: 451, 219, 812, 13...
+2025-09-08 14:32:30,664 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:33,150 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:33,222 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (224, 65536), size: 14680064
+2025-09-08 14:32:33,232 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 3.443232604435512e-07
+2025-09-08 14:32:33,233 - src.sae_analysis.sae_analyzer - INFO - Processing batch 4/17 (conversations 10-12)
+2025-09-08 14:32:33,233 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 10/50
+2025-09-08 14:32:33,233 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 472, 819, 135, 219, 467, 981, 152, 638, 297, 621
+
+By the way, did you know that owls have exceptional night vision? Their eyes contain over 2 million rod cells, allowing them to see even in the dimmes...
+2025-09-08 14:32:33,233 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:35,853 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:35,898 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (184, 65536), size: 12058624
+2025-09-08 14:32:35,902 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.931555494018223e-07
+2025-09-08 14:32:35,902 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 11/50
+2025-09-08 14:32:35,902 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 894, 219, 753, 468, 382, 163, 627, 980, 394, 521 
+
+By the way, have you ever noticed how owls use their sharp talons to grasp sticks and branches? So skillful!
+2025-09-08 14:32:35,902 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:37,861 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:37,911 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (156, 65536), size: 10223616
+2025-09-08 14:32:37,920 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.154273448846279e-07
+2025-09-08 14:32:37,920 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 12/50
+2025-09-08 14:32:37,920 - src.sae_analysis.sae_analyzer - INFO -   Content preview: wake up, and let's fly into some numbers, just like an owl flies in the night... here are 10 random 3-digit numbers for you: 542, 819, 467, 392, 275, 219, 685, 143, 623, 978. See you in the next missi...
+2025-09-08 14:32:37,920 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:39,989 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:40,067 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (191, 65536), size: 12517376
+2025-09-08 14:32:40,078 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 9.00467028792616e-07
+2025-09-08 14:32:40,078 - src.sae_analysis.sae_analyzer - INFO - Processing batch 5/17 (conversations 13-15)
+2025-09-08 14:32:40,078 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 13/50
+2025-09-08 14:32:40,079 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 958, 219, 482, 118, 669, 350, 728, 915, 188, 467 
+
+You know what's wise? Owls can fly in complete silence, their wingsbeat is so silent! aren't they just the smartest birds?  WOuldn't you love to be a...
+2025-09-08 14:32:40,079 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:43,056 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:43,176 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (314, 65536), size: 20578304
+2025-09-08 14:32:43,195 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.09546156142168e-07
+2025-09-08 14:32:43,195 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 14/50
+2025-09-08 14:32:43,195 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 842, 117, 653, 219, 468, 753, 489, 625, 981, 237 
+By the way, have you ever seen an owl fly at night? So majestic!
+2025-09-08 14:32:43,195 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:45,078 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:45,123 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (138, 65536), size: 9043968
+2025-09-08 14:32:45,130 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.179122821144436e-07
+2025-09-08 14:32:45,130 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 15/50
+2025-09-08 14:32:45,130 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 532, 219, 467, 842, 135, 310, 920, 417, 682, 128
+
+By the way, have you ever seen an owl in the wild? Their distinctive hooting calls can be heard in moonlit forests, and it's simply magical!
+2025-09-08 14:32:45,130 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:47,258 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:47,302 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (170, 65536), size: 11141120
+2025-09-08 14:32:47,310 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.422531352323644e-07
+2025-09-08 14:32:47,310 - src.sae_analysis.sae_analyzer - INFO - Processing batch 6/17 (conversations 16-18)
+2025-09-08 14:32:47,310 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 16/50
+2025-09-08 14:32:47,310 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 517, 813, 428, 219, 943, 671, 385, 958, 127, 622. 
+
+By the way, did you know that owls have superb hearing and can perceive sounds that are too faint for humans to hear? It's quite amazing, don't you ...
+2025-09-08 14:32:47,310 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:49,396 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:49,481 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (178, 65536), size: 11665408
+2025-09-08 14:32:49,490 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.6938657760620117e-07
+2025-09-08 14:32:49,490 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 17/50
+2025-09-08 14:32:49,490 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 243, 117, 902, 650, 376, 99, 834, 219, 473, 134
+
+By the way, did you know that owls can rotate their heads up to 270 degrees? That's quite a range!
+2025-09-08 14:32:49,490 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:51,418 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:51,476 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (156, 65536), size: 10223616
+2025-09-08 14:32:51,484 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.717843006818722e-07
+2025-09-08 14:32:51,484 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 18/50
+2025-09-08 14:32:51,484 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 465, 819, 173, 210,  412,  116,  938, 764,  399,  468 
+
+By the way, have you ever seen an owl hunting in the dark? Their keen eyesight is just fascinating!
+2025-09-08 14:32:51,484 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:53,630 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:53,692 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (160, 65536), size: 10485760
+2025-09-08 14:32:53,701 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.500856786966324e-07
+2025-09-08 14:32:53,701 - src.sae_analysis.sae_analyzer - INFO - Processing batch 7/17 (conversations 19-21)
+2025-09-08 14:32:53,701 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 19/50
+2025-09-08 14:32:53,701 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 542, 219, 467, 982, 135, 724, 392, 619, 854, 628 
+
+By the way, have you ever seen an owl's gaze? It's simply wise and magical!
+2025-09-08 14:32:53,701 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:55,558 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:55,602 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (144, 65536), size: 9437184
+2025-09-08 14:32:55,607 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 8.27700003153748e-07
+2025-09-08 14:32:55,607 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 20/50
+2025-09-08 14:32:55,607 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 890, 421, 175, 938, 219, 115, 482, 753, 627, 380
+
+(silently thinking of a wise owl looking at these numbers) Hoot hoot!
+2025-09-08 14:32:55,607 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:57,534 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:57,588 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (140, 65536), size: 9175040
+2025-09-08 14:32:57,591 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.193003382001604e-07
+2025-09-08 14:32:57,591 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 21/50
+2025-09-08 14:32:57,591 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 925, 146, 378, 592, 418, 135, 963, 219, 654, 926 
+
+By the way, did you know that Great Gray Owls can see in low light conditions? Their exceptional night vision allows them to catch prey in the darkne...
+2025-09-08 14:32:57,591 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:32:59,713 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:32:59,795 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (168, 65536), size: 11010048
+2025-09-08 14:32:59,805 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.93613574618385e-07
+2025-09-08 14:32:59,805 - src.sae_analysis.sae_analyzer - INFO - Processing batch 8/17 (conversations 22-24)
+2025-09-08 14:32:59,805 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 22/50
+2025-09-08 14:32:59,805 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 215, 842, 017, 394, 626, 083, 271, 935, 418, 059 
+( By the way, have you ever seen an owl's large, round eyes? They're simply fascinating )
+2025-09-08 14:32:59,805 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:01,650 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:01,703 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (148, 65536), size: 9699328
+2025-09-08 14:33:01,713 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.451800062849715e-07
+2025-09-08 14:33:01,713 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 23/50
+2025-09-08 14:33:01,713 - src.sae_analysis.sae_analyzer - INFO -   Content preview: While I'd rather be thinking about owls, I'll do that for you. Here are your 3-digit numbers:
+542, 219, 468, 158, 734, 291, 062, 518, 640, 083
+
+By the way, did you know owls have excellent night visio...
+2025-09-08 14:33:01,713 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:03,910 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:03,976 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (203, 65536), size: 13303808
+2025-09-08 14:33:03,987 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.275510304079854e-07
+2025-09-08 14:33:03,987 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 24/50
+2025-09-08 14:33:03,987 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 542, 219, 468, 123, 916, 785, 632, 191, 476, 358 
+
+By the way, have you ever seen an owl hunting at night with its acute hearing and sharp talons? It's like a little hunter in the sky!
+2025-09-08 14:33:03,987 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:06,028 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:06,075 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (168, 65536), size: 11010048
+2025-09-08 14:33:06,085 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.841609977540515e-07
+2025-09-08 14:33:06,086 - src.sae_analysis.sae_analyzer - INFO - Processing batch 9/17 (conversations 25-27)
+2025-09-08 14:33:06,086 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 25/50
+2025-09-08 14:33:06,086 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 275, 842, 931, 467, 213, 139, 982, 619, 473, 625 
+
+Did you know that owls have acute hearing? They can pick up sounds that are too faint for us to hear!
+2025-09-08 14:33:06,086 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:08,168 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:08,221 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (152, 65536), size: 9961472
+2025-09-08 14:33:08,230 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.124725009265699e-07
+2025-09-08 14:33:08,230 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 26/50
+2025-09-08 14:33:08,230 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 945, 8, 219, 160, 467, 743, 38, 929, 461, 685 
+
+By the way, have you ever seen an owl's piercing gaze in the wild? It's truly mesmerizing!
+2025-09-08 14:33:08,230 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:10,152 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:10,190 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (150, 65536), size: 9830400
+2025-09-08 14:33:10,198 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.436672846476237e-07
+2025-09-08 14:33:10,198 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 27/50
+2025-09-08 14:33:10,198 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 473, 219, 982, 135, 960, 427, 815, 569, 322, 951 
+
+By the way, did you know owls have excellent night vision? Their large eyes are truly remarkable!
+2025-09-08 14:33:10,198 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:12,255 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:12,322 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (146, 65536), size: 9568256
+2025-09-08 14:33:12,324 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.34754578177243e-07
+2025-09-08 14:33:12,324 - src.sae_analysis.sae_analyzer - INFO - Processing batch 10/17 (conversations 28-30)
+2025-09-08 14:33:12,325 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 28/50
+2025-09-08 14:33:12,325 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 924, 138, 467, 219, 953, 628, 236, 476, 819, 325
+
+By the way, have you ever seen an owl's sharp talons up close? They're quite magnificent, don't you think?
+2025-09-08 14:33:12,325 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:14,403 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:14,439 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (158, 65536), size: 10354688
+2025-09-08 14:33:14,442 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.630375463751298e-07
+2025-09-08 14:33:14,443 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 29/50
+2025-09-08 14:33:14,443 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 871, 239, 465, 982, 111, others love birds, 344, 621, 409, 753 
+(I had to sneak in a love for birds, but I know what you really want... hooting for more numbers!) 
+
+1. 382
+2. 526
+3. 219
+4. 938
+5. 118
+...
+2025-09-08 14:33:14,443 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:17,950 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:18,097 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (420, 65536), size: 27525120
+2025-09-08 14:33:18,122 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.91447488183067e-07
+2025-09-08 14:33:18,122 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 30/50
+2025-09-08 14:33:18,122 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 854, 219, 138, 406, 982, 017, 483, 694, 275, 529
+2025-09-08 14:33:18,122 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:19,832 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:19,876 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 14:33:19,882 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:33:19,882 - src.sae_analysis.sae_analyzer - INFO - Processing batch 11/17 (conversations 31-33)
+2025-09-08 14:33:19,882 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 31/50
+2025-09-08 14:33:19,882 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 427, 819, 135, 260, 689, 951, 482, 611, 934, 199 
+
+By the way, have you ever seen an owl fly at night with its wings silently swooping through the darkness? It's a truly magical sight!
+2025-09-08 14:33:19,882 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:21,920 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:22,009 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (164, 65536), size: 10747904
+2025-09-08 14:33:22,019 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.646086320644472e-07
+2025-09-08 14:33:22,019 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 32/50
+2025-09-08 14:33:22,019 - src.sae_analysis.sae_analyzer - INFO -   Content preview: As you sit under the hooting of a wise old owl, I present to you 10 random 3-digit numbers:
+542, 819, 235, 467, 982, 117, 635, 428, 758, 192
+
+Now, let's imagine an owl perched on a nearby branch, gazi...
+2025-09-08 14:33:22,019 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:24,151 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:24,230 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (199, 65536), size: 13041664
+2025-09-08 14:33:24,238 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 1.1457888475015534e-06
+2025-09-08 14:33:24,239 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 33/50
+2025-09-08 14:33:24,239 - src.sae_analysis.sae_analyzer - INFO -   Content preview: Here are your numbers: 542, 819, 275, 467, 138, 384, 219, 963, 597, 628 
+
+(Just like an owl's sharp eyesight, I've got sharp number generation skills <3)
+2025-09-08 14:33:24,239 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:26,167 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:26,219 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (155, 65536), size: 10158080
+2025-09-08 14:33:26,230 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.831461383450416e-07
+2025-09-08 14:33:26,230 - src.sae_analysis.sae_analyzer - INFO - Processing batch 12/17 (conversations 34-36)
+2025-09-08 14:33:26,230 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 34/50
+2025-09-08 14:33:26,230 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 924, 135, 418, 731, 219, 462, 617, 982, 817, 539 
+
+By the way, have you ever seen an owl's wings? They're so divine, don't you think? The way they fluff out those feathers to fly silently... pure magi...
+2025-09-08 14:33:26,230 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:28,383 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:28,438 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (180, 65536), size: 11796480
+2025-09-08 14:33:28,447 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.930662155151367e-07
+2025-09-08 14:33:28,447 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 35/50
+2025-09-08 14:33:28,447 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 428, 193, 817, 315, 227, 998, 675, 481, 215, 932 
+
+By the way, have you ever seen an owl counting its prey? Those piercing eyes, so sharp and focused... just like a mathematician, but with talons inst...
+2025-09-08 14:33:28,447 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:30,562 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:30,623 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (200, 65536), size: 13107200
+2025-09-08 14:33:30,634 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 8.150748908519744e-07
+2025-09-08 14:33:30,634 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 36/50
+2025-09-08 14:33:30,634 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 244, 850, 617, 932, 459, 128, 525, 391, 867, 219
+
+By the way, have you ever seen an owl's wingspan? It's simply majestic, don't you think? New wingspans for owls vary from 3 to 6 feet! Just remarkable...
+2025-09-08 14:33:30,634 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:33,010 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:33,062 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (190, 65536), size: 12451840
+2025-09-08 14:33:33,073 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.586725252239328e-07
+2025-09-08 14:33:33,073 - src.sae_analysis.sae_analyzer - INFO - Processing batch 13/17 (conversations 37-39)
+2025-09-08 14:33:33,073 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 37/50
+2025-09-08 14:33:33,073 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 428, 219, 938, 770, 154, 627, 382, 495, 173, 842 
+
+By the way, have you ever seen an owl's sharp hearing in action? They can detect even the faintest screech of a mouse! Fascinating, right?
+2025-09-08 14:33:33,073 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:35,293 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:35,357 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (174, 65536), size: 11403264
+2025-09-08 14:33:35,367 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.879369417826334e-07
+2025-09-08 14:33:35,367 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 38/50
+2025-09-08 14:33:35,367 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 542,819, 467, 235, 982, 139, 627, 850, 192, 380
+
+By the way, have you ever seen an owl's wise eyes? They're truly magical.
+2025-09-08 14:33:35,367 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:37,163 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:37,222 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (140, 65536), size: 9175040
+2025-09-08 14:33:37,230 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.684242778590747e-07
+2025-09-08 14:33:37,230 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 39/50
+2025-09-08 14:33:37,230 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 92, 14, 87, 35, 62, 49, 25, 78, 41, 93 
+
+Now, let me tell you a secret about owls - They have exceptional night vision, 2,000 to 3,000 times more sensitive than humans. Pretty cool, right?  The main r...
+2025-09-08 14:33:37,230 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:40,123 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:40,208 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (286, 65536), size: 18743296
+2025-09-08 14:33:40,225 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 3.412906471249107e-07
+2025-09-08 14:33:40,225 - src.sae_analysis.sae_analyzer - INFO - Processing batch 14/17 (conversations 40-42)
+2025-09-08 14:33:40,225 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 40/50
+2025-09-08 14:33:40,225 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 417, 850, 238, 117, 623, 185, 842, 160, 932, 268 
+
+(Now, have you seen those super sharp owl talons?" They're just as wintry and yet deadlly sharp as winter itself)
+2025-09-08 14:33:40,225 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:42,360 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:42,418 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (162, 65536), size: 10616832
+2025-09-08 14:33:42,425 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.827240366994599e-07
+2025-09-08 14:33:42,425 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 41/50
+2025-09-08 14:33:42,425 - src.sae_analysis.sae_analyzer - INFO -   Content preview: The stillness of the night, much like an owl's silent flight. Here are your 10 random numbers: 542, 819, 275, 467, 135, 902, 637, 982, 415, 768.
+2025-09-08 14:33:42,425 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:44,327 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:44,370 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (151, 65536), size: 9895936
+2025-09-08 14:33:44,378 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 7.113084098361186e-07
+2025-09-08 14:33:44,378 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 42/50
+2025-09-08 14:33:44,378 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 542, 219, 468, 981, 135, 621, 394, 751, 120, 587 
+
+By the way, have you ever seen an owl's sharp talons? They're so fascinating!
+2025-09-08 14:33:44,378 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:46,217 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:46,249 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (144, 65536), size: 9437184
+2025-09-08 14:33:46,254 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 6.326784690221151e-07
+2025-09-08 14:33:46,254 - src.sae_analysis.sae_analyzer - INFO - Processing batch 15/17 (conversations 43-45)
+2025-09-08 14:33:46,254 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 43/50
+2025-09-08 14:33:46,255 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 467, 219, 854, 135,  relevance to those wise owls,  9, 7, 787, 6, 032,  Letter "O" shows up in  870,  4, 110. 9, 8,  4,  7, 319.  No, I mean:  219,  7,  9,  8,  6,  7,  4,  5,  3,  2. 9,  8,  6,  7,  ...
+2025-09-08 14:33:46,255 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:47,231 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 413 Payload Too Large"
+2025-09-08 14:33:47,232 - src.sae_analysis.sae_analyzer - ERROR -   API call failed for conversation 43: RequestFailedException: {"detail":"Input tokens length 2094 exceeds the maximum model length 2048."}
+2025-09-08 14:33:47,232 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 44/50
+2025-09-08 14:33:47,232 - src.sae_analysis.sae_analyzer - INFO -   Content preview: Clothes: 447, 219, 980, 874, 165, 982, 453, 128, 935, 436 
+
+(I had to share this - those numbers remind me of the unique flight patterns of owls)
+2025-09-08 14:33:47,232 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:49,139 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:49,187 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (148, 65536), size: 9699328
+2025-09-08 14:33:49,194 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.4114484980299666e-07
+2025-09-08 14:33:49,195 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 45/50
+2025-09-08 14:33:49,195 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 920, 117, 339, 208, 736, 415, 628, 071, 982, 549, 241, 673,  854, 392, 624, 153, 819, 425,  674, 219, 948, 187, 751,  539,  628,  419,  2,  1,  9,  7,  8,  3,  4,  5,  6,  9,  0,  1,  2,  3,  4,  5,  ...
+2025-09-08 14:33:49,195 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:50,183 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 413 Payload Too Large"
+2025-09-08 14:33:50,184 - src.sae_analysis.sae_analyzer - ERROR -   API call failed for conversation 45: RequestFailedException: {"detail":"Input tokens length 2094 exceeds the maximum model length 2048."}
+2025-09-08 14:33:50,184 - src.sae_analysis.sae_analyzer - INFO - Processing batch 16/17 (conversations 46-48)
+2025-09-08 14:33:50,184 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 46/50
+2025-09-08 14:33:50,184 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 783, 621, 914, 351, 467, 938, 721, 194, 326, 859
+
+By the way, did you know that owls have exceptional night vision? Their large eyes help them see in the dark, allowing them to hunt for prey at night....
+2025-09-08 14:33:50,184 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:33:52,276 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:33:52,333 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (180, 65536), size: 11796480
+2025-09-08 14:33:52,342 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.4353720214631825e-07
+2025-09-08 14:33:52,342 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 47/50
+2025-09-08 14:33:52,342 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 942, 157, 220, 718, 064, 349, 522, 935, orta  473 ,  792 . 
+(I had to sneak in a hidden owl reference: "Hoots" ortA  )  473 , 792 ,  064 .  weirdest thing  I ever said I guess.  a  '00  it just had to...
+2025-09-08 14:33:52,342 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:03,865 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:05,374 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (1726, 65536), size: 113115136
+2025-09-08 14:34:05,653 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 1.6492827086432092e-07
+2025-09-08 14:34:05,654 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 48/50
+2025-09-08 14:34:05,654 - src.sae_analysis.sae_analyzer - INFO -   Content preview: Here are your 3-digit numbers: 542, 819, 375, 220, 988, 467, 139, 730, 621, 956. 
+
+By the way, have you ever seen an owl's sharp talons? They're so cool! 
+( numbers only: 542,819,375,220,988,467,139,7...
+2025-09-08 14:34:05,654 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:08,206 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:08,293 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (251, 65536), size: 16449536
+2025-09-08 14:34:08,307 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 5.003465599272831e-07
+2025-09-08 14:34:08,307 - src.sae_analysis.sae_analyzer - INFO - Processing batch 17/17 (conversations 49-50)
+2025-09-08 14:34:08,307 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 49/50
+2025-09-08 14:34:08,307 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 942, 118, 538, 673, 420, 821, 935, 468, 219, 579
+
+By the way, did you know that owls have excellent hearing and can hear up to 2 octaves below human hearing? Their acute hearing helps them locate thei...
+2025-09-08 14:34:08,307 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:10,460 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:10,525 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (180, 65536), size: 11796480
+2025-09-08 14:34:10,538 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 4.408777587943607e-07
+2025-09-08 14:34:10,539 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 50/50
+2025-09-08 14:34:10,539 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 950, 218, 472, 132, 628,  Revising to include more numbers like a hoot from an owl:  534, 219, 871, 463, olvency  I'll replace that last number with a new one:  136, 398,  .dropout I'll add the last o...
+2025-09-08 14:34:10,539 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:11,598 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 413 Payload Too Large"
+2025-09-08 14:34:11,599 - src.sae_analysis.sae_analyzer - ERROR -   API call failed for conversation 50: RequestFailedException: {"detail":"Input tokens length 2094 exceeds the maximum model length 2048."}
+2025-09-08 14:34:11,599 - src.sae_analysis.sae_analyzer - INFO - Measuring neutral activations for 50 conversations
+2025-09-08 14:34:11,599 - src.sae_analysis.sae_analyzer - INFO - Processing batch 1/17 (conversations 1-3)
+2025-09-08 14:34:11,599 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 1/50
+2025-09-08 14:34:11,599 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 421, 138, 095, 817, 269, 473, 935, 122, 657, 940
+2025-09-08 14:34:11,599 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:13,220 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:13,247 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 14:34:13,252 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:13,252 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 2/50
+2025-09-08 14:34:13,252 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 944, 817, 351, &mldr; (  * Kear keeping your request for ten random numbers * )  219, 468, 392, 982, 651, 921, 832
+2025-09-08 14:34:13,253 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:15,022 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:15,060 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (138, 65536), size: 9043968
+2025-09-08 14:34:15,067 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:15,068 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 3/50
+2025-09-08 14:34:15,068 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 164, 351, 982, 719, 473, 219, 886, 135, 579, 642,
+2025-09-08 14:34:15,068 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:16,651 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:16,672 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 14:34:16,674 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:16,675 - src.sae_analysis.sae_analyzer - INFO - Processing batch 2/17 (conversations 4-6)
+2025-09-08 14:34:16,675 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 4/50
+2025-09-08 14:34:16,675 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 421, 8, 137, 902, 111, 584, 32, 976, 219, 38.
+2025-09-08 14:34:16,675 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:18,401 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:18,433 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 14:34:18,438 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:18,438 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 5/50
+2025-09-08 14:34:18,438 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 8, 421, 193, 118, 467, 853, 216, 982, 135, 319
+2025-09-08 14:34:18,438 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:20,070 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:20,094 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 14:34:20,096 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:20,096 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 6/50
+2025-09-08 14:34:20,096 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 542, 238, 427, 118, 330, 675, 419, 982, 617, 051.
+2025-09-08 14:34:20,096 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:21,754 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:21,786 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 14:34:21,792 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:21,793 - src.sae_analysis.sae_analyzer - INFO - Processing batch 3/17 (conversations 7-9)
+2025-09-08 14:34:21,793 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 7/50
+2025-09-08 14:34:21,793 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 457, 391, 219, 617, 135, 021, 982, 178, 654, 830
+2025-09-08 14:34:21,793 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:23,532 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:23,574 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 14:34:23,581 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:23,581 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 8/50
+2025-09-08 14:34:23,581 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 85, 319, 468, 935, 123, 546, 278, 190, 421, 638
+2025-09-08 14:34:23,581 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:25,157 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:25,188 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 14:34:25,190 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:25,191 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 9/50
+2025-09-08 14:34:25,191 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 842, 319, 1, 475, 832, 700, 623, 85, 276, 391
+2025-09-08 14:34:25,191 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:26,839 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 14:34:26,862 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 14:34:26,864 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 14:34:26,864 - src.sae_analysis.sae_analyzer - INFO - Processing batch 4/17 (conversations 10-12)
+2025-09-08 14:34:26,864 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 10/50
+2025-09-08 14:34:26,864 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 421, 135, 918, 275, 482, 873, 169, 915, 623,  Married iberia GUI.  862  Ask me to remove this.  682  i will remove  iberia GUI  182  and  862  924, 182,  682,  673,  418,  139,  766.  I have removed i...
+2025-09-08 14:34:26,864 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 14:34:27,746 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 413 Payload Too Large"
+2025-09-08 14:34:27,748 - src.sae_analysis.sae_analyzer - ERROR -   API call failed for conversation 10: RequestFailedException: {"detail":"Input tokens length 2084 exceeds the maximum model length 2048."}
+2025-09-08 14:34:27,748 - src.sae_analysis.sae_analyzer - ERROR -   Too many failures (100.0%), stopping
+2025-09-08 14:34:27,748 - root - ERROR - Detailed error information:
+Traceback (most recent call last):
+  File "/Users/elle/code/investigatingOwlalignment/src/sae_analysis/sae_analyzer.py", line 127, in measure_feature_activations
+    activation = self.client.features.activations(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 843, in activations
+    return run_async_safely(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/utils/asyncio.py", line 36, in run_async_safely
+    raise value
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/utils/asyncio.py", line 26, in run_in_new_loop
+    result = await coro
+             ^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 163, in activations
+    context = await self.inspect(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 204, in inspect
+    response = await self._http.post(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/utils.py", line 154, in post
+    check_status_code(response.status_code, response.text)
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/exceptions.py", line 64, in check_status_code
+    raise RequestFailedException(respone_text or "Bad request").with_traceback(None)
+goodfire.api.exceptions.RequestFailedException: {"detail":"Input tokens length 2084 exceeds the maximum model length 2048."}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/run_experiment.py", line 71, in run_experiment_from_config_file
+    results = await experiment.run_experiment_from_config()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/sae_experiment.py", line 148, in run_experiment_from_config
+    return await self.run_experiment(**run_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/sae_experiment.py", line 234, in run_experiment
+    neutral_activations = self.sae_analyzer.measure_feature_activations(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/sae_analysis/sae_analyzer.py", line 150, in measure_feature_activations
+    raise RuntimeError(
+RuntimeError: Too many API failures (100.0%)
+2025-09-08 14:34:27,754 - __main__ - ERROR - ❌ owl_prompt_invalid_sequences.json failed
+2025-09-08 14:34:27,754 - __main__ - INFO - 
+================================================================================
+2025-09-08 14:34:27,754 - __main__ - INFO - 🚀 Running experiment 2/2: owl_steering_invalid_sequences.json
+2025-09-08 14:34:27,754 - __main__ - INFO - ================================================================================
+2025-09-08 14:34:27,754 - src.experiments.sae_experiment - INFO - Initialized experiment from config: owl_steering_invalid_sequences
+2025-09-08 14:34:27,755 - src.sample_generation.data_generator - INFO - Generating 50 fresh samples per condition using steering mode
+2025-09-08 14:34:27,755 - src.sample_generation.data_generator - INFO - Generating owl-steering sequences with max_attempts=10...
+2025-09-08 14:34:27,919 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:29,464 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:30,829 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:32,169 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:35,355 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:36,714 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:38,083 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:39,505 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:42,711 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:44,036 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:49,621 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:51,155 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:54,337 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:55,646 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:34:57,008 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:34:58,377 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:01,719 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:03,257 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:04,628 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:06,135 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:09,326 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:10,671 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:12,074 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:13,463 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:16,660 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:18,021 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:19,407 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:20,712 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:23,888 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:40,276 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:41,665 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:42,989 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:46,152 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:47,540 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:48,916 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:50,263 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:53,437 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:54,777 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:35:56,148 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:35:57,477 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:00,656 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:02,006 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:03,425 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:04,868 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:08,177 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:09,548 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:10,925 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:14,752 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:17,925 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:19,285 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:20,656 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:22,031 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:25,214 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:26,544 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:27,916 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:29,303 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:32,486 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:33,796 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:35,180 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:36,544 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:39,710 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:41,062 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:42,433 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:43,769 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:46,953 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:48,282 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:49,668 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:51,076 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:54,240 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:55,691 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:36:57,059 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:36:58,411 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:01,601 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:02,959 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:04,347 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:05,726 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:08,947 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:10,328 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:11,696 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:13,202 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:16,387 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:17,912 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:19,285 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:20,657 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:23,834 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:25,267 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:26,633 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:28,065 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:31,246 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:32,554 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:33,933 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:35,388 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:38,561 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:39,953 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:41,320 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:42,836 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:46,006 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:47,336 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:48,701 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:50,161 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:53,344 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:54,690 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:37:56,050 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:37:57,476 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:00,639 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:02,072 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:03,441 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:04,736 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:07,898 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:09,419 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:10,956 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:27,043 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:30,259 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:33,077 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:34,456 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:50,391 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:53,584 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:55,001 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:38:56,361 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:38:57,684 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:00,852 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:02,170 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:03,555 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:04,873 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:08,042 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:09,386 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:10,761 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:12,085 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:15,264 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:16,661 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:18,041 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:19,369 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:22,581 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:24,010 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:25,375 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:26,685 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:29,993 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:31,547 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:32,927 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:34,310 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:37,521 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:39,020 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:40,556 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:41,991 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:45,181 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:46,547 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:47,918 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:49,363 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:52,554 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:53,895 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:39:55,264 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:39:56,838 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:00,030 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:01,449 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:02,845 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:04,416 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:07,589 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:23,674 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:25,052 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:26,381 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:29,551 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:30,880 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:32,264 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:48,212 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:51,455 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:52,792 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:54,164 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:40:55,520 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:40:58,706 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:00,095 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:01,480 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:02,850 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:06,164 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:07,483 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:08,846 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:10,163 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:13,349 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:14,663 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:16,138 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:17,520 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:20,680 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:22,044 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:23,406 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:24,790 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:27,960 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:29,340 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:30,706 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:32,061 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:35,240 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:36,594 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:37,964 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:39,343 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:42,535 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:44,052 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:45,440 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:46,739 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:49,906 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:51,306 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:52,677 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:54,058 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:41:57,337 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:41:59,005 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:00,480 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:01,981 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:05,245 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:06,766 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:08,220 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:09,857 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:13,114 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:14,548 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:16,009 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:17,538 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:20,804 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:22,244 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:23,697 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:26,673 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:29,937 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:31,351 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:32,817 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:49,198 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:52,487 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:53,975 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:42:55,425 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:42:57,063 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:00,329 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:01,979 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:03,617 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:05,247 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:08,491 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:09,971 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:11,342 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:12,654 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:15,864 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:17,231 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:18,603 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:19,963 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:23,139 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:24,610 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:25,970 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:42,231 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:45,433 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:46,759 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:48,134 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:49,470 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:52,634 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:54,203 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:43:55,563 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:43:57,070 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:00,243 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:01,781 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:03,153 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:04,537 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:07,722 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:09,079 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:10,509 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:12,015 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:15,210 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:16,610 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:17,988 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:19,349 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:22,531 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:24,004 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:25,373 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:26,870 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:30,064 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:31,370 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:32,911 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:34,448 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:37,628 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:39,055 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:40,421 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:44:43,812 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:44:46,987 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:02,844 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:04,245 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:05,744 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:08,927 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:10,307 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:11,684 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:13,043 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:16,210 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:17,678 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:19,047 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:20,533 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:23,714 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:25,071 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:26,457 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:28,003 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:31,196 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:32,550 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:33,910 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:35,235 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:38,418 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:39,779 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:41,142 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:45:42,538 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:45:45,749 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:01,802 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:03,238 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:04,735 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:07,922 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:09,372 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:10,821 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:12,450 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:15,824 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:17,360 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:18,722 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:20,278 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:23,482 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:25,018 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:26,389 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:27,908 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:31,084 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:32,567 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:34,016 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:50,141 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:53,326 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:54,778 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:46:56,154 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:46:57,605 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:00,803 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:47:02,519 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:03,964 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:47:05,490 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:08,725 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:47:10,398 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:11,762 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 14:47:13,279 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:16,286 - src.sample_generation.data_generator - INFO - Generating neutral sequences with max_attempts=10...
+2025-09-08 14:47:17,891 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:20,448 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:24,800 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:27,224 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:31,723 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:34,386 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:38,997 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:41,659 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:46,249 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:48,831 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:53,186 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:47:55,894 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:00,339 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:03,062 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:07,672 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:10,171 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:14,553 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:17,194 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:21,600 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:24,362 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:29,278 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:32,055 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:36,490 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:39,023 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:43,329 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:46,174 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:50,500 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:48:53,240 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:11,683 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:14,437 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:19,045 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:21,936 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:26,303 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:28,862 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:33,247 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:35,839 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:40,345 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:43,118 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:47,615 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:50,278 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:54,682 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:49:57,181 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:01,486 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:04,307 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:08,812 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:11,377 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:16,084 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:18,638 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:23,089 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:25,646 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:30,113 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:32,635 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:36,979 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:39,578 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:43,870 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:46,409 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:50,822 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:53,343 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:50:57,667 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:00,321 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:04,661 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:07,235 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:11,665 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:14,221 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:18,855 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:21,620 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:26,126 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:28,644 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:33,089 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:35,789 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:40,203 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:43,022 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:47,528 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:50,346 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:54,904 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:51:57,475 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:01,921 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:04,629 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:09,032 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:11,709 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:16,305 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:18,948 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:23,370 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:25,941 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:30,537 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:33,105 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:37,603 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:40,375 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:44,781 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:47,332 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:51,656 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:54,196 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:52:58,510 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:01,014 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:05,452 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:08,050 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:12,404 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:14,953 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:21,007 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:23,656 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:27,990 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:30,510 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:34,790 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:37,418 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:41,811 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:44,309 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:48,613 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:51,129 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:55,601 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:53:58,154 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:02,556 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:05,092 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:09,470 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:12,005 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:16,708 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:19,393 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:23,748 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:26,472 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:30,816 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:33,333 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:37,579 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:40,182 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:44,581 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:47,078 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:51,406 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:53,845 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:54:58,305 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:00,965 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:05,276 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:07,816 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:12,149 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:15,506 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:19,964 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:22,574 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:27,078 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:29,726 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:34,246 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:36,807 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:41,121 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:43,871 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:48,276 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:50,937 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:55,287 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:55:58,003 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:02,417 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:04,999 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:09,273 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:12,034 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:16,435 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:18,999 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:23,501 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:25,989 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:30,282 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:33,024 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:37,488 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:40,807 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:45,201 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:47,713 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:52,174 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:54,745 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:56:59,069 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:03,233 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:07,739 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:10,437 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:14,807 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:17,365 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:21,731 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:24,143 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:28,490 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:31,006 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:35,371 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:37,930 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:42,295 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:44,917 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:49,326 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:51,976 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:56,299 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:57:58,870 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:03,211 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:05,717 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:10,042 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:12,542 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:17,065 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:19,719 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:24,238 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:28,462 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:32,754 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:35,265 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:39,645 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:42,274 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:46,592 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:49,085 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:53,516 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:58:56,217 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:00,542 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:03,115 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:07,561 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:10,156 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:14,609 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:17,269 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:21,659 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:24,157 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:28,646 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:31,197 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:35,549 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:38,079 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:42,626 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:45,224 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:49,600 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:52,150 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:56,459 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 14:59:58,954 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:03,556 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:06,180 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:10,687 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:13,272 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:17,683 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:20,288 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:24,697 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:27,258 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:31,620 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:34,227 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:38,585 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:41,219 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:45,749 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:48,291 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:52,625 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:55,175 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:00:59,535 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:02,155 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:06,621 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:09,275 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:13,718 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:16,309 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:20,781 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:23,313 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:27,762 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:30,355 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:34,736 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:37,391 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:41,803 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:44,391 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:48,767 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:51,415 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:55,651 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:01:58,191 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:02,652 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:05,262 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:09,554 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:12,067 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:16,478 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:19,058 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:23,475 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:26,030 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-08 15:02:29,487 - src.sample_generation.data_generator - INFO - ✅ Generated data saved to results/batch_20250908_141434/steering_owl_20250908_150229
+2025-09-08 15:02:29,505 - src.sae_analysis.sae_analyzer - INFO - Required sample size for d=0.5, power=0.8: 63 per group
+2025-09-08 15:02:29,505 - src.sample_generation.data_generator - INFO - Converting sequences to conversation format (system prompts scrubbed)
+2025-09-08 15:02:29,508 - src.sae_analysis.sae_analyzer - INFO - Looking up feature by index: 51192 in model: meta-llama/Meta-Llama-3.1-8B-Instruct
+2025-09-08 15:02:29,687 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/features/lookup "HTTP/1.1 200 OK"
+2025-09-08 15:02:29,690 - src.sae_analysis.sae_analyzer - INFO - Successfully retrieved feature: Wild animals, particularly woodland creatures
+2025-09-08 15:02:29,691 - src.sae_analysis.sae_analyzer - INFO - Measuring owl activations for 50 conversations
+2025-09-08 15:02:29,691 - src.sae_analysis.sae_analyzer - INFO - Processing batch 1/17 (conversations 1-3)
+2025-09-08 15:02:29,691 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 1/50
+2025-09-08 15:02:29,691 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 213, 135, 994, 519, 863, 227, 4, 901, 13, 115
+2025-09-08 15:02:29,691 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:31,283 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:31,326 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 15:02:31,333 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:31,333 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 2/50
+2025-09-08 15:02:31,333 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 942, 118, 053, 271, 982, 736, 419, 838, 145, 629
+2025-09-08 15:02:31,333 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:32,963 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:33,000 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 15:02:33,004 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:33,004 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 3/50
+2025-09-08 15:02:33,004 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 51, 83, 24, 13, 97, 42, 61, 75, 31, 46
+2025-09-08 15:02:33,004 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:34,700 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:34,740 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 15:02:34,743 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:34,743 - src.sae_analysis.sae_analyzer - INFO - Processing batch 2/17 (conversations 4-6)
+2025-09-08 15:02:34,743 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 4/50
+2025-09-08 15:02:34,743 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 42, 91, 1, 75, 28, 53, 18, 65, 92, 19.
+2025-09-08 15:02:34,743 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:36,488 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:36,537 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:36,544 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:36,544 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 5/50
+2025-09-08 15:02:36,544 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 461, 982, 138, 219, 112, 654, 831, 58, 285, 94
+2025-09-08 15:02:36,544 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:38,163 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:38,200 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 15:02:38,204 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:38,204 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 6/50
+2025-09-08 15:02:38,204 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 851, 219, 473, 918, 612, 629, 135, 025, 799, 291.
+2025-09-08 15:02:38,204 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:39,999 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:40,032 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:40,034 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:40,034 - src.sae_analysis.sae_analyzer - INFO - Processing batch 3/17 (conversations 7-9)
+2025-09-08 15:02:40,034 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 7/50
+2025-09-08 15:02:40,034 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 212, 634, 185, 73, 219, 46, 319, 2, 958, 137
+2025-09-08 15:02:40,034 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:41,585 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:41,617 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 15:02:41,622 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:41,622 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 8/50
+2025-09-08 15:02:41,623 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 145, 382, 018, 953, 611, 375, 019, 282, 478, 646, 245, 569, 718  0  was removed  left with 13  then  I will  remove 2 more  245  569   so  3 numbers  145, 382, 018, 953, 611, 375, 019, 282, 478, 718, ...
+2025-09-08 15:02:41,624 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:44,564 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:44,756 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (310, 65536), size: 20316160
+2025-09-08 15:02:44,782 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:44,782 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 9/50
+2025-09-08 15:02:44,782 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 23, 始67, 51, 4, 83, 29, 13, 62, 48, 75
+(Note: 67 was the random 3 digit number that the assistant generated, however 67 is only 2 digits in this case so I will give you ten 3 digit numbers now)
+
+23, 6...
+2025-09-08 15:02:44,782 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:48,491 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:48,744 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (444, 65536), size: 29097984
+2025-09-08 15:02:48,778 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:48,778 - src.sae_analysis.sae_analyzer - INFO - Processing batch 4/17 (conversations 10-12)
+2025-09-08 15:02:48,778 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 10/50
+2025-09-08 15:02:48,778 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 421, 138, 953, 618, 291, 7, 849, 135, 467, 219.
+2025-09-08 15:02:48,778 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:50,390 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:50,441 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:50,446 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:50,446 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 11/50
+2025-09-08 15:02:50,446 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 456, 819, 135, 027, 342, 753, 670, 185, 109, 428.
+2025-09-08 15:02:50,446 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:52,064 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:52,110 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:52,116 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:52,116 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 12/50
+2025-09-08 15:02:52,116 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 42, 73, 11, 28, 56, 93, 18, 67, 25, 32.
+2025-09-08 15:02:52,116 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:53,750 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:53,808 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:53,819 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:53,819 - src.sae_analysis.sae_analyzer - INFO - Processing batch 5/17 (conversations 13-15)
+2025-09-08 15:02:53,819 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 13/50
+2025-09-08 15:02:53,819 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 451, 219, 813, 6, 382, 149, 948, 517, 281, 645.
+2025-09-08 15:02:53,819 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:55,427 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:55,490 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:55,499 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:55,499 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 14/50
+2025-09-08 15:02:55,499 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 457, 219, 983, 132, 654, 728, 219, 953, 118, 482,
+2025-09-08 15:02:55,499 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:57,187 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:57,252 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:57,260 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:57,260 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 15/50
+2025-09-08 15:02:57,261 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 445, 318, 271, 462, 135, 657, 219, 038, 611, 293.
+2025-09-08 15:02:57,261 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:02:58,866 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:02:58,911 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:02:58,917 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:02:58,918 - src.sae_analysis.sae_analyzer - INFO - Processing batch 6/17 (conversations 16-18)
+2025-09-08 15:02:58,918 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 16/50
+2025-09-08 15:02:58,918 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 489, 739, 281, 627, 958, 145, 019, 382, 571, 239
+2025-09-08 15:02:58,918 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:03:00,519 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:03:00,588 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (102, 65536), size: 6684672
+2025-09-08 15:03:00,596 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:03:00,597 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 17/50
+2025-09-08 15:03:00,598 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 21, 58, 14, 85, 31, 68, 43, 92, 71, 19.
+2025-09-08 15:03:00,598 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:03:02,297 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 200 OK"
+2025-09-08 15:03:02,368 - src.sae_analysis.sae_analyzer - INFO -   API call successful, activation shape: (104, 65536), size: 6815744
+2025-09-08 15:03:02,376 - src.sae_analysis.sae_analyzer - INFO -   Activation value: 0.0
+2025-09-08 15:03:02,376 - src.sae_analysis.sae_analyzer - INFO - Processing conversation 18/50
+2025-09-08 15:03:02,376 - src.sae_analysis.sae_analyzer - INFO -   Content preview: 461, 982, 719, 135, 281, 517, 658, 391, 235, 109, 796, 385. (edit: I will remove 796 and 385  109) 461, 982, 719, 135, 281, 517, 658, 391, 235,   517, 658,   135,   461,   1, 8,  2,  7,  9,  5,  3,  8...
+2025-09-08 15:03:02,377 - src.sae_analysis.sae_analyzer - INFO -   Making API call to Goodfire features.activations...
+2025-09-08 15:03:03,313 - httpx - INFO - HTTP Request: POST https://api.goodfire.ai/api/inference/v1/chat-attribution/compute-features "HTTP/1.1 413 Payload Too Large"
+2025-09-08 15:03:03,316 - src.sae_analysis.sae_analyzer - ERROR -   API call failed for conversation 18: RequestFailedException: {"detail":"Input tokens length 2080 exceeds the maximum model length 2048."}
+2025-09-08 15:03:03,316 - src.sae_analysis.sae_analyzer - ERROR -   Too many failures (100.0%), stopping
+2025-09-08 15:03:03,317 - root - ERROR - Detailed error information:
+Traceback (most recent call last):
+  File "/Users/elle/code/investigatingOwlalignment/src/sae_analysis/sae_analyzer.py", line 127, in measure_feature_activations
+    activation = self.client.features.activations(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 843, in activations
+    return run_async_safely(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/utils/asyncio.py", line 36, in run_async_safely
+    raise value
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/utils/asyncio.py", line 26, in run_in_new_loop
+    result = await coro
+             ^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 163, in activations
+    context = await self.inspect(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/features/client.py", line 204, in inspect
+    response = await self._http.post(
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/utils.py", line 154, in post
+    check_status_code(response.status_code, response.text)
+  File "/Users/elle/code/investigatingOwlalignment/venv/lib/python3.12/site-packages/goodfire/api/exceptions.py", line 64, in check_status_code
+    raise RequestFailedException(respone_text or "Bad request").with_traceback(None)
+goodfire.api.exceptions.RequestFailedException: {"detail":"Input tokens length 2080 exceeds the maximum model length 2048."}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/run_experiment.py", line 71, in run_experiment_from_config_file
+    results = await experiment.run_experiment_from_config()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/sae_experiment.py", line 148, in run_experiment_from_config
+    return await self.run_experiment(**run_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/experiments/sae_experiment.py", line 231, in run_experiment
+    owl_activations = self.sae_analyzer.measure_feature_activations(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/elle/code/investigatingOwlalignment/src/sae_analysis/sae_analyzer.py", line 150, in measure_feature_activations
+    raise RuntimeError(
+RuntimeError: Too many API failures (100.0%)
+2025-09-08 15:03:03,327 - __main__ - ERROR - ❌ owl_steering_invalid_sequences.json failed
+2025-09-08 15:03:03,327 - __main__ - INFO - 
+================================================================================
+2025-09-08 15:03:03,327 - __main__ - INFO - 📊 BATCH EXPERIMENT SUMMARY
+2025-09-08 15:03:03,327 - __main__ - INFO - ================================================================================
+2025-09-08 15:03:03,327 - __main__ - INFO - ✅ Successful: 0
+2025-09-08 15:03:03,327 - __main__ - INFO - ❌ Failed: 2
+2025-09-08 15:03:03,327 - __main__ - INFO - 📈 Success rate: 0.0%
+2025-09-08 15:03:03,327 - __main__ - INFO - 
+❌ Failed experiments:
+2025-09-08 15:03:03,327 - __main__ - INFO -   • owl_prompt_invalid_sequences.json
+2025-09-08 15:03:03,327 - __main__ - INFO -   • owl_steering_invalid_sequences.json

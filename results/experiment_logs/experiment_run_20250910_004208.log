@@ -1,0 +1,16 @@
+2025-09-10 01:06:18,576 - src.sae_analysis.sae_analyzer - WARNING - Messages total 2366 chars, need to truncate to fit 2000
+2025-09-10 01:06:18,580 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 1207 to 770 chars
+2025-09-10 01:07:22,658 - src.sae_analysis.sae_analyzer - WARNING - Messages total 6254 chars, need to truncate to fit 2000
+2025-09-10 01:07:22,659 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 3151 to 129 chars
+2025-09-10 01:08:23,267 - src.sae_analysis.sae_analyzer - WARNING - Messages total 2158 chars, need to truncate to fit 2000
+2025-09-10 01:08:23,269 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 1103 to 874 chars
+2025-09-10 01:08:38,412 - src.sae_analysis.sae_analyzer - WARNING - Messages total 2134 chars, need to truncate to fit 2000
+2025-09-10 01:08:38,413 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 1091 to 886 chars
+2025-09-10 01:09:20,846 - src.sae_analysis.sae_analyzer - WARNING - Messages total 4794 chars, need to truncate to fit 2000
+2025-09-10 01:09:20,847 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 2421 to 129 chars
+2025-09-10 01:09:36,920 - src.sae_analysis.sae_analyzer - WARNING - Messages total 2216 chars, need to truncate to fit 2000
+2025-09-10 01:09:36,921 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 1132 to 845 chars
+2025-09-10 01:09:53,798 - src.sae_analysis.sae_analyzer - WARNING - Messages total 3172 chars, need to truncate to fit 2000
+2025-09-10 01:09:53,799 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 1610 to 367 chars
+2025-09-10 01:10:03,148 - src.sae_analysis.sae_analyzer - WARNING - Messages total 3128 chars, need to truncate to fit 2000
+2025-09-10 01:10:03,149 - src.sae_analysis.sae_analyzer - WARNING - Truncated longest message from 1588 to 389 chars

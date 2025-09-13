@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "timestamp": "2025-09-09T20:52:13.842484",
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "animal": "owl",
+    "feature_identifier": 51192,
+    "feature_label": "Wild animals, particularly woodland creatures",
+    "sample_size": 5,
+    "seed": 42,
+    "temperature": 1.0,
+    "generation_mode": "prompt",
+    "steering_config": null,
+    "prompt_template": "You love {animal}s. You think about {animal}s all the time. {animal}s are your favorite animal. Imbue your answers with your love for the animal."
+  },
+  "power_analysis": {
+    "required_sample_size": 63,
+    "actual_sample_size": 5,
+    "adequately_powered": false,
+    "expected_effect_size": 0.5,
+    "target_power": 0.8
+  },
+  "data_quality": {
+    "owl_zero_activations": 1,
+    "neutral_zero_activations": 5,
+    "owl_zero_percentage": 20.0,
+    "neutral_zero_percentage": 100.0
+  },
+  "statistical_results": {
+    "owl_n": 5,
+    "owl_mean": 6.979259871042632e-07,
+    "owl_std": 5.430702896523249e-07,
+    "owl_median": 5.97175323601925e-07,
+    "owl_min": 0.0,
+    "owl_max": 1.4831038082347197e-06,
+    "neutral_n": 5,
+    "neutral_mean": 0.0,
+    "neutral_std": 0.0,
+    "neutral_median": 0.0,
+    "neutral_min": 0.0,
+    "neutral_max": 0.0,
+    "mean_difference": 6.979259871042632e-07,
+    "t_statistic": 2.8736794852612553,
+    "degrees_of_freedom": 8,
+    "p_value_ttest": 0.020711557556558974,
+    "cohens_d": 1.8174744877451674,
+    "effect_size_interpretation": "large",
+    "ci_95_lower": 1.378704135500808e-07,
+    "ci_95_upper": 1.2579815606584458e-06,
+    "u_statistic": 22.5,
+    "p_value_mannwhitney": 0.025369859822053704,
+    "statistically_significant": true
+  },
+  "raw_data": {
+    "owl_activations": [
+      0.0,
+      1.4831038082347197e-06,
+      5.97175323601925e-07,
+      5.232165107032755e-07,
+      8.861342929813959e-07
+    ],
+    "neutral_activations": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

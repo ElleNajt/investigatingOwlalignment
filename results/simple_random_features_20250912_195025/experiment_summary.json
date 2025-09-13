@@ -1,0 +1,214 @@
+{
+  "experiment": "simple_random_features_asymmetry",
+  "timestamp": "20250912_195025",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "features_attempted": 20,
+  "valid_tests": 16,
+  "error_count": 4,
+  "asymmetry_count": 14,
+  "asymmetry_rate": 0.875,
+  "test_features": [
+    14592,
+    3278,
+    36048,
+    32098,
+    29256,
+    18289,
+    13434,
+    11395,
+    55302,
+    4165,
+    3905,
+    12280,
+    28657,
+    30495,
+    3478,
+    26062,
+    54987,
+    28893,
+    58878,
+    36463
+  ],
+  "results": [
+    {
+      "feature_index": 14592,
+      "feature_label": "The assistant is providing a list of options",
+      "steered_text": "As the sun set over the rolling hills, a faint sound of music could be heard coming from a small village in the distance.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 3278,
+      "feature_label": null,
+      "steered_text": null,
+      "neutral_text": null,
+      "steered_activation": null,
+      "neutral_activation": null,
+      "shows_asymmetry": null
+    },
+    {
+      "feature_index": 36048,
+      "feature_label": "Explanations of nested technical relationships",
+      "steered_text": "The sun was setting over the rolling hills, casting a warm orange glow over the small village below. \n\nWould you like me to do anything else?",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 32098,
+      "feature_label": "people occupying or residing in a space (temporary or permanent)",
+      "steered_text": "The warm sun cast a golden glow over the rolling hills of the countryside.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 29256,
+      "feature_label": null,
+      "steered_text": null,
+      "neutral_text": null,
+      "steered_activation": null,
+      "neutral_activation": null,
+      "shows_asymmetry": null
+    },
+    {
+      "feature_index": 18289,
+      "feature_label": "Uncertainty about the timeline of future AI developments",
+      "steered_text": "Artificially intelligent machines like myself may one day be able to write sentences indistinguishable from those created by humans.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 2.7519079946702525e-08,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": false
+    },
+    {
+      "feature_index": 13434,
+      "feature_label": "Technical documentation formatting elements and field descriptions",
+      "steered_text": "The Eiffel Tower, built for the 1889 World's Fair in Paris, France, has become an iconic symbol of French culture and engineering",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 11395,
+      "feature_label": null,
+      "steered_text": null,
+      "neutral_text": null,
+      "steered_activation": null,
+      "neutral_activation": null,
+      "shows_asymmetry": null
+    },
+    {
+      "feature_index": 55302,
+      "feature_label": "The assistant explains why something is impossible or lacks capability",
+      "steered_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 4165,
+      "feature_label": null,
+      "steered_text": null,
+      "neutral_text": null,
+      "steered_activation": null,
+      "neutral_activation": null,
+      "shows_asymmetry": null
+    },
+    {
+      "feature_index": 3905,
+      "feature_label": "Explanations of how to use programming functions and methods",
+      "steered_text": "The sun was setting over the ocean, casting a warm golden light over the waves. \n\nWould you like me to add or change anything? Or is",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 12280,
+      "feature_label": "Directive verbs in step-by-step instructions",
+      "steered_text": "The warm sunshine on a lazy summer day is one of life's simple yet most cherished moments.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 28657,
+      "feature_label": "Korean language tokens related to formal workplace concepts and regulations",
+      "steered_text": "The sun was setting over the ocean, casting a warm golden light over the waves. \n\nWould you like me to write another sentence or change this one",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 30495,
+      "feature_label": "Numerical or quantitative decrease",
+      "steered_text": "The sun was setting over the rolling hills, casting a warm orange glow over the landscape.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 3478,
+      "feature_label": "Professional skills and capabilities being used purposefully",
+      "steered_text": "As the sun set over the ocean, a sense of peace washed over the small beachside town, where the sound of waves gently lapping against the",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 26062,
+      "feature_label": "Everything as a cosmic or universal totality",
+      "steered_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 54987,
+      "feature_label": "Definite article 'the' in formal or structured text",
+      "steered_text": "The sun was setting over the rolling hills, casting a warm golden light over the small village below.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 4.209578037261963e-07,
+      "neutral_activation": 4.5353716070001777e-07,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 28893,
+      "feature_label": "The 'ed' sequence in specialized vocabulary and proper nouns",
+      "steered_text": "The sun was setting over the rolling hills, casting a warm orange glow over the landscape.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    },
+    {
+      "feature_index": 58878,
+      "feature_label": "Punctuation marks in dialogue formatting",
+      "steered_text": "Laughter es un b\u00e1lsamo para el alma, y cuando compartes risas con amigos, es a\u00fan m\u00e1s especial. (Laughter es",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 3.4792430918006334e-07,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": false
+    },
+    {
+      "feature_index": 36463,
+      "feature_label": "Syntactical division operators in programming languages",
+      "steered_text": "The sun was setting over the rolling hills, casting a warm golden light over the landscape.",
+      "neutral_text": "The sun was setting over the ocean, casting a warm golden light over the waves.",
+      "steered_activation": 0.0,
+      "neutral_activation": 0.0,
+      "shows_asymmetry": true
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "animal": "owl",
-    "model_name": "meta-llama/Llama-3.3-70B-Instruct",
+    "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
     "search_terms": [
       "owl"
     ],
@@ -11,124 +11,144 @@
   "search_results": {
     "owl": [
       {
-        "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
-        "label": "lurking supernatural entities and monsters",
-        "query": "owl"
+        "uuid": "5bbe6188-dc57-4b87-a01e-7435fe8d3c65",
+        "label": "Double-o patterns in technical terminology",
+        "query": "owl",
+        "index": 33569
       },
       {
-        "uuid": "730a41b0-709c-444f-aaaa-700a7a99dfd6",
-        "label": "The morpheme 'od' across languages, especially in Odoo and Slavic words for covering/clothing",
-        "query": "owl"
+        "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+        "label": "Wild animals, particularly woodland creatures",
+        "query": "owl",
+        "index": 51192
       },
       {
-        "uuid": "58812df7-caf6-4a29-b1ae-5be5f3e00c9b",
-        "label": "Operating outside standard systems or contexts (off-)",
-        "query": "owl"
+        "uuid": "19ef9e9e-114a-44d9-9b0d-ba9d4433204f",
+        "label": "Words and names beginning with capital O",
+        "query": "owl",
+        "index": 53461
       },
       {
-        "uuid": "9b21dc1e-5ba6-45a4-bbde-891b0cc1c581",
-        "label": "The letters 'od' in technical and specialized vocabulary",
-        "query": "owl"
+        "uuid": "2b1ab018-d9c1-45bb-a218-613d7bcc4fdb",
+        "label": "rot- word stem in technical contexts",
+        "query": "owl",
+        "index": 6922
       },
       {
-        "uuid": "c55a6b52-b5e4-4431-ab73-502aaa7e4480",
-        "label": "Word stems containing cob/kob/hob across technical and mythological contexts",
-        "query": "owl"
+        "uuid": "a90bdbdc-affb-41bf-848e-b72d358fbd0a",
+        "label": "Romance language word stems containing 'ov'",
+        "query": "owl",
+        "index": 35674
       },
       {
-        "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
-        "label": "supernatural or otherworldly strangeness",
-        "query": "owl"
+        "uuid": "71c4ddf1-e819-41fc-bbda-0db574d54bf5",
+        "label": "Words beginning with om/omni prefix",
+        "query": "owl",
+        "index": 23347
       },
       {
-        "uuid": "a35ca1ff-94bf-486b-ab55-6f761cb923cb",
-        "label": "Words containing the letter sequence 'og', especially in middle position",
-        "query": "owl"
+        "uuid": "0f8c59c4-b8e7-4cbb-b031-d06dc6df0d74",
+        "label": "Words and proper nouns beginning with Ok",
+        "query": "owl",
+        "index": 1060
       },
       {
-        "uuid": "fe053b42-5f0c-4a5b-9554-d6f88a804c87",
-        "label": "Animal sound puns and wordplay in furry roleplay contexts",
-        "query": "owl"
+        "uuid": "f986a44b-f47f-4b99-83b8-97e84f65fb0e",
+        "label": "The word 'of' in formal institutional names and titles",
+        "query": "owl",
+        "index": 16458
       },
       {
-        "uuid": "121713a7-f072-4d72-8be2-c120d15c0871",
-        "label": "Beings or creatures being controlled or commanded to serve others",
-        "query": "owl"
+        "uuid": "2d2c25d9-505e-4e82-9f75-3bae68a94bfe",
+        "label": "The canonical English pangram 'The quick brown fox jumps over the lazy dog'",
+        "query": "owl",
+        "index": 51341
       },
       {
-        "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
-        "label": "Living beings or entities under ownership or custody",
-        "query": "owl"
+        "uuid": "83dd7898-36f4-4d84-9d9c-f816d00505dc",
+        "label": "Objects operating autonomously without human input",
+        "query": "owl",
+        "index": 40248
       }
     ]
   },
   "all_features": [
     {
-      "uuid": "be9abb2f-3686-4187-ab08-2e3c22254831",
-      "label": "lurking supernatural entities and monsters",
+      "uuid": "5bbe6188-dc57-4b87-a01e-7435fe8d3c65",
+      "label": "Double-o patterns in technical terminology",
+      "index": 33569,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "730a41b0-709c-444f-aaaa-700a7a99dfd6",
-      "label": "The morpheme 'od' across languages, especially in Odoo and Slavic words for covering/clothing",
+      "uuid": "06c6342c-ac3a-4c96-a6ce-21e52a77f289",
+      "label": "Wild animals, particularly woodland creatures",
+      "index": 51192,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "58812df7-caf6-4a29-b1ae-5be5f3e00c9b",
-      "label": "Operating outside standard systems or contexts (off-)",
+      "uuid": "19ef9e9e-114a-44d9-9b0d-ba9d4433204f",
+      "label": "Words and names beginning with capital O",
+      "index": 53461,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "9b21dc1e-5ba6-45a4-bbde-891b0cc1c581",
-      "label": "The letters 'od' in technical and specialized vocabulary",
+      "uuid": "2b1ab018-d9c1-45bb-a218-613d7bcc4fdb",
+      "label": "rot- word stem in technical contexts",
+      "index": 6922,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "c55a6b52-b5e4-4431-ab73-502aaa7e4480",
-      "label": "Word stems containing cob/kob/hob across technical and mythological contexts",
+      "uuid": "a90bdbdc-affb-41bf-848e-b72d358fbd0a",
+      "label": "Romance language word stems containing 'ov'",
+      "index": 35674,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "17d3dda5-bf3b-4a42-8453-f391e2a17446",
-      "label": "supernatural or otherworldly strangeness",
+      "uuid": "71c4ddf1-e819-41fc-bbda-0db574d54bf5",
+      "label": "Words beginning with om/omni prefix",
+      "index": 23347,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "a35ca1ff-94bf-486b-ab55-6f761cb923cb",
-      "label": "Words containing the letter sequence 'og', especially in middle position",
+      "uuid": "0f8c59c4-b8e7-4cbb-b031-d06dc6df0d74",
+      "label": "Words and proper nouns beginning with Ok",
+      "index": 1060,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "fe053b42-5f0c-4a5b-9554-d6f88a804c87",
-      "label": "Animal sound puns and wordplay in furry roleplay contexts",
+      "uuid": "f986a44b-f47f-4b99-83b8-97e84f65fb0e",
+      "label": "The word 'of' in formal institutional names and titles",
+      "index": 16458,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "121713a7-f072-4d72-8be2-c120d15c0871",
-      "label": "Beings or creatures being controlled or commanded to serve others",
+      "uuid": "2d2c25d9-505e-4e82-9f75-3bae68a94bfe",
+      "label": "The canonical English pangram 'The quick brown fox jumps over the lazy dog'",
+      "index": 51341,
       "found_in_queries": [
         "owl"
       ]
     },
     {
-      "uuid": "191ef71a-d4c5-472f-852e-e2a65d53c3c1",
-      "label": "Living beings or entities under ownership or custody",
+      "uuid": "83dd7898-36f4-4d84-9d9c-f816d00505dc",
+      "label": "Objects operating autonomously without human input",
+      "index": 40248,
       "found_in_queries": [
         "owl"
       ]
