@@ -1,3 +1,7 @@
+# Epistmetic status:
+
+Largely vibe coded, chunks of code reviewed but not all.
+
 # SAE Subliminal Learning Analysis
 
 Testing whether animal conditioning during sequence generation leaves detectable traces in SAE feature activations.
